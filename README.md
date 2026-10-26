@@ -22,7 +22,7 @@ inputs, the reports of the NIST SP 800-22 tests, and the scripts that recompute 
 | [`measurement/laptop/`](measurement/laptop/) | Code for further GPU measurements on configuration A; not used in the paper | Section 8.7 |
 | [`data/`](data/) | The six 10 MB inputs of configurations B and C, their checksums and origin | Section 6.3 |
 | [`results/configuration_B/`](results/configuration_B/), [`results/configuration_C/`](results/configuration_C/) | Raw per-iteration results, logs, key checks, NIST SP 800-22 reports | Tables 7–9, Figure 4, Sections 7.1, 7.5–7.7, Tables S2–S4 |
-| [`results/Supplementary_Tables_S1-S4.xlsx`](results/Supplementary_Tables_S1-S4.xlsx) | Supplementary Tables S1–S4 of the paper | |
+| [`results/Supplementary_Tables_S1-S4.xlsx`](results/Supplementary_Tables_S1-S4.xlsx) | Tables S1–S4 to which the paper refers: complete statistics of configuration A, measurements of B and C with raw iterations, paired measurements, NIST results | Section 6.7 |
 | [`analysis/`](analysis/) | Python scripts that recompute Tables 4–9 and Figures 2–4 from `results/` | |
 
 ## Configurations

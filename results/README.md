@@ -5,7 +5,7 @@
   OpenSSL 3.0.13.
 * `configuration_C/`: laptop HP OMEN 15-dc1xxx, Intel Core i5-9300H, 16 GB DDR4-2666, Windows 11 (build 26300),
   High performance power plan, .NET 8.0.33; produced with `measurement/run_windows.cmd`.
-* `Supplementary_Tables_S1-S4.xlsx`: Supplementary Tables S1–S4 of the paper.
+* `Supplementary_Tables_S1-S4.xlsx`: Tables S1–S4 to which the paper refers (Section 6.7).
 
 All results of configurations B and C were obtained with `measurement/AssocMeasure` on the inputs in `data/`. Times
 are in seconds unless the field name says otherwise.

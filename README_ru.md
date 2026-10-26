@@ -22,7 +22,7 @@ NIST SP 800-22 и скрипты, по которым пересчитывают
 | [`measurement/laptop/`](measurement/laptop/) | Код для дополнительных замеров GPU на конфигурации A; в статье не использован | разд. 8.7 |
 | [`data/`](data/) | Шесть входных файлов по 10 МБ для конфигураций B и C, их контрольные суммы и происхождение | разд. 6.3 |
 | [`results/configuration_B/`](results/configuration_B/), [`results/configuration_C/`](results/configuration_C/) | Исходные результаты по итерациям, журналы, проверки ключей, отчёты NIST SP 800-22 | табл. 7–9, рис. 4, разд. 7.1, 7.5–7.7, табл. S2–S4 |
-| [`results/Supplementary_Tables_S1-S4.xlsx`](results/Supplementary_Tables_S1-S4.xlsx) | Дополнительные таблицы S1–S4 статьи | |
+| [`results/Supplementary_Tables_S1-S4.xlsx`](results/Supplementary_Tables_S1-S4.xlsx) | Таблицы S1–S4, на которые ссылается статья: полная статистика конфигурации A, замеры B и C с итерациями, парный дизайн, результаты NIST | разд. 6.7 |
 | [`analysis/`](analysis/) | Скрипты на Python, пересчитывающие табл. 4–9 и рис. 2–4 по `results/` | |
 
 ## Конфигурации
