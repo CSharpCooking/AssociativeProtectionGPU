@@ -1,0 +1,5 @@
+*.bin binary
+*.png binary
+*.xlsx binary
+*.cmd text eol=crlf
+*.sh text eol=lf

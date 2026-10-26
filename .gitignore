@@ -1,0 +1,6 @@
+bin/
+obj/
+results_run/
+analysis/output/
+__pycache__/
+*.pyc

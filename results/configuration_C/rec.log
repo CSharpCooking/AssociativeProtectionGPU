@@ -1,0 +1,54 @@
+rec: original stream <- file                   N= 10  mean=   1928.73 ms  +  215.15 (99.9% CI)  SD=  142.31  med=   1899.94  min=   1755.83  max=   2206.95  per-MB=  192.87 ms
+rec: original stream <- memory                 N= 10  mean=   1928.29 ms  +  386.35 (99.9% CI)  SD=  255.55  med=   1959.29  min=   1405.99  max=   2297.01  per-MB=  192.83 ms
+rec: original, no stream (search, CPU code)    N= 10  mean=   1301.82 ms  +  135.31 (99.9% CI)  SD=   89.50  med=   1302.20  min=   1173.21  max=   1488.42  per-MB=  130.18 ms
+rec: GPU search kernel logic on CPU            N= 10  mean=   1850.59 ms  +  403.64 (99.9% CI)  SD=  266.98  med=   1809.30  min=   1569.19  max=   2407.10  per-MB=  185.06 ms
+rec: branch-free kernel logic on CPU           N= 10  mean=   7077.12 ms  +  133.77 (99.9% CI)  SD=   88.48  med=   7111.70  min=   6934.32  max=   7184.73  per-MB=  707.71 ms
+rec: table-driven kernel logic on CPU          N= 10  mean=    584.38 ms  +   41.19 (99.9% CI)  SD=   27.25  med=    587.96  min=    533.10  max=    616.31  per-MB=   58.44 ms
+rec: original search, 8 threads                N= 10  mean=    416.22 ms  +   61.88 (99.9% CI)  SD=   40.93  med=    413.57  min=    360.05  max=    498.82  per-MB=   41.62 ms
+rec: table-driven, 8 threads                   N= 10  mean=    111.77 ms  +    8.00 (99.9% CI)  SD=    5.29  med=    113.64  min=    103.57  max=    116.65  per-MB=   11.18 ms
+table construction: mean 126.6 us (+8.8)
+rec: original stream <- file                   N= 10  mean=   1504.28 ms  +  385.88 (99.9% CI)  SD=  255.24  med=   1440.04  min=   1188.16  max=   1923.22  per-MB=  150.43 ms
+rec: original stream <- memory                 N= 10  mean=   1372.45 ms  +  326.12 (99.9% CI)  SD=  215.71  med=   1321.74  min=   1089.42  max=   1716.68  per-MB=  137.24 ms
+rec: original, no stream (search, CPU code)    N= 10  mean=   1017.47 ms  +  224.94 (99.9% CI)  SD=  148.78  med=   1006.16  min=    828.92  max=   1379.88  per-MB=  101.75 ms
+rec: GPU search kernel logic on CPU            N= 10  mean=   1726.61 ms  +  362.57 (99.9% CI)  SD=  239.82  med=   1789.33  min=   1351.16  max=   2029.03  per-MB=  172.66 ms
+rec: branch-free kernel logic on CPU           N= 10  mean=   6841.67 ms  +  446.25 (99.9% CI)  SD=  295.17  med=   6724.66  min=   6623.71  max=   7529.63  per-MB=  684.17 ms
+rec: table-driven kernel logic on CPU          N= 10  mean=    539.93 ms  +    7.31 (99.9% CI)  SD=    4.84  med=    538.37  min=    533.35  max=    546.34  per-MB=   53.99 ms
+rec: original search, 8 threads                N= 10  mean=    372.12 ms  +   70.35 (99.9% CI)  SD=   46.53  med=    356.29  min=    324.51  max=    469.60  per-MB=   37.21 ms
+rec: table-driven, 8 threads                   N= 10  mean=    114.40 ms  +    6.71 (99.9% CI)  SD=    4.44  med=    113.17  min=    111.37  max=    126.54  per-MB=   11.44 ms
+table construction: mean 82.7 us (+1.0)
+rec: original stream <- file                   N= 10  mean=   1827.73 ms  +  387.19 (99.9% CI)  SD=  256.11  med=   1764.12  min=   1505.48  max=   2191.36  per-MB=  182.77 ms
+rec: original stream <- memory                 N= 10  mean=   1674.76 ms  +  365.32 (99.9% CI)  SD=  241.64  med=   1647.42  min=   1345.54  max=   1982.38  per-MB=  167.48 ms
+rec: original, no stream (search, CPU code)    N= 10  mean=   1512.81 ms  +  375.32 (99.9% CI)  SD=  248.25  med=   1507.88  min=   1097.25  max=   1938.55  per-MB=  151.28 ms
+rec: GPU search kernel logic on CPU            N= 10  mean=   1574.10 ms  +  339.19 (99.9% CI)  SD=  224.35  med=   1618.66  min=   1171.59  max=   1868.21  per-MB=  157.41 ms
+rec: branch-free kernel logic on CPU           N= 10  mean=   7199.85 ms  +  715.09 (99.9% CI)  SD=  472.98  med=   6948.13  min=   6873.21  max=   8284.90  per-MB=  719.98 ms
+rec: table-driven kernel logic on CPU          N= 10  mean=    587.72 ms  +   58.93 (99.9% CI)  SD=   38.98  med=    580.44  min=    546.09  max=    662.56  per-MB=   58.77 ms
+rec: original search, 8 threads                N= 10  mean=    443.81 ms  +   67.45 (99.9% CI)  SD=   44.61  med=    448.35  min=    365.91  max=    492.47  per-MB=   44.38 ms
+rec: table-driven, 8 threads                   N= 10  mean=    111.97 ms  +    2.85 (99.9% CI)  SD=    1.89  med=    112.51  min=    107.60  max=    113.73  per-MB=   11.20 ms
+table construction: mean 87.5 us (+0.7)
+rec: original stream <- file                   N= 10  mean=   1835.39 ms  +  385.71 (99.9% CI)  SD=  255.12  med=   1809.45  min=   1413.56  max=   2323.58  per-MB=  183.54 ms
+rec: original stream <- memory                 N= 10  mean=   1713.23 ms  +  436.04 (99.9% CI)  SD=  288.41  med=   1665.17  min=   1334.61  max=   2307.05  per-MB=  171.32 ms
+rec: original, no stream (search, CPU code)    N= 10  mean=   1649.83 ms  +  248.23 (99.9% CI)  SD=  164.19  med=   1666.72  min=   1408.63  max=   1867.10  per-MB=  164.98 ms
+rec: GPU search kernel logic on CPU            N= 10  mean=   1823.61 ms  +  363.15 (99.9% CI)  SD=  240.20  med=   1734.81  min=   1612.00  max=   2340.06  per-MB=  182.36 ms
+rec: branch-free kernel logic on CPU           N= 10  mean=   6959.26 ms  +   86.50 (99.9% CI)  SD=   57.21  med=   6935.12  min=   6911.43  max=   7102.26  per-MB=  695.93 ms
+rec: table-driven kernel logic on CPU          N= 10  mean=    568.65 ms  +   45.31 (99.9% CI)  SD=   29.97  med=    582.56  min=    524.95  max=    600.70  per-MB=   56.86 ms
+rec: original search, 8 threads                N= 10  mean=    399.44 ms  +   80.28 (99.9% CI)  SD=   53.10  med=    401.95  min=    320.56  max=    477.82  per-MB=   39.94 ms
+rec: table-driven, 8 threads                   N= 10  mean=    110.25 ms  +   12.19 (99.9% CI)  SD=    8.06  med=    112.61  min=     90.70  max=    120.78  per-MB=   11.02 ms
+table construction: mean 126.4 us (+15.7)
+rec: original stream <- file                   N= 10  mean=    810.51 ms  +   16.30 (99.9% CI)  SD=   10.78  med=    806.26  min=    796.46  max=    824.47  per-MB=   81.05 ms
+rec: original stream <- memory                 N= 10  mean=    745.35 ms  +   19.80 (99.9% CI)  SD=   13.10  med=    742.66  min=    728.93  max=    773.65  per-MB=   74.53 ms
+rec: original, no stream (search, CPU code)    N= 10  mean=    563.74 ms  +    2.97 (99.9% CI)  SD=    1.97  med=    563.15  min=    561.82  max=    568.51  per-MB=   56.37 ms
+rec: GPU search kernel logic on CPU            N= 10  mean=    644.29 ms  +   11.53 (99.9% CI)  SD=    7.63  med=    641.21  min=    637.02  max=    661.46  per-MB=   64.43 ms
+rec: branch-free kernel logic on CPU           N= 10  mean=   6968.56 ms  +  114.28 (99.9% CI)  SD=   75.59  med=   6946.84  min=   6907.37  max=   7140.81  per-MB=  696.86 ms
+rec: table-driven kernel logic on CPU          N= 10  mean=    577.69 ms  +   26.89 (99.9% CI)  SD=   17.79  med=    581.55  min=    528.16  max=    589.60  per-MB=   57.77 ms
+rec: original search, 8 threads                N= 10  mean=    181.40 ms  +   33.92 (99.9% CI)  SD=   22.44  med=    183.61  min=    145.22  max=    208.90  per-MB=   18.14 ms
+rec: table-driven, 8 threads                   N= 10  mean=    110.88 ms  +    7.75 (99.9% CI)  SD=    5.12  med=    113.31  min=    102.70  max=    115.36  per-MB=   11.09 ms
+table construction: mean 70.4 us (+1.1)
+rec: original stream <- file                   N= 10  mean=   1990.68 ms  +  448.98 (99.9% CI)  SD=  296.97  med=   1986.58  min=   1562.69  max=   2428.68  per-MB=  199.07 ms
+rec: original stream <- memory                 N= 10  mean=   1573.91 ms  +  461.74 (99.9% CI)  SD=  305.41  med=   1494.07  min=   1222.77  max=   2034.52  per-MB=  157.39 ms
+rec: original, no stream (search, CPU code)    N= 10  mean=   1350.25 ms  +  333.82 (99.9% CI)  SD=  220.80  med=   1379.87  min=    941.91  max=   1640.55  per-MB=  135.03 ms
+rec: GPU search kernel logic on CPU            N= 10  mean=   1889.56 ms  +  523.87 (99.9% CI)  SD=  346.51  med=   1975.34  min=   1165.58  max=   2317.07  per-MB=  188.96 ms
+rec: branch-free kernel logic on CPU           N= 10  mean=   6596.49 ms  +   75.02 (99.9% CI)  SD=   49.62  med=   6576.28  min=   6547.83  max=   6702.77  per-MB=  659.65 ms
+rec: table-driven kernel logic on CPU          N= 10  mean=    573.84 ms  +   23.68 (99.9% CI)  SD=   15.66  med=    578.26  min=    529.72  max=    583.79  per-MB=   57.38 ms
+rec: original search, 8 threads                N= 10  mean=    456.31 ms  +  103.59 (99.9% CI)  SD=   68.52  med=    455.55  min=    363.04  max=    558.09  per-MB=   45.63 ms
+rec: table-driven, 8 threads                   N= 10  mean=    112.00 ms  +    6.97 (99.9% CI)  SD=    4.61  med=    111.63  min=    104.22  max=    123.07  per-MB=   11.20 ms
+table construction: mean 70.4 us (+7.9)

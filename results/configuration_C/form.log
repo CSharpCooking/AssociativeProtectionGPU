@@ -1,0 +1,8 @@
+form: original stream -> file                  N= 10  mean=   3674.40 ms  +  623.87 (99.9% CI)  SD=  412.65  med=   3615.37  min=   3275.36  max=   4583.40  per-MB=  367.44 ms
+form: original stream -> Stream.Null           N= 10  mean=   3282.99 ms  +  459.24 (99.9% CI)  SD=  303.76  med=   3170.57  min=   3082.26  max=   4083.12  per-MB=  328.30 ms
+form: original, no stream (per-container CSPRNG) N= 10  mean=   3159.46 ms  +  169.40 (99.9% CI)  SD=  112.05  med=   3122.51  min=   3056.69  max=   3408.20  per-MB=  315.95 ms
+form: bulk CSPRNG (one call per 512 KB)        N= 10  mean=    536.45 ms  +    8.42 (99.9% CI)  SD=    5.57  med=    534.95  min=    529.21  max=    546.49  per-MB=   53.64 ms
+form: GPU filler function on CPU               N= 10  mean=    996.60 ms  +   15.44 (99.9% CI)  SD=   10.21  med=    995.70  min=    983.86  max=   1012.44  per-MB=   99.66 ms
+form: masking only (no filler)                 N= 10  mean=    471.33 ms  +    8.44 (99.9% CI)  SD=    5.58  med=    469.82  min=    464.95  max=    480.98  per-MB=   47.13 ms
+form: bulk CSPRNG, 8 threads                   N= 10  mean=    219.24 ms  +   19.67 (99.9% CI)  SD=   13.01  med=    221.81  min=    184.52  max=    229.57  per-MB=   21.92 ms
+form: GPU filler function, 8 threads           N= 10  mean=    273.38 ms  +   14.62 (99.9% CI)  SD=    9.67  med=    270.68  min=    263.94  max=    297.84  per-MB=   27.34 ms
