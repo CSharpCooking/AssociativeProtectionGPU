@@ -7,7 +7,7 @@ Python 3.10+ with NumPy and Matplotlib. Run from the repository root; output goe
 |---|---|---|---|
 | `config_a.py` | `results/configuration_A/bdn_statistics.json` | `config_A.json`; report on stdout | Tables 4–6; fixed and marginal costs, allocation experiment, crossing points (Sections 7.2–7.4); comparison of the two chunk-size series (Section 7.8) |
 | `summarize.py B`, `summarize.py C` | `results/configuration_B/` or `_C/`, `data/` | `summary_B.json`, `summary_C.json`; report on stdout | Tables 7, 8, 9, S2, S3; Sections 7.5–7.7 |
-| `paper_values.py` | the three JSON files above | `paper_values.md` | Rows of Tables 4–9 and the derived values quoted in the text (generator-call share, ratios of the recognition procedures, correlations, NIST counts) |
+| `paper_values.py` | the three JSON files above | `paper_values.md` | Rows of Tables 4–9 and the derived values quoted in the text (stage sums against the full cycle, generator-call share, ratios of the recognition procedures, correlations, NIST counts) |
 | `figures.py` | the JSON files above and `dist_10MB.json` of configurations B and C | `fig2.png`, `fig3.png`, `fig4.png` | Figures 2–4 |
 | `input_stats.py FILE…` | any files | stdout | Size, SHA-256 and the comparison counts of the search per byte (Section 6.3, Table 8) |
 | `run_nist.sh` | a binary file | NIST STS reports | Table 9, Table S4 (see the header of the script) |

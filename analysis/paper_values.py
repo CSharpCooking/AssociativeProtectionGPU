@@ -91,6 +91,21 @@ table('Table 6. Stages at 100 MB on configuration A (s)', ['Operation', 'CPU-seq
 emit('Formation / recovery: ' + ', '.join(f"{v} {t6['formation'][v][0] / t6['recovery'][v][0]:.2f}" for v in ('cpu', 'igpu', 'dgpu')))
 emit()
 
+# ---------------------------------------------------------------- Section 7.4: stages are separate benchmarks
+ORIG = json.load(open(RESULTS / 'configuration_A' / 'bdn_statistics.json', encoding='utf-8'))
+stat = lambda z, n: next(x for x in ORIG if x['series'] == '512' and x['size'] == z and x['name'] == n)
+rows = []
+for z in ('1KB', '10KB', '100KB', '1MB', '3.45MB', '10MB', '100MB'):
+    row = [LBL[z]]
+    for m in ('CPU', 'iGPU', 'dGPU'):
+        f, r, c = stat(z, m + ' enc'), stat(z, m + ' dec'), stat(z, m + ' full')
+        dev = (f['Mean'] + r['Mean'] - c['Mean']) * 1e3
+        ci = (f['Error'] + r['Error'] + c['Error']) * 1e3
+        row.append(f"{dev:+.2f} ms ({100 * dev / (c['Mean'] * 1e3):+.1f}%){'' if abs(dev) <= ci else ' *'}")
+    rows.append(row)
+table('Section 7.4. Sum of the formation and recovery means minus the full-cycle mean (* = beyond the sum of the three CI half-widths)',
+      ['Volume', 'CPU-seq', 'iGPU', 'dGPU'], rows)
+
 
 # ---------------------------------------------------------------- Table 7
 def formrow(F, prefix):
