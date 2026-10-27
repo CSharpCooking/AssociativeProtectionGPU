@@ -1,7 +1,8 @@
-// Revision benchmarks for configuration A (the laptop with the integrated and the discrete GPU).
+// Revision benchmarks for a computer with a GPU (configuration A of the paper or another one, such as configuration C).
 // Add this file to the benchmark project of the thesis together with GpuStegoV2.cs, NewKernels.cs,
-// CpuParallelStego.cs, RevKernels.cs and RevEntry.cs; they use the classes of the thesis library
-// (AssocStego, AssocStegoStream, EtalonFactory, GpuStegoEncryptor, GpuStegoDecryptor, AcceleratorSelector).
+// CpuParallelStego.cs, RevKernels.cs and RevEntry.cs, or build them with standalone/AssocRevision.csproj; they use the
+// classes of the thesis library (AssocStego, AssocStegoStream, EtalonFactory, GpuStegoEncryptor, GpuStegoDecryptor,
+// AcceleratorSelector). The discrete GPU is selected through CUDA, the integrated GPU through OpenCL.
 // Every class is one group of measurements and is run separately (RevEntry.cs, run_revision.cmd):
 //   RevBreakEven     full cycle at 1-100 KB: CPU-seq and the original GPU classes, three processes per case
 //   RevFormation     formation of 10 MB: reference, sequential and multithreaded CPU variants, GPUs
@@ -68,7 +69,7 @@ public abstract class RevBase
         Session = device switch
         {
             "iGPU" => AcceleratorSelector.Create(ExecutionMode.IntegratedGpu),
-            "dGPU" => AcceleratorSelector.CreateBestDiscreteGpuForBenchmarks(),
+            "dGPU" => AcceleratorSelector.Create(ExecutionMode.NvidiaDiscreteGpu),
             _ => null,
         };
         if (device != null && (Session == null || Session.IsCpuFallback || Session.Accelerator == null))

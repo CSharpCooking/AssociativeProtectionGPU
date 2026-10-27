@@ -33,7 +33,7 @@ public static class RevKernels
         {
             using var session = dev == "iGPU"
                 ? AcceleratorSelector.Create(ExecutionMode.IntegratedGpu)
-                : AcceleratorSelector.CreateBestDiscreteGpuForBenchmarks();
+                : AcceleratorSelector.Create(ExecutionMode.NvidiaDiscreteGpu);
             if (session.IsCpuFallback || session.Accelerator == null) { Console.Error.WriteLine(dev + ": not available"); continue; }
             Accelerator acc = session.Accelerator;
             var formation = acc.LoadAutoGroupedStreamKernel<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int>(NewKernels.EncryptKernelCopy);

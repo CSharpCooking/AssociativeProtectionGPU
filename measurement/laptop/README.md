@@ -1,15 +1,27 @@
-# Revision measurements on configuration A
+# Revision measurements on a laptop with a GPU
 
-Code for further measurements on the laptop of the GPU measurements (configuration A: Intel Core i5-13420H,
-Intel UHD Graphics through OpenCL, NVIDIA GeForce RTX 4050 Laptop GPU through CUDA). These measurements are not used
+Code for further measurements on a computer with a GPU: on the laptop of the GPU measurements of the paper
+(configuration A: Intel Core i5-13420H, Intel UHD Graphics, NVIDIA GeForce RTX 4050 Laptop GPU) or on another one,
+such as the laptop of configuration C (Intel Core i5-9300H, NVIDIA GeForce RTX 2060). These measurements are not used
 in the paper. Section 8.7 of the paper lists what they would add.
 
-The classes are meant to be added to the benchmark project of the thesis, which has the library and the packages
-(ILGPU 1.5.3, BenchmarkDotNet 0.15.8). They use its classes `AssocStego`, `AssocStegoStream`, `EtalonFactory`,
-`GpuStegoEncryptor`, `GpuStegoDecryptor` and `AcceleratorSelector`. They were compiled against stand-ins for ILGPU
-and BenchmarkDotNet, because the packages could not be downloaded where the kit was written. On an emulation of the
-ILGPU runtime, every case of every class recovered its input byte by byte without leaking device buffers. They
-**were not compiled against the real packages**, so a small adjustment may be needed on the laptop.
+There are two ways to build the code:
+
+* **Inside the benchmark project of the thesis**, which has the library and the packages: copy the six `.cs` files of
+  this folder into that project (details below).
+* **Standalone** (`standalone/AssocRevision.csproj`), for a computer without that project: it compiles the library
+  listing of the thesis (`library/CpuGpuStego.cs`), a compatible `BitVector` (`measurement/AssocMeasure/Thesis/`) and
+  the files of this folder, with ILGPU 1.5.3, ILGPU.Algorithms 1.5.3 and BenchmarkDotNet 0.15.8 from NuGet. It needs
+  the .NET 8 SDK and the folder layout of this repository.
+
+The discrete GPU is selected with `AcceleratorSelector.Create(ExecutionMode.NvidiaDiscreteGpu)`, that is, through
+CUDA, and the integrated GPU with `AcceleratorSelector.Create(ExecutionMode.IntegratedGpu)`, through OpenCL. If a
+device is not available, its cases end with an error and the others run.
+
+The code was compiled against stand-ins for ILGPU and BenchmarkDotNet, because the packages could not be downloaded
+where the kit was written. On an emulation of the ILGPU runtime, every case of every class recovered its input byte by
+byte without leaking device buffers, also in the standalone layout with the library listing. The code **was not
+compiled against the real packages**, so a small adjustment may be needed.
 
 ## Files
 
@@ -20,7 +32,8 @@ ILGPU runtime, every case of every class recovered its input byte by byte withou
 | `RevEntry.cs` | Dispatcher of the commands `rev`, `rev-kernels` and `rev-env` |
 | `GpuStegoV2.cs`, `NewKernels.cs` | GPU encoder and decoder with the chunk size as a parameter and the search, branch-free and table-driven recognition kernels; copies of the original kernels |
 | `CpuParallelStego.cs` | CPU paths of the file scenario: one generator call per range or the GPU filler function, search or table, sequential or on all threads |
-| `run_revision.cmd` | Runs everything in order and collects the results in `results_A_revision` |
+| `run_revision.cmd` | Runs everything in order and collects the results in `results_revision` next to itself |
+| `standalone/` | `AssocRevision.csproj`, `Program.cs` and `GlobalUsings.cs` of the standalone build |
 
 ## Groups
 
@@ -44,26 +57,37 @@ search, a byte of `uniform` costs 12.3 comparisons on average and 22.9 at the le
 of `ff` costs 15.0 at both levels. If divergence limits the search kernel, `uniform` takes longer than `ff`; if the
 amount of work does, `ff` takes longer; if memory traffic does, both take about the same time.
 
-## Integration
+## Running
 
-1. Copy the six `.cs` files into the benchmark project of the thesis (the one with `StegoBenchmarks`).
+Inside the benchmark project of the thesis:
+
+1. Copy the six `.cs` files of this folder (not `standalone/`) into the benchmark project of the thesis (the one with
+   `StegoBenchmarks`).
 2. In `Program.Main`, insert as the first statement
    `if (args.Length > 0 && args[0].StartsWith("rev")) { RevEntry.Run(args); return; }`
    (or `return RevEntry.Run(args);` if `Main` returns `int`).
-3. Put `run_revision.cmd` into the project folder and run, from a console (not from Visual Studio, so that no
-   debugger is attached):
-   `run_revision.cmd <novel.txt> <repository>\data`
-   The first argument is the text file of the novel used in the paper; the second is the `data` folder of this
-   repository. A single group is run with a third argument, e.g. `run_revision.cmd novel.txt ..\data formation`;
-   `formation` (about 3 minutes) is a good first test.
+3. Put `run_revision.cmd` into the project folder.
 
-The whole run takes about 1–1.5 h. Every BenchmarkDotNet group writes its reports and its log, with the times of
-all warm-up and measured iterations, to `results_A_revision\<class>`.
+Standalone: nothing to prepare; `run_revision.cmd` stays in this folder and builds `standalone/AssocRevision.csproj`
+when there is no `.csproj` next to it.
+
+Then run, from a console (not from Visual Studio, so that no debugger is attached), on mains power:
+
+```
+run_revision.cmd <novel.txt> <repository>\data
+```
+
+The first argument is the text file of the novel used in the paper; the second is the `data` folder of this
+repository. A single group is run with a third argument, e.g. `run_revision.cmd novel.txt ..\..\data formation`;
+`formation` (a few minutes) is a good first test. The whole run takes about 1–1.5 h on configuration A and about
+1.5–2 h on configuration C, whose processor is slower. Every BenchmarkDotNet group writes its reports and its log,
+with the times of all warm-up and measured iterations, to `results_revision\<class>`; `env.txt` records the runtime,
+the packages, the devices and their drivers, and the power settings.
 
 ## Kernel profiles (optional)
 
 With Nsight Compute installed and access to the GPU performance counters allowed, the kernel launches of
-`rev-kernels` on the discrete GPU can be profiled:
+`rev-kernels` on the discrete GPU can be profiled, from the folder of the project that was built:
 
 ```
 ncu --target-processes all --set full --export rev_kernels_dgpu dotnet run -c Release --no-build -- rev-kernels <repository>\data 1 dGPU

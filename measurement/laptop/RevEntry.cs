@@ -1,5 +1,5 @@
-// Entry point of the revision measurements. In Program.Main of the benchmark project of the thesis, insert as the
-// first statement
+// Entry point of the revision measurements (standalone/Program.cs calls it in the standalone build). In Program.Main
+// of the benchmark project of the thesis, insert as the first statement
 //     if (args.Length > 0 && args[0].StartsWith("rev")) { RevEntry.Run(args); return; }
 // (write "return RevEntry.Run(args);" instead if Main returns int). Commands:
 //     rev --filter *RevBreakEven* [further BenchmarkDotNet options, e.g. --artifacts <folder>]
@@ -53,7 +53,7 @@ public static class RevEntry
             {
                 using var s = dev == "iGPU"
                     ? AcceleratorSelector.Create(ExecutionMode.IntegratedGpu)
-                    : AcceleratorSelector.CreateBestDiscreteGpuForBenchmarks();
+                    : AcceleratorSelector.Create(ExecutionMode.NvidiaDiscreteGpu);
                 if (s.Accelerator == null) { Console.WriteLine($"{dev}: not available. {s.Message}"); continue; }
                 var a = s.Accelerator;
                 Console.WriteLine($"{dev}: {a.Name}; backend {a.AcceleratorType}; memory {a.MemorySize >> 20} MB; " +

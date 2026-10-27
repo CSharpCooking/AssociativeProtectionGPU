@@ -4,3 +4,4 @@ results_run/
 analysis/output/
 __pycache__/
 *.pyc
+results_revision/

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Standalone build of the revision measurements, for a computer without the benchmark project of the thesis.
+       It compiles the library listing of the thesis (library/CpuGpuStego.cs), a compatible BitVector
+       (measurement/AssocMeasure/Thesis/BitVector.cs) and the .cs files of measurement/laptop. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Optimize>true</Optimize>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>$(NoWarn);CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8625</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ILGPU" Version="1.5.3" />
+    <PackageReference Include="ILGPU.Algorithms" Version="1.5.3" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs;GlobalUsings.cs" />
+    <Compile Include="..\*.cs" />
+    <Compile Include="..\..\..\library\CpuGpuStego.cs" Link="Library\CpuGpuStego.cs" />
+    <Compile Include="..\..\AssocMeasure\Thesis\BitVector.cs" Link="Library\BitVector.cs" />
+  </ItemGroup>
+</Project>

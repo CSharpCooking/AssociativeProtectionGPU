@@ -19,7 +19,7 @@ NIST SP 800-22 и скрипты, по которым пересчитывают
 | [`results/configuration_A/`](results/configuration_A/) | Сводные отчёты BenchmarkDotNet конфигурации A (изображения) и их значения (JSON, CSV) | табл. 4–6, рис. 2–3, разд. 7.2–7.4, 7.8, табл. S1 |
 | [`measurement/AssocMeasure/`](measurement/AssocMeasure/) | Консольная программа на .NET 8 для замеров CPU-части на конфигурациях B и C | разд. 5.2–5.3, 6.3–6.6 |
 | [`measurement/run_linux.sh`](measurement/run_linux.sh), [`run_windows.cmd`](measurement/run_windows.cmd) | Скрипты, выполняющие весь набор этих замеров | |
-| [`measurement/laptop/`](measurement/laptop/) | Код для дополнительных замеров GPU на конфигурации A; в статье не использован | разд. 8.7 |
+| [`measurement/laptop/`](measurement/laptop/) | Код для дополнительных замеров GPU (конфигурация A или другой ноутбук с GPU), с самостоятельной сборкой; в статье не использован | разд. 8.7 |
 | [`data/`](data/) | Шесть входных файлов по 10 МБ для конфигураций B и C, их контрольные суммы и происхождение | разд. 6.3 |
 | [`results/configuration_B/`](results/configuration_B/), [`results/configuration_C/`](results/configuration_C/) | Исходные результаты по итерациям, журналы, проверки ключей, отчёты NIST SP 800-22 | табл. 7–9, рис. 4, разд. 7.1, 7.5–7.7, табл. S2–S4 |
 | [`results/Supplementary_Tables_S1-S4.xlsx`](results/Supplementary_Tables_S1-S4.xlsx) | Таблицы S1–S4, на которые ссылается статья: полная статистика конфигурации A, замеры B и C с итерациями, парный дизайн, результаты NIST | разд. 6.7 |

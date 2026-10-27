@@ -19,7 +19,7 @@ inputs, the reports of the NIST SP 800-22 tests, and the scripts that recompute 
 | [`results/configuration_A/`](results/configuration_A/) | BenchmarkDotNet summary reports of configuration A (images) and their values (JSON, CSV) | Tables 4–6, Figures 2–3, Sections 7.2–7.4, 7.8, Table S1 |
 | [`measurement/AssocMeasure/`](measurement/AssocMeasure/) | .NET 8 console program of the CPU-side measurements on configurations B and C | Sections 5.2–5.3, 6.3–6.6 |
 | [`measurement/run_linux.sh`](measurement/run_linux.sh), [`run_windows.cmd`](measurement/run_windows.cmd) | Scripts that run the complete set of these measurements | |
-| [`measurement/laptop/`](measurement/laptop/) | Code for further GPU measurements on configuration A; not used in the paper | Section 8.7 |
+| [`measurement/laptop/`](measurement/laptop/) | Code for further GPU measurements (configuration A or another laptop with a GPU), with a standalone build; not used in the paper | Section 8.7 |
 | [`data/`](data/) | The six 10 MB inputs of configurations B and C, their checksums and origin | Section 6.3 |
 | [`results/configuration_B/`](results/configuration_B/), [`results/configuration_C/`](results/configuration_C/) | Raw per-iteration results, logs, key checks, NIST SP 800-22 reports | Tables 7–9, Figure 4, Sections 7.1, 7.5–7.7, Tables S2–S4 |
 | [`results/Supplementary_Tables_S1-S4.xlsx`](results/Supplementary_Tables_S1-S4.xlsx) | Tables S1–S4 to which the paper refers: complete statistics of configuration A, measurements of B and C with raw iterations, paired measurements, NIST results | Section 6.7 |

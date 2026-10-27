@@ -1,24 +1,27 @@
 @echo off
 rem Revision measurements on configuration A (laptop with the integrated and the discrete GPU).
-rem Put this file into the folder of the benchmark project of the thesis (the folder with its .csproj) after adding
-rem the .cs files of measurement/laptop to the project and the RevEntry line to Program.Main (see README.md).
+rem Two ways (see README.md): put this file into the folder of the benchmark project of the thesis (the folder with its
+rem .csproj) after adding the .cs files of measurement/laptop and the RevEntry line to Program.Main; or run it where it
+rem lies, in measurement/laptop of the repository, and it uses the standalone project in measurement/laptop/standalone.
 rem
 rem   run_revision.cmd <novel text file> <data folder of the repository> [group]
 rem
 rem group: all (default) or one of env, breakeven, fullcycle, formation, chunksize, recovery, recognition, kernels.
-rem Results: folder results_A_revision next to this file; send it as a zip archive.
+rem Results: folder results_revision next to this file; send it as a zip archive.
 setlocal
 if "%~2"=="" goto :usage
 set "ASSOC_INPUT=%~f1"
 set "ASSOC_DATA=%~f2"
 set "GROUP=%~3"
 if "%GROUP%"=="" set "GROUP=all"
-set "OUT=%~dp0results_A_revision"
+set "OUT=%~dp0results_revision"
 if not exist "%ASSOC_INPUT%" goto :notext
 if not exist "%ASSOC_DATA%\uniform_10MB.bin" goto :nodata
 echo  all env breakeven fullcycle formation chunksize recovery recognition kernels | findstr /i /c:" %GROUP%" >nul || goto :usage
 if not exist "%OUT%" mkdir "%OUT%"
-cd /d "%~dp0"
+set "PROJDIR=%~dp0"
+if not exist "%~dp0*.csproj" if exist "%~dp0standalone\AssocRevision.csproj" set "PROJDIR=%~dp0standalone\"
+cd /d "%PROJDIR%"
 
 echo [%time%] build
 dotnet build -c Release -nologo > "%OUT%\build.log" 2>&1
