@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Figures 2-4 of the paper (PNG, 300 dpi), written to analysis/output/.
-Run config_a.py and summarize.py (B and C) first.
+"""Figures 2-5 of the paper (PNG, 300 dpi), written to analysis/output/.
+Run config_a.py, summarize.py (B and C) and config_d.py first.
 
 usage: python3 analysis/figures.py"""
 import json, math
@@ -136,4 +136,29 @@ a4.set_xlim(3.8, 8.6)
 a4.set_xlabel('Bytes inspected per tried etalon'); a4.set_ylabel('Search time / mean over keys')
 a4.set_title('(d) dependence on the key, uniform data', fontsize=9.5, color=INK2, loc='left')
 fig.tight_layout(h_pad=1.6, rect=(0, 0, 1, 0.965)); fig.savefig(f'{OUT}/fig4.png'); plt.close(fig)
+# ---------------------------------------------------------------- Figure 5: break-even grid on configuration D
+DD = json.load(open(OUT / 'config_D.json'))
+g = DD['grid']
+kb = [r['kb'] for r in g]
+fig, (b1, b2) = plt.subplots(1, 2, figsize=(7.8, 3.6), dpi=300)
+for ax in (b1, b2): style(ax)
+for key, col, mk, name in (('cpu', AQUA, 'D', 'CPU-seq'), ('igpu', BLUE, 's', 'iGPU (OpenCL)'), ('dgpu', ORANGE, 'o', 'dGPU (CUDA)')):
+    m = [r[key][0] for r in g]; e = [r[key][1] for r in g]
+    b1.errorbar(kb, m, yerr=e, color=col, lw=1.8, marker=mk, ms=4.5, capsize=2, elinewidth=1, label=name,
+                markeredgecolor='white', markeredgewidth=0.6, zorder=3)
+b1.set_xlim(0, 104); b1.set_ylim(0, 28); b1.set_xticks(kb); b1.tick_params(axis='x', labelsize=8.5)
+b1.set_xlabel('Input volume, KB'); b1.set_ylabel('Full-cycle time, ms')
+b1.legend(loc='upper left', frameon=False, fontsize=8.5)
+b1.set_title('(a) time', fontsize=9.5, color=INK2, loc='left')
+for key, col, mk, name, dx in (('s_igpu', BLUE, 's', 'iGPU (OpenCL)', -0.8), ('s_dgpu', ORANGE, 'o', 'dGPU (CUDA)', 0.8)):
+    s_ = [r[key][0] for r in g]; lo = [r[key][0] - r[key][1] for r in g]; hi = [r[key][2] - r[key][0] for r in g]
+    b2.errorbar([v + dx for v in kb], s_, yerr=[lo, hi], color=col, lw=1.8, marker=mk, ms=4.5, capsize=2, elinewidth=1, label=name,
+                markeredgecolor='white', markeredgewidth=0.6, zorder=3)
+b2.axhline(1.0, color=INK2, lw=1, ls='--', zorder=1)
+b2.text(103, 1.06, 'break-even, S = 1', color=INK2, fontsize=8, va='bottom', ha='right')
+b2.set_xlim(0, 104); b2.set_ylim(0, 3.3); b2.set_xticks(kb); b2.tick_params(axis='x', labelsize=8.5)
+b2.set_xlabel('Input volume, KB'); b2.set_ylabel('Speedup S over CPU-seq')
+b2.legend(loc='upper left', frameon=False, fontsize=8.5)
+b2.set_title('(b) speedup', fontsize=9.5, color=INK2, loc='left')
+fig.tight_layout(w_pad=2.0); fig.savefig(f'{OUT}/fig5.png'); plt.close(fig)
 print('figures written to', OUT.relative_to(ROOT))

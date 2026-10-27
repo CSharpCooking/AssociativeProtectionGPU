@@ -3,3 +3,4 @@
 *.xlsx binary
 *.cmd text eol=crlf
 *.sh text eol=lf
+results/configuration_D/** -text

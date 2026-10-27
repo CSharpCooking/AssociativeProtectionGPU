@@ -1,0 +1,2004 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 12 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1/" /p:OutDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0/" /p:OutputPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0/" /p:PublishDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\publish/" in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1
+// command took 0.83 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1/" /p:OutDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0/" /p:OutputPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0/" /p:PublishDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\publish/" --output "C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0/" in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1
+// command took 2.91 sec and exited with 0
+// ***** Done, took 00:00:03 (3.78 sec)   *****
+// Found 12 benchmarks:
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-par]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-par-table]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-seq]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-seq-table]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-branchfree]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-table]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-v2]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-branchfree]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-table]
+//   RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-v2]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-par]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1388 1384 --benchmarkName "RevRecovery.Recovery(Mode: \"CPU-par\")" --job L1W3I15 --benchmarkId 0 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 88400.00 ns, 88.4000 us/op
+WorkloadJitting  1: 1 op, 204424600.00 ns, 204.4246 ms/op
+
+OverheadWarmup   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   2: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   5: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 184445400.00 ns, 184.4454 ms/op
+WorkloadWarmup   2: 1 op, 163888800.00 ns, 163.8888 ms/op
+WorkloadWarmup   3: 1 op, 153677500.00 ns, 153.6775 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 148243400.00 ns, 148.2434 ms/op
+WorkloadActual   2: 1 op, 135843600.00 ns, 135.8436 ms/op
+WorkloadActual   3: 1 op, 139066500.00 ns, 139.0665 ms/op
+WorkloadActual   4: 1 op, 168703100.00 ns, 168.7031 ms/op
+WorkloadActual   5: 1 op, 153437200.00 ns, 153.4372 ms/op
+WorkloadActual   6: 1 op, 157014200.00 ns, 157.0142 ms/op
+WorkloadActual   7: 1 op, 136605800.00 ns, 136.6058 ms/op
+WorkloadActual   8: 1 op, 143857800.00 ns, 143.8578 ms/op
+WorkloadActual   9: 1 op, 169174400.00 ns, 169.1744 ms/op
+WorkloadActual  10: 1 op, 155171300.00 ns, 155.1713 ms/op
+WorkloadActual  11: 1 op, 159557300.00 ns, 159.5573 ms/op
+WorkloadActual  12: 1 op, 153048200.00 ns, 153.0482 ms/op
+WorkloadActual  13: 1 op, 141738800.00 ns, 141.7388 ms/op
+WorkloadActual  14: 1 op, 148427600.00 ns, 148.4276 ms/op
+WorkloadActual  15: 1 op, 137494200.00 ns, 137.4942 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 148243200.00 ns, 148.2432 ms/op
+WorkloadResult   2: 1 op, 135843400.00 ns, 135.8434 ms/op
+WorkloadResult   3: 1 op, 139066300.00 ns, 139.0663 ms/op
+WorkloadResult   4: 1 op, 168702900.00 ns, 168.7029 ms/op
+WorkloadResult   5: 1 op, 153437000.00 ns, 153.4370 ms/op
+WorkloadResult   6: 1 op, 157014000.00 ns, 157.0140 ms/op
+WorkloadResult   7: 1 op, 136605600.00 ns, 136.6056 ms/op
+WorkloadResult   8: 1 op, 143857600.00 ns, 143.8576 ms/op
+WorkloadResult   9: 1 op, 169174200.00 ns, 169.1742 ms/op
+WorkloadResult  10: 1 op, 155171100.00 ns, 155.1711 ms/op
+WorkloadResult  11: 1 op, 159557100.00 ns, 159.5571 ms/op
+WorkloadResult  12: 1 op, 153048000.00 ns, 153.0480 ms/op
+WorkloadResult  13: 1 op, 141738600.00 ns, 141.7386 ms/op
+WorkloadResult  14: 1 op, 148427400.00 ns, 148.4274 ms/op
+WorkloadResult  15: 1 op, 137494000.00 ns, 137.4940 ms/op
+// GC:  0 0 0 26392032 1
+// Threading:  401 1 1
+
+// AfterAll
+// Benchmark Process 43376 has exited with code 0.
+
+Mean = 149.825 ms, StdErr = 2.822 ms (1.88%), N = 15, StdDev = 10.931 ms
+Min = 135.843 ms, Q1 = 140.402 ms, Median = 148.427 ms, Q3 = 156.093 ms, Max = 169.174 ms
+IQR = 15.690 ms, LowerFence = 116.867 ms, UpperFence = 179.628 ms
+ConfidenceInterval = [138.140 ms; 161.511 ms] (CI 99.9%), Margin = 11.685 ms (7.80% of Mean)
+Skewness = 0.34, Kurtosis = 1.82, MValue = 2
+
+// ** Remained 11 (91,7 %) benchmark(s) to run. Estimated finish 2026-10-27 13:59 (0h 6m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-par-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1404 1368 --benchmarkName "RevRecovery.Recovery(Mode: \"CPU-par-table\")" --job L1W3I15 --benchmarkId 1 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 93300.00 ns, 93.3000 us/op
+WorkloadJitting  1: 1 op, 117035200.00 ns, 117.0352 ms/op
+
+OverheadWarmup   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   2: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   7: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 314501500.00 ns, 314.5015 ms/op
+WorkloadWarmup   2: 1 op, 84473500.00 ns, 84.4735 ms/op
+WorkloadWarmup   3: 1 op, 86926800.00 ns, 86.9268 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 91335800.00 ns, 91.3358 ms/op
+WorkloadActual   2: 1 op, 84137700.00 ns, 84.1377 ms/op
+WorkloadActual   3: 1 op, 89300900.00 ns, 89.3009 ms/op
+WorkloadActual   4: 1 op, 84680000.00 ns, 84.6800 ms/op
+WorkloadActual   5: 1 op, 92923800.00 ns, 92.9238 ms/op
+WorkloadActual   6: 1 op, 83909700.00 ns, 83.9097 ms/op
+WorkloadActual   7: 1 op, 93311900.00 ns, 93.3119 ms/op
+WorkloadActual   8: 1 op, 84539000.00 ns, 84.5390 ms/op
+WorkloadActual   9: 1 op, 86913100.00 ns, 86.9131 ms/op
+WorkloadActual  10: 1 op, 87237500.00 ns, 87.2375 ms/op
+WorkloadActual  11: 1 op, 83668200.00 ns, 83.6682 ms/op
+WorkloadActual  12: 1 op, 81393600.00 ns, 81.3936 ms/op
+WorkloadActual  13: 1 op, 86529100.00 ns, 86.5291 ms/op
+WorkloadActual  14: 1 op, 88007000.00 ns, 88.0070 ms/op
+WorkloadActual  15: 1 op, 83966400.00 ns, 83.9664 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 91335600.00 ns, 91.3356 ms/op
+WorkloadResult   2: 1 op, 84137500.00 ns, 84.1375 ms/op
+WorkloadResult   3: 1 op, 89300700.00 ns, 89.3007 ms/op
+WorkloadResult   4: 1 op, 84679800.00 ns, 84.6798 ms/op
+WorkloadResult   5: 1 op, 92923600.00 ns, 92.9236 ms/op
+WorkloadResult   6: 1 op, 83909500.00 ns, 83.9095 ms/op
+WorkloadResult   7: 1 op, 93311700.00 ns, 93.3117 ms/op
+WorkloadResult   8: 1 op, 84538800.00 ns, 84.5388 ms/op
+WorkloadResult   9: 1 op, 86912900.00 ns, 86.9129 ms/op
+WorkloadResult  10: 1 op, 87237300.00 ns, 87.2373 ms/op
+WorkloadResult  11: 1 op, 83668000.00 ns, 83.6680 ms/op
+WorkloadResult  12: 1 op, 81393400.00 ns, 81.3934 ms/op
+WorkloadResult  13: 1 op, 86528900.00 ns, 86.5289 ms/op
+WorkloadResult  14: 1 op, 88006800.00 ns, 88.0068 ms/op
+WorkloadResult  15: 1 op, 83966200.00 ns, 83.9662 ms/op
+// GC:  0 0 0 26313192 1
+// Threading:  153 0 1
+
+// AfterAll
+// Benchmark Process 16636 has exited with code 0.
+
+Mean = 86.790 ms, StdErr = 0.927 ms (1.07%), N = 15, StdDev = 3.591 ms
+Min = 81.393 ms, Q1 = 84.052 ms, Median = 86.529 ms, Q3 = 88.654 ms, Max = 93.312 ms
+IQR = 4.602 ms, LowerFence = 77.149 ms, UpperFence = 95.557 ms
+ConfidenceInterval = [82.951 ms; 90.630 ms] (CI 99.9%), Margin = 3.840 ms (4.42% of Mean)
+Skewness = 0.5, Kurtosis = 1.95, MValue = 2.22
+
+// ** Remained 10 (83,3 %) benchmark(s) to run. Estimated finish 2026-10-27 13:59 (0h 6m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-seq]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1424 1420 --benchmarkName "RevRecovery.Recovery(Mode: \"CPU-seq\")" --job L1W3I15 --benchmarkId 2 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 94700.00 ns, 94.7000 us/op
+WorkloadJitting  1: 1 op, 858420600.00 ns, 858.4206 ms/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  14: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 100.00 ns, 100.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 609469800.00 ns, 609.4698 ms/op
+WorkloadWarmup   2: 1 op, 910952300.00 ns, 910.9523 ms/op
+WorkloadWarmup   3: 1 op, 833180100.00 ns, 833.1801 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 863163400.00 ns, 863.1634 ms/op
+WorkloadActual   2: 1 op, 865812000.00 ns, 865.8120 ms/op
+WorkloadActual   3: 1 op, 926500800.00 ns, 926.5008 ms/op
+WorkloadActual   4: 1 op, 889694400.00 ns, 889.6944 ms/op
+WorkloadActual   5: 1 op, 877715800.00 ns, 877.7158 ms/op
+WorkloadActual   6: 1 op, 879740400.00 ns, 879.7404 ms/op
+WorkloadActual   7: 1 op, 920901000.00 ns, 920.9010 ms/op
+WorkloadActual   8: 1 op, 669289100.00 ns, 669.2891 ms/op
+WorkloadActual   9: 1 op, 694933100.00 ns, 694.9331 ms/op
+WorkloadActual  10: 1 op, 901955700.00 ns, 901.9557 ms/op
+WorkloadActual  11: 1 op, 908411400.00 ns, 908.4114 ms/op
+WorkloadActual  12: 1 op, 713009900.00 ns, 713.0099 ms/op
+WorkloadActual  13: 1 op, 669206600.00 ns, 669.2066 ms/op
+WorkloadActual  14: 1 op, 726853500.00 ns, 726.8535 ms/op
+WorkloadActual  15: 1 op, 899577000.00 ns, 899.5770 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 863163300.00 ns, 863.1633 ms/op
+WorkloadResult   2: 1 op, 865811900.00 ns, 865.8119 ms/op
+WorkloadResult   3: 1 op, 926500700.00 ns, 926.5007 ms/op
+WorkloadResult   4: 1 op, 889694300.00 ns, 889.6943 ms/op
+WorkloadResult   5: 1 op, 877715700.00 ns, 877.7157 ms/op
+WorkloadResult   6: 1 op, 879740300.00 ns, 879.7403 ms/op
+WorkloadResult   7: 1 op, 920900900.00 ns, 920.9009 ms/op
+WorkloadResult   8: 1 op, 669289000.00 ns, 669.2890 ms/op
+WorkloadResult   9: 1 op, 694933000.00 ns, 694.9330 ms/op
+WorkloadResult  10: 1 op, 901955600.00 ns, 901.9556 ms/op
+WorkloadResult  11: 1 op, 908411300.00 ns, 908.4113 ms/op
+WorkloadResult  12: 1 op, 713009800.00 ns, 713.0098 ms/op
+WorkloadResult  13: 1 op, 669206500.00 ns, 669.2065 ms/op
+WorkloadResult  14: 1 op, 726853400.00 ns, 726.8534 ms/op
+WorkloadResult  15: 1 op, 899576900.00 ns, 899.5769 ms/op
+// GC:  0 0 0 11534936 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 32496 has exited with code 0.
+
+Mean = 827.118 ms, StdErr = 25.687 ms (3.11%), N = 15, StdDev = 99.486 ms
+Min = 669.207 ms, Q1 = 719.932 ms, Median = 877.716 ms, Q3 = 900.766 ms, Max = 926.501 ms
+IQR = 180.835 ms, LowerFence = 448.680 ms, UpperFence = 1,172.018 ms
+ConfidenceInterval = [720.760 ms; 933.475 ms] (CI 99.9%), Margin = 106.357 ms (12.86% of Mean)
+Skewness = -0.6, Kurtosis = 1.45, MValue = 3
+
+// ** Remained 9 (75,0 %) benchmark(s) to run. Estimated finish 2026-10-27 14:00 (0h 6m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-seq-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1460 1456 --benchmarkName "RevRecovery.Recovery(Mode: \"CPU-seq-table\")" --job L1W3I15 --benchmarkId 3 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 90900.00 ns, 90.9000 us/op
+WorkloadJitting  1: 1 op, 309672500.00 ns, 309.6725 ms/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 600.00 ns, 600.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   7: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  14: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 100.00 ns, 100.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 246299500.00 ns, 246.2995 ms/op
+WorkloadWarmup   2: 1 op, 244131300.00 ns, 244.1313 ms/op
+WorkloadWarmup   3: 1 op, 244925600.00 ns, 244.9256 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 243573800.00 ns, 243.5738 ms/op
+WorkloadActual   2: 1 op, 243032300.00 ns, 243.0323 ms/op
+WorkloadActual   3: 1 op, 247473400.00 ns, 247.4734 ms/op
+WorkloadActual   4: 1 op, 242670100.00 ns, 242.6701 ms/op
+WorkloadActual   5: 1 op, 201752700.00 ns, 201.7527 ms/op
+WorkloadActual   6: 1 op, 242456700.00 ns, 242.4567 ms/op
+WorkloadActual   7: 1 op, 242454100.00 ns, 242.4541 ms/op
+WorkloadActual   8: 1 op, 244837700.00 ns, 244.8377 ms/op
+WorkloadActual   9: 1 op, 242247900.00 ns, 242.2479 ms/op
+WorkloadActual  10: 1 op, 240907600.00 ns, 240.9076 ms/op
+WorkloadActual  11: 1 op, 244464200.00 ns, 244.4642 ms/op
+WorkloadActual  12: 1 op, 243922400.00 ns, 243.9224 ms/op
+WorkloadActual  13: 1 op, 241695000.00 ns, 241.6950 ms/op
+WorkloadActual  14: 1 op, 220419000.00 ns, 220.4190 ms/op
+WorkloadActual  15: 1 op, 243526300.00 ns, 243.5263 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 243573700.00 ns, 243.5737 ms/op
+WorkloadResult   2: 1 op, 243032200.00 ns, 243.0322 ms/op
+WorkloadResult   3: 1 op, 242670000.00 ns, 242.6700 ms/op
+WorkloadResult   4: 1 op, 201752600.00 ns, 201.7526 ms/op
+WorkloadResult   5: 1 op, 242456600.00 ns, 242.4566 ms/op
+WorkloadResult   6: 1 op, 242454000.00 ns, 242.4540 ms/op
+WorkloadResult   7: 1 op, 244837600.00 ns, 244.8376 ms/op
+WorkloadResult   8: 1 op, 242247800.00 ns, 242.2478 ms/op
+WorkloadResult   9: 1 op, 240907500.00 ns, 240.9075 ms/op
+WorkloadResult  10: 1 op, 244464100.00 ns, 244.4641 ms/op
+WorkloadResult  11: 1 op, 243922300.00 ns, 243.9223 ms/op
+WorkloadResult  12: 1 op, 241694900.00 ns, 241.6949 ms/op
+WorkloadResult  13: 1 op, 220418900.00 ns, 220.4189 ms/op
+WorkloadResult  14: 1 op, 243526200.00 ns, 243.5262 ms/op
+// GC:  0 0 0 26231672 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 27580 has exited with code 0.
+
+Mean = 238.426 ms, StdErr = 3.259 ms (1.37%), N = 14, StdDev = 12.193 ms
+Min = 201.753 ms, Q1 = 241.833 ms, Median = 242.563 ms, Q3 = 243.562 ms, Max = 244.838 ms
+IQR = 1.729 ms, LowerFence = 239.240 ms, UpperFence = 246.155 ms
+ConfidenceInterval = [224.671 ms; 252.180 ms] (CI 99.9%), Margin = 13.754 ms (5.77% of Mean)
+Skewness = -2.12, Kurtosis = 6.21, MValue = 2
+
+// ** Remained 8 (66,7 %) benchmark(s) to run. Estimated finish 2026-10-27 14:00 (0h 5m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 612 1380 --benchmarkName "RevRecovery.Recovery(Mode: \"dGPU\")" --job L1W3I15 --benchmarkId 4 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 96300.00 ns, 96.3000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 124389400.00 ns, 124.3894 ms/op
+
+OverheadWarmup   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 133697000.00 ns, 133.6970 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 127715700.00 ns, 127.7157 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 119984000.00 ns, 119.9840 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 123117600.00 ns, 123.1176 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 125289800.00 ns, 125.2898 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 109192000.00 ns, 109.1920 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 124657900.00 ns, 124.6579 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 133271800.00 ns, 133.2718 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 111079700.00 ns, 111.0797 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 124777300.00 ns, 124.7773 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 129359500.00 ns, 129.3595 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 118320000.00 ns, 118.3200 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 122277900.00 ns, 122.2779 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 116356500.00 ns, 116.3565 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 128396500.00 ns, 128.3965 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 126931500.00 ns, 126.9315 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 118760100.00 ns, 118.7601 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 130677300.00 ns, 130.6773 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 123117400.00 ns, 123.1174 ms/op
+WorkloadResult   2: 1 op, 125289600.00 ns, 125.2896 ms/op
+WorkloadResult   3: 1 op, 109191800.00 ns, 109.1918 ms/op
+WorkloadResult   4: 1 op, 124657700.00 ns, 124.6577 ms/op
+WorkloadResult   5: 1 op, 133271600.00 ns, 133.2716 ms/op
+WorkloadResult   6: 1 op, 111079500.00 ns, 111.0795 ms/op
+WorkloadResult   7: 1 op, 124777100.00 ns, 124.7771 ms/op
+WorkloadResult   8: 1 op, 129359300.00 ns, 129.3593 ms/op
+WorkloadResult   9: 1 op, 118319800.00 ns, 118.3198 ms/op
+WorkloadResult  10: 1 op, 122277700.00 ns, 122.2777 ms/op
+WorkloadResult  11: 1 op, 116356300.00 ns, 116.3563 ms/op
+WorkloadResult  12: 1 op, 128396300.00 ns, 128.3963 ms/op
+WorkloadResult  13: 1 op, 126931300.00 ns, 126.9313 ms/op
+WorkloadResult  14: 1 op, 118759900.00 ns, 118.7599 ms/op
+WorkloadResult  15: 1 op, 130677100.00 ns, 130.6771 ms/op
+// GC:  0 0 0 26750696 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 44364 has exited with code 0.
+
+Mean = 122.831 ms, StdErr = 1.796 ms (1.46%), N = 15, StdDev = 6.956 ms
+Min = 109.192 ms, Q1 = 118.540 ms, Median = 124.658 ms, Q3 = 127.664 ms, Max = 133.272 ms
+IQR = 9.124 ms, LowerFence = 104.854 ms, UpperFence = 141.350 ms
+ConfidenceInterval = [115.394 ms; 130.268 ms] (CI 99.9%), Margin = 7.437 ms (6.05% of Mean)
+Skewness = -0.48, Kurtosis = 2.13, MValue = 2
+
+// ** Remained 7 (58,3 %) benchmark(s) to run. Estimated finish 2026-10-27 13:58 (0h 3m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-branchfree]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1372 936 --benchmarkName "RevRecovery.Recovery(Mode: \"dGPU-branchfree\")" --job L1W3I15 --benchmarkId 5 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 96000.00 ns, 96.0000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 107244400.00 ns, 107.2444 ms/op
+
+OverheadWarmup   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   2: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 100.00 ns, 100.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 108777700.00 ns, 108.7777 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 104511300.00 ns, 104.5113 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 111265900.00 ns, 111.2659 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 111824300.00 ns, 111.8243 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 102491900.00 ns, 102.4919 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 102452600.00 ns, 102.4526 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 110380000.00 ns, 110.3800 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 107680800.00 ns, 107.6808 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 106600100.00 ns, 106.6001 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 108523200.00 ns, 108.5232 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 107999300.00 ns, 107.9993 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 106717700.00 ns, 106.7177 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 111207200.00 ns, 111.2072 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 105934700.00 ns, 105.9347 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 107123200.00 ns, 107.1232 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 108019400.00 ns, 108.0194 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 103013400.00 ns, 103.0134 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 106803300.00 ns, 106.8033 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 102491700.00 ns, 102.4917 ms/op
+WorkloadResult   2: 1 op, 102452400.00 ns, 102.4524 ms/op
+WorkloadResult   3: 1 op, 110379800.00 ns, 110.3798 ms/op
+WorkloadResult   4: 1 op, 107680600.00 ns, 107.6806 ms/op
+WorkloadResult   5: 1 op, 106599900.00 ns, 106.5999 ms/op
+WorkloadResult   6: 1 op, 108523000.00 ns, 108.5230 ms/op
+WorkloadResult   7: 1 op, 107999100.00 ns, 107.9991 ms/op
+WorkloadResult   8: 1 op, 106717500.00 ns, 106.7175 ms/op
+WorkloadResult   9: 1 op, 111207000.00 ns, 111.2070 ms/op
+WorkloadResult  10: 1 op, 105934500.00 ns, 105.9345 ms/op
+WorkloadResult  11: 1 op, 107123000.00 ns, 107.1230 ms/op
+WorkloadResult  12: 1 op, 108019200.00 ns, 108.0192 ms/op
+WorkloadResult  13: 1 op, 103013200.00 ns, 103.0132 ms/op
+WorkloadResult  14: 1 op, 106803100.00 ns, 106.8031 ms/op
+// GC:  0 0 0 26750464 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 34944 has exited with code 0.
+
+Mean = 106.782 ms, StdErr = 0.709 ms (0.66%), N = 14, StdDev = 2.655 ms
+Min = 102.452 ms, Q1 = 106.101 ms, Median = 106.963 ms, Q3 = 108.014 ms, Max = 111.207 ms
+IQR = 1.913 ms, LowerFence = 103.231 ms, UpperFence = 110.884 ms
+ConfidenceInterval = [103.787 ms; 109.776 ms] (CI 99.9%), Margin = 2.994 ms (2.80% of Mean)
+Skewness = -0.27, Kurtosis = 2.1, MValue = 2
+
+// ** Remained 6 (50,0 %) benchmark(s) to run. Estimated finish 2026-10-27 13:58 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1572 1564 --benchmarkName "RevRecovery.Recovery(Mode: \"dGPU-table\")" --job L1W3I15 --benchmarkId 6 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 115400.00 ns, 115.4000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 105585400.00 ns, 105.5854 ms/op
+
+OverheadWarmup   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   2: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 100.00 ns, 100.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 103545100.00 ns, 103.5451 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 103972600.00 ns, 103.9726 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 101114700.00 ns, 101.1147 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 101361500.00 ns, 101.3615 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 98331700.00 ns, 98.3317 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 101098100.00 ns, 101.0981 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 101688800.00 ns, 101.6888 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 99990300.00 ns, 99.9903 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 103500700.00 ns, 103.5007 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 102750900.00 ns, 102.7509 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 100417500.00 ns, 100.4175 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 101495500.00 ns, 101.4955 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 101611300.00 ns, 101.6113 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 102810000.00 ns, 102.8100 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 102921800.00 ns, 102.9218 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 102286300.00 ns, 102.2863 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 99855600.00 ns, 99.8556 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 100030700.00 ns, 100.0307 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 101361400.00 ns, 101.3614 ms/op
+WorkloadResult   2: 1 op, 98331600.00 ns, 98.3316 ms/op
+WorkloadResult   3: 1 op, 101098000.00 ns, 101.0980 ms/op
+WorkloadResult   4: 1 op, 101688700.00 ns, 101.6887 ms/op
+WorkloadResult   5: 1 op, 99990200.00 ns, 99.9902 ms/op
+WorkloadResult   6: 1 op, 103500600.00 ns, 103.5006 ms/op
+WorkloadResult   7: 1 op, 102750800.00 ns, 102.7508 ms/op
+WorkloadResult   8: 1 op, 100417400.00 ns, 100.4174 ms/op
+WorkloadResult   9: 1 op, 101495400.00 ns, 101.4954 ms/op
+WorkloadResult  10: 1 op, 101611200.00 ns, 101.6112 ms/op
+WorkloadResult  11: 1 op, 102809900.00 ns, 102.8099 ms/op
+WorkloadResult  12: 1 op, 102921700.00 ns, 102.9217 ms/op
+WorkloadResult  13: 1 op, 102286200.00 ns, 102.2862 ms/op
+WorkloadResult  14: 1 op, 99855500.00 ns, 99.8555 ms/op
+WorkloadResult  15: 1 op, 100030600.00 ns, 100.0306 ms/op
+// GC:  0 0 0 26750464 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 31396 has exited with code 0.
+
+Mean = 101.343 ms, StdErr = 0.366 ms (0.36%), N = 15, StdDev = 1.418 ms
+Min = 98.332 ms, Q1 = 100.224 ms, Median = 101.495 ms, Q3 = 102.519 ms, Max = 103.501 ms
+IQR = 2.295 ms, LowerFence = 96.782 ms, UpperFence = 105.960 ms
+ConfidenceInterval = [99.828 ms; 102.859 ms] (CI 99.9%), Margin = 1.516 ms (1.50% of Mean)
+Skewness = -0.36, Kurtosis = 2.17, MValue = 2
+
+// ** Remained 5 (41,7 %) benchmark(s) to run. Estimated finish 2026-10-27 13:57 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-v2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1460 1600 --benchmarkName "RevRecovery.Recovery(Mode: \"dGPU-v2\")" --job L1W3I15 --benchmarkId 7 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 161000.00 ns, 161.0000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 123573500.00 ns, 123.5735 ms/op
+
+OverheadWarmup   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   2: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   3: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 100.00 ns, 100.0000 ns/op
+
+OverheadActual   1: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   5: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  14: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 100.00 ns, 100.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 125787900.00 ns, 125.7879 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 115755000.00 ns, 115.7550 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 132982300.00 ns, 132.9823 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 122873700.00 ns, 122.8737 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 121495900.00 ns, 121.4959 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 123429600.00 ns, 123.4296 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 125175900.00 ns, 125.1759 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 109757800.00 ns, 109.7578 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 125896700.00 ns, 125.8967 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 111726200.00 ns, 111.7262 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 122657300.00 ns, 122.6573 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 133179100.00 ns, 133.1791 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 115255600.00 ns, 115.2556 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 130758700.00 ns, 130.7587 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 122374100.00 ns, 122.3741 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 119343400.00 ns, 119.3434 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 113647200.00 ns, 113.6472 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 131297900.00 ns, 131.2979 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 122873600.00 ns, 122.8736 ms/op
+WorkloadResult   2: 1 op, 121495800.00 ns, 121.4958 ms/op
+WorkloadResult   3: 1 op, 123429500.00 ns, 123.4295 ms/op
+WorkloadResult   4: 1 op, 125175800.00 ns, 125.1758 ms/op
+WorkloadResult   5: 1 op, 109757700.00 ns, 109.7577 ms/op
+WorkloadResult   6: 1 op, 125896600.00 ns, 125.8966 ms/op
+WorkloadResult   7: 1 op, 111726100.00 ns, 111.7261 ms/op
+WorkloadResult   8: 1 op, 122657200.00 ns, 122.6572 ms/op
+WorkloadResult   9: 1 op, 133179000.00 ns, 133.1790 ms/op
+WorkloadResult  10: 1 op, 115255500.00 ns, 115.2555 ms/op
+WorkloadResult  11: 1 op, 130758600.00 ns, 130.7586 ms/op
+WorkloadResult  12: 1 op, 122374000.00 ns, 122.3740 ms/op
+WorkloadResult  13: 1 op, 119343300.00 ns, 119.3433 ms/op
+WorkloadResult  14: 1 op, 113647100.00 ns, 113.6471 ms/op
+WorkloadResult  15: 1 op, 131297800.00 ns, 131.2978 ms/op
+// GC:  0 0 0 26750464 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 31764 has exited with code 0.
+
+Mean = 121.925 ms, StdErr = 1.819 ms (1.49%), N = 15, StdDev = 7.044 ms
+Min = 109.758 ms, Q1 = 117.299 ms, Median = 122.657 ms, Q3 = 125.536 ms, Max = 133.179 ms
+IQR = 8.237 ms, LowerFence = 104.944 ms, UpperFence = 137.891 ms
+ConfidenceInterval = [114.394 ms; 129.455 ms] (CI 99.9%), Margin = 7.531 ms (6.18% of Mean)
+Skewness = -0.13, Kurtosis = 1.89, MValue = 3
+
+// ** Remained 4 (33,3 %) benchmark(s) to run. Estimated finish 2026-10-27 13:56 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1372 1588 --benchmarkName "RevRecovery.Recovery(Mode: \"iGPU\")" --job L1W3I15 --benchmarkId 8 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 100600.00 ns, 100.6000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 352943300.00 ns, 352.9433 ms/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   7: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 331952100.00 ns, 331.9521 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 354600200.00 ns, 354.6002 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 307180600.00 ns, 307.1806 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 346140000.00 ns, 346.1400 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 287608800.00 ns, 287.6088 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 342604600.00 ns, 342.6046 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 351354600.00 ns, 351.3546 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 297159500.00 ns, 297.1595 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 310340700.00 ns, 310.3407 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 303253100.00 ns, 303.2531 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 363699300.00 ns, 363.6993 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 337445400.00 ns, 337.4454 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 339760100.00 ns, 339.7601 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 346039000.00 ns, 346.0390 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 317349600.00 ns, 317.3496 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 354543800.00 ns, 354.5438 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 356885200.00 ns, 356.8852 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 333899600.00 ns, 333.8996 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+��ࠡ�⪠ 20 ������...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 346139800.00 ns, 346.1398 ms/op
+WorkloadResult   2: 1 op, 287608600.00 ns, 287.6086 ms/op
+WorkloadResult   3: 1 op, 342604400.00 ns, 342.6044 ms/op
+WorkloadResult   4: 1 op, 351354400.00 ns, 351.3544 ms/op
+WorkloadResult   5: 1 op, 297159300.00 ns, 297.1593 ms/op
+WorkloadResult   6: 1 op, 310340500.00 ns, 310.3405 ms/op
+WorkloadResult   7: 1 op, 303252900.00 ns, 303.2529 ms/op
+WorkloadResult   8: 1 op, 363699100.00 ns, 363.6991 ms/op
+WorkloadResult   9: 1 op, 337445200.00 ns, 337.4452 ms/op
+WorkloadResult  10: 1 op, 339759900.00 ns, 339.7599 ms/op
+WorkloadResult  11: 1 op, 346038800.00 ns, 346.0388 ms/op
+WorkloadResult  12: 1 op, 317349400.00 ns, 317.3494 ms/op
+WorkloadResult  13: 1 op, 354543600.00 ns, 354.5436 ms/op
+WorkloadResult  14: 1 op, 356885000.00 ns, 356.8850 ms/op
+WorkloadResult  15: 1 op, 333899400.00 ns, 333.8994 ms/op
+// GC:  0 0 0 26755176 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 30924 has exited with code 0.
+
+Mean = 332.539 ms, StdErr = 6.095 ms (1.83%), N = 15, StdDev = 23.604 ms
+Min = 287.609 ms, Q1 = 313.845 ms, Median = 339.760 ms, Q3 = 348.747 ms, Max = 363.699 ms
+IQR = 34.902 ms, LowerFence = 261.492 ms, UpperFence = 401.100 ms
+ConfidenceInterval = [307.304 ms; 357.773 ms] (CI 99.9%), Margin = 25.234 ms (7.59% of Mean)
+Skewness = -0.54, Kurtosis = 1.81, MValue = 2.89
+
+// ** Remained 3 (25,0 %) benchmark(s) to run. Estimated finish 2026-10-27 13:56 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-branchfree]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1580 1604 --benchmarkName "RevRecovery.Recovery(Mode: \"iGPU-branchfree\")" --job L1W3I15 --benchmarkId 9 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 110600.00 ns, 110.6000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 645220600.00 ns, 645.2206 ms/op
+
+OverheadWarmup   1: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   7: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 646694400.00 ns, 646.6944 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 646249700.00 ns, 646.2497 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 640704000.00 ns, 640.7040 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 644491900.00 ns, 644.4919 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 648886800.00 ns, 648.8868 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 644377500.00 ns, 644.3775 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 638088800.00 ns, 638.0888 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 637721000.00 ns, 637.7210 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 644930900.00 ns, 644.9309 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 663862000.00 ns, 663.8620 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 643073700.00 ns, 643.0737 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 651162600.00 ns, 651.1626 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 641141000.00 ns, 641.1410 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 647783900.00 ns, 647.7839 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 639702200.00 ns, 639.7022 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 648359500.00 ns, 648.3595 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 660256700.00 ns, 660.2567 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 663954600.00 ns, 663.9546 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 644491700.00 ns, 644.4917 ms/op
+WorkloadResult   2: 1 op, 648886600.00 ns, 648.8866 ms/op
+WorkloadResult   3: 1 op, 644377300.00 ns, 644.3773 ms/op
+WorkloadResult   4: 1 op, 638088600.00 ns, 638.0886 ms/op
+WorkloadResult   5: 1 op, 637720800.00 ns, 637.7208 ms/op
+WorkloadResult   6: 1 op, 644930700.00 ns, 644.9307 ms/op
+WorkloadResult   7: 1 op, 643073500.00 ns, 643.0735 ms/op
+WorkloadResult   8: 1 op, 651162400.00 ns, 651.1624 ms/op
+WorkloadResult   9: 1 op, 641140800.00 ns, 641.1408 ms/op
+WorkloadResult  10: 1 op, 647783700.00 ns, 647.7837 ms/op
+WorkloadResult  11: 1 op, 639702000.00 ns, 639.7020 ms/op
+WorkloadResult  12: 1 op, 648359300.00 ns, 648.3593 ms/op
+WorkloadResult  13: 1 op, 660256500.00 ns, 660.2565 ms/op
+// GC:  0 0 0 26754944 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 28592 has exited with code 0.
+
+Mean = 645.383 ms, StdErr = 1.700 ms (0.26%), N = 13, StdDev = 6.131 ms
+Min = 637.721 ms, Q1 = 641.141 ms, Median = 644.492 ms, Q3 = 648.359 ms, Max = 660.256 ms
+IQR = 7.218 ms, LowerFence = 630.313 ms, UpperFence = 659.187 ms
+ConfidenceInterval = [638.041 ms; 652.725 ms] (CI 99.9%), Margin = 7.342 ms (1.14% of Mean)
+Skewness = 0.82, Kurtosis = 3.16, MValue = 2
+
+// ** Remained 2 (16,7 %) benchmark(s) to run. Estimated finish 2026-10-27 13:56 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1556 1624 --benchmarkName "RevRecovery.Recovery(Mode: \"iGPU-table\")" --job L1W3I15 --benchmarkId 10 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 101700.00 ns, 101.7000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 143483200.00 ns, 143.4832 ms/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  13: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 148565800.00 ns, 148.5658 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 146708900.00 ns, 146.7089 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 147202100.00 ns, 147.2021 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 148811800.00 ns, 148.8118 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 146840100.00 ns, 146.8401 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 146987500.00 ns, 146.9875 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 139129900.00 ns, 139.1299 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 144091800.00 ns, 144.0918 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 145829400.00 ns, 145.8294 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 144632800.00 ns, 144.6328 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 145728500.00 ns, 145.7285 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 147518200.00 ns, 147.5182 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 145352500.00 ns, 145.3525 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 146445500.00 ns, 146.4455 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 142568800.00 ns, 142.5688 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 148500000.00 ns, 148.5000 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 148489400.00 ns, 148.4894 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 150220800.00 ns, 150.2208 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 148811600.00 ns, 148.8116 ms/op
+WorkloadResult   2: 1 op, 146839900.00 ns, 146.8399 ms/op
+WorkloadResult   3: 1 op, 146987300.00 ns, 146.9873 ms/op
+WorkloadResult   4: 1 op, 139129700.00 ns, 139.1297 ms/op
+WorkloadResult   5: 1 op, 144091600.00 ns, 144.0916 ms/op
+WorkloadResult   6: 1 op, 145829200.00 ns, 145.8292 ms/op
+WorkloadResult   7: 1 op, 144632600.00 ns, 144.6326 ms/op
+WorkloadResult   8: 1 op, 145728300.00 ns, 145.7283 ms/op
+WorkloadResult   9: 1 op, 147518000.00 ns, 147.5180 ms/op
+WorkloadResult  10: 1 op, 145352300.00 ns, 145.3523 ms/op
+WorkloadResult  11: 1 op, 146445300.00 ns, 146.4453 ms/op
+WorkloadResult  12: 1 op, 142568600.00 ns, 142.5686 ms/op
+WorkloadResult  13: 1 op, 148499800.00 ns, 148.4998 ms/op
+WorkloadResult  14: 1 op, 148489200.00 ns, 148.4892 ms/op
+WorkloadResult  15: 1 op, 150220600.00 ns, 150.2206 ms/op
+// GC:  0 0 0 26754944 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 40636 has exited with code 0.
+
+Mean = 146.076 ms, StdErr = 0.715 ms (0.49%), N = 15, StdDev = 2.768 ms
+Min = 139.130 ms, Q1 = 144.992 ms, Median = 146.445 ms, Q3 = 148.004 ms, Max = 150.221 ms
+IQR = 3.011 ms, LowerFence = 140.476 ms, UpperFence = 152.520 ms
+ConfidenceInterval = [143.117 ms; 149.035 ms] (CI 99.9%), Margin = 2.959 ms (2.03% of Mean)
+Skewness = -0.83, Kurtosis = 3.32, MValue = 2
+
+// ** Remained 1 (8,3 %) benchmark(s) to run. Estimated finish 2026-10-27 13:56 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-v2]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W3I15-1.dll --anonymousPipes 1624 616 --benchmarkName "RevRecovery.Recovery(Mode: \"iGPU-v2\")" --job L1W3I15 --benchmarkId 11 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W3I15-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 93500.00 ns, 93.5000 us/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadJitting  1: 1 op, 333713300.00 ns, 333.7133 ms/op
+
+OverheadWarmup   1: 1 op, 600.00 ns, 600.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   1: 1 op, 371400000.00 ns, 371.4000 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   2: 1 op, 333296700.00 ns, 333.2967 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadWarmup   3: 1 op, 310608300.00 ns, 310.6083 ms/op
+
+// BeforeActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   1: 1 op, 303990600.00 ns, 303.9906 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   2: 1 op, 338559000.00 ns, 338.5590 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   3: 1 op, 366603400.00 ns, 366.6034 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   4: 1 op, 314399000.00 ns, 314.3990 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   5: 1 op, 324985100.00 ns, 324.9851 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   6: 1 op, 331928200.00 ns, 331.9282 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   7: 1 op, 372038800.00 ns, 372.0388 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   8: 1 op, 327035400.00 ns, 327.0354 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual   9: 1 op, 327272200.00 ns, 327.2722 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  10: 1 op, 351741700.00 ns, 351.7417 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  11: 1 op, 354802900.00 ns, 354.8029 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  12: 1 op, 300368500.00 ns, 300.3685 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  13: 1 op, 341504400.00 ns, 341.5044 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  14: 1 op, 310667700.00 ns, 310.6677 ms/op
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadActual  15: 1 op, 343964800.00 ns, 343.9648 ms/op
+
+// AfterActualRun
+��ࠡ�⪠ 20 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/20 (5,0%)
+��ࠡ�⠭ ���� 11/20 (55,0%)
+WorkloadResult   1: 1 op, 303990400.00 ns, 303.9904 ms/op
+WorkloadResult   2: 1 op, 338558800.00 ns, 338.5588 ms/op
+WorkloadResult   3: 1 op, 366603200.00 ns, 366.6032 ms/op
+WorkloadResult   4: 1 op, 314398800.00 ns, 314.3988 ms/op
+WorkloadResult   5: 1 op, 324984900.00 ns, 324.9849 ms/op
+WorkloadResult   6: 1 op, 331928000.00 ns, 331.9280 ms/op
+WorkloadResult   7: 1 op, 372038600.00 ns, 372.0386 ms/op
+WorkloadResult   8: 1 op, 327035200.00 ns, 327.0352 ms/op
+WorkloadResult   9: 1 op, 327272000.00 ns, 327.2720 ms/op
+WorkloadResult  10: 1 op, 351741500.00 ns, 351.7415 ms/op
+WorkloadResult  11: 1 op, 354802700.00 ns, 354.8027 ms/op
+WorkloadResult  12: 1 op, 300368300.00 ns, 300.3683 ms/op
+WorkloadResult  13: 1 op, 341504200.00 ns, 341.5042 ms/op
+WorkloadResult  14: 1 op, 310667500.00 ns, 310.6675 ms/op
+WorkloadResult  15: 1 op, 343964600.00 ns, 343.9646 ms/op
+// GC:  0 0 0 26754944 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 30672 has exited with code 0.
+
+Mean = 333.991 ms, StdErr = 5.595 ms (1.68%), N = 15, StdDev = 21.669 ms
+Min = 300.368 ms, Q1 = 319.692 ms, Median = 331.928 ms, Q3 = 347.853 ms, Max = 372.039 ms
+IQR = 28.161 ms, LowerFence = 277.450 ms, UpperFence = 390.095 ms
+ConfidenceInterval = [310.825 ms; 357.156 ms] (CI 99.9%), Margin = 23.165 ms (6.94% of Mean)
+Skewness = 0.13, Kurtosis = 1.84, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2026-10-27 13:56 (0h 0m from now) **
+Successfully reverted power plan (GUID: 64a64f24-65b9-4b56-befd-5ec1eaced9b3 FriendlyName: Silent)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  C:\assoc\AssociativeProtectionGPU\measurement\laptop\results_revision\RevRecovery\results\RevRecovery-report.csv
+  C:\assoc\AssociativeProtectionGPU\measurement\laptop\results_revision\RevRecovery\results\RevRecovery-report-github.md
+  C:\assoc\AssociativeProtectionGPU\measurement\laptop\results_revision\RevRecovery\results\RevRecovery-report.html
+
+// * Detailed results *
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-par]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 149.825 ms, StdErr = 2.822 ms (1.88%), N = 15, StdDev = 10.931 ms
+Min = 135.843 ms, Q1 = 140.402 ms, Median = 148.427 ms, Q3 = 156.093 ms, Max = 169.174 ms
+IQR = 15.690 ms, LowerFence = 116.867 ms, UpperFence = 179.628 ms
+ConfidenceInterval = [138.140 ms; 161.511 ms] (CI 99.9%), Margin = 11.685 ms (7.80% of Mean)
+Skewness = 0.34, Kurtosis = 1.82, MValue = 2
+-------------------- Histogram --------------------
+[134.033 ms ; 148.083 ms) | @@@@@@
+[148.083 ms ; 163.121 ms) | @@@@@@@
+[163.121 ms ; 174.991 ms) | @@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-par-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 86.790 ms, StdErr = 0.927 ms (1.07%), N = 15, StdDev = 3.591 ms
+Min = 81.393 ms, Q1 = 84.052 ms, Median = 86.529 ms, Q3 = 88.654 ms, Max = 93.312 ms
+IQR = 4.602 ms, LowerFence = 77.149 ms, UpperFence = 95.557 ms
+ConfidenceInterval = [82.951 ms; 90.630 ms] (CI 99.9%), Margin = 3.840 ms (4.42% of Mean)
+Skewness = 0.5, Kurtosis = 1.95, MValue = 2.22
+-------------------- Histogram --------------------
+[79.482 ms ; 83.541 ms) | @
+[83.541 ms ; 87.364 ms) | @@@@@@@@@
+[87.364 ms ; 90.412 ms) | @@
+[90.412 ms ; 94.235 ms) | @@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-seq]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 827.118 ms, StdErr = 25.687 ms (3.11%), N = 15, StdDev = 99.486 ms
+Min = 669.207 ms, Q1 = 719.932 ms, Median = 877.716 ms, Q3 = 900.766 ms, Max = 926.501 ms
+IQR = 180.835 ms, LowerFence = 448.680 ms, UpperFence = 1,172.018 ms
+ConfidenceInterval = [720.760 ms; 933.475 ms] (CI 99.9%), Margin = 106.357 ms (12.86% of Mean)
+Skewness = -0.6, Kurtosis = 1.45, MValue = 3
+-------------------- Histogram --------------------
+[645.084 ms ; 750.976 ms) | @@@@@
+[750.976 ms ; 841.886 ms) | 
+[841.886 ms ; 947.778 ms) | @@@@@@@@@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=CPU-seq-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 238.426 ms, StdErr = 3.259 ms (1.37%), N = 14, StdDev = 12.193 ms
+Min = 201.753 ms, Q1 = 241.833 ms, Median = 242.563 ms, Q3 = 243.562 ms, Max = 244.838 ms
+IQR = 1.729 ms, LowerFence = 239.240 ms, UpperFence = 246.155 ms
+ConfidenceInterval = [224.671 ms; 252.180 ms] (CI 99.9%), Margin = 13.754 ms (5.77% of Mean)
+Skewness = -2.12, Kurtosis = 6.21, MValue = 2
+-------------------- Histogram --------------------
+[195.113 ms ; 208.392 ms) | @
+[208.392 ms ; 213.779 ms) | 
+[213.779 ms ; 227.059 ms) | @
+[227.059 ms ; 236.233 ms) | 
+[236.233 ms ; 251.477 ms) | @@@@@@@@@@@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 122.831 ms, StdErr = 1.796 ms (1.46%), N = 15, StdDev = 6.956 ms
+Min = 109.192 ms, Q1 = 118.540 ms, Median = 124.658 ms, Q3 = 127.664 ms, Max = 133.272 ms
+IQR = 9.124 ms, LowerFence = 104.854 ms, UpperFence = 141.350 ms
+ConfidenceInterval = [115.394 ms; 130.268 ms] (CI 99.9%), Margin = 7.437 ms (6.05% of Mean)
+Skewness = -0.48, Kurtosis = 2.13, MValue = 2
+-------------------- Histogram --------------------
+[105.490 ms ; 113.856 ms) | @@
+[113.856 ms ; 122.116 ms) | @@@
+[122.116 ms ; 129.521 ms) | @@@@@@@@
+[129.521 ms ; 136.974 ms) | @@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-branchfree]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 106.782 ms, StdErr = 0.709 ms (0.66%), N = 14, StdDev = 2.655 ms
+Min = 102.452 ms, Q1 = 106.101 ms, Median = 106.963 ms, Q3 = 108.014 ms, Max = 111.207 ms
+IQR = 1.913 ms, LowerFence = 103.231 ms, UpperFence = 110.884 ms
+ConfidenceInterval = [103.787 ms; 109.776 ms] (CI 99.9%), Margin = 2.994 ms (2.80% of Mean)
+Skewness = -0.27, Kurtosis = 2.1, MValue = 2
+-------------------- Histogram --------------------
+[101.007 ms ; 104.178 ms) | @@@
+[104.178 ms ; 108.674 ms) | @@@@@@@@@
+[108.674 ms ; 112.653 ms) | @@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 101.343 ms, StdErr = 0.366 ms (0.36%), N = 15, StdDev = 1.418 ms
+Min = 98.332 ms, Q1 = 100.224 ms, Median = 101.495 ms, Q3 = 102.519 ms, Max = 103.501 ms
+IQR = 2.295 ms, LowerFence = 96.782 ms, UpperFence = 105.960 ms
+ConfidenceInterval = [99.828 ms; 102.859 ms] (CI 99.9%), Margin = 1.516 ms (1.50% of Mean)
+Skewness = -0.36, Kurtosis = 2.17, MValue = 2
+-------------------- Histogram --------------------
+[ 97.577 ms ; 101.186 ms) | @@@@@@
+[101.186 ms ; 104.255 ms) | @@@@@@@@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=dGPU-v2]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 121.925 ms, StdErr = 1.819 ms (1.49%), N = 15, StdDev = 7.044 ms
+Min = 109.758 ms, Q1 = 117.299 ms, Median = 122.657 ms, Q3 = 125.536 ms, Max = 133.179 ms
+IQR = 8.237 ms, LowerFence = 104.944 ms, UpperFence = 137.891 ms
+ConfidenceInterval = [114.394 ms; 129.455 ms] (CI 99.9%), Margin = 7.531 ms (6.18% of Mean)
+Skewness = -0.13, Kurtosis = 1.89, MValue = 3
+-------------------- Histogram --------------------
+[108.758 ms ; 116.255 ms) | @@@@
+[116.255 ms ; 118.871 ms) | 
+[118.871 ms ; 128.220 ms) | @@@@@@@@
+[128.220 ms ; 136.928 ms) | @@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 332.539 ms, StdErr = 6.095 ms (1.83%), N = 15, StdDev = 23.604 ms
+Min = 287.609 ms, Q1 = 313.845 ms, Median = 339.760 ms, Q3 = 348.747 ms, Max = 363.699 ms
+IQR = 34.902 ms, LowerFence = 261.492 ms, UpperFence = 401.100 ms
+ConfidenceInterval = [307.304 ms; 357.773 ms] (CI 99.9%), Margin = 25.234 ms (7.59% of Mean)
+Skewness = -0.54, Kurtosis = 1.81, MValue = 2.89
+-------------------- Histogram --------------------
+[275.047 ms ; 294.692 ms) | @
+[294.692 ms ; 319.816 ms) | @@@@
+[319.816 ms ; 332.830 ms) | 
+[332.830 ms ; 357.954 ms) | @@@@@@@@@
+[357.954 ms ; 376.261 ms) | @
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-branchfree]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 645.383 ms, StdErr = 1.700 ms (0.26%), N = 13, StdDev = 6.131 ms
+Min = 637.721 ms, Q1 = 641.141 ms, Median = 644.492 ms, Q3 = 648.359 ms, Max = 660.256 ms
+IQR = 7.218 ms, LowerFence = 630.313 ms, UpperFence = 659.187 ms
+ConfidenceInterval = [638.041 ms; 652.725 ms] (CI 99.9%), Margin = 7.342 ms (1.14% of Mean)
+Skewness = 0.82, Kurtosis = 3.16, MValue = 2
+-------------------- Histogram --------------------
+[634.299 ms ; 663.679 ms) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 146.076 ms, StdErr = 0.715 ms (0.49%), N = 15, StdDev = 2.768 ms
+Min = 139.130 ms, Q1 = 144.992 ms, Median = 146.445 ms, Q3 = 148.004 ms, Max = 150.221 ms
+IQR = 3.011 ms, LowerFence = 140.476 ms, UpperFence = 152.520 ms
+ConfidenceInterval = [143.117 ms; 149.035 ms] (CI 99.9%), Margin = 2.959 ms (2.03% of Mean)
+Skewness = -0.83, Kurtosis = 3.32, MValue = 2
+-------------------- Histogram --------------------
+[137.657 ms ; 142.487 ms) | @
+[142.487 ms ; 145.641 ms) | @@@@
+[145.641 ms ; 151.694 ms) | @@@@@@@@@@
+---------------------------------------------------
+
+RevRecovery.Recovery: L1W3I15(InvocationCount=1, IterationCount=15, LaunchCount=1, UnrollFactor=1, WarmupCount=3) [Mode=iGPU-v2]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 333.991 ms, StdErr = 5.595 ms (1.68%), N = 15, StdDev = 21.669 ms
+Min = 300.368 ms, Q1 = 319.692 ms, Median = 331.928 ms, Q3 = 347.853 ms, Max = 372.039 ms
+IQR = 28.161 ms, LowerFence = 277.450 ms, UpperFence = 390.095 ms
+ConfidenceInterval = [310.825 ms; 357.156 ms] (CI 99.9%), Margin = 23.165 ms (6.94% of Mean)
+Skewness = 0.13, Kurtosis = 1.84, MValue = 2
+-------------------- Histogram --------------------
+[295.852 ms ; 322.943 ms) | @@@@
+[322.943 ms ; 346.007 ms) | @@@@@@@
+[346.007 ms ; 373.422 ms) | @@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+Intel Core i9-14900HX 2.20GHz, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 8.0.427
+  [Host]  : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+  L1W3I15 : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+
+Job=L1W3I15  InvocationCount=1  IterationCount=15  
+LaunchCount=1  UnrollFactor=1  WarmupCount=3  
+
+| Method   | Mode            | Mean      | Error      | StdDev    | StdErr    | Min       | Q1        | Median    | Q3        | Max       | Iterations | Allocated |
+|--------- |---------------- |----------:|-----------:|----------:|----------:|----------:|----------:|----------:|----------:|----------:|-----------:|----------:|
+| Recovery | CPU-par         | 149.83 ms |  11.685 ms | 10.931 ms |  2.822 ms | 135.84 ms | 140.40 ms | 148.43 ms | 156.09 ms | 169.17 ms |      15.00 |  25.17 MB |
+| Recovery | CPU-par-table   |  86.79 ms |   3.840 ms |  3.591 ms |  0.927 ms |  81.39 ms |  84.05 ms |  86.53 ms |  88.65 ms |  93.31 ms |      15.00 |  25.09 MB |
+| Recovery | CPU-seq         | 827.12 ms | 106.357 ms | 99.486 ms | 25.687 ms | 669.21 ms | 719.93 ms | 877.72 ms | 900.77 ms | 926.50 ms |      15.00 |     11 MB |
+| Recovery | CPU-seq-table   | 238.43 ms |  13.754 ms | 12.193 ms |  3.259 ms | 201.75 ms | 241.83 ms | 242.56 ms | 243.56 ms | 244.84 ms |      14.00 |  25.02 MB |
+| Recovery | dGPU            | 122.83 ms |   7.437 ms |  6.956 ms |  1.796 ms | 109.19 ms | 118.54 ms | 124.66 ms | 127.66 ms | 133.27 ms |      15.00 |  25.51 MB |
+| Recovery | dGPU-branchfree | 106.78 ms |   2.994 ms |  2.655 ms |  0.709 ms | 102.45 ms | 106.10 ms | 106.96 ms | 108.01 ms | 111.21 ms |      14.00 |  25.51 MB |
+| Recovery | dGPU-table      | 101.34 ms |   1.516 ms |  1.418 ms |  0.366 ms |  98.33 ms | 100.22 ms | 101.50 ms | 102.52 ms | 103.50 ms |      15.00 |  25.51 MB |
+| Recovery | dGPU-v2         | 121.92 ms |   7.531 ms |  7.044 ms |  1.819 ms | 109.76 ms | 117.30 ms | 122.66 ms | 125.54 ms | 133.18 ms |      15.00 |  25.51 MB |
+| Recovery | iGPU            | 332.54 ms |  25.234 ms | 23.604 ms |  6.095 ms | 287.61 ms | 313.84 ms | 339.76 ms | 348.75 ms | 363.70 ms |      15.00 |  25.52 MB |
+| Recovery | iGPU-branchfree | 645.38 ms |   7.342 ms |  6.131 ms |  1.700 ms | 637.72 ms | 641.14 ms | 644.49 ms | 648.36 ms | 660.26 ms |      13.00 |  25.52 MB |
+| Recovery | iGPU-table      | 146.08 ms |   2.959 ms |  2.768 ms |  0.715 ms | 139.13 ms | 144.99 ms | 146.45 ms | 148.00 ms | 150.22 ms |      15.00 |  25.52 MB |
+| Recovery | iGPU-v2         | 333.99 ms |  23.165 ms | 21.669 ms |  5.595 ms | 300.37 ms | 319.69 ms | 331.93 ms | 347.85 ms | 372.04 ms |      15.00 |  25.52 MB |
+
+// * Warnings *
+MultimodalDistribution
+  RevRecovery.Recovery: L1W3I15 -> It seems that the distribution can have several modes (mValue = 3)
+  RevRecovery.Recovery: L1W3I15 -> It seems that the distribution can have several modes (mValue = 2.89)
+MinIterationTime
+  RevRecovery.Recovery: L1W3I15 -> The minimum observed iteration time is 81.394ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+  RevRecovery.Recovery: L1W3I15 -> The minimum observed iteration time is 98.332ms which is very small. It's recommended to increase it to at least 100ms using more operations.
+
+// * Hints *
+Outliers
+  RevRecovery.Recovery: L1W3I15 -> 1 outlier  was  removed, 3 outliers were detected (201.75 ms, 220.42 ms, 247.47 ms)
+  RevRecovery.Recovery: L1W3I15 -> 1 outlier  was  removed, 4 outliers were detected (102.45 ms..103.01 ms, 111.82 ms)
+  RevRecovery.Recovery: L1W3I15 -> 2 outliers were removed (663.86 ms, 663.95 ms)
+  RevRecovery.Recovery: L1W3I15 -> 1 outlier  was  detected (139.13 ms)
+
+// * Legends *
+  Mode       : Value of the 'Mode' parameter
+  Mean       : Arithmetic mean of all measurements
+  Error      : Half of 99.9% confidence interval
+  StdDev     : Standard deviation of all measurements
+  StdErr     : Standard error of all measurements
+  Min        : Minimum
+  Q1         : Quartile 1 (25th percentile)
+  Median     : Value separating the higher half of all measurements (50th percentile)
+  Q3         : Quartile 3 (75th percentile)
+  Max        : Maximum
+  Iterations : Number of target iterations
+  Allocated  : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms       : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:04:05 (245.6 sec), executed benchmarks: 12
+
+Global total time: 00:04:09 (249.9 sec), executed benchmarks: 12
+// * Artifacts cleanup *
+Artifacts cleanup is finished

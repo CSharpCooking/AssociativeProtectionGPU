@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>RevRecovery-20261027-135220</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+Intel Core i9-14900HX 2.20GHz, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 8.0.427
+  [Host]  : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+  L1W3I15 : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code>Job=L1W3I15  InvocationCount=1  IterationCount=15  
+LaunchCount=1  UnrollFactor=1  WarmupCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mode     </th><th>Mean</th><th>Error</th><th>StdDev</th><th>StdErr</th><th>Min</th><th>Q1 </th><th>Median</th><th>Q3 </th><th>Max</th><th>Iterations</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Recovery</td><td>CPU-par</td><td>149.83 ms</td><td>11.685 ms</td><td>10.931 ms</td><td>2.822 ms</td><td>135.84 ms</td><td>140.40 ms</td><td>148.43 ms</td><td>156.09 ms</td><td>169.17 ms</td><td>15.00</td><td>25.17 MB</td>
+</tr><tr><td>Recovery</td><td>CPU-par-table</td><td>86.79 ms</td><td>3.840 ms</td><td>3.591 ms</td><td>0.927 ms</td><td>81.39 ms</td><td>84.05 ms</td><td>86.53 ms</td><td>88.65 ms</td><td>93.31 ms</td><td>15.00</td><td>25.09 MB</td>
+</tr><tr><td>Recovery</td><td>CPU-seq</td><td>827.12 ms</td><td>106.357 ms</td><td>99.486 ms</td><td>25.687 ms</td><td>669.21 ms</td><td>719.93 ms</td><td>877.72 ms</td><td>900.77 ms</td><td>926.50 ms</td><td>15.00</td><td>11 MB</td>
+</tr><tr><td>Recovery</td><td>CPU-seq-table</td><td>238.43 ms</td><td>13.754 ms</td><td>12.193 ms</td><td>3.259 ms</td><td>201.75 ms</td><td>241.83 ms</td><td>242.56 ms</td><td>243.56 ms</td><td>244.84 ms</td><td>14.00</td><td>25.02 MB</td>
+</tr><tr><td>Recovery</td><td>dGPU</td><td>122.83 ms</td><td>7.437 ms</td><td>6.956 ms</td><td>1.796 ms</td><td>109.19 ms</td><td>118.54 ms</td><td>124.66 ms</td><td>127.66 ms</td><td>133.27 ms</td><td>15.00</td><td>25.51 MB</td>
+</tr><tr><td>Recovery</td><td>dGPU-branchfree</td><td>106.78 ms</td><td>2.994 ms</td><td>2.655 ms</td><td>0.709 ms</td><td>102.45 ms</td><td>106.10 ms</td><td>106.96 ms</td><td>108.01 ms</td><td>111.21 ms</td><td>14.00</td><td>25.51 MB</td>
+</tr><tr><td>Recovery</td><td>dGPU-table</td><td>101.34 ms</td><td>1.516 ms</td><td>1.418 ms</td><td>0.366 ms</td><td>98.33 ms</td><td>100.22 ms</td><td>101.50 ms</td><td>102.52 ms</td><td>103.50 ms</td><td>15.00</td><td>25.51 MB</td>
+</tr><tr><td>Recovery</td><td>dGPU-v2</td><td>121.92 ms</td><td>7.531 ms</td><td>7.044 ms</td><td>1.819 ms</td><td>109.76 ms</td><td>117.30 ms</td><td>122.66 ms</td><td>125.54 ms</td><td>133.18 ms</td><td>15.00</td><td>25.51 MB</td>
+</tr><tr><td>Recovery</td><td>iGPU</td><td>332.54 ms</td><td>25.234 ms</td><td>23.604 ms</td><td>6.095 ms</td><td>287.61 ms</td><td>313.84 ms</td><td>339.76 ms</td><td>348.75 ms</td><td>363.70 ms</td><td>15.00</td><td>25.52 MB</td>
+</tr><tr><td>Recovery</td><td>iGPU-branchfree</td><td>645.38 ms</td><td>7.342 ms</td><td>6.131 ms</td><td>1.700 ms</td><td>637.72 ms</td><td>641.14 ms</td><td>644.49 ms</td><td>648.36 ms</td><td>660.26 ms</td><td>13.00</td><td>25.52 MB</td>
+</tr><tr><td>Recovery</td><td>iGPU-table</td><td>146.08 ms</td><td>2.959 ms</td><td>2.768 ms</td><td>0.715 ms</td><td>139.13 ms</td><td>144.99 ms</td><td>146.45 ms</td><td>148.00 ms</td><td>150.22 ms</td><td>15.00</td><td>25.52 MB</td>
+</tr><tr><td>Recovery</td><td>iGPU-v2</td><td>333.99 ms</td><td>23.165 ms</td><td>21.669 ms</td><td>5.595 ms</td><td>300.37 ms</td><td>319.69 ms</td><td>331.93 ms</td><td>347.85 ms</td><td>372.04 ms</td><td>15.00</td><td>25.52 MB</td>
+</tr></tbody></table>
+</body>
+</html>

@@ -2,7 +2,8 @@
 
 ## Configurations B and C
 
-Six inputs of 10 MiB (10,485,760 bytes) each, used for all measurements of configurations B and C (Section 6.3 of the
+Six inputs of 10 MiB (10,485,760 bytes) each, used for all measurements of configurations B and C and, `uniform`, `ff`, `zero` and `ru`, for the measurements of
+configuration D (Section 6.3 of the
 paper). `SHA256SUMS` holds their hashes; `python3 data/make_synthetic_inputs.py --check` verifies all six, and without
 `--check` the script first regenerates the three synthetic ones. Comparisons per byte: mean number of etalon
 comparisons of the sequential search, and its warp-level counterpart (`analysis/input_stats.py`).

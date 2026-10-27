@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>RevBreakEven-20261027-132649</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+Intel Core i9-14900HX 2.20GHz, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 8.0.427
+  [Host]  : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+  L3W5I30 : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code>Job=L3W5I30  InvocationCount=1  IterationCount=30  
+LaunchCount=3  UnrollFactor=1  WarmupCount=5  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>SizeKB</th><th>Mode</th><th>Mean </th><th>Error</th><th>StdDev</th><th>StdErr</th><th>Median</th><th>Min  </th><th>Q1   </th><th>Q3   </th><th>Max  </th><th>Iterations</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>&#39;Full cycle&#39;</td><td>1</td><td>CPU-seq</td><td>841.6 &mu;s</td><td>23.22 &mu;s</td><td>61.99 &mu;s</td><td>6.80 &mu;s</td><td>831.4 &mu;s</td><td>742.4 &mu;s</td><td>791.8 &mu;s</td><td>879.6 &mu;s</td><td>1,033.6 &mu;s</td><td>83.00</td><td>-</td><td>-</td><td>-</td><td>2 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>1</td><td>dGPU</td><td>3,928.9 &mu;s</td><td>51.27 &mu;s</td><td>141.21 &mu;s</td><td>15.05 &mu;s</td><td>3,929.2 &mu;s</td><td>3,618.2 &mu;s</td><td>3,836.1 &mu;s</td><td>4,027.9 &mu;s</td><td>4,208.2 &mu;s</td><td>88.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>33.07 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>1</td><td>iGPU</td><td>4,147.8 &mu;s</td><td>196.02 &mu;s</td><td>536.61 &mu;s</td><td>57.53 &mu;s</td><td>3,920.2 &mu;s</td><td>3,512.3 &mu;s</td><td>3,728.8 &mu;s</td><td>4,652.5 &mu;s</td><td>5,574.4 &mu;s</td><td>87.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>33.07 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>10</td><td>CPU-seq</td><td>3,151.4 &mu;s</td><td>57.86 &mu;s</td><td>160.32 &mu;s</td><td>16.99 &mu;s</td><td>3,163.8 &mu;s</td><td>2,748.4 &mu;s</td><td>3,032.1 &mu;s</td><td>3,253.2 &mu;s</td><td>3,520.0 &mu;s</td><td>89.00</td><td>-</td><td>-</td><td>-</td><td>2.01 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>10</td><td>dGPU</td><td>3,937.6 &mu;s</td><td>50.39 &mu;s</td><td>137.09 &mu;s</td><td>14.78 &mu;s</td><td>3,939.1 &mu;s</td><td>3,644.3 &mu;s</td><td>3,832.3 &mu;s</td><td>4,023.2 &mu;s</td><td>4,258.4 &mu;s</td><td>86.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>33.63 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>10</td><td>iGPU</td><td>4,140.2 &mu;s</td><td>57.45 &mu;s</td><td>156.31 &mu;s</td><td>16.86 &mu;s</td><td>4,112.9 &mu;s</td><td>3,880.6 &mu;s</td><td>4,025.3 &mu;s</td><td>4,225.9 &mu;s</td><td>4,603.7 &mu;s</td><td>86.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>33.63 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>20</td><td>CPU-seq</td><td>5,663.8 &mu;s</td><td>117.33 &mu;s</td><td>323.16 &mu;s</td><td>34.45 &mu;s</td><td>5,695.5 &mu;s</td><td>4,827.9 &mu;s</td><td>5,475.9 &mu;s</td><td>5,888.5 &mu;s</td><td>6,279.6 &mu;s</td><td>88.00</td><td>-</td><td>-</td><td>-</td><td>2.02 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>20</td><td>dGPU</td><td>5,170.7 &mu;s</td><td>56.55 &mu;s</td><td>155.75 &mu;s</td><td>16.60 &mu;s</td><td>5,143.8 &mu;s</td><td>4,907.7 &mu;s</td><td>5,047.8 &mu;s</td><td>5,292.0 &mu;s</td><td>5,533.6 &mu;s</td><td>88.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.24 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>20</td><td>iGPU</td><td>5,743.4 &mu;s</td><td>53.28 &mu;s</td><td>145.85 &mu;s</td><td>15.64 &mu;s</td><td>5,729.2 &mu;s</td><td>5,408.1 &mu;s</td><td>5,651.4 &mu;s</td><td>5,854.1 &mu;s</td><td>6,075.5 &mu;s</td><td>87.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.24 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>30</td><td>CPU-seq</td><td>8,338.5 &mu;s</td><td>152.93 &mu;s</td><td>423.76 &mu;s</td><td>44.92 &mu;s</td><td>8,338.3 &mu;s</td><td>7,343.6 &mu;s</td><td>8,095.9 &mu;s</td><td>8,604.9 &mu;s</td><td>9,319.5 &mu;s</td><td>89.00</td><td>-</td><td>-</td><td>-</td><td>2.03 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>30</td><td>dGPU</td><td>5,595.1 &mu;s</td><td>64.05 &mu;s</td><td>175.35 &mu;s</td><td>18.80 &mu;s</td><td>5,599.8 &mu;s</td><td>5,104.9 &mu;s</td><td>5,465.6 &mu;s</td><td>5,704.4 &mu;s</td><td>5,984.6 &mu;s</td><td>87.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.86 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>30</td><td>iGPU</td><td>6,392.5 &mu;s</td><td>58.69 &mu;s</td><td>159.66 &mu;s</td><td>17.22 &mu;s</td><td>6,395.8 &mu;s</td><td>6,007.7 &mu;s</td><td>6,280.6 &mu;s</td><td>6,504.1 &mu;s</td><td>6,902.8 &mu;s</td><td>86.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.86 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>40</td><td>CPU-seq</td><td>10,940.7 &mu;s</td><td>198.05 &mu;s</td><td>545.50 &mu;s</td><td>58.15 &mu;s</td><td>10,929.4 &mu;s</td><td>9,694.1 &mu;s</td><td>10,632.1 &mu;s</td><td>11,253.9 &mu;s</td><td>12,260.3 &mu;s</td><td>88.00</td><td>-</td><td>-</td><td>-</td><td>2.04 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>40</td><td>dGPU</td><td>4,597.8 &mu;s</td><td>63.57 &mu;s</td><td>175.10 &mu;s</td><td>18.67 &mu;s</td><td>4,570.0 &mu;s</td><td>4,269.3 &mu;s</td><td>4,470.9 &mu;s</td><td>4,694.4 &mu;s</td><td>5,087.9 &mu;s</td><td>88.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>33.47 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>40</td><td>iGPU</td><td>5,607.7 &mu;s</td><td>55.64 &mu;s</td><td>154.17 &mu;s</td><td>16.34 &mu;s</td><td>5,601.5 &mu;s</td><td>5,265.8 &mu;s</td><td>5,480.6 &mu;s</td><td>5,717.9 &mu;s</td><td>5,954.5 &mu;s</td><td>89.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>33.47 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>50</td><td>CPU-seq</td><td>13,280.8 &mu;s</td><td>217.50 &mu;s</td><td>591.73 &mu;s</td><td>63.81 &mu;s</td><td>13,234.4 &mu;s</td><td>11,877.3 &mu;s</td><td>12,910.6 &mu;s</td><td>13,796.1 &mu;s</td><td>14,679.9 &mu;s</td><td>86.00</td><td>-</td><td>-</td><td>-</td><td>2.05 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>50</td><td>dGPU</td><td>4,712.9 &mu;s</td><td>42.68 &mu;s</td><td>115.38 &mu;s</td><td>12.51 &mu;s</td><td>4,698.5 &mu;s</td><td>4,485.9 &mu;s</td><td>4,636.1 &mu;s</td><td>4,797.3 &mu;s</td><td>5,021.3 &mu;s</td><td>85.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.09 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>50</td><td>iGPU</td><td>6,128.9 &mu;s</td><td>63.25 &mu;s</td><td>174.22 &mu;s</td><td>18.57 &mu;s</td><td>6,127.9 &mu;s</td><td>5,771.5 &mu;s</td><td>5,998.6 &mu;s</td><td>6,241.9 &mu;s</td><td>6,569.4 &mu;s</td><td>88.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.09 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>60</td><td>CPU-seq</td><td>15,991.3 &mu;s</td><td>315.00 &mu;s</td><td>878.08 &mu;s</td><td>92.56 &mu;s</td><td>16,042.0 &mu;s</td><td>13,993.7 &mu;s</td><td>15,400.8 &mu;s</td><td>16,589.7 &mu;s</td><td>17,900.7 &mu;s</td><td>90.00</td><td>-</td><td>-</td><td>-</td><td>2.06 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>60</td><td>dGPU</td><td>6,081.8 &mu;s</td><td>59.51 &mu;s</td><td>162.91 &mu;s</td><td>17.47 &mu;s</td><td>6,094.0 &mu;s</td><td>5,755.3 &mu;s</td><td>5,979.5 &mu;s</td><td>6,173.1 &mu;s</td><td>6,610.6 &mu;s</td><td>87.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.7 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>60</td><td>iGPU</td><td>7,751.1 &mu;s</td><td>81.82 &mu;s</td><td>222.60 &mu;s</td><td>24.00 &mu;s</td><td>7,717.9 &mu;s</td><td>7,210.6 &mu;s</td><td>7,598.8 &mu;s</td><td>7,897.7 &mu;s</td><td>8,341.7 &mu;s</td><td>86.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>34.7 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>75</td><td>CPU-seq</td><td>20,136.0 &mu;s</td><td>426.20 &mu;s</td><td>1,181.00 &mu;s</td><td>125.19 &mu;s</td><td>20,233.2 &mu;s</td><td>17,359.1 &mu;s</td><td>19,216.2 &mu;s</td><td>20,833.8 &mu;s</td><td>22,510.6 &mu;s</td><td>89.00</td><td>-</td><td>-</td><td>-</td><td>2.07 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>75</td><td>dGPU</td><td>7,516.4 &mu;s</td><td>68.93 &mu;s</td><td>189.87 &mu;s</td><td>20.24 &mu;s</td><td>7,512.9 &mu;s</td><td>7,155.7 &mu;s</td><td>7,367.4 &mu;s</td><td>7,626.8 &mu;s</td><td>7,948.7 &mu;s</td><td>88.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>35.62 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>75</td><td>iGPU</td><td>8,787.8 &mu;s</td><td>102.46 &mu;s</td><td>278.74 &mu;s</td><td>30.06 &mu;s</td><td>8,724.9 &mu;s</td><td>8,224.3 &mu;s</td><td>8,631.0 &mu;s</td><td>8,978.1 &mu;s</td><td>9,521.9 &mu;s</td><td>86.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>35.63 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>100</td><td>CPU-seq</td><td>26,110.0 &mu;s</td><td>520.24 &mu;s</td><td>1,450.23 &mu;s</td><td>152.87 &mu;s</td><td>26,217.2 &mu;s</td><td>22,096.2 &mu;s</td><td>25,024.8 &mu;s</td><td>27,059.3 &mu;s</td><td>29,157.3 &mu;s</td><td>90.00</td><td>-</td><td>-</td><td>-</td><td>2.1 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>100</td><td>dGPU</td><td>8,832.8 &mu;s</td><td>73.06 &mu;s</td><td>200.01 &mu;s</td><td>21.44 &mu;s</td><td>8,796.9 &mu;s</td><td>8,420.0 &mu;s</td><td>8,675.9 &mu;s</td><td>8,971.0 &mu;s</td><td>9,227.6 &mu;s</td><td>87.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>37.16 MB</td>
+</tr><tr><td>&#39;Full cycle&#39;</td><td>100</td><td>iGPU</td><td>11,009.6 &mu;s</td><td>154.03 &mu;s</td><td>419.05 &mu;s</td><td>45.19 &mu;s</td><td>10,911.0 &mu;s</td><td>10,090.2 &mu;s</td><td>10,743.0 &mu;s</td><td>11,332.5 &mu;s</td><td>12,202.3 &mu;s</td><td>86.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>37.16 MB</td>
+</tr></tbody></table>
+</body>
+</html>

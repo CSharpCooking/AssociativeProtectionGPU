@@ -38,13 +38,14 @@ function (with the seeds given or drawn from the system generator) and one seque
 
 The only change made after the measurements is the optional seed list of `filler`.
 
-## laptop: code for further measurements on a laptop with a GPU
+## laptop: GPU measurements of configuration D
 
-Not used in the paper (Section 8.7 lists what was not measured). Six BenchmarkDotNet classes, a kernel-level
-measurement and a script for configuration A or another computer with a GPU, such as configuration C: the break-even
-volume on a dense grid of 1-100 KB, multithreaded CPU baselines and the effect of the filler generation, the chunk
-size in one build and one run, the recognition kernels on different data, and kernel-only times. The files can be
-added to the benchmark project of the thesis or built with the standalone project `laptop/standalone`, which compiles
-the library listing of `library/` with ILGPU and BenchmarkDotNet from NuGet. The code was checked on an emulation of
-the ILGPU runtime but was not compiled against ILGPU or BenchmarkDotNet themselves. See
-[`laptop/README.md`](laptop/README.md) (English) and [`laptop/README_ru.md`](laptop/README_ru.md) (Russian).
+The kit used on configuration D (Sections 7.8–7.11 of the paper; results in
+[`results/configuration_D`](../results/configuration_D)). Six BenchmarkDotNet classes, a kernel-level measurement and
+a script for a computer with a GPU: the break-even volume on a dense grid of 1-100 KB, multithreaded CPU paths and the
+effect of the filler generation, the chunk size in one build and one run, the recognition kernels on different data,
+and kernel-only times. The files can be added to the benchmark project of the thesis or built with the standalone
+project `laptop/standalone`, which compiles the library listing of `library/` with ILGPU and BenchmarkDotNet from
+NuGet; on configuration D, this build compiled against the real packages without changes. It can be run unchanged on
+another computer with a GPU, such as the laptop of configuration A. See [`laptop/README.md`](laptop/README.md)
+(English) and [`laptop/README_ru.md`](laptop/README_ru.md) (Russian).

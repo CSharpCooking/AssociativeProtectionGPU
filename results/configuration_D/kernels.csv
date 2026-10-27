@@ -1,0 +1,801 @@
+device,input,step,rep,ms
+iGPU,uniform,copy input to device,0,1,177
+iGPU,uniform,formation kernel,0,81,255
+iGPU,uniform,copy protected to host,0,23,153
+iGPU,uniform,copy protected to device,0,22,218
+iGPU,uniform,search kernel,0,202,727
+iGPU,uniform,table kernel,0,49,353
+iGPU,uniform,branch-free kernel,0,545,567
+iGPU,uniform,copy output to host,0,0,678
+iGPU,uniform,write protected file,0,240,270
+iGPU,uniform,read protected file,0,54,840
+iGPU,uniform,copy input to device,1,1,183
+iGPU,uniform,formation kernel,1,80,988
+iGPU,uniform,copy protected to host,1,22,203
+iGPU,uniform,copy protected to device,1,17,841
+iGPU,uniform,search kernel,1,202,590
+iGPU,uniform,table kernel,1,49,267
+iGPU,uniform,branch-free kernel,1,546,027
+iGPU,uniform,copy output to host,1,0,589
+iGPU,uniform,write protected file,1,251,575
+iGPU,uniform,read protected file,1,56,891
+iGPU,uniform,copy input to device,2,1,123
+iGPU,uniform,formation kernel,2,80,998
+iGPU,uniform,copy protected to host,2,22,794
+iGPU,uniform,copy protected to device,2,17,911
+iGPU,uniform,search kernel,2,202,641
+iGPU,uniform,table kernel,2,49,718
+iGPU,uniform,branch-free kernel,2,545,447
+iGPU,uniform,copy output to host,2,0,646
+iGPU,uniform,write protected file,2,246,952
+iGPU,uniform,read protected file,2,55,023
+iGPU,uniform,copy input to device,3,1,120
+iGPU,uniform,formation kernel,3,81,013
+iGPU,uniform,copy protected to host,3,22,567
+iGPU,uniform,copy protected to device,3,17,934
+iGPU,uniform,search kernel,3,202,780
+iGPU,uniform,table kernel,3,49,384
+iGPU,uniform,branch-free kernel,3,546,740
+iGPU,uniform,copy output to host,3,0,854
+iGPU,uniform,write protected file,3,247,069
+iGPU,uniform,read protected file,3,56,646
+iGPU,uniform,copy input to device,4,1,103
+iGPU,uniform,formation kernel,4,81,019
+iGPU,uniform,copy protected to host,4,22,671
+iGPU,uniform,copy protected to device,4,18,320
+iGPU,uniform,search kernel,4,204,405
+iGPU,uniform,table kernel,4,50,672
+iGPU,uniform,branch-free kernel,4,546,169
+iGPU,uniform,copy output to host,4,0,977
+iGPU,uniform,write protected file,4,403,051
+iGPU,uniform,read protected file,4,100,936
+iGPU,uniform,copy input to device,5,2,172
+iGPU,uniform,formation kernel,5,82,578
+iGPU,uniform,copy protected to host,5,26,662
+iGPU,uniform,copy protected to device,5,21,734
+iGPU,uniform,search kernel,5,203,595
+iGPU,uniform,table kernel,5,49,517
+iGPU,uniform,branch-free kernel,5,545,781
+iGPU,uniform,copy output to host,5,0,728
+iGPU,uniform,write protected file,5,298,088
+iGPU,uniform,read protected file,5,62,161
+iGPU,uniform,copy input to device,6,2,032
+iGPU,uniform,formation kernel,6,83,497
+iGPU,uniform,copy protected to host,6,24,271
+iGPU,uniform,copy protected to device,6,20,043
+iGPU,uniform,search kernel,6,202,506
+iGPU,uniform,table kernel,6,49,265
+iGPU,uniform,branch-free kernel,6,545,381
+iGPU,uniform,copy output to host,6,0,654
+iGPU,uniform,write protected file,6,256,920
+iGPU,uniform,read protected file,6,53,680
+iGPU,uniform,copy input to device,7,1,124
+iGPU,uniform,formation kernel,7,81,115
+iGPU,uniform,copy protected to host,7,23,651
+iGPU,uniform,copy protected to device,7,18,520
+iGPU,uniform,search kernel,7,202,419
+iGPU,uniform,table kernel,7,49,224
+iGPU,uniform,branch-free kernel,7,545,583
+iGPU,uniform,copy output to host,7,0,699
+iGPU,uniform,write protected file,7,271,918
+iGPU,uniform,read protected file,7,54,485
+iGPU,uniform,copy input to device,8,1,070
+iGPU,uniform,formation kernel,8,81,034
+iGPU,uniform,copy protected to host,8,23,971
+iGPU,uniform,copy protected to device,8,19,227
+iGPU,uniform,search kernel,8,202,412
+iGPU,uniform,table kernel,8,49,232
+iGPU,uniform,branch-free kernel,8,545,347
+iGPU,uniform,copy output to host,8,0,629
+iGPU,uniform,write protected file,8,258,067
+iGPU,uniform,read protected file,8,54,452
+iGPU,uniform,copy input to device,9,1,101
+iGPU,uniform,formation kernel,9,81,074
+iGPU,uniform,copy protected to host,9,23,021
+iGPU,uniform,copy protected to device,9,18,993
+iGPU,uniform,search kernel,9,202,488
+iGPU,uniform,table kernel,9,50,492
+iGPU,uniform,branch-free kernel,9,545,492
+iGPU,uniform,copy output to host,9,0,671
+iGPU,uniform,write protected file,9,268,287
+iGPU,uniform,read protected file,9,53,764
+iGPU,ff,copy input to device,0,1,071
+iGPU,ff,formation kernel,0,85,197
+iGPU,ff,copy protected to host,0,23,579
+iGPU,ff,copy protected to device,0,18,762
+iGPU,ff,search kernel,0,140,475
+iGPU,ff,table kernel,0,55,490
+iGPU,ff,branch-free kernel,0,544,388
+iGPU,ff,copy output to host,0,0,630
+iGPU,ff,write protected file,0,266,752
+iGPU,ff,read protected file,0,53,900
+iGPU,ff,copy input to device,1,1,200
+iGPU,ff,formation kernel,1,85,468
+iGPU,ff,copy protected to host,1,22,883
+iGPU,ff,copy protected to device,1,18,937
+iGPU,ff,search kernel,1,140,186
+iGPU,ff,table kernel,1,54,702
+iGPU,ff,branch-free kernel,1,543,884
+iGPU,ff,copy output to host,1,0,575
+iGPU,ff,write protected file,1,272,034
+iGPU,ff,read protected file,1,56,000
+iGPU,ff,copy input to device,2,1,318
+iGPU,ff,formation kernel,2,86,374
+iGPU,ff,copy protected to host,2,24,813
+iGPU,ff,copy protected to device,2,19,474
+iGPU,ff,search kernel,2,139,921
+iGPU,ff,table kernel,2,54,696
+iGPU,ff,branch-free kernel,2,543,894
+iGPU,ff,copy output to host,2,0,614
+iGPU,ff,write protected file,2,292,476
+iGPU,ff,read protected file,2,53,984
+iGPU,ff,copy input to device,3,1,073
+iGPU,ff,formation kernel,3,85,212
+iGPU,ff,copy protected to host,3,22,589
+iGPU,ff,copy protected to device,3,18,480
+iGPU,ff,search kernel,3,140,032
+iGPU,ff,table kernel,3,54,666
+iGPU,ff,branch-free kernel,3,544,125
+iGPU,ff,copy output to host,3,0,744
+iGPU,ff,write protected file,3,278,324
+iGPU,ff,read protected file,3,54,527
+iGPU,ff,copy input to device,4,1,109
+iGPU,ff,formation kernel,4,85,216
+iGPU,ff,copy protected to host,4,22,570
+iGPU,ff,copy protected to device,4,18,040
+iGPU,ff,search kernel,4,139,954
+iGPU,ff,table kernel,4,54,798
+iGPU,ff,branch-free kernel,4,544,154
+iGPU,ff,copy output to host,4,0,758
+iGPU,ff,write protected file,4,292,036
+iGPU,ff,read protected file,4,57,045
+iGPU,ff,copy input to device,5,1,258
+iGPU,ff,formation kernel,5,85,241
+iGPU,ff,copy protected to host,5,22,838
+iGPU,ff,copy protected to device,5,18,230
+iGPU,ff,search kernel,5,139,999
+iGPU,ff,table kernel,5,54,702
+iGPU,ff,branch-free kernel,5,544,353
+iGPU,ff,copy output to host,5,0,578
+iGPU,ff,write protected file,5,240,355
+iGPU,ff,read protected file,5,54,754
+iGPU,ff,copy input to device,6,1,240
+iGPU,ff,formation kernel,6,85,292
+iGPU,ff,copy protected to host,6,22,675
+iGPU,ff,copy protected to device,6,18,318
+iGPU,ff,search kernel,6,139,944
+iGPU,ff,table kernel,6,54,762
+iGPU,ff,branch-free kernel,6,544,334
+iGPU,ff,copy output to host,6,0,759
+iGPU,ff,write protected file,6,260,682
+iGPU,ff,read protected file,6,56,327
+iGPU,ff,copy input to device,7,1,514
+iGPU,ff,formation kernel,7,85,606
+iGPU,ff,copy protected to host,7,23,030
+iGPU,ff,copy protected to device,7,18,263
+iGPU,ff,search kernel,7,140,223
+iGPU,ff,table kernel,7,54,674
+iGPU,ff,branch-free kernel,7,544,287
+iGPU,ff,copy output to host,7,0,575
+iGPU,ff,write protected file,7,257,777
+iGPU,ff,read protected file,7,57,304
+iGPU,ff,copy input to device,8,1,163
+iGPU,ff,formation kernel,8,85,253
+iGPU,ff,copy protected to host,8,23,034
+iGPU,ff,copy protected to device,8,18,325
+iGPU,ff,search kernel,8,140,018
+iGPU,ff,table kernel,8,55,223
+iGPU,ff,branch-free kernel,8,544,403
+iGPU,ff,copy output to host,8,0,692
+iGPU,ff,write protected file,8,267,141
+iGPU,ff,read protected file,8,58,309
+iGPU,ff,copy input to device,9,1,044
+iGPU,ff,formation kernel,9,85,221
+iGPU,ff,copy protected to host,9,22,583
+iGPU,ff,copy protected to device,9,18,106
+iGPU,ff,search kernel,9,139,986
+iGPU,ff,table kernel,9,54,724
+iGPU,ff,branch-free kernel,9,544,165
+iGPU,ff,copy output to host,9,0,651
+iGPU,ff,write protected file,9,264,106
+iGPU,ff,read protected file,9,59,277
+iGPU,zero,copy input to device,0,1,118
+iGPU,zero,formation kernel,0,71,176
+iGPU,zero,copy protected to host,0,23,298
+iGPU,zero,copy protected to device,0,19,487
+iGPU,zero,search kernel,0,56,880
+iGPU,zero,table kernel,0,55,225
+iGPU,zero,branch-free kernel,0,545,713
+iGPU,zero,copy output to host,0,0,704
+iGPU,zero,write protected file,0,269,001
+iGPU,zero,read protected file,0,57,820
+iGPU,zero,copy input to device,1,1,206
+iGPU,zero,formation kernel,1,71,020
+iGPU,zero,copy protected to host,1,23,668
+iGPU,zero,copy protected to device,1,19,462
+iGPU,zero,search kernel,1,56,911
+iGPU,zero,table kernel,1,55,130
+iGPU,zero,branch-free kernel,1,545,830
+iGPU,zero,copy output to host,1,0,652
+iGPU,zero,write protected file,1,264,862
+iGPU,zero,read protected file,1,54,249
+iGPU,zero,copy input to device,2,1,129
+iGPU,zero,formation kernel,2,71,096
+iGPU,zero,copy protected to host,2,22,855
+iGPU,zero,copy protected to device,2,19,254
+iGPU,zero,search kernel,2,56,881
+iGPU,zero,table kernel,2,55,127
+iGPU,zero,branch-free kernel,2,545,739
+iGPU,zero,copy output to host,2,0,663
+iGPU,zero,write protected file,2,254,953
+iGPU,zero,read protected file,2,59,543
+iGPU,zero,copy input to device,3,1,293
+iGPU,zero,formation kernel,3,71,207
+iGPU,zero,copy protected to host,3,23,537
+iGPU,zero,copy protected to device,3,19,032
+iGPU,zero,search kernel,3,56,887
+iGPU,zero,table kernel,3,55,169
+iGPU,zero,branch-free kernel,3,545,767
+iGPU,zero,copy output to host,3,0,621
+iGPU,zero,write protected file,3,286,804
+iGPU,zero,read protected file,3,57,998
+iGPU,zero,copy input to device,4,1,209
+iGPU,zero,formation kernel,4,71,087
+iGPU,zero,copy protected to host,4,22,726
+iGPU,zero,copy protected to device,4,19,049
+iGPU,zero,search kernel,4,57,048
+iGPU,zero,table kernel,4,55,158
+iGPU,zero,branch-free kernel,4,546,548
+iGPU,zero,copy output to host,4,0,667
+iGPU,zero,write protected file,4,257,421
+iGPU,zero,read protected file,4,56,562
+iGPU,zero,copy input to device,5,1,789
+iGPU,zero,formation kernel,5,71,120
+iGPU,zero,copy protected to host,5,23,558
+iGPU,zero,copy protected to device,5,18,827
+iGPU,zero,search kernel,5,56,957
+iGPU,zero,table kernel,5,55,111
+iGPU,zero,branch-free kernel,5,546,197
+iGPU,zero,copy output to host,5,0,676
+iGPU,zero,write protected file,5,263,988
+iGPU,zero,read protected file,5,57,641
+iGPU,zero,copy input to device,6,1,274
+iGPU,zero,formation kernel,6,71,041
+iGPU,zero,copy protected to host,6,22,630
+iGPU,zero,copy protected to device,6,18,597
+iGPU,zero,search kernel,6,56,957
+iGPU,zero,table kernel,6,55,100
+iGPU,zero,branch-free kernel,6,545,867
+iGPU,zero,copy output to host,6,0,669
+iGPU,zero,write protected file,6,274,677
+iGPU,zero,read protected file,6,55,198
+iGPU,zero,copy input to device,7,1,078
+iGPU,zero,formation kernel,7,71,107
+iGPU,zero,copy protected to host,7,22,472
+iGPU,zero,copy protected to device,7,18,746
+iGPU,zero,search kernel,7,57,120
+iGPU,zero,table kernel,7,55,114
+iGPU,zero,branch-free kernel,7,545,770
+iGPU,zero,copy output to host,7,0,561
+iGPU,zero,write protected file,7,244,119
+iGPU,zero,read protected file,7,55,986
+iGPU,zero,copy input to device,8,1,090
+iGPU,zero,formation kernel,8,71,091
+iGPU,zero,copy protected to host,8,22,704
+iGPU,zero,copy protected to device,8,18,520
+iGPU,zero,search kernel,8,56,966
+iGPU,zero,table kernel,8,55,173
+iGPU,zero,branch-free kernel,8,545,709
+iGPU,zero,copy output to host,8,0,609
+iGPU,zero,write protected file,8,246,793
+iGPU,zero,read protected file,8,57,891
+iGPU,zero,copy input to device,9,1,204
+iGPU,zero,formation kernel,9,71,121
+iGPU,zero,copy protected to host,9,22,716
+iGPU,zero,copy protected to device,9,18,116
+iGPU,zero,search kernel,9,56,932
+iGPU,zero,table kernel,9,55,200
+iGPU,zero,branch-free kernel,9,545,716
+iGPU,zero,copy output to host,9,0,696
+iGPU,zero,write protected file,9,262,506
+iGPU,zero,read protected file,9,53,859
+iGPU,ru,copy input to device,0,1,220
+iGPU,ru,formation kernel,0,81,776
+iGPU,ru,copy protected to host,0,25,923
+iGPU,ru,copy protected to device,0,22,098
+iGPU,ru,search kernel,0,203,935
+iGPU,ru,table kernel,0,56,947
+iGPU,ru,branch-free kernel,0,548,801
+iGPU,ru,copy output to host,0,0,556
+iGPU,ru,write protected file,0,257,737
+iGPU,ru,read protected file,0,57,367
+iGPU,ru,copy input to device,1,1,266
+iGPU,ru,formation kernel,1,81,069
+iGPU,ru,copy protected to host,1,22,562
+iGPU,ru,copy protected to device,1,18,092
+iGPU,ru,search kernel,1,204,000
+iGPU,ru,table kernel,1,56,997
+iGPU,ru,branch-free kernel,1,548,780
+iGPU,ru,copy output to host,1,0,607
+iGPU,ru,write protected file,1,241,558
+iGPU,ru,read protected file,1,54,694
+iGPU,ru,copy input to device,2,1,126
+iGPU,ru,formation kernel,2,81,104
+iGPU,ru,copy protected to host,2,22,959
+iGPU,ru,copy protected to device,2,18,357
+iGPU,ru,search kernel,2,203,931
+iGPU,ru,table kernel,2,56,980
+iGPU,ru,branch-free kernel,2,548,824
+iGPU,ru,copy output to host,2,0,703
+iGPU,ru,write protected file,2,279,831
+iGPU,ru,read protected file,2,56,141
+iGPU,ru,copy input to device,3,1,145
+iGPU,ru,formation kernel,3,81,134
+iGPU,ru,copy protected to host,3,22,584
+iGPU,ru,copy protected to device,3,18,797
+iGPU,ru,search kernel,3,204,073
+iGPU,ru,table kernel,3,56,869
+iGPU,ru,branch-free kernel,3,548,860
+iGPU,ru,copy output to host,3,0,680
+iGPU,ru,write protected file,3,274,270
+iGPU,ru,read protected file,3,57,380
+iGPU,ru,copy input to device,4,1,380
+iGPU,ru,formation kernel,4,81,310
+iGPU,ru,copy protected to host,4,22,556
+iGPU,ru,copy protected to device,4,18,320
+iGPU,ru,search kernel,4,204,341
+iGPU,ru,table kernel,4,56,980
+iGPU,ru,branch-free kernel,4,548,883
+iGPU,ru,copy output to host,4,0,546
+iGPU,ru,write protected file,4,286,356
+iGPU,ru,read protected file,4,54,618
+iGPU,ru,copy input to device,5,1,058
+iGPU,ru,formation kernel,5,81,131
+iGPU,ru,copy protected to host,5,23,312
+iGPU,ru,copy protected to device,5,17,784
+iGPU,ru,search kernel,5,203,934
+iGPU,ru,table kernel,5,57,023
+iGPU,ru,branch-free kernel,5,548,795
+iGPU,ru,copy output to host,5,0,689
+iGPU,ru,write protected file,5,239,793
+iGPU,ru,read protected file,5,52,963
+iGPU,ru,copy input to device,6,1,129
+iGPU,ru,formation kernel,6,81,014
+iGPU,ru,copy protected to host,6,22,879
+iGPU,ru,copy protected to device,6,19,759
+iGPU,ru,search kernel,6,203,983
+iGPU,ru,table kernel,6,56,895
+iGPU,ru,branch-free kernel,6,548,760
+iGPU,ru,copy output to host,6,0,529
+iGPU,ru,write protected file,6,247,264
+iGPU,ru,read protected file,6,54,477
+iGPU,ru,copy input to device,7,1,103
+iGPU,ru,formation kernel,7,81,108
+iGPU,ru,copy protected to host,7,22,620
+iGPU,ru,copy protected to device,7,17,828
+iGPU,ru,search kernel,7,203,914
+iGPU,ru,table kernel,7,56,873
+iGPU,ru,branch-free kernel,7,548,880
+iGPU,ru,copy output to host,7,0,781
+iGPU,ru,write protected file,7,271,521
+iGPU,ru,read protected file,7,51,801
+iGPU,ru,copy input to device,8,1,156
+iGPU,ru,formation kernel,8,81,142
+iGPU,ru,copy protected to host,8,22,419
+iGPU,ru,copy protected to device,8,17,889
+iGPU,ru,search kernel,8,203,936
+iGPU,ru,table kernel,8,56,893
+iGPU,ru,branch-free kernel,8,548,854
+iGPU,ru,copy output to host,8,0,705
+iGPU,ru,write protected file,8,314,244
+iGPU,ru,read protected file,8,54,417
+iGPU,ru,copy input to device,9,1,106
+iGPU,ru,formation kernel,9,81,075
+iGPU,ru,copy protected to host,9,22,785
+iGPU,ru,copy protected to device,9,18,364
+iGPU,ru,search kernel,9,203,831
+iGPU,ru,table kernel,9,56,963
+iGPU,ru,branch-free kernel,9,548,827
+iGPU,ru,copy output to host,9,0,676
+iGPU,ru,write protected file,9,243,859
+iGPU,ru,read protected file,9,54,231
+dGPU,uniform,copy input to device,0,1,132
+dGPU,uniform,formation kernel,0,6,738
+dGPU,uniform,copy protected to host,0,29,528
+dGPU,uniform,copy protected to device,0,29,503
+dGPU,uniform,search kernel,0,28,459
+dGPU,uniform,table kernel,0,0,730
+dGPU,uniform,branch-free kernel,0,4,364
+dGPU,uniform,copy output to host,0,0,995
+dGPU,uniform,write protected file,0,270,910
+dGPU,uniform,read protected file,0,53,548
+dGPU,uniform,copy input to device,1,1,137
+dGPU,uniform,formation kernel,1,6,019
+dGPU,uniform,copy protected to host,1,27,633
+dGPU,uniform,copy protected to device,1,26,178
+dGPU,uniform,search kernel,1,23,985
+dGPU,uniform,table kernel,1,0,629
+dGPU,uniform,branch-free kernel,1,3,789
+dGPU,uniform,copy output to host,1,0,946
+dGPU,uniform,write protected file,1,241,719
+dGPU,uniform,read protected file,1,53,821
+dGPU,uniform,copy input to device,2,1,108
+dGPU,uniform,formation kernel,2,5,988
+dGPU,uniform,copy protected to host,2,26,255
+dGPU,uniform,copy protected to device,2,29,246
+dGPU,uniform,search kernel,2,23,966
+dGPU,uniform,table kernel,2,0,648
+dGPU,uniform,branch-free kernel,2,3,706
+dGPU,uniform,copy output to host,2,1,008
+dGPU,uniform,write protected file,2,278,430
+dGPU,uniform,read protected file,2,52,672
+dGPU,uniform,copy input to device,3,1,034
+dGPU,uniform,formation kernel,3,5,931
+dGPU,uniform,copy protected to host,3,25,892
+dGPU,uniform,copy protected to device,3,26,156
+dGPU,uniform,search kernel,3,23,983
+dGPU,uniform,table kernel,3,0,629
+dGPU,uniform,branch-free kernel,3,3,700
+dGPU,uniform,copy output to host,3,0,976
+dGPU,uniform,write protected file,3,253,298
+dGPU,uniform,read protected file,3,54,425
+dGPU,uniform,copy input to device,4,1,083
+dGPU,uniform,formation kernel,4,5,915
+dGPU,uniform,copy protected to host,4,25,732
+dGPU,uniform,copy protected to device,4,26,044
+dGPU,uniform,search kernel,4,23,978
+dGPU,uniform,table kernel,4,0,615
+dGPU,uniform,branch-free kernel,4,3,704
+dGPU,uniform,copy output to host,4,1,075
+dGPU,uniform,write protected file,4,269,281
+dGPU,uniform,read protected file,4,52,856
+dGPU,uniform,copy input to device,5,1,220
+dGPU,uniform,formation kernel,5,7,193
+dGPU,uniform,copy protected to host,5,29,316
+dGPU,uniform,copy protected to device,5,26,138
+dGPU,uniform,search kernel,5,33,045
+dGPU,uniform,table kernel,5,0,726
+dGPU,uniform,branch-free kernel,5,5,170
+dGPU,uniform,copy output to host,5,1,154
+dGPU,uniform,write protected file,5,264,924
+dGPU,uniform,read protected file,5,54,361
+dGPU,uniform,copy input to device,6,1,156
+dGPU,uniform,formation kernel,6,7,564
+dGPU,uniform,copy protected to host,6,27,556
+dGPU,uniform,copy protected to device,6,29,514
+dGPU,uniform,search kernel,6,36,810
+dGPU,uniform,table kernel,6,0,629
+dGPU,uniform,branch-free kernel,6,5,657
+dGPU,uniform,copy output to host,6,1,073
+dGPU,uniform,write protected file,6,271,556
+dGPU,uniform,read protected file,6,55,466
+dGPU,uniform,copy input to device,7,1,207
+dGPU,uniform,formation kernel,7,6,884
+dGPU,uniform,copy protected to host,7,28,174
+dGPU,uniform,copy protected to device,7,26,168
+dGPU,uniform,search kernel,7,29,393
+dGPU,uniform,table kernel,7,0,615
+dGPU,uniform,branch-free kernel,7,4,625
+dGPU,uniform,copy output to host,7,1,123
+dGPU,uniform,write protected file,7,265,451
+dGPU,uniform,read protected file,7,52,568
+dGPU,uniform,copy input to device,8,1,369
+dGPU,uniform,formation kernel,8,6,110
+dGPU,uniform,copy protected to host,8,27,574
+dGPU,uniform,copy protected to device,8,31,618
+dGPU,uniform,search kernel,8,24,446
+dGPU,uniform,table kernel,8,0,731
+dGPU,uniform,branch-free kernel,8,3,825
+dGPU,uniform,copy output to host,8,1,235
+dGPU,uniform,write protected file,8,245,927
+dGPU,uniform,read protected file,8,53,808
+dGPU,uniform,copy input to device,9,1,059
+dGPU,uniform,formation kernel,9,5,924
+dGPU,uniform,copy protected to host,9,28,512
+dGPU,uniform,copy protected to device,9,27,107
+dGPU,uniform,search kernel,9,23,674
+dGPU,uniform,table kernel,9,1,408
+dGPU,uniform,branch-free kernel,9,3,637
+dGPU,uniform,copy output to host,9,1,017
+dGPU,uniform,write protected file,9,272,058
+dGPU,uniform,read protected file,9,53,790
+dGPU,ff,copy input to device,0,1,048
+dGPU,ff,formation kernel,0,5,928
+dGPU,ff,copy protected to host,0,26,443
+dGPU,ff,copy protected to device,0,28,373
+dGPU,ff,search kernel,0,2,430
+dGPU,ff,table kernel,0,0,633
+dGPU,ff,branch-free kernel,0,3,681
+dGPU,ff,copy output to host,0,1,014
+dGPU,ff,write protected file,0,269,918
+dGPU,ff,read protected file,0,54,437
+dGPU,ff,copy input to device,1,1,247
+dGPU,ff,formation kernel,1,5,920
+dGPU,ff,copy protected to host,1,28,042
+dGPU,ff,copy protected to device,1,26,420
+dGPU,ff,search kernel,1,2,434
+dGPU,ff,table kernel,1,0,634
+dGPU,ff,branch-free kernel,1,3,642
+dGPU,ff,copy output to host,1,0,941
+dGPU,ff,write protected file,1,247,043
+dGPU,ff,read protected file,1,53,689
+dGPU,ff,copy input to device,2,1,175
+dGPU,ff,formation kernel,2,5,901
+dGPU,ff,copy protected to host,2,26,231
+dGPU,ff,copy protected to device,2,25,999
+dGPU,ff,search kernel,2,2,445
+dGPU,ff,table kernel,2,0,639
+dGPU,ff,branch-free kernel,2,3,653
+dGPU,ff,copy output to host,2,0,944
+dGPU,ff,write protected file,2,255,681
+dGPU,ff,read protected file,2,53,044
+dGPU,ff,copy input to device,3,1,059
+dGPU,ff,formation kernel,3,6,820
+dGPU,ff,copy protected to host,3,26,217
+dGPU,ff,copy protected to device,3,28,536
+dGPU,ff,search kernel,3,3,111
+dGPU,ff,table kernel,3,0,614
+dGPU,ff,branch-free kernel,3,4,556
+dGPU,ff,copy output to host,3,1,059
+dGPU,ff,write protected file,3,251,001
+dGPU,ff,read protected file,3,52,010
+dGPU,ff,copy input to device,4,1,146
+dGPU,ff,formation kernel,4,7,593
+dGPU,ff,copy protected to host,4,26,460
+dGPU,ff,copy protected to device,4,26,346
+dGPU,ff,search kernel,4,3,357
+dGPU,ff,table kernel,4,0,625
+dGPU,ff,branch-free kernel,4,5,035
+dGPU,ff,copy output to host,4,0,934
+dGPU,ff,write protected file,4,266,798
+dGPU,ff,read protected file,4,53,953
+dGPU,ff,copy input to device,5,1,161
+dGPU,ff,formation kernel,5,8,062
+dGPU,ff,copy protected to host,5,26,118
+dGPU,ff,copy protected to device,5,26,747
+dGPU,ff,search kernel,5,3,699
+dGPU,ff,table kernel,5,0,663
+dGPU,ff,branch-free kernel,5,5,573
+dGPU,ff,copy output to host,5,0,951
+dGPU,ff,write protected file,5,248,438
+dGPU,ff,read protected file,5,53,856
+dGPU,ff,copy input to device,6,1,144
+dGPU,ff,formation kernel,6,9,059
+dGPU,ff,copy protected to host,6,28,674
+dGPU,ff,copy protected to device,6,30,709
+dGPU,ff,search kernel,6,4,129
+dGPU,ff,table kernel,6,0,663
+dGPU,ff,branch-free kernel,6,6,258
+dGPU,ff,copy output to host,6,0,948
+dGPU,ff,write protected file,6,250,346
+dGPU,ff,read protected file,6,54,422
+dGPU,ff,copy input to device,7,1,501
+dGPU,ff,formation kernel,7,9,979
+dGPU,ff,copy protected to host,7,25,234
+dGPU,ff,copy protected to device,7,29,152
+dGPU,ff,search kernel,7,4,531
+dGPU,ff,table kernel,7,0,734
+dGPU,ff,branch-free kernel,7,6,881
+dGPU,ff,copy output to host,7,1,156
+dGPU,ff,write protected file,7,243,415
+dGPU,ff,read protected file,7,54,014
+dGPU,ff,copy input to device,8,1,046
+dGPU,ff,formation kernel,8,9,923
+dGPU,ff,copy protected to host,8,29,677
+dGPU,ff,copy protected to device,8,31,880
+dGPU,ff,search kernel,8,4,938
+dGPU,ff,table kernel,8,0,802
+dGPU,ff,branch-free kernel,8,7,405
+dGPU,ff,copy output to host,8,1,093
+dGPU,ff,write protected file,8,239,163
+dGPU,ff,read protected file,8,53,904
+dGPU,ff,copy input to device,9,1,162
+dGPU,ff,formation kernel,9,10,726
+dGPU,ff,copy protected to host,9,27,383
+dGPU,ff,copy protected to device,9,26,081
+dGPU,ff,search kernel,9,5,266
+dGPU,ff,table kernel,9,0,883
+dGPU,ff,branch-free kernel,9,7,925
+dGPU,ff,copy output to host,9,0,912
+dGPU,ff,write protected file,9,264,920
+dGPU,ff,read protected file,9,53,118
+dGPU,zero,copy input to device,0,1,142
+dGPU,zero,formation kernel,0,7,848
+dGPU,zero,copy protected to host,0,26,303
+dGPU,zero,copy protected to device,0,26,014
+dGPU,zero,search kernel,0,0,645
+dGPU,zero,table kernel,0,0,638
+dGPU,zero,branch-free kernel,0,5,388
+dGPU,zero,copy output to host,0,1,089
+dGPU,zero,write protected file,0,266,268
+dGPU,zero,read protected file,0,52,509
+dGPU,zero,copy input to device,1,1,113
+dGPU,zero,formation kernel,1,7,835
+dGPU,zero,copy protected to host,1,25,865
+dGPU,zero,copy protected to device,1,26,240
+dGPU,zero,search kernel,1,0,641
+dGPU,zero,table kernel,1,0,671
+dGPU,zero,branch-free kernel,1,5,370
+dGPU,zero,copy output to host,1,0,911
+dGPU,zero,write protected file,1,260,345
+dGPU,zero,read protected file,1,53,214
+dGPU,zero,copy input to device,2,1,930
+dGPU,zero,formation kernel,2,7,831
+dGPU,zero,copy protected to host,2,26,857
+dGPU,zero,copy protected to device,2,31,664
+dGPU,zero,search kernel,2,0,668
+dGPU,zero,table kernel,2,0,611
+dGPU,zero,branch-free kernel,2,5,377
+dGPU,zero,copy output to host,2,0,921
+dGPU,zero,write protected file,2,265,064
+dGPU,zero,read protected file,2,54,599
+dGPU,zero,copy input to device,3,1,199
+dGPU,zero,formation kernel,3,7,963
+dGPU,zero,copy protected to host,3,25,261
+dGPU,zero,copy protected to device,3,27,075
+dGPU,zero,search kernel,3,0,641
+dGPU,zero,table kernel,3,0,613
+dGPU,zero,branch-free kernel,3,5,411
+dGPU,zero,copy output to host,3,1,089
+dGPU,zero,write protected file,3,263,586
+dGPU,zero,read protected file,3,52,387
+dGPU,zero,copy input to device,4,1,246
+dGPU,zero,formation kernel,4,9,397
+dGPU,zero,copy protected to host,4,28,721
+dGPU,zero,copy protected to device,4,26,303
+dGPU,zero,search kernel,4,0,744
+dGPU,zero,table kernel,4,0,701
+dGPU,zero,branch-free kernel,4,6,562
+dGPU,zero,copy output to host,4,0,930
+dGPU,zero,write protected file,4,268,614
+dGPU,zero,read protected file,4,53,625
+dGPU,zero,copy input to device,5,1,191
+dGPU,zero,formation kernel,5,10,508
+dGPU,zero,copy protected to host,5,30,004
+dGPU,zero,copy protected to device,5,28,543
+dGPU,zero,search kernel,5,0,813
+dGPU,zero,table kernel,5,0,758
+dGPU,zero,branch-free kernel,5,7,338
+dGPU,zero,copy output to host,5,1,079
+dGPU,zero,write protected file,5,294,816
+dGPU,zero,read protected file,5,55,056
+dGPU,zero,copy input to device,6,1,161
+dGPU,zero,formation kernel,6,11,518
+dGPU,zero,copy protected to host,6,27,892
+dGPU,zero,copy protected to device,6,30,192
+dGPU,zero,search kernel,6,0,885
+dGPU,zero,table kernel,6,0,828
+dGPU,zero,branch-free kernel,6,7,957
+dGPU,zero,copy output to host,6,1,052
+dGPU,zero,write protected file,6,292,106
+dGPU,zero,read protected file,6,54,878
+dGPU,zero,copy input to device,7,3,443
+dGPU,zero,formation kernel,7,11,874
+dGPU,zero,copy protected to host,7,95,234
+dGPU,zero,copy protected to device,7,29,273
+dGPU,zero,search kernel,7,0,802
+dGPU,zero,table kernel,7,0,754
+dGPU,zero,branch-free kernel,7,7,260
+dGPU,zero,copy output to host,7,0,913
+dGPU,zero,write protected file,7,269,854
+dGPU,zero,read protected file,7,54,566
+dGPU,zero,copy input to device,8,1,154
+dGPU,zero,formation kernel,8,10,514
+dGPU,zero,copy protected to host,8,28,699
+dGPU,zero,copy protected to device,8,26,099
+dGPU,zero,search kernel,8,0,809
+dGPU,zero,table kernel,8,0,763
+dGPU,zero,branch-free kernel,8,7,206
+dGPU,zero,copy output to host,8,0,975
+dGPU,zero,write protected file,8,262,560
+dGPU,zero,read protected file,8,53,760
+dGPU,zero,copy input to device,9,1,173
+dGPU,zero,formation kernel,9,10,479
+dGPU,zero,copy protected to host,9,28,059
+dGPU,zero,copy protected to device,9,28,909
+dGPU,zero,search kernel,9,0,808
+dGPU,zero,table kernel,9,0,956
+dGPU,zero,branch-free kernel,9,7,217
+dGPU,zero,copy output to host,9,1,102
+dGPU,zero,write protected file,9,272,193
+dGPU,zero,read protected file,9,52,144
+dGPU,ru,copy input to device,0,1,110
+dGPU,ru,formation kernel,0,8,468
+dGPU,ru,copy protected to host,0,28,135
+dGPU,ru,copy protected to device,0,28,284
+dGPU,ru,search kernel,0,15,622
+dGPU,ru,table kernel,0,0,744
+dGPU,ru,branch-free kernel,0,5,871
+dGPU,ru,copy output to host,0,1,168
+dGPU,ru,write protected file,0,274,902
+dGPU,ru,read protected file,0,52,982
+dGPU,ru,copy input to device,1,1,175
+dGPU,ru,formation kernel,1,7,982
+dGPU,ru,copy protected to host,1,28,272
+dGPU,ru,copy protected to device,1,26,501
+dGPU,ru,search kernel,1,14,555
+dGPU,ru,table kernel,1,0,805
+dGPU,ru,branch-free kernel,1,5,459
+dGPU,ru,copy output to host,1,1,124
+dGPU,ru,write protected file,1,264,632
+dGPU,ru,read protected file,1,52,940
+dGPU,ru,copy input to device,2,1,092
+dGPU,ru,formation kernel,2,7,686
+dGPU,ru,copy protected to host,2,26,250
+dGPU,ru,copy protected to device,2,31,203
+dGPU,ru,search kernel,2,13,882
+dGPU,ru,table kernel,2,0,638
+dGPU,ru,branch-free kernel,2,5,241
+dGPU,ru,copy output to host,2,0,955
+dGPU,ru,write protected file,2,276,688
+dGPU,ru,read protected file,2,55,216
+dGPU,ru,copy input to device,3,1,157
+dGPU,ru,formation kernel,3,7,533
+dGPU,ru,copy protected to host,3,28,168
+dGPU,ru,copy protected to device,3,26,129
+dGPU,ru,search kernel,3,13,505
+dGPU,ru,table kernel,3,0,630
+dGPU,ru,branch-free kernel,3,5,117
+dGPU,ru,copy output to host,3,1,023
+dGPU,ru,write protected file,3,272,505
+dGPU,ru,read protected file,3,51,847
+dGPU,ru,copy input to device,4,1,178
+dGPU,ru,formation kernel,4,7,408
+dGPU,ru,copy protected to host,4,28,163
+dGPU,ru,copy protected to device,4,26,249
+dGPU,ru,search kernel,4,13,289
+dGPU,ru,table kernel,4,0,617
+dGPU,ru,branch-free kernel,4,5,096
+dGPU,ru,copy output to host,4,0,957
+dGPU,ru,write protected file,4,285,948
+dGPU,ru,read protected file,4,53,078
+dGPU,ru,copy input to device,5,1,079
+dGPU,ru,formation kernel,5,7,319
+dGPU,ru,copy protected to host,5,26,291
+dGPU,ru,copy protected to device,5,26,577
+dGPU,ru,search kernel,5,13,151
+dGPU,ru,table kernel,5,0,614
+dGPU,ru,branch-free kernel,5,4,955
+dGPU,ru,copy output to host,5,0,952
+dGPU,ru,write protected file,5,285,496
+dGPU,ru,read protected file,5,54,484
+dGPU,ru,copy input to device,6,1,152
+dGPU,ru,formation kernel,6,7,364
+dGPU,ru,copy protected to host,6,28,091
+dGPU,ru,copy protected to device,6,26,472
+dGPU,ru,search kernel,6,13,138
+dGPU,ru,table kernel,6,0,622
+dGPU,ru,branch-free kernel,6,4,964
+dGPU,ru,copy output to host,6,0,913
+dGPU,ru,write protected file,6,266,643
+dGPU,ru,read protected file,6,54,907
+dGPU,ru,copy input to device,7,1,217
+dGPU,ru,formation kernel,7,7,554
+dGPU,ru,copy protected to host,7,25,609
+dGPU,ru,copy protected to device,7,31,927
+dGPU,ru,search kernel,7,13,134
+dGPU,ru,table kernel,7,0,747
+dGPU,ru,branch-free kernel,7,5,029
+dGPU,ru,copy output to host,7,1,017
+dGPU,ru,write protected file,7,284,567
+dGPU,ru,read protected file,7,55,043
+dGPU,ru,copy input to device,8,1,170
+dGPU,ru,formation kernel,8,7,377
+dGPU,ru,copy protected to host,8,29,703
+dGPU,ru,copy protected to device,8,26,308
+dGPU,ru,search kernel,8,13,142
+dGPU,ru,table kernel,8,0,714
+dGPU,ru,branch-free kernel,8,4,975
+dGPU,ru,copy output to host,8,1,110
+dGPU,ru,write protected file,8,269,673
+dGPU,ru,read protected file,8,53,849
+dGPU,ru,copy input to device,9,1,554
+dGPU,ru,formation kernel,9,7,278
+dGPU,ru,copy protected to host,9,27,858
+dGPU,ru,copy protected to device,9,26,021
+dGPU,ru,search kernel,9,12,920
+dGPU,ru,table kernel,9,0,619
+dGPU,ru,branch-free kernel,9,4,950
+dGPU,ru,copy output to host,9,1,190
+dGPU,ru,write protected file,9,266,968
+dGPU,ru,read protected file,9,55,187

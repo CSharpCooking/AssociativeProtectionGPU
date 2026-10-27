@@ -5,8 +5,9 @@
 // input and of the protected representation to and from the device (one copy each) and the writing and reading
 // of the protected representation to and from a file, so that the kernel times can be set against the stage
 // times of RevFormation and RevRecovery. Every recognition is checked byte by byte.
-// Output: CSV lines "device,input,step,rep,ms" on the standard output; the first repetition is a warm-up and is
-// not printed. With reps = 1 the command is short enough to be run under Nsight Compute (see the instructions).
+// Output: CSV lines "device,input,step,rep,ms" on the standard output, with a decimal point whatever the locale (the
+// first version used the locale, so that results/configuration_D/kernels.csv has a decimal comma); the first
+// repetition is a warm-up and is not printed. With reps = 1 the command is short enough to be run under Nsight Compute (see the instructions).
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -70,7 +71,7 @@ public static class RevKernels
                 };
                 for (int rep = -1; rep < reps; rep++)
                 {
-                    void Report(string step, double ms) { if (rep >= 0) Console.WriteLine($"{dev},{name},{step},{rep},{ms:F3}"); }
+                    void Report(string step, double ms) { if (rep >= 0) Console.WriteLine(FormattableString.Invariant($"{dev},{name},{step},{rep},{ms:F3}")); }
                     Report("copy input to device", Time(() => dInput.CopyFromCPU(input)));
                     Report("formation kernel", Time(() => formation(n, dInput.View, dProtected.View, dMaskedEtalons.View, dKeys.View, c, 0, seed)));
                     Report("copy protected to host", Time(() => dProtected.CopyToCPU(protectedHost)));

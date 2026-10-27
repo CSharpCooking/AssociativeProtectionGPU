@@ -4,7 +4,7 @@ Laptop Acer Nitro V 15: Intel Core i5-13420H, 16 GB DDR5-5200, M.2 NVMe PCIe 4.0
 (48 execution units, up to 1.4 GHz) through OpenCL and NVIDIA GeForce RTX 4050 Laptop GPU through CUDA;
 Windows 11 25H2 (build 26200.8246), .NET 7.0.16, BenchmarkDotNet 0.15.8, ILGPU 1.5.3.
 Library: [`library/CpuGpuStego.cs`](../../library/CpuGpuStego.cs); benchmark class:
-[`library/StegoBenchmarks.cs`](../../library/StegoBenchmarks.cs). Used in Tables 4–6 and Sections 7.1–7.3 and 7.8
+[`library/StegoBenchmarks.cs`](../../library/StegoBenchmarks.cs). Used in Tables 4–6 and Sections 7.1–7.4 and 7.11
 of the paper and in Table S1.
 
 ## Files
@@ -35,4 +35,4 @@ Method names in the reports (Russian) and their names here: «CPU - Шифров
 The values were transcribed from the report images and every value was checked against them. The inputs were UTF-8
 text files formed from a Russian-language novel and the text of a 3.45 MB book; they are protected by copyright and
 are not included (see [`data/README.md`](../../data/README.md)). In the 1024 KB series, the volumes of 3.45 MB and
-above were measured under different conditions and are not comparable with the 512 KB series (Section 7.8 of the paper).
+above were measured under different conditions and are not comparable with the 512 KB series (Section 7.11 of the paper).

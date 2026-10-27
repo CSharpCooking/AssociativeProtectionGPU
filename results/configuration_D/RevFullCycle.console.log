@@ -1,0 +1,2517 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 7 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1/" /p:OutDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0/" /p:OutputPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0/" /p:PublishDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\publish/" in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1
+// command took 0.73 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1/" /p:OutDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0/" /p:OutputPath="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0/" /p:PublishDir="C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\publish/" --output "C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0/" in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1
+// command took 3 sec and exited with 0
+// ***** Done, took 00:00:03 (3.77 sec)   *****
+// Found 7 benchmarks:
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par]
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par-GF]
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par-GF-table]
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=dGPU]
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=dGPU-table]
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=iGPU]
+//   RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=iGPU-table]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 1360 1328 --benchmarkName "RevFullCycle.FullCycle(Mode: \"CPU-par\")" --job L1W2I10 --benchmarkId 0 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 59000.00 ns, 59.0000 us/op
+WorkloadJitting  1: 1 op, 2862553300.00 ns, 2.8626 s/op
+
+OverheadWarmup   1: 1 op, 600.00 ns, 600.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   7: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 900.00 ns, 900.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 3531223400.00 ns, 3.5312 s/op
+WorkloadWarmup   2: 1 op, 2682732600.00 ns, 2.6827 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2832116200.00 ns, 2.8321 s/op
+WorkloadActual   2: 1 op, 2835025600.00 ns, 2.8350 s/op
+WorkloadActual   3: 1 op, 2959838800.00 ns, 2.9598 s/op
+WorkloadActual   4: 1 op, 2995108700.00 ns, 2.9951 s/op
+WorkloadActual   5: 1 op, 2823319400.00 ns, 2.8233 s/op
+WorkloadActual   6: 1 op, 2938169200.00 ns, 2.9382 s/op
+WorkloadActual   7: 1 op, 2991110900.00 ns, 2.9911 s/op
+WorkloadActual   8: 1 op, 2665280100.00 ns, 2.6653 s/op
+WorkloadActual   9: 1 op, 4190631200.00 ns, 4.1906 s/op
+WorkloadActual  10: 1 op, 2867824100.00 ns, 2.8678 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2832116000.00 ns, 2.8321 s/op
+WorkloadResult   2: 1 op, 2835025400.00 ns, 2.8350 s/op
+WorkloadResult   3: 1 op, 2959838600.00 ns, 2.9598 s/op
+WorkloadResult   4: 1 op, 2995108500.00 ns, 2.9951 s/op
+WorkloadResult   5: 1 op, 2823319200.00 ns, 2.8233 s/op
+WorkloadResult   6: 1 op, 2938169000.00 ns, 2.9382 s/op
+WorkloadResult   7: 1 op, 2991110700.00 ns, 2.9911 s/op
+WorkloadResult   8: 1 op, 2665279900.00 ns, 2.6653 s/op
+WorkloadResult   9: 1 op, 2867823900.00 ns, 2.8678 s/op
+// GC:  0 0 0 140086024 1
+// Threading:  8723 25 1
+
+// AfterAll
+// Benchmark Process 11500 has exited with code 0.
+
+Mean = 2.879 s, StdErr = 0.035 s (1.22%), N = 9, StdDev = 0.106 s
+Min = 2.665 s, Q1 = 2.832 s, Median = 2.868 s, Q3 = 2.960 s, Max = 2.995 s
+IQR = 0.128 s, LowerFence = 2.641 s, UpperFence = 3.151 s
+ConfidenceInterval = [2.701 s; 3.056 s] (CI 99.9%), Margin = 0.177 s (6.16% of Mean)
+Skewness = -0.6, Kurtosis = 2.23, MValue = 2.4
+
+// ** Remained 6 (85,7 %) benchmark(s) to run. Estimated finish 2026-10-27 13:33 (0h 4m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par-GF]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 864 1388 --benchmarkName "RevFullCycle.FullCycle(Mode: \"CPU-par-GF\")" --job L1W2I10 --benchmarkId 1 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 64500.00 ns, 64.5000 us/op
+WorkloadJitting  1: 1 op, 2856610300.00 ns, 2.8566 s/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 100.00 ns, 100.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 2932089700.00 ns, 2.9321 s/op
+WorkloadWarmup   2: 1 op, 2964172800.00 ns, 2.9642 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2944465800.00 ns, 2.9445 s/op
+WorkloadActual   2: 1 op, 3014112300.00 ns, 3.0141 s/op
+WorkloadActual   3: 1 op, 3258920900.00 ns, 3.2589 s/op
+WorkloadActual   4: 1 op, 2951859500.00 ns, 2.9519 s/op
+WorkloadActual   5: 1 op, 3257797700.00 ns, 3.2578 s/op
+WorkloadActual   6: 1 op, 3113919400.00 ns, 3.1139 s/op
+WorkloadActual   7: 1 op, 3031463600.00 ns, 3.0315 s/op
+WorkloadActual   8: 1 op, 2970605600.00 ns, 2.9706 s/op
+WorkloadActual   9: 1 op, 3123149800.00 ns, 3.1231 s/op
+WorkloadActual  10: 1 op, 3057337100.00 ns, 3.0573 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2944465600.00 ns, 2.9445 s/op
+WorkloadResult   2: 1 op, 3014112100.00 ns, 3.0141 s/op
+WorkloadResult   3: 1 op, 3258920700.00 ns, 3.2589 s/op
+WorkloadResult   4: 1 op, 2951859300.00 ns, 2.9519 s/op
+WorkloadResult   5: 1 op, 3257797500.00 ns, 3.2578 s/op
+WorkloadResult   6: 1 op, 3113919200.00 ns, 3.1139 s/op
+WorkloadResult   7: 1 op, 3031463400.00 ns, 3.0315 s/op
+WorkloadResult   8: 1 op, 2970605400.00 ns, 2.9706 s/op
+WorkloadResult   9: 1 op, 3123149600.00 ns, 3.1231 s/op
+WorkloadResult  10: 1 op, 3057336900.00 ns, 3.0573 s/op
+// GC:  0 0 0 140063696 1
+// Threading:  8694 11 1
+
+// AfterAll
+// Benchmark Process 45664 has exited with code 0.
+
+Mean = 3.072 s, StdErr = 0.037 s (1.19%), N = 10, StdDev = 0.115 s
+Min = 2.944 s, Q1 = 2.981 s, Median = 3.044 s, Q3 = 3.121 s, Max = 3.259 s
+IQR = 0.139 s, LowerFence = 2.772 s, UpperFence = 3.330 s
+ConfidenceInterval = [2.898 s; 3.247 s] (CI 99.9%), Margin = 0.175 s (5.68% of Mean)
+Skewness = 0.51, Kurtosis = 1.69, MValue = 2
+
+// ** Remained 5 (71,4 %) benchmark(s) to run. Estimated finish 2026-10-27 13:33 (0h 3m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par-GF-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 1376 604 --benchmarkName "RevFullCycle.FullCycle(Mode: \"CPU-par-GF-table\")" --job L1W2I10 --benchmarkId 2 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 62900.00 ns, 62.9000 us/op
+WorkloadJitting  1: 1 op, 2342944600.00 ns, 2.3429 s/op
+
+OverheadWarmup   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 2445573000.00 ns, 2.4456 s/op
+WorkloadWarmup   2: 1 op, 2812808700.00 ns, 2.8128 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 2540708100.00 ns, 2.5407 s/op
+WorkloadActual   2: 1 op, 2591058600.00 ns, 2.5911 s/op
+WorkloadActual   3: 1 op, 2490232400.00 ns, 2.4902 s/op
+WorkloadActual   4: 1 op, 2451058700.00 ns, 2.4511 s/op
+WorkloadActual   5: 1 op, 2464912600.00 ns, 2.4649 s/op
+WorkloadActual   6: 1 op, 2462717100.00 ns, 2.4627 s/op
+WorkloadActual   7: 1 op, 2472841700.00 ns, 2.4728 s/op
+WorkloadActual   8: 1 op, 2493268100.00 ns, 2.4933 s/op
+WorkloadActual   9: 1 op, 2472482400.00 ns, 2.4725 s/op
+WorkloadActual  10: 1 op, 2709534300.00 ns, 2.7095 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 2540707900.00 ns, 2.5407 s/op
+WorkloadResult   2: 1 op, 2591058400.00 ns, 2.5911 s/op
+WorkloadResult   3: 1 op, 2490232200.00 ns, 2.4902 s/op
+WorkloadResult   4: 1 op, 2451058500.00 ns, 2.4511 s/op
+WorkloadResult   5: 1 op, 2464912400.00 ns, 2.4649 s/op
+WorkloadResult   6: 1 op, 2462716900.00 ns, 2.4627 s/op
+WorkloadResult   7: 1 op, 2472841500.00 ns, 2.4728 s/op
+WorkloadResult   8: 1 op, 2493267900.00 ns, 2.4933 s/op
+WorkloadResult   9: 1 op, 2472482200.00 ns, 2.4725 s/op
+// GC:  0 0 0 139380776 1
+// Threading:  6557 13 1
+
+// AfterAll
+// Benchmark Process 41148 has exited with code 0.
+
+Mean = 2.493 s, StdErr = 0.015 s (0.60%), N = 9, StdDev = 0.045 s
+Min = 2.451 s, Q1 = 2.465 s, Median = 2.473 s, Q3 = 2.493 s, Max = 2.591 s
+IQR = 0.028 s, LowerFence = 2.422 s, UpperFence = 2.536 s
+ConfidenceInterval = [2.418 s; 2.569 s] (CI 99.9%), Margin = 0.076 s (3.03% of Mean)
+Skewness = 1.1, Kurtosis = 2.76, MValue = 2
+
+// ** Remained 4 (57,1 %) benchmark(s) to run. Estimated finish 2026-10-27 13:33 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=dGPU]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 1476 1436 --benchmarkName "RevFullCycle.FullCycle(Mode: \"dGPU\")" --job L1W2I10 --benchmarkId 3 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 63100.00 ns, 63.1000 us/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadJitting  1: 1 op, 2587270800.00 ns, 2.5873 s/op
+
+OverheadWarmup   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  12: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  13: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 300.00 ns, 300.0000 ns/op
+
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   1: 1 op, 2788012300.00 ns, 2.7880 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   2: 1 op, 2820015300.00 ns, 2.8200 s/op
+
+// BeforeActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   1: 1 op, 2551999900.00 ns, 2.5520 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   2: 1 op, 2540109800.00 ns, 2.5401 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   3: 1 op, 2641329400.00 ns, 2.6413 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   4: 1 op, 2585789300.00 ns, 2.5858 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   5: 1 op, 2739922200.00 ns, 2.7399 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   6: 1 op, 2638502500.00 ns, 2.6385 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   7: 1 op, 2706839400.00 ns, 2.7068 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   8: 1 op, 3406680900.00 ns, 3.4067 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   9: 1 op, 2854803200.00 ns, 2.8548 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual  10: 1 op, 2942522000.00 ns, 2.9425 s/op
+
+// AfterActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadResult   1: 1 op, 2551999650.00 ns, 2.5520 s/op
+WorkloadResult   2: 1 op, 2540109550.00 ns, 2.5401 s/op
+WorkloadResult   3: 1 op, 2641329150.00 ns, 2.6413 s/op
+WorkloadResult   4: 1 op, 2585789050.00 ns, 2.5858 s/op
+WorkloadResult   5: 1 op, 2739921950.00 ns, 2.7399 s/op
+WorkloadResult   6: 1 op, 2638502250.00 ns, 2.6385 s/op
+WorkloadResult   7: 1 op, 2706839150.00 ns, 2.7068 s/op
+WorkloadResult   8: 1 op, 2854802950.00 ns, 2.8548 s/op
+WorkloadResult   9: 1 op, 2942521750.00 ns, 2.9425 s/op
+// GC:  0 0 0 137624704 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 25564 has exited with code 0.
+
+Mean = 2.689 s, StdErr = 0.046 s (1.70%), N = 9, StdDev = 0.137 s
+Min = 2.540 s, Q1 = 2.586 s, Median = 2.641 s, Q3 = 2.740 s, Max = 2.943 s
+IQR = 0.154 s, LowerFence = 2.355 s, UpperFence = 2.971 s
+ConfidenceInterval = [2.458 s; 2.920 s] (CI 99.9%), Margin = 0.231 s (8.59% of Mean)
+Skewness = 0.59, Kurtosis = 1.82, MValue = 2.33
+
+// ** Remained 3 (42,9 %) benchmark(s) to run. Estimated finish 2026-10-27 13:33 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=dGPU-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 1456 1508 --benchmarkName "RevFullCycle.FullCycle(Mode: \"dGPU-table\")" --job L1W2I10 --benchmarkId 4 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 73600.00 ns, 73.6000 us/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadJitting  1: 1 op, 2316038900.00 ns, 2.3160 s/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   7: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadActual  11: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  12: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  13: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  16: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 300.00 ns, 300.0000 ns/op
+
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   1: 1 op, 2686931500.00 ns, 2.6869 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   2: 1 op, 2728454700.00 ns, 2.7285 s/op
+
+// BeforeActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   1: 1 op, 4387737500.00 ns, 4.3877 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   2: 1 op, 2848783800.00 ns, 2.8488 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   3: 1 op, 2755450100.00 ns, 2.7555 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   4: 1 op, 2812726100.00 ns, 2.8127 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   5: 1 op, 2642568800.00 ns, 2.6426 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   6: 1 op, 2617793100.00 ns, 2.6178 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   7: 1 op, 2699292200.00 ns, 2.6993 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   8: 1 op, 2587863500.00 ns, 2.5879 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   9: 1 op, 2559268600.00 ns, 2.5593 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual  10: 1 op, 2651810600.00 ns, 2.6518 s/op
+
+// AfterActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadResult   1: 1 op, 2848783500.00 ns, 2.8488 s/op
+WorkloadResult   2: 1 op, 2755449800.00 ns, 2.7554 s/op
+WorkloadResult   3: 1 op, 2812725800.00 ns, 2.8127 s/op
+WorkloadResult   4: 1 op, 2642568500.00 ns, 2.6426 s/op
+WorkloadResult   5: 1 op, 2617792800.00 ns, 2.6178 s/op
+WorkloadResult   6: 1 op, 2699291900.00 ns, 2.6993 s/op
+WorkloadResult   7: 1 op, 2587863200.00 ns, 2.5879 s/op
+WorkloadResult   8: 1 op, 2559268300.00 ns, 2.5593 s/op
+WorkloadResult   9: 1 op, 2651810300.00 ns, 2.6518 s/op
+// GC:  0 0 0 137622952 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 45044 has exited with code 0.
+
+Mean = 2.686 s, StdErr = 0.034 s (1.25%), N = 9, StdDev = 0.101 s
+Min = 2.559 s, Q1 = 2.618 s, Median = 2.652 s, Q3 = 2.755 s, Max = 2.849 s
+IQR = 0.138 s, LowerFence = 2.411 s, UpperFence = 2.962 s
+ConfidenceInterval = [2.517 s; 2.855 s] (CI 99.9%), Margin = 0.169 s (6.29% of Mean)
+Skewness = 0.35, Kurtosis = 1.47, MValue = 2.8
+
+// ** Remained 2 (28,6 %) benchmark(s) to run. Estimated finish 2026-10-27 13:33 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=iGPU]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 928 1152 --benchmarkName "RevFullCycle.FullCycle(Mode: \"iGPU\")" --job L1W2I10 --benchmarkId 5 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 76500.00 ns, 76.5000 us/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadJitting  1: 1 op, 5688913200.00 ns, 5.6889 s/op
+
+OverheadWarmup   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   2: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   1: 1 op, 5720486600.00 ns, 5.7205 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   2: 1 op, 5597535000.00 ns, 5.5975 s/op
+
+// BeforeActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   1: 1 op, 5511036500.00 ns, 5.5110 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   2: 1 op, 5663232200.00 ns, 5.6632 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   3: 1 op, 5644612300.00 ns, 5.6446 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   4: 1 op, 5571280000.00 ns, 5.5713 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   5: 1 op, 5829399900.00 ns, 5.8294 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   6: 1 op, 5801491700.00 ns, 5.8015 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   7: 1 op, 5716562500.00 ns, 5.7166 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   8: 1 op, 5566829300.00 ns, 5.5668 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   9: 1 op, 6195223900.00 ns, 6.1952 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual  10: 1 op, 5600866500.00 ns, 5.6009 s/op
+
+// AfterActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+��ࠡ�⪠ 200 ������...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadResult   1: 1 op, 5511036300.00 ns, 5.5110 s/op
+WorkloadResult   2: 1 op, 5663232000.00 ns, 5.6632 s/op
+WorkloadResult   3: 1 op, 5644612100.00 ns, 5.6446 s/op
+WorkloadResult   4: 1 op, 5571279800.00 ns, 5.5713 s/op
+WorkloadResult   5: 1 op, 5829399700.00 ns, 5.8294 s/op
+WorkloadResult   6: 1 op, 5801491500.00 ns, 5.8015 s/op
+WorkloadResult   7: 1 op, 5716562300.00 ns, 5.7166 s/op
+WorkloadResult   8: 1 op, 5566829100.00 ns, 5.5668 s/op
+WorkloadResult   9: 1 op, 5600866300.00 ns, 5.6009 s/op
+// GC:  0 0 0 137714304 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 24580 has exited with code 0.
+
+Mean = 5.656 s, StdErr = 0.036 s (0.64%), N = 9, StdDev = 0.109 s
+Min = 5.511 s, Q1 = 5.571 s, Median = 5.645 s, Q3 = 5.717 s, Max = 5.829 s
+IQR = 0.145 s, LowerFence = 5.353 s, UpperFence = 5.934 s
+ConfidenceInterval = [5.474 s; 5.839 s] (CI 99.9%), Margin = 0.182 s (3.23% of Mean)
+Skewness = 0.34, Kurtosis = 1.54, MValue = 2
+
+// ** Remained 1 (14,3 %) benchmark(s) to run. Estimated finish 2026-10-27 13:34 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=iGPU-table]
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet AssocRevision-L1W2I10-1.dll --anonymousPipes 1328 1488 --benchmarkName "RevFullCycle.FullCycle(Mode: \"iGPU-table\")" --job L1W2I10 --benchmarkId 6 in C:\assoc\AssociativeProtectionGPU\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L1W2I10-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2)
+
+OverheadJitting  1: 1 op, 71600.00 ns, 71.6000 us/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadJitting  1: 1 op, 3832549800.00 ns, 3.8325 s/op
+
+OverheadWarmup   1: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   7: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  10: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   1: 1 op, 3963017300.00 ns, 3.9630 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadWarmup   2: 1 op, 3758351700.00 ns, 3.7584 s/op
+
+// BeforeActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   1: 1 op, 3902229800.00 ns, 3.9022 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   2: 1 op, 3919540100.00 ns, 3.9195 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   3: 1 op, 3859201700.00 ns, 3.8592 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   4: 1 op, 3901916600.00 ns, 3.9019 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   5: 1 op, 4101926400.00 ns, 4.1019 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   6: 1 op, 3847101300.00 ns, 3.8471 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   7: 1 op, 3781579600.00 ns, 3.7816 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   8: 1 op, 3996878200.00 ns, 3.9969 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual   9: 1 op, 3977431400.00 ns, 3.9774 s/op
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadActual  10: 1 op, 3676230500.00 ns, 3.6762 s/op
+
+// AfterActualRun
+��ࠡ�⪠ 200 ������ �� 524288 ����...
+��ࠡ�⠭ ���� 1/200 (0,5%)
+��ࠡ�⠭ ���� 11/200 (5,5%)
+��ࠡ�⠭ ���� 21/200 (10,5%)
+��ࠡ�⠭ ���� 31/200 (15,5%)
+��ࠡ�⠭ ���� 41/200 (20,5%)
+��ࠡ�⠭ ���� 51/200 (25,5%)
+��ࠡ�⠭ ���� 61/200 (30,5%)
+��ࠡ�⠭ ���� 71/200 (35,5%)
+��ࠡ�⠭ ���� 81/200 (40,5%)
+��ࠡ�⠭ ���� 91/200 (45,5%)
+��ࠡ�⠭ ���� 101/200 (50,5%)
+��ࠡ�⠭ ���� 111/200 (55,5%)
+��ࠡ�⠭ ���� 121/200 (60,5%)
+��ࠡ�⠭ ���� 131/200 (65,5%)
+��ࠡ�⠭ ���� 141/200 (70,5%)
+��ࠡ�⠭ ���� 151/200 (75,5%)
+��ࠡ�⠭ ���� 161/200 (80,5%)
+��ࠡ�⠭ ���� 171/200 (85,5%)
+��ࠡ�⠭ ���� 181/200 (90,5%)
+��ࠡ�⠭ ���� 191/200 (95,5%)
+WorkloadResult   1: 1 op, 3902229600.00 ns, 3.9022 s/op
+WorkloadResult   2: 1 op, 3919539900.00 ns, 3.9195 s/op
+WorkloadResult   3: 1 op, 3859201500.00 ns, 3.8592 s/op
+WorkloadResult   4: 1 op, 3901916400.00 ns, 3.9019 s/op
+WorkloadResult   5: 1 op, 4101926200.00 ns, 4.1019 s/op
+WorkloadResult   6: 1 op, 3847101100.00 ns, 3.8471 s/op
+WorkloadResult   7: 1 op, 3781579400.00 ns, 3.7816 s/op
+WorkloadResult   8: 1 op, 3996878000.00 ns, 3.9969 s/op
+WorkloadResult   9: 1 op, 3977431200.00 ns, 3.9774 s/op
+WorkloadResult  10: 1 op, 3676230300.00 ns, 3.6762 s/op
+// GC:  0 0 0 137713176 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 24904 has exited with code 0.
+
+Mean = 3.896 s, StdErr = 0.037 s (0.96%), N = 10, StdDev = 0.118 s
+Min = 3.676 s, Q1 = 3.850 s, Median = 3.902 s, Q3 = 3.963 s, Max = 4.102 s
+IQR = 0.113 s, LowerFence = 3.681 s, UpperFence = 4.132 s
+ConfidenceInterval = [3.718 s; 4.075 s] (CI 99.9%), Margin = 0.178 s (4.57% of Mean)
+Skewness = -0.13, Kurtosis = 2.31, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2026-10-27 13:34 (0h 0m from now) **
+Successfully reverted power plan (GUID: 64a64f24-65b9-4b56-befd-5ec1eaced9b3 FriendlyName: Silent)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  C:\assoc\AssociativeProtectionGPU\measurement\laptop\results_revision\RevFullCycle\results\RevFullCycle-report.csv
+  C:\assoc\AssociativeProtectionGPU\measurement\laptop\results_revision\RevFullCycle\results\RevFullCycle-report-github.md
+  C:\assoc\AssociativeProtectionGPU\measurement\laptop\results_revision\RevFullCycle\results\RevFullCycle-report.html
+
+// * Detailed results *
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 2.879 s, StdErr = 0.035 s (1.22%), N = 9, StdDev = 0.106 s
+Min = 2.665 s, Q1 = 2.832 s, Median = 2.868 s, Q3 = 2.960 s, Max = 2.995 s
+IQR = 0.128 s, LowerFence = 2.641 s, UpperFence = 3.151 s
+ConfidenceInterval = [2.701 s; 3.056 s] (CI 99.9%), Margin = 0.177 s (6.16% of Mean)
+Skewness = -0.6, Kurtosis = 2.23, MValue = 2.4
+-------------------- Histogram --------------------
+[2.599 s ; 2.732 s) | @
+[2.732 s ; 2.814 s) | 
+[2.814 s ; 2.947 s) | @@@@@
+[2.947 s ; 3.062 s) | @@@
+---------------------------------------------------
+
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par-GF]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 3.072 s, StdErr = 0.037 s (1.19%), N = 10, StdDev = 0.115 s
+Min = 2.944 s, Q1 = 2.981 s, Median = 3.044 s, Q3 = 3.121 s, Max = 3.259 s
+IQR = 0.139 s, LowerFence = 2.772 s, UpperFence = 3.330 s
+ConfidenceInterval = [2.898 s; 3.247 s] (CI 99.9%), Margin = 0.175 s (5.68% of Mean)
+Skewness = 0.51, Kurtosis = 1.69, MValue = 2
+-------------------- Histogram --------------------
+[2.931 s ; 3.071 s) | @@@@@@
+[3.071 s ; 3.261 s) | @@@@
+---------------------------------------------------
+
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=CPU-par-GF-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 2.493 s, StdErr = 0.015 s (0.60%), N = 9, StdDev = 0.045 s
+Min = 2.451 s, Q1 = 2.465 s, Median = 2.473 s, Q3 = 2.493 s, Max = 2.591 s
+IQR = 0.028 s, LowerFence = 2.422 s, UpperFence = 2.536 s
+ConfidenceInterval = [2.418 s; 2.569 s] (CI 99.9%), Margin = 0.076 s (3.03% of Mean)
+Skewness = 1.1, Kurtosis = 2.76, MValue = 2
+-------------------- Histogram --------------------
+[2.444 s ; 2.501 s) | @@@@@@@
+[2.501 s ; 2.594 s) | @@
+---------------------------------------------------
+
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=dGPU]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 2.689 s, StdErr = 0.046 s (1.70%), N = 9, StdDev = 0.137 s
+Min = 2.540 s, Q1 = 2.586 s, Median = 2.641 s, Q3 = 2.740 s, Max = 2.943 s
+IQR = 0.154 s, LowerFence = 2.355 s, UpperFence = 2.971 s
+ConfidenceInterval = [2.458 s; 2.920 s] (CI 99.9%), Margin = 0.231 s (8.59% of Mean)
+Skewness = 0.59, Kurtosis = 1.82, MValue = 2.33
+-------------------- Histogram --------------------
+[2.537 s ; 2.710 s) | @@@@@@
+[2.710 s ; 2.812 s) | @
+[2.812 s ; 2.985 s) | @@
+---------------------------------------------------
+
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=dGPU-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 2.686 s, StdErr = 0.034 s (1.25%), N = 9, StdDev = 0.101 s
+Min = 2.559 s, Q1 = 2.618 s, Median = 2.652 s, Q3 = 2.755 s, Max = 2.849 s
+IQR = 0.138 s, LowerFence = 2.411 s, UpperFence = 2.962 s
+ConfidenceInterval = [2.517 s; 2.855 s] (CI 99.9%), Margin = 0.169 s (6.29% of Mean)
+Skewness = 0.35, Kurtosis = 1.47, MValue = 2.8
+-------------------- Histogram --------------------
+[2.542 s ; 2.669 s) | @@@@@
+[2.669 s ; 2.739 s) | @
+[2.739 s ; 2.866 s) | @@@
+---------------------------------------------------
+
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=iGPU]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 5.656 s, StdErr = 0.036 s (0.64%), N = 9, StdDev = 0.109 s
+Min = 5.511 s, Q1 = 5.571 s, Median = 5.645 s, Q3 = 5.717 s, Max = 5.829 s
+IQR = 0.145 s, LowerFence = 5.353 s, UpperFence = 5.934 s
+ConfidenceInterval = [5.474 s; 5.839 s] (CI 99.9%), Margin = 0.182 s (3.23% of Mean)
+Skewness = 0.34, Kurtosis = 1.54, MValue = 2
+-------------------- Histogram --------------------
+[5.443 s ; 5.684 s) | @@@@@@
+[5.684 s ; 5.841 s) | @@@
+---------------------------------------------------
+
+RevFullCycle.'Full cycle': L1W2I10(InvocationCount=1, IterationCount=10, LaunchCount=1, UnrollFactor=1, WarmupCount=2) [Mode=iGPU-table]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 3.896 s, StdErr = 0.037 s (0.96%), N = 10, StdDev = 0.118 s
+Min = 3.676 s, Q1 = 3.850 s, Median = 3.902 s, Q3 = 3.963 s, Max = 4.102 s
+IQR = 0.113 s, LowerFence = 3.681 s, UpperFence = 4.132 s
+ConfidenceInterval = [3.718 s; 4.075 s] (CI 99.9%), Margin = 0.178 s (4.57% of Mean)
+Skewness = -0.13, Kurtosis = 2.31, MValue = 2
+-------------------- Histogram --------------------
+[3.657 s ; 3.801 s) | @@
+[3.801 s ; 3.984 s) | @@@@@@
+[3.984 s ; 4.121 s) | @@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+Intel Core i9-14900HX 2.20GHz, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 8.0.427
+  [Host]  : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+  L1W2I10 : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+
+Job=L1W2I10  InvocationCount=1  IterationCount=10  
+LaunchCount=1  UnrollFactor=1  WarmupCount=2  
+
+| Method       | Mode             | Mean    | Error    | StdDev   | StdErr   | Min     | Q1      | Median  | Q3      | Max     | Iterations | Allocated |
+|------------- |----------------- |--------:|---------:|---------:|---------:|--------:|--------:|--------:|--------:|--------:|-----------:|----------:|
+| 'Full cycle' | CPU-par          | 2.879 s | 0.1774 s | 0.1055 s | 0.0352 s | 2.665 s | 2.832 s | 2.868 s | 2.960 s | 2.995 s |      9.000 |  133.6 MB |
+| 'Full cycle' | CPU-par-GF       | 3.072 s | 0.1746 s | 0.1155 s | 0.0365 s | 2.944 s | 2.981 s | 3.044 s | 3.121 s | 3.259 s |     10.000 | 133.58 MB |
+| 'Full cycle' | CPU-par-GF-table | 2.493 s | 0.0756 s | 0.0450 s | 0.0150 s | 2.451 s | 2.465 s | 2.473 s | 2.493 s | 2.591 s |      9.000 | 132.92 MB |
+| 'Full cycle' | dGPU             | 2.689 s | 0.2309 s | 0.1374 s | 0.0458 s | 2.540 s | 2.586 s | 2.641 s | 2.740 s | 2.943 s |      9.000 | 131.25 MB |
+| 'Full cycle' | dGPU-table       | 2.686 s | 0.1690 s | 0.1006 s | 0.0335 s | 2.559 s | 2.618 s | 2.652 s | 2.755 s | 2.849 s |      9.000 | 131.25 MB |
+| 'Full cycle' | iGPU             | 5.656 s | 0.1824 s | 0.1086 s | 0.0362 s | 5.511 s | 5.571 s | 5.645 s | 5.717 s | 5.829 s |      9.000 | 131.33 MB |
+| 'Full cycle' | iGPU-table       | 3.896 s | 0.1782 s | 0.1178 s | 0.0373 s | 3.676 s | 3.850 s | 3.902 s | 3.963 s | 4.102 s |     10.000 | 131.33 MB |
+
+// * Hints *
+Outliers
+  RevFullCycle.'Full cycle': L1W2I10 -> 1 outlier  was  removed (4.19 s)
+  RevFullCycle.'Full cycle': L1W2I10 -> 1 outlier  was  removed (2.71 s)
+  RevFullCycle.'Full cycle': L1W2I10 -> 1 outlier  was  removed (3.41 s)
+  RevFullCycle.'Full cycle': L1W2I10 -> 1 outlier  was  removed (4.39 s)
+  RevFullCycle.'Full cycle': L1W2I10 -> 1 outlier  was  removed (6.20 s)
+  RevFullCycle.'Full cycle': L1W2I10 -> 1 outlier  was  detected (3.68 s)
+
+// * Legends *
+  Mode       : Value of the 'Mode' parameter
+  Mean       : Arithmetic mean of all measurements
+  Error      : Half of 99.9% confidence interval
+  StdDev     : Standard deviation of all measurements
+  StdErr     : Standard error of all measurements
+  Min        : Minimum
+  Q1         : Quartile 1 (25th percentile)
+  Median     : Value separating the higher half of all measurements (50th percentile)
+  Q3         : Quartile 3 (75th percentile)
+  Max        : Maximum
+  Iterations : Number of target iterations
+  Allocated  : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 s        : 1 Second (1 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:05:43 (343.64 sec), executed benchmarks: 7
+
+Global total time: 00:05:48 (348.36 sec), executed benchmarks: 7
+// * Artifacts cleanup *
+Artifacts cleanup is finished

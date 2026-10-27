@@ -5,7 +5,10 @@
   OpenSSL 3.0.13.
 * `configuration_C/`: laptop HP OMEN 15-dc1xxx, Intel Core i5-9300H, 16 GB DDR4-2666, Windows 11 (build 26300),
   High performance power plan, .NET 8.0.33; produced with `measurement/run_windows.cmd`.
-* `Supplementary_Tables_S1-S4.xlsx`: Tables S1–S4 to which the paper refers (Section 6.7).
+* [`configuration_D/`](configuration_D/): laptop ASUS ROG Strix SCAR 18, Intel Core i9-14900HX, Intel UHD Graphics
+  (OpenCL) and NVIDIA GeForce RTX 4090 Laptop GPU (CUDA), Windows 11 Home 25H2, .NET 8.0.33; BenchmarkDotNet reports
+  and logs and kernel-only times of the kit `measurement/laptop` (own README).
+* `Supplementary_Tables_S1-S6.xlsx`: Tables S1–S6 to which the paper refers (Section 6.7).
 
 All results of configurations B and C were obtained with `measurement/AssocMeasure` on the inputs in `data/`. Times
 are in seconds unless the field name says otherwise.

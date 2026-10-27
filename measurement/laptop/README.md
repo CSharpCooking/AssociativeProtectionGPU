@@ -1,9 +1,10 @@
 # Revision measurements on a laptop with a GPU
 
-Code for further measurements on a computer with a GPU: on the laptop of the GPU measurements of the paper
-(configuration A: Intel Core i5-13420H, Intel UHD Graphics, NVIDIA GeForce RTX 4050 Laptop GPU) or on another one,
-such as the laptop of configuration C (Intel Core i5-9300H, NVIDIA GeForce RTX 2060). These measurements are not used
-in the paper. Section 8.7 of the paper lists what they would add.
+Code of the measurements added in the revision on a computer with a GPU. It was run on configuration D of the paper
+(ASUS ROG Strix SCAR 18: Intel Core i9-14900HX, Intel UHD Graphics, NVIDIA GeForce RTX 4090 Laptop GPU); the results
+are in [`results/configuration_D`](../../results/configuration_D) and are analyzed by
+[`analysis/config_d.py`](../../analysis/config_d.py) (Sections 7.8–7.11 of the paper). It can be run unchanged on
+another computer with a GPU, such as the laptop of configuration A.
 
 There are two ways to build the code:
 
@@ -18,10 +19,10 @@ The discrete GPU is selected with `AcceleratorSelector.Create(ExecutionMode.Nvid
 CUDA, and the integrated GPU with `AcceleratorSelector.Create(ExecutionMode.IntegratedGpu)`, through OpenCL. If a
 device is not available, its cases end with an error and the others run.
 
-The code was compiled against stand-ins for ILGPU and BenchmarkDotNet, because the packages could not be downloaded
-where the kit was written. On an emulation of the ILGPU runtime, every case of every class recovered its input byte by
-byte without leaking device buffers, also in the standalone layout with the library listing. The code **was not
-compiled against the real packages**, so a small adjustment may be needed.
+The kit was written against stand-ins for ILGPU and BenchmarkDotNet, because the packages could not be downloaded
+where it was written, and was checked on an emulation of the ILGPU runtime. On configuration D, the standalone build
+compiled against the real packages without changes (`results/configuration_D/build.log`), and all classes ran to
+completion.
 
 ## Files
 
@@ -77,10 +78,12 @@ Then run, from a console (not from Visual Studio, so that no debugger is attache
 run_revision.cmd <novel.txt> <repository>\data
 ```
 
-The first argument is the text file of the novel used in the paper; the second is the `data` folder of this
-repository. A single group is run with a third argument, e.g. `run_revision.cmd novel.txt ..\..\data formation`;
-`formation` (a few minutes) is a good first test. The whole run takes about 1–1.5 h on configuration A and about
-1.5–2 h on configuration C, whose processor is slower. Every BenchmarkDotNet group writes its reports and its log,
+The first argument is a UTF-8 text file, such as the novel used on configuration A; on configuration D, the Russian
+text `data/ru_10MB.bin` was used, whose numbers of etalon comparisons per byte are those of the novel (Section 6.3 of
+the paper). The second argument is the `data` folder of this repository. A single group is run with a third argument, e.g. `run_revision.cmd novel.txt ..\..\data formation`;
+`formation` (a few minutes) is a good first test. On configuration D, the groups took 2, 6, 1, 17, 4 and 9 minutes
+(break-even grid, 100 MB full cycle, formation, chunk size, recovery, recognition), plus a few minutes for the
+kernels; on a slower computer, the reference CPU implementation makes the run several times longer. Every BenchmarkDotNet group writes its reports and its log,
 with the times of all warm-up and measured iterations, to `results_revision\<class>`; `env.txt` records the runtime,
 the packages, the devices and their drivers, and the power settings.
 

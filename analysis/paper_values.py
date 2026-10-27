@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Prints the rows of Tables 4-9 of the paper and the derived values quoted in its text, computed from
-analysis/output/config_A.json, summary_B.json and summary_C.json (run config_a.py and summarize.py first).
-Writes analysis/output/paper_values.md.
+"""Prints the rows of Tables 4-15 of the paper and the derived values quoted in its text, computed from
+analysis/output/config_A.json, summary_B.json, summary_C.json and config_D.json (run config_a.py, summarize.py and
+config_d.py first). Writes analysis/output/paper_values.md.
 
 usage: python3 analysis/paper_values.py"""
 import json
@@ -12,6 +12,7 @@ from decimal import Decimal, ROUND_HALF_UP
 from common import ROOT, RESULTS, OUT, out_path
 
 D = json.load(open(OUT / 'config_A.json'))
+DD = json.load(open(OUT / 'config_D.json'))
 B = json.load(open(OUT / 'summary_B.json'))
 C = json.load(open(OUT / 'summary_C.json'))
 lines = []
@@ -220,6 +221,60 @@ for fn in sorted(os.listdir(FD)):
             if m:
                 fu.append((fn.replace('_finalAnalysisReport.txt', ''), int(m.group(1))))
 emit('Follow-up, Block Frequency on six further GPU filler sequences: ' + ', '.join(f'{a} {b}/100' for a, b in fu))
+
+emit()
+
+# ---------------------------------------------------------------- configuration D (Tables 10-15)
+rows = [[f"{g['kb']} KB", pm(g['cpu'][0], g['cpu'][1], 2), pm(g['igpu'][0], g['igpu'][1], 2), pm(g['dgpu'][0], g['dgpu'][1], 2),
+         sint(g['s_igpu']), sint(g['s_dgpu'])] for g in DD['grid']]
+table('Table 10. Full cycle on configuration D, 1-100 KB, three processes per value (ms, mean ± half-width of the 99.9% CI)',
+      ['Volume', 'CPU-seq', 'iGPU', 'dGPU', 'S iGPU', 'S dGPU'], rows)
+for g in ('igpu', 'dgpu'):
+    b = DD[f'bracket_{g}']
+    emit(f"{g}: CPU-seq faster up to {b['last_cpu']} KB, GPU faster from {b['first_gpu']} KB on; unresolved {b['unresolved']}; "
+         f"interpolated crossing {b['cross']:.1f} KB")
+emit()
+t11 = DD['t11']
+rows = [[k, pm(v['mean'], v['err'], 3), v['N'], sint(v['s_seq']), sint(v['s_best'])] for k, v in t11.items()]
+table('Table 11. Full cycle of 100 MB on configuration D (s); speedups over CPU-seq and relative to CPU-par-GF-table',
+      ['Path', 'Time', 'N', 'S over CPU-seq', 'Relative to CPU-par-GF-table'], rows)
+F12 = DD['formation']['t12']; R13 = DD['recovery']['t13']
+rows = [['formation', k, pm(v['mean'], v['err'], 1), v['N'], sint(v['s_ref'])] for k, v in F12.items()] + \
+       [['recovery', k, pm(v['mean'], v['err'], 1), v['N'], sint(v['s_ref'])] for k, v in R13.items()]
+table('Table 12. Formation and recovery of 10 MB on configuration D (ms); speedup over CPU-seq',
+      ['Stage', 'Path', 'Time', 'N', 'S over CPU-seq'], rows)
+F = DD['formation']
+emit(f"Per-section generator calls: {100 * F['call_share']:.1f}% of the reference formation "
+     f"[{100 * F['call_share_ci'][0]:.1f}, {100 * F['call_share_ci'][1]:.1f}], {F['ns_per_call']:.0f} ns per call; "
+     f"dGPU over CPU-seq-GF {sint(F['dgpu_vs_seqgf'])}; iGPU over CPU-seq-GF {sint(F['igpu_vs_seqgf'])}; dGPU over CPU-par-GF {sint(F['dgpu_vs_pargf'])}")
+emit()
+DATA = ('zero', 'ff', 'uniform', 'ru')
+rows = []
+for m in ('CPU-seq', 'CPU-seq-table', 'iGPU', 'iGPU-table', 'iGPU-branchfree', 'dGPU', 'dGPU-table', 'dGPU-branchfree'):
+    rows.append(['stage', m] + [pm(DD['recognition'][f'{d}|{m}']['mean'], DD['recognition'][f'{d}|{m}']['err'], 1) for d in DATA])
+for dev in ('iGPU', 'dGPU'):
+    for st in ('formation kernel', 'search kernel', 'table kernel', 'branch-free kernel'):
+        rows.append(['kernel', f'{dev} {st}'] + [pm(DD['kernels'][f'{dev}|{d}|{st}']['mean'], DD['kernels'][f'{dev}|{d}|{st}']['sd'], 2) for d in DATA])
+table('Table 13. Recognition of the 10 MB inputs on configuration D: stage (mean ± CI) and kernel-only time (mean ± SD of 10), ms',
+      ['Measurement', 'Procedure', 'All-zero', 'All-255', 'Uniform', 'Russian text'], rows)
+K = DD['kernels']
+def km(dev, step): return K[f'{dev}|ru|{step}']['mean']
+rows = []
+for dev in ('iGPU', 'dGPU'):
+    for lbl, stage, kern, to_dev, to_host in (('formation', F12[dev]['mean'], 'formation kernel', 'copy input to device', 'copy protected to host'),
+                                               ('recovery, search', DD['recognition'][f'ru|{dev}']['mean'], 'search kernel', 'copy protected to device', 'copy output to host'),
+                                               ('recovery, table', DD['recognition'][f'ru|{dev}-table']['mean'], 'table kernel', 'copy protected to device', 'copy output to host')):
+        k_, a_, b_ = km(dev, kern), km(dev, to_dev), km(dev, to_host)
+        rows.append([dev, lbl, rnd(stage, 1), rnd(k_, 1), rnd(a_, 1), rnd(b_, 1), rnd(stage - k_ - a_ - b_, 1), rnd(100 * (k_ + a_ + b_) / stage, 1)])
+table('Table 14. Decomposition of the stages for 10 MB of Russian text on configuration D (ms)',
+      ['Device', 'Stage', 'Stage time', 'Kernel', 'Copy to device', 'Copy to host', 'Remainder', 'Kernel and copies, %'], rows)
+ck = DD['chunk']
+rows = []
+for dev in ('iGPU', 'dGPU'):
+    rows.append([dev] + [f"{pm(ck[dev][c]['mean'], ck[dev][c]['err'], 3)} ({100 * ck[dev][c]['rel']:+.1f}%)" for c in ('orig', 'v2-256', 'v2-512', 'v2-1024', 'v2-2048')])
+rows.append(['allocation, MB'] + [f"{ck['dGPU'][c]['alloc']:.0f}" for c in ('orig', 'v2-256', 'v2-512', 'v2-1024', 'v2-2048')])
+table(f"Table 15. Full cycle of 100 MB on configuration D by chunk size (s; relative to V2 with 512 KB); CPU-seq {pm(ck['CPU-seq']['mean'], ck['CPU-seq']['err'], 2)} s",
+      ['', 'Original, 512 KB', 'V2, 256 KB', 'V2, 512 KB', 'V2, 1024 KB', 'V2, 2048 KB'], rows)
 
 open(out_path('paper_values.md'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
 print('\nwritten', out_path('paper_values.md').relative_to(ROOT))
