@@ -16,9 +16,10 @@ comparisons of the sequential search, and its warp-level counterpart (`analysis/
 | `ru_10MB.bin` | Russian text in UTF-8: the main text of the master's thesis on which the paper is based (D. S. Georgiev, KNRTU-KAI, 2026; see `library/README.md`) from the introduction to the conclusion, without headings and formula lines (233,639 bytes, 87% of which belong to non-ASCII characters; the last paragraph is the English version of the conclusion), repeated up to 10 MiB | 13.4 | 22.9 |
 | `zip_10MB.bin` | The first 10 MiB of a gzip-compressed tar archive (PAX format) of the directory `shared/` of the .NET 8.0.32 installation of configuration B; this part holds assemblies of the ASP.NET Core shared framework. Close to uniformly distributed bytes from a real file | 12.3 | 22.9 |
 
-Third-party content: `en_10MB.bin` consists of license texts and copyright notices distributed with Ubuntu, each
-under the terms stated in it. `zip_10MB.bin` contains compressed portions of .NET assemblies, which are licensed under
-the MIT license (`LICENSE-dotnet.txt`, Copyright (c) .NET Foundation and Contributors).
+Licenses: the synthetic inputs and `ru_10MB.bin` are covered by the MIT License of the repository (`../LICENSE`).
+Third-party content keeps its own terms: `en_10MB.bin` consists of license texts and copyright notices distributed
+with Ubuntu, each under the terms stated in it; `zip_10MB.bin` contains compressed portions of .NET assemblies, which
+are licensed under the MIT license (`LICENSE-dotnet.txt`, Copyright (c) .NET Foundation and Contributors).
 
 ## Configuration A (not included)
 

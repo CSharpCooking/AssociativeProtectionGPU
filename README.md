@@ -74,8 +74,10 @@ the published GPU filler sequences are regenerated from their seeds (`results/co
 
 ## License
 
-No license has been chosen yet. Until one is added, the authors retain all rights to the code and texts of this
-repository. Third-party content in `data/` remains under its own terms (see [`data/README.md`](data/README.md)).
+The code, data and texts of the authors in this repository are released under the [MIT License](LICENSE).
+Third-party content keeps its own terms: `data/en_10MB.bin` (license texts and copyright notices distributed with
+Ubuntu) and `data/zip_10MB.bin` (portions of .NET assemblies under the MIT License of the .NET Foundation,
+`data/LICENSE-dotnet.txt`); see [`data/README.md`](data/README.md).
 
 ## Citation
 
