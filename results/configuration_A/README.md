@@ -4,7 +4,8 @@ Laptop Acer Nitro V 15: Intel Core i5-13420H, 16 GB DDR5-5200, M.2 NVMe PCIe 4.0
 (48 execution units, up to 1.4 GHz) through OpenCL and NVIDIA GeForce RTX 4050 Laptop GPU through CUDA;
 Windows 11 25H2 (build 26200.8246), .NET 7.0.16, BenchmarkDotNet 0.15.8, ILGPU 1.5.3.
 Library: [`library/CpuGpuStego.cs`](../../library/CpuGpuStego.cs); benchmark class:
-[`library/StegoBenchmarks.cs`](../../library/StegoBenchmarks.cs). Used in Tables 4–6 and Sections 7.1–7.4 and 7.11
+[`library/StegoBenchmarks.cs`](../../library/StegoBenchmarks.cs), in their final version; the measurements were made
+with an earlier build under .NET 7, which may differ from it in details (Section 6.7 of the paper). Used in Tables 4–6 and Sections 7.1–7.4 and 7.11
 of the paper and in Table S1.
 
 ## Files

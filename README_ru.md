@@ -38,8 +38,9 @@
 | GPU | Intel UHD Graphics (OpenCL), NVIDIA GeForce RTX 4050 Laptop GPU (CUDA) | нет | не использовались | Intel UHD Graphics (OpenCL), NVIDIA GeForce RTX 4090 Laptop GPU (CUDA) |
 | ПО | Windows 11 25H2, .NET 7.0.16, BenchmarkDotNet 0.15.8, ILGPU 1.5.3 | Ubuntu 24.04.5, .NET 8.0.32, OpenSSL 3.0.13 | Windows 11 (сборка 26300), .NET 8.0.33 | Windows 11 Home 25H2, .NET 8.0.33, BenchmarkDotNet 0.15.8, ILGPU 1.5.3 |
 
-Полное описание — в табл. 3 статьи. Замеры GPU на конфигурации A выполнены классом бенчмарков из
-`library/StegoBenchmarks.cs`, на конфигурациях B и C — программой `measurement/AssocMeasure`, на конфигурации D —
+Полное описание — в табл. 3 статьи. Замеры GPU на конфигурации A выполнены более ранней сборкой (.NET 7) класса
+бенчмарков из `library/StegoBenchmarks.cs`, которая может отличаться от опубликованного листинга в деталях (разд. 6.7
+статьи), на конфигурациях B и C — программой `measurement/AssocMeasure`, на конфигурации D —
 набором `measurement/laptop`, который компилирует листинг библиотеки из `library/` без изменений.
 
 ## Пересчёт таблиц и рисунков
@@ -50,7 +51,7 @@ Python 3.10 или новее с NumPy и Matplotlib (`pip install -r analysis/r
 python3 analysis/config_a.py        # табл. 4–6 и производные величины конфигурации A
 python3 analysis/summarize.py B     # конфигурация B: формирование, распознавание, парный дизайн, NIST
 python3 analysis/summarize.py C     # конфигурация C
-python3 analysis/config_d.py        # конфигурация D: табл. 10–15, S5, S6; сверка журналов с отчётами
+python3 analysis/config_d.py        # конфигурация D: табл. 10–15 по журналам, со сверкой с отчётами
 python3 analysis/paper_values.py    # табл. 4–15 и величины из текста -> analysis/output/paper_values.md
 python3 analysis/figures.py         # рис. 2–5 -> analysis/output/
 ```
@@ -83,8 +84,9 @@ BenchmarkDotNet из NuGet), выполняет шесть его классов
   характеристики.
 * Собираемый проект библиотеки: листинги взяты из приложений магистерской диссертации, на которой основана статья;
   в них нет класса `BitVector` и файлов проекта (см. [`library/README.md`](library/README.md)).
-* Отчёты об оборудовании с серийными номерами, имена пользователей и локальные пути: пути в отчётах NIST заменены
-  относительными.
+* Отчёты об оборудовании с серийными номерами, имена пользователей и пути к папкам пользователей: пути в отчётах NIST
+  заменены относительными; в журналах конфигурации D остались пути её рабочей папки `C:\assoc`, имени пользователя в
+  них нет.
 
 ## Лицензия
 

@@ -22,7 +22,8 @@ device is not available, its cases end with an error and the others run.
 The kit was written against stand-ins for ILGPU and BenchmarkDotNet, because the packages could not be downloaded
 where it was written, and was checked on an emulation of the ILGPU runtime. On configuration D, the standalone build
 compiled against the real packages without changes (`results/configuration_D/build.log`), and all classes ran to
-completion.
+completion. Since that run, only the number format of `rev-kernels` (a decimal point whatever the locale) and comments
+have changed.
 
 ## Files
 
@@ -48,7 +49,7 @@ iterations, so that the reported counts are the actual ones.
 | `RevBreakEven` | Full cycle with verification at 1, 10, 20, 30, 40, 50, 60, 75, 100 KB; CPU-seq and the original GPU classes | 27 | 3 × (5 + 30) | R1 5.1; R2 4, 5; R3 5 |
 | `RevFullCycle` | Full cycle of 100 MB: multithreaded CPU (chunk-wise generator or GPU filler function, search or table) and both GPUs (search or table) | 7 | 1 × (2 + 10) | R1 2.5; R2 2; R3 2 |
 | `RevFormation` | Formation of 10 MB: CPU-seq, sequential with one generator call per range or with the GPU filler function, the same on all threads, both GPUs | 7 | 1 × (3 + 15) | R2 3; R3 2 |
-| `RevChunkSize` | Full cycle of 100 MB with chunks of 256, 512, 1024 and 2048 KB in one build and one run; the original classes at 512 KB; CPU-seq as a control of the state of the machine | 11 | 1 × (2 + 10) | R1 2.1; R2 8; R3 3 |
+| `RevChunkSize` | Full cycle of 100 MB with chunks of 256, 512, 1024 and 2048 KB in one build and one run; the original classes at 512 KB; CPU-seq, which runs first and therefore does not control the state of the machine during the whole run | 11 | 1 × (2 + 10) | R1 2.1; R2 8; R3 3 |
 | `RevRecovery` | Recovery of 10 MB: search and table on the CPU (sequential and on all threads), original and revision search kernels, table and branch-free kernels on both GPUs | 12 | 1 × (3 + 15) | R1 1.3, 1.4, 4; R3 4 |
 | `RevRecognition` | Recovery of the 10 MB inputs uniform, all-255, all-zero and Russian text of `data/` by CPU-seq, the CPU table and the three GPU kernels | 32 | 1 × (3 + 15) | R1 4, 5.2; R3 4 |
 | `rev-kernels` | Kernel-only times of the formation kernel and the three recognition kernels on the same four inputs, copies to and from the device, file write and read | 8 runs | 1 warm-up + 10 | R1 2.3, 4; R3 4 |

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Configuration A: Tables 4-6 of the paper and the derived quantities of Sections 7.1-7.3 and 7.8 (fixed and
+"""Configuration A: Tables 4-6 of the paper and the derived quantities of Sections 7.2-7.4 and 7.11 (fixed and
 marginal costs, allocation experiment, confounding of the 1024 KB series, crossing points), computed from the
 BenchmarkDotNet statistics in results/configuration_A/bdn_statistics.json.
 Writes analysis/output/config_A.json and prints a report.

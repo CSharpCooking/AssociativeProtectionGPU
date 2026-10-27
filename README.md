@@ -38,8 +38,9 @@ NIST SP 800-22 tests, and the scripts that recompute the tables and figures of t
 | GPUs | Intel UHD Graphics (OpenCL), NVIDIA GeForce RTX 4050 Laptop GPU (CUDA) | none | not used | Intel UHD Graphics (OpenCL), NVIDIA GeForce RTX 4090 Laptop GPU (CUDA) |
 | Software | Windows 11 25H2, .NET 7.0.16, BenchmarkDotNet 0.15.8, ILGPU 1.5.3 | Ubuntu 24.04.5, .NET 8.0.32, OpenSSL 3.0.13 | Windows 11 (build 26300), .NET 8.0.33 | Windows 11 Home 25H2, .NET 8.0.33, BenchmarkDotNet 0.15.8, ILGPU 1.5.3 |
 
-Table 3 of the paper gives the complete description. The GPU measurements of configuration A were made with the
-benchmark class in `library/StegoBenchmarks.cs`; configurations B and C ran `measurement/AssocMeasure`, and
+Table 3 of the paper gives the complete description. The GPU measurements of configuration A were made with an earlier
+build (.NET 7) of the benchmark class in `library/StegoBenchmarks.cs`, which may differ from the published listing in
+details (Section 6.7 of the paper); configurations B and C ran `measurement/AssocMeasure`, and
 configuration D the kit `measurement/laptop`, which compiles the library listing of `library/` without changes.
 
 ## Reproducing the analysis
@@ -50,7 +51,7 @@ Python 3.10 or later with NumPy and Matplotlib (`pip install -r analysis/require
 python3 analysis/config_a.py        # Tables 4-6 and the derived values of configuration A
 python3 analysis/summarize.py B     # configuration B: formation, recognition, paired design, NIST
 python3 analysis/summarize.py C     # configuration C
-python3 analysis/config_d.py        # configuration D: Tables 10-15, S5, S6; checks the logs against the reports
+python3 analysis/config_d.py        # configuration D: Tables 10-15 from the logs, checked against the reports
 python3 analysis/paper_values.py    # Tables 4-15 and the values quoted in the text -> analysis/output/paper_values.md
 python3 analysis/figures.py         # Figures 2-5 -> analysis/output/
 ```
@@ -81,8 +82,9 @@ Russian: [`RUN_INSTRUCTIONS_RU.md`](measurement/laptop/RUN_INSTRUCTIONS_RU.md).
   statistics reported for it.
 * A buildable project of the library: the listings come from the appendices of the master's thesis on which the paper
   is based and lack the `BitVector` class and the project files (see [`library/README.md`](library/README.md)).
-* Hardware reports with serial numbers, user names and local paths: paths in the NIST reports were shortened to
-  relative ones.
+* Hardware reports with serial numbers, user names and paths of user folders: paths in the NIST reports were
+  shortened to relative ones; the logs of configuration D contain the paths of its working folder `C:\assoc`, which
+  contain no user name.
 
 ## License
 

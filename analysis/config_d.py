@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 """Configuration D: the revision measurements on a second laptop with a GPU (measurement/laptop), computed from the
 BenchmarkDotNet reports and logs and from the kernel times in results/configuration_D.
-Tables 10-14 and Figure 5 of the paper, Sections 7.8-7.11, Table S5 (statistics) and Table S6 (kernel times).
-Writes analysis/output/config_D.json and prints a report.
+Tables 10-15 and Figure 5 of the paper, Sections 7.8-7.11, and the values summarized in Tables S5 (statistics) and
+S6 (kernel times). Writes analysis/output/config_D.json and prints a report.
 
-The statistics of every case are taken from the CSV report (mean, half-width of the 99.9% confidence interval,
-SD, SE, quartiles, extremes, number of iterations after the removal of upper outliers, allocation). The log of
-every class gives the time of every measured iteration of every process; the script recomputes the mean and the
-number of iterations from it as a check of the report and gives the mean of every process (the break-even grid
-ran three processes per case). kernels.csv was written with the decimal comma of the Russian locale, so that a
-line has six fields: device, input, step, repetition, integer part, fraction.
+The log of every class gives the time of every measured iteration of every process (WorkloadResult, after the
+removal of upper outliers). The mean, SD, SE and half-width of the 99.9% confidence interval of every case are
+computed from these times, pooled over the processes, as BenchmarkDotNet computes them (Student's t with N - 1
+degrees of freedom), and are checked against the CSV report, which gives them rounded to four significant digits;
+the number of iterations must be identical. The quartiles, extremes, allocation and collections are taken from the
+report. The script also gives the mean of every process (the break-even grid ran three processes per case).
+kernels.csv was written with the decimal comma of the Russian locale, so that a line has six fields: device, input,
+step, repetition, integer part, fraction.
 
 usage: python3 analysis/config_d.py"""
 import csv
@@ -26,13 +28,18 @@ TO_MS = {'ns': 1e-6, 'μs': 1e-3, 'us': 1e-3, 'ms': 1.0, 's': 1e3}
 TO_MB = {'B': 2.0 ** -20, 'KB': 2.0 ** -10, 'MB': 1.0, 'GB': 2.0 ** 10}
 
 
-def quantity(text, table):
-    """'1,033.6 μs' -> 1.0336 (ms); '33.07 MB' -> 33.07 (MB); '-' or '' -> None"""
+def quantity(text, table, half_ulp=False):
+    """'1,033.6 μs' -> 1.0336 (ms); '33.07 MB' -> 33.07 (MB); '-' or '' -> None.
+    With half_ulp, also half a unit of the last printed digit, in the same unit (the rounding error of the report)."""
     t = text.strip().strip('"')
     if t in ('', '-', 'NA', '?'):
-        return None
+        return (None, None) if half_ulp else None
     v, u = t.split()
-    return float(v.replace(',', '')) * table[u]
+    x = float(v.replace(',', '')) * table[u]
+    if not half_ulp:
+        return x
+    dec = len(v.split('.')[1]) if '.' in v else 0
+    return x, 0.5 * 10.0 ** -dec * table[u]
 
 
 def read_report(cls):
@@ -47,8 +54,9 @@ def read_report(cls):
     for r in body:
         d = dict(zip(head, r))
         rec = {'class': cls, 'job': d['Job'], 'params': {n: d[n] for n in names}}
+        rec['half_ulp'] = {}
         for k in ('Mean', 'Error', 'StdDev', 'StdErr', 'Median', 'Min', 'Q1', 'Q3', 'Max'):
-            rec[k] = quantity(d[k], TO_MS)
+            rec[k], rec['half_ulp'][k] = quantity(d[k], TO_MS, half_ulp=True)
         rec['N'] = int(round(float(d['Iterations'])))
         rec['alloc_MB'] = quantity(d['Allocated'], TO_MB)
         # BenchmarkDotNet omits the columns of the generations without collections in a class
@@ -87,6 +95,43 @@ def mean(xs):
     return sum(xs) / len(xs)
 
 
+def _betacf(a, b, x):
+    """continued fraction of the regularized incomplete beta function (modified Lentz)"""
+    tiny, c, d = 1e-300, 1.0, 1.0 - (a + b) * x / (a + 1.0)
+    d = 1.0 / (d if abs(d) > tiny else tiny)
+    h = d
+    for m in range(1, 500):
+        for aa in (m * (b - m) * x / ((a + 2 * m - 1) * (a + 2 * m)),
+                   -(a + m) * (a + b + m) * x / ((a + 2 * m) * (a + 2 * m + 1))):
+            d = 1.0 + aa * d
+            d = 1.0 / (d if abs(d) > tiny else tiny)
+            c = 1.0 + aa / c
+            c = c if abs(c) > tiny else tiny
+            h *= d * c
+        if abs(d * c - 1.0) < 1e-15:
+            break
+    return h
+
+
+def _betainc(a, b, x):
+    lb = math.lgamma(a + b) - math.lgamma(a) - math.lgamma(b) + a * math.log(x) + b * math.log(1.0 - x)
+    if x < (a + 1.0) / (a + b + 2.0):
+        return math.exp(lb) * _betacf(a, b, x) / a
+    return 1.0 - math.exp(lb) * _betacf(b, a, 1.0 - x) / b
+
+
+def t_quantile(p, df):
+    """quantile of Student's t distribution for p > 0.5, by bisection of the distribution function"""
+    lo, hi = 0.0, 1e4
+    for _ in range(200):
+        t = (lo + hi) / 2
+        if 1.0 - 0.5 * _betainc(df / 2.0, 0.5, df / (df + t * t)) < p:
+            lo = t
+        else:
+            hi = t
+    return (lo + hi) / 2
+
+
 def sd(xs):
     m = mean(xs)
     return math.sqrt(sum((x - m) ** 2 for x in xs) / (len(xs) - 1))
@@ -107,10 +152,15 @@ for cls in CLASSES:
         rec['launch_N'] = [len(l['result']) for l in launches]
         rec['warmup_per_launch'] = [len(l['warmup']) for l in launches]
         rec['measured_per_launch'] = [len(l['actual']) for l in launches]
-        rec['log_mean'], rec['log_N'] = mean(res), len(res)
-        rec['log_sd'] = sd(res)
-        rel = abs(rec['log_mean'] / rec['Mean'] - 1)
-        CHECK.append((cls, key, rel, rec['log_N'] == rec['N']))
+        n_ = len(res)
+        m_, s_ = mean(res), sd(res)
+        se_ = s_ / math.sqrt(n_)
+        log = {'Mean': m_, 'StdDev': s_, 'StdErr': se_, 'Error': t_quantile(0.9995, n_ - 1) * se_}
+        # every statistic of the log must round to the value printed in the report
+        rel = max(abs(log[k] - rec[k]) / rec['half_ulp'][k] for k in log)
+        CHECK.append((cls, key, rel, n_ == rec['N']))
+        rec['report'] = {k: rec[k] for k in log}
+        rec.update(log)                     # the statistics used below are those of the log
         R[cls][key] = rec
     if len(logs) > 1:                       # RevFormation: the first log is a separate trial run of the class
         R[cls + '_trial'] = {k: {'Mean': mean([x for l in v for x in l['result']]), 'N': sum(len(l['result']) for l in v)}
@@ -118,8 +168,9 @@ for cls in CLASSES:
 
 worst = max(CHECK, key=lambda c: c[2])
 assert all(c[3] for c in CHECK), [c for c in CHECK if not c[3]]
-assert worst[2] < 5e-4, worst
-print(f'logs agree with the reports: {len(CHECK)} cases, N identical, largest relative difference of the means {worst[2]:.1e}')
+assert worst[2] <= 1.0 + 1e-6, worst
+print(f'logs agree with the reports: {len(CHECK)} cases, N identical; the mean, SD, SE and CI half-width computed from the '
+      f'log round to the values of the report (largest difference {worst[2]:.3f} of half a unit of the last printed digit)')
 
 
 def get(cls, *key):
@@ -147,7 +198,7 @@ def verdict(a, b):
 
 def stats(r):
     keep = ('Mean', 'Error', 'StdDev', 'StdErr', 'Median', 'Min', 'Q1', 'Q3', 'Max', 'N', 'alloc_MB', 'gc_per_1000',
-            'launch_means', 'launch_N', 'warmup_per_launch', 'measured_per_launch')
+            'launch_means', 'launch_N', 'warmup_per_launch', 'measured_per_launch', 'report')
     return {k: r[k] for k in keep}
 
 
@@ -227,7 +278,7 @@ out['repeat_100MB'] = rep
 print(f"  original GPU classes measured in two classes (separate processes): difference {rep['iGPU']:+.1f}% (iGPU), {rep['dGPU']:+.1f}% (dGPU)")
 
 # ---------------------------------------------------------------- 3. formation of 10 MB
-print('\n=== Table 12: formation of 10 MB (ms)')
+print('\n=== Table 12 (formation): formation of 10 MB (ms)')
 fm = {m: get('RevFormation', m) for m in ('CPU-seq', 'CPU-seq-chunk', 'CPU-seq-GF', 'CPU-par', 'CPU-par-GF', 'iGPU', 'dGPU')}
 t12 = {}
 for name, r in fm.items():
@@ -257,7 +308,7 @@ out['formation_trial_dev'] = dev
 print('  trial run of the class 10 min earlier, difference of the means %:', {k: round(v, 1) for k, v in dev.items()})
 
 # ---------------------------------------------------------------- 4. recovery of 10 MB
-print('\n=== Table 13: recovery of 10 MB (ms); the protected file of the GPU modes is formed by the GPU encoder')
+print('\n=== Table 12 (recovery): recovery of 10 MB (ms); the protected file of the GPU modes is formed by the GPU encoder')
 rv_modes = ('CPU-seq', 'CPU-seq-table', 'CPU-par', 'CPU-par-table', 'iGPU', 'iGPU-v2', 'iGPU-table', 'iGPU-branchfree',
             'dGPU', 'dGPU-v2', 'dGPU-table', 'dGPU-branchfree')
 rv = {m: get('RevRecovery', m) for m in rv_modes}
@@ -279,7 +330,7 @@ out['stage_ratio_10MB'] = {m: fm[m]['Mean'] / rv[m]['Mean'] for m in ('CPU-seq',
 print('  formation / recovery at 10 MB:', {k: round(v, 2) for k, v in out['stage_ratio_10MB'].items()})
 
 # ---------------------------------------------------------------- 5. recognition of the four inputs
-print('\n=== Table 14 (left): recovery of the 10 MB inputs of data/ (ms)')
+print('\n=== Table 13 (stages): recovery of the 10 MB inputs of data/ (ms)')
 DATA = ('uniform', 'ff', 'zero', 'ru')
 rg_modes = ('CPU-seq', 'CPU-seq-table', 'iGPU', 'iGPU-table', 'iGPU-branchfree', 'dGPU', 'dGPU-table', 'dGPU-branchfree')
 rg = {(d, m): get('RevRecognition', d, m) for d in DATA for m in rg_modes}
@@ -289,7 +340,7 @@ for m in rg_modes:
           + f"   uniform/ff {rg[('uniform', m)]['Mean']/rg[('ff', m)]['Mean']:.2f}")
 
 # ---------------------------------------------------------------- 6. kernel-only times
-print('\n=== Table 14 (right): kernel-only times, 10 MB in one launch, data resident on the device (ms, mean ± SD of 10)')
+print('\n=== Tables 13 (kernels) and 14: kernel-only times, 10 MB in one launch, data resident on the device (ms, mean ± SD of 10)')
 K = {}
 with open(DIR / 'kernels.csv', encoding='utf-8') as f:
     next(f)
@@ -304,6 +355,26 @@ with open(DIR / 'kernels.csv', encoding='utf-8') as f:
 assert all(len(v) == 10 for v in K.values())
 KS = {k: dict(mean=mean(v), sd=sd(v), min=min(v), max=max(v)) for k, v in K.items()}
 out['kernels'] = {'|'.join(k): v for k, v in KS.items()}
+# The lines of a repetition follow each other in the file, so that the lists are in the order of the repetitions. In every
+# repetition, the search, table-driven and branch-free kernels ran one after another; the branch-free kernel does the same
+# work on every input. Ratio of the search kernel to the branch-free kernel of the same repetition:
+SBF = {(dev_, d): [a / b for a, b in zip(K[(dev_, d, 'search kernel')], K[(dev_, d, 'branch-free kernel')])]
+       for dev_ in ('iGPU', 'dGPU') for d in DATA}
+out['search_over_branchfree'] = {f'{dv}|{d}': dict(mean=mean(v), min=min(v), max=max(v)) for (dv, d), v in SBF.items()}
+COMPUTE = ('formation kernel', 'search kernel', 'table kernel', 'branch-free kernel')
+out['kernel_variation'] = {dv: dict(
+    max_over_min=max(KS[(dv, d, st)]['max'] / KS[(dv, d, st)]['min'] for d in DATA for st in COMPUTE),
+    max_cv=max(KS[(dv, d, st)]['sd'] / KS[(dv, d, st)]['mean'] for d in DATA for st in COMPUTE)) for dv in ('iGPU', 'dGPU')}
+for dv in ('iGPU', 'dGPU'):
+    v = out['kernel_variation'][dv]
+    print(f"{dv}: kernel times between repetitions: largest max/min {v['max_over_min']:.2f}, largest CV {100 * v['max_cv']:.1f}%; "
+          f"search / branch-free of the same repetition: " + '  '.join(
+              f"{d} {min(SBF[(dv, d)]):.3f}-{max(SBF[(dv, d)]):.3f}" for d in DATA))
+for dv in ('iGPU', 'dGPU'):
+    a, b = SBF[(dv, 'uniform')], SBF[(dv, 'ff')]
+    out['search_over_branchfree'][f'{dv}|uniform_over_ff'] = dict(mean=mean(a) / mean(b), min=min(a) / max(b), max=max(a) / min(b))
+    print(f"{dv}: search uniform/ff relative to the branch-free kernel {mean(a) / mean(b):.2f} ({min(a) / max(b):.2f}-{max(a) / min(b):.2f}); "
+          f"ratio of the mean search times {KS[(dv, 'uniform', 'search kernel')]['mean'] / KS[(dv, 'ff', 'search kernel')]['mean']:.2f}")
 steps = ['formation kernel', 'search kernel', 'table kernel', 'branch-free kernel', 'copy input to device', 'copy protected to host',
          'copy protected to device', 'copy output to host', 'write protected file', 'read protected file']
 for dev_ in ('dGPU', 'iGPU'):
@@ -349,7 +420,7 @@ for dev_ in ('dGPU', 'iGPU'):
 out['kernel_derived'] = kd
 
 # ---------------------------------------------------------------- 7. chunk size
-print('\n=== chunk size: full cycle of 100 MB (s), one run, CPU-seq as control')
+print('\n=== Table 15: full cycle of 100 MB by chunk size (s), one run; CPU-seq was the first case of the run')
 ck = {}
 for g in ('iGPU', 'dGPU'):
     base = get('RevChunkSize', f'{g}-v2-512')

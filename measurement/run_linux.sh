@@ -1,5 +1,5 @@
 #!/bin/bash
-# CPU-side measurements in the setting of configuration B (Tables 7, 8, S2, S3 and the key checks of Section 7.4)
+# CPU-side measurements in the setting of configuration B (Tables 7, 8, S2, S3 and the key checks of Section 7.1)
 # and the input for the NIST tests. Requires the .NET 8 SDK. Results, logs and system information are written to
 # results_run/ in the repository root (excluded from version control). Total time on configuration B: about 1 h.
 # Run on an otherwise idle machine connected to mains power.

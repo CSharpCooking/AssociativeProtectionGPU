@@ -1,5 +1,5 @@
 @echo off
-rem Revision measurements on configuration A (laptop with the integrated and the discrete GPU).
+rem Revision measurements on a laptop with an integrated and a discrete GPU (run on configuration D of the paper).
 rem Two ways (see README.md): put this file into the folder of the benchmark project of the thesis (the folder with its
 rem .csproj) after adding the .cs files of measurement/laptop and the RevEntry line to Program.Main; or run it where it
 rem lies, in measurement/laptop of the repository, and it uses the standalone project in measurement/laptop/standalone.
