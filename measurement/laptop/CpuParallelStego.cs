@@ -1,10 +1,16 @@
-// Multithreaded CPU paths for the file-based scenario of the benchmarks (no ILGPU types; plain arrays).
-// Forward: every 512 KB chunk is formed in parallel (ranges of 16 KB of source data) into a reusable buffer
+// CPU paths of the file-based scenario of the revision benchmarks (no ILGPU types; plain arrays).
+// Forward: every 512 KB chunk is formed range by range (16 KB of source data per range) into a reusable buffer
 //          and written to the file; the filler is generated either by one RandomNumberGenerator.Fill call
 //          per range or by the filler function of the GPU kernels (PseudoRandomByte, one seed per chunk).
-// Inverse: chunks are read from the file and recognized in parallel by the original search
+// Inverse: chunks are read from the file and recognized range by range by the original search
 //          (AssocStego.DiscloseByteFromBuffer) or by the table-driven procedure (RecognitionTable).
+// parallel = true processes the ranges with Parallel.ForEach on all hardware threads, false one after another.
 // Requires AssocStego (library) and RecognitionTable (NewKernels.cs).
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Collections.Concurrent;
 using System.Security.Cryptography;
 
@@ -13,9 +19,15 @@ public enum CpuRecognition { Search, Table }
 public static class CpuParallelStego
 {
     public const int ChunkSize = 512 * 1024;   // source bytes per chunk, as in the GPU classes
-    public const int Range = 16 * 1024;        // source bytes per parallel work item
+    public const int Range = 16 * 1024;        // source bytes per work item
 
-    public static void EncryptToFile(byte[] input, string path, AssocStego st, bool gpuFiller)
+    private static void ForRanges(int n, bool parallel, Action<Tuple<int, int>> body)
+    {
+        if (parallel) Parallel.ForEach(Partitioner.Create(0, n, Range), body);
+        else for (int a = 0; a < n; a += Range) body(Tuple.Create(a, Math.Min(n, a + Range)));
+    }
+
+    public static void EncryptToFile(byte[] input, string path, AssocStego st, bool gpuFiller, bool parallel = true)
     {
         int c = st.ContainerByteLength, h = st.HiddenByteLength;
         byte[] e = st.FlattenedEtalonsBytes, k = st.FlattenedKeysBytes;
@@ -25,7 +37,7 @@ public static class CpuParallelStego
         {
             int n = Math.Min(ChunkSize, input.Length - start);
             int seed = RandomNumberGenerator.GetInt32(int.MinValue, int.MaxValue);
-            Parallel.ForEach(Partitioner.Create(0, n, Range), r =>
+            ForRanges(n, parallel, r =>
             {
                 if (!gpuFiller)
                     RandomNumberGenerator.Fill(chunk.AsSpan(r.Item1 * h, (r.Item2 - r.Item1) * h));
@@ -75,7 +87,7 @@ public static class CpuParallelStego
         return (byte)x;
     }
 
-    public static byte[] DecryptFromFile(string path, int length, AssocStego st, CpuRecognition alg)
+    public static byte[] DecryptFromFile(string path, int length, AssocStego st, CpuRecognition alg, bool parallel = true)
     {
         int c = st.ContainerByteLength, h = st.HiddenByteLength;
         var result = new byte[length];
@@ -88,7 +100,7 @@ public static class CpuParallelStego
             int n = Math.Min(ChunkSize, length - start);
             int need = n * h, got = 0;
             while (got < need) { int r = fs.Read(chunk, got, need - got); if (r == 0) throw new EndOfStreamException("unexpected end of the protected file"); got += r; }
-            Parallel.ForEach(Partitioner.Create(0, n, Range), r =>
+            ForRanges(n, parallel, r =>
             {
                 for (int i = r.Item1; i < r.Item2; i++)
                     result[start + i] = tb is null ? st.DiscloseByteFromBuffer(chunk.AsSpan(i * h, h)) : DecodeTable(chunk, i * h, tb, c);

@@ -2,6 +2,11 @@
 // Structure and file handling follow GpuStegoEncryptor/GpuStegoDecryptor of the thesis (Appendix 1);
 // differences: selectable recognition algorithm, explicit group size (0 = automatic, as before),
 // optional reuse of device buffers across blocks, no console output inside the measured code.
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Security.Cryptography;
 using ILGPU;
 using ILGPU.Runtime;

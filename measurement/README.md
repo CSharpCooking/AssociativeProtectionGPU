@@ -38,18 +38,12 @@ function (with the seeds given or drawn from the system generator) and one seque
 
 The only change made after the measurements is the optional seed list of `filler`.
 
-## laptop: code for further GPU measurements on configuration A
+## laptop: code for further measurements on configuration A
 
-Not used in the paper (Section 8.7 lists what was not measured). The classes use the library of the thesis and ILGPU;
-they were checked against an emulation of the ILGPU runtime and stubs of BenchmarkDotNet (byte-exact results for every
-mode, algorithm, chunk size and volume) but **were not compiled against ILGPU or BenchmarkDotNet themselves**.
-
-| File | Content |
-|---|---|
-| `GpuStegoV2.cs`, `NewKernels.cs` | GPU encoder and decoder with the search, branch-free and table-driven recognition kernels; `groupSize > 0` loads the kernels with `LoadImplicitlyGroupedStreamKernel` (group-size sweep); `reuseDeviceBuffers: true` allocates the device buffers once per operation |
-| `CpuParallelStego.cs` | Multithreaded CPU paths of the file scenario: chunk-wise system generator or the GPU filler function, search or table |
-| `RevisionBenchmarks.cs` | BenchmarkDotNet class: full cycle of CPU-seq, CPU-par, CPU-par with the GPU filler, iGPU and dGPU on a dense grid of 1–100 KB and at 1, 10 and 100 MB, with parameters for the recognition procedure, chunk size, group size and buffer reuse; the input is a UTF-8 text file of at least 100 MB given in `ASSOC_INPUT` |
-
-A kernel profile can be taken by running one recovery of `data/uniform_10MB.bin` and of `data/ff_10MB.bin` under
-Nsight Compute (`ncu --set full -k regex:Decrypt …`): warp execution efficiency, branch efficiency, achieved occupancy,
-DRAM throughput.
+Not used in the paper (Section 8.7 lists what was not measured). Six BenchmarkDotNet classes, a kernel-level
+measurement and a script, to be added to the benchmark project of the thesis on the laptop of the GPU measurements:
+the break-even volume on a dense grid of 1-100 KB, multithreaded CPU baselines and the effect of the filler
+generation, the chunk size in one build and one run, the recognition kernels on different data, and kernel-only
+times. The code was checked on an emulation of the ILGPU runtime but was not compiled against ILGPU or
+BenchmarkDotNet themselves. See [`laptop/README.md`](laptop/README.md) (English) and
+[`laptop/README_ru.md`](laptop/README_ru.md) (Russian).

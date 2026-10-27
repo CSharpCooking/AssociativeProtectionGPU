@@ -107,6 +107,21 @@ table('Section 7.4. Sum of the formation and recovery means minus the full-cycle
       ['Volume', 'CPU-seq', 'iGPU', 'dGPU'], rows)
 
 
+# ---------------------------------------------------------------- Section 6.4 and captions of Tables 4-6
+S512 = [x for x in ORIG if x['series'] == '512']
+OPS = {'full': 'full cycle', 'enc': 'formation', 'dec': 'recovery'}
+cv = lambda x: 100 * x['StdDev'] / x['Mean']
+rows = []
+for op, name in OPS.items():
+    sub = [x for x in S512 if x['name'].endswith(' ' + op)]
+    rows.append([name, f"{min(x['N'] for x in sub)}-{max(x['N'] for x in sub)}", f"{rnd(min(map(cv, sub)), 1)}-{rnd(max(map(cv, sub)), 1)}%"])
+table('Section 6.4. 512 KB series: measured iterations N after outlier removal and coefficient of variation SD/mean', ['Operation', 'N', 'CV'], rows)
+nrange = lambda sub: f"{min(x['N'] for x in sub)}-{max(x['N'] for x in sub)}"
+emit('Captions: N of Table 4 ' + nrange([x for x in S512 if x['name'].endswith(' full')])
+     + '; of Table 5 ' + nrange([x for x in S512 if x['size'] in ('1KB', '10MB', '100MB')])
+     + '; of Table 6 ' + nrange([x for x in S512 if x['size'] == '100MB']))
+emit()
+
 # ---------------------------------------------------------------- Table 7
 def formrow(F, prefix):
     for k, v in F.items():

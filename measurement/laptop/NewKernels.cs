@@ -2,6 +2,9 @@
 // (EncryptKernelCopy, DecryptSearchKernelCopy) that can be loaded with an explicit group size. Written against the ILGPU API surface
 // (Index1D, ArrayView<T>) so that the same source can be dropped into the GPU project; here it
 // is compiled against ILGPU directly.
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using ILGPU;
 using ILGPU.Runtime;
 
