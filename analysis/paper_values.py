@@ -254,10 +254,10 @@ for m in ('CPU-seq', 'CPU-seq-table', 'iGPU', 'iGPU-table', 'iGPU-branchfree', '
     rows.append(['stage', m] + [pm(DD['recognition'][f'{d}|{m}']['mean'], DD['recognition'][f'{d}|{m}']['err'], 1) for d in DATA])
 for dev in ('iGPU', 'dGPU'):
     for st in ('formation kernel', 'search kernel', 'table kernel', 'branch-free kernel'):
-        rows.append(['kernel', f'{dev} {st}'] + [pm(DD['kernels'][f'{dev}|{d}|{st}']['mean'], DD['kernels'][f'{dev}|{d}|{st}']['sd'], 2) for d in DATA])
+        rows.append(['kernel', f'{dev} {st}'] + [f"{rnd(DD['kernels'][f'{dev}|{d}|{st}']['mean'], 2)} ({rnd(DD['kernels'][f'{dev}|{d}|{st}']['sd'], 2)})" for d in DATA])
     rows.append(['kernel', f'{dev} search / branch-free, same repetition'] +
                 [f"{DD['search_over_branchfree'][f'{dev}|{d}']['min']:.3g}-{DD['search_over_branchfree'][f'{dev}|{d}']['max']:.3g}" for d in DATA])
-table('Table 13. Recognition of the 10 MB inputs on configuration D: stage (mean ± CI), kernel-only time (mean ± SD of 10), ms, and '
+table('Table 13. Recognition of the 10 MB inputs on configuration D: stage (mean ± CI), kernel-only time (mean (SD) of 10), ms, and '
       'ratio of the search to the branch-free kernel in the same repetition (range over the 10 repetitions)',
       ['Measurement', 'Procedure', 'All-zero', 'All-255', 'Uniform', 'Russian text'], rows)
 K = DD['kernels']

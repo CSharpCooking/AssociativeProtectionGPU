@@ -53,10 +53,11 @@ python3 analysis/summarize.py B     # configuration B: formation, recognition, p
 python3 analysis/summarize.py C     # configuration C
 python3 analysis/config_d.py        # configuration D: Tables 10-15 from the logs, checked against the reports
 python3 analysis/paper_values.py    # Tables 4-15 and the values quoted in the text -> analysis/output/paper_values.md
+python3 analysis/lockstep_model.py  # lockstep work of the search kernel per warp (Sections 4.3 and 7.10)
 python3 analysis/figures.py         # Figures 2-5 -> analysis/output/
 ```
 
-`analysis/run_all.sh` runs all six. Details: [`analysis/README.md`](analysis/README.md).
+`analysis/run_all.sh` runs all seven. Details: [`analysis/README.md`](analysis/README.md).
 
 ## Repeating the CPU measurements
 
