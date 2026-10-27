@@ -44,4 +44,4 @@ byte by byte. Later versions of the kit write the times with a decimal point.
 
 [`analysis/config_d.py`](../../analysis/config_d.py) reads these files, computes the statistics of the tables of the
 paper from the iteration times of the logs, as BenchmarkDotNet computes them, and checks them against the reports,
-which round them to three or four significant digits.
+which give them rounded.

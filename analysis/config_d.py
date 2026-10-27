@@ -7,7 +7,7 @@ S6 (kernel times). Writes analysis/output/config_D.json and prints a report.
 The log of every class gives the time of every measured iteration of every process (WorkloadResult, after the
 removal of upper outliers). The mean, SD, SE and half-width of the 99.9% confidence interval of every case are
 computed from these times, pooled over the processes, as BenchmarkDotNet computes them (Student's t with N - 1
-degrees of freedom), and are checked against the CSV report, which gives them rounded to four significant digits;
+degrees of freedom), and are checked against the CSV report, which gives them rounded;
 the number of iterations must be identical. The quartiles, extremes, allocation and collections are taken from the
 report. The script also gives the mean of every process (the break-even grid ran three processes per case).
 kernels.csv was written with the decimal comma of the Russian locale, so that a line has six fields: device, input,
@@ -170,7 +170,7 @@ worst = max(CHECK, key=lambda c: c[2])
 assert all(c[3] for c in CHECK), [c for c in CHECK if not c[3]]
 assert worst[2] <= 1.0 + 1e-6, worst
 print(f'logs agree with the reports: {len(CHECK)} cases, N identical; the mean, SD, SE and CI half-width computed from the '
-      f'log round to the values of the report (largest difference {worst[2]:.3f} of half a unit of the last printed digit)')
+      f'log round to the values printed in the report (largest difference {worst[2]:.3f} of half a unit of the last printed digit)')
 
 
 def get(cls, *key):
@@ -361,13 +361,18 @@ out['kernels'] = {'|'.join(k): v for k, v in KS.items()}
 SBF = {(dev_, d): [a / b for a, b in zip(K[(dev_, d, 'search kernel')], K[(dev_, d, 'branch-free kernel')])]
        for dev_ in ('iGPU', 'dGPU') for d in DATA}
 out['search_over_branchfree'] = {f'{dv}|{d}': dict(mean=mean(v), min=min(v), max=max(v)) for (dv, d), v in SBF.items()}
-COMPUTE = ('formation kernel', 'search kernel', 'table kernel', 'branch-free kernel')
+# variation between the repetitions of the kernels that take milliseconds; the table-driven kernel (about 0.7 ms on the
+# dGPU) is reported separately
+COMPUTE = ('formation kernel', 'search kernel', 'branch-free kernel')
 out['kernel_variation'] = {dv: dict(
     max_over_min=max(KS[(dv, d, st)]['max'] / KS[(dv, d, st)]['min'] for d in DATA for st in COMPUTE),
-    max_cv=max(KS[(dv, d, st)]['sd'] / KS[(dv, d, st)]['mean'] for d in DATA for st in COMPUTE)) for dv in ('iGPU', 'dGPU')}
+    max_cv=max(KS[(dv, d, st)]['sd'] / KS[(dv, d, st)]['mean'] for d in DATA for st in COMPUTE),
+    table_max_over_min=max(KS[(dv, d, 'table kernel')]['max'] / KS[(dv, d, 'table kernel')]['min'] for d in DATA))
+    for dv in ('iGPU', 'dGPU')}
 for dv in ('iGPU', 'dGPU'):
     v = out['kernel_variation'][dv]
-    print(f"{dv}: kernel times between repetitions: largest max/min {v['max_over_min']:.2f}, largest CV {100 * v['max_cv']:.1f}%; "
+    print(f"{dv}: formation, search and branch-free kernel times between repetitions: largest max/min {v['max_over_min']:.2f}, "
+          f"largest CV {100 * v['max_cv']:.1f}%; table-driven kernel largest max/min {v['table_max_over_min']:.2f}; "
           f"search / branch-free of the same repetition: " + '  '.join(
               f"{d} {min(SBF[(dv, d)]):.3f}-{max(SBF[(dv, d)]):.3f}" for d in DATA))
 for dv in ('iGPU', 'dGPU'):
