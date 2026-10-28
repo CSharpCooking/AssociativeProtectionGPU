@@ -32,7 +32,7 @@ KBV = [1, 10, 100, 1024, 3.45 * 1024, 10 * 1024, 100 * 1024]   # input volumes i
 fig, ax = plt.subplots(figsize=(5.31, 3.2), dpi=300)          # printed at 13.5 cm
 style(ax)
 ax.axvspan(10, 100, color=GRID, alpha=0.7, lw=0, zorder=0)      # the measured interval that brackets break-even
-ax.text(31.6, 3.3, 'break-even\ninterval', color=INK2, fontsize=7.5, ha='center', va='bottom')
+ax.text(31.6, 3.3, 'transition\ninterval', color=INK2, fontsize=7.5, ha='center', va='bottom')
 for key, col, mk, name, f in (('s_igpu', BLUE, 's', 'iGPU (OpenCL)', 0.92), ('s_dgpu', ORANGE, 'o', 'dGPU (CUDA)', 1.09)):
     s = [r[key][0] for r in rows]; lo = [r[key][0] - r[key][1] for r in rows]; hi = [r[key][2] - r[key][0] for r in rows]
     xs = [v * f for v in KBV]
@@ -104,7 +104,7 @@ for ax, cfg, ymax, tag in ((a1, 'B', 140, '(a) configuration B'), (a2, 'C', 260,
     ax.set_title(tag, fontsize=8.5, color=INK2, loc='left')
 fig.legend([Line2D([0], [0], marker='o', color='w', markerfacecolor=BLUE, ms=6), Line2D([0], [0], marker='s', color='w', markerfacecolor=ORANGE, ms=6),
             Line2D([0], [0], color=INK, lw=1.4)],
-           ['Sequential search', 'Table-driven', 'Mean over 16 keys'], loc='upper center', bbox_to_anchor=(0.5, 1.0), frameon=False, ncol=3)
+           ['Original search', 'Table-driven', 'Mean over 16 keys'], loc='upper center', bbox_to_anchor=(0.5, 1.0), frameon=False, ncol=3)
 # (c) relative search time versus comparisons per byte
 cmpd = SUM['B']['cmp']
 xu = cmpd['uniform'][0]
