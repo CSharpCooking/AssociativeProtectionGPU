@@ -1,5 +1,5 @@
 // Key validation by construction of the recognition table (Section 5.2 of the paper). Added to the library after the
-// measurements of the paper (revision 2); the measured version of the listing is tagged measured-r1 in the repository.
+// measurements of the paper (revision 2); the measured version of the listing is that of commit 23050a9.
 //
 // The table-driven check applies only to keys whose masks are built by the dichotomic partitioning of AssocStego.CreateKey
 // (binary partitioning of the etalon set, Proposition 1 of the paper). Such keys use at most L - 1 mask positions in total

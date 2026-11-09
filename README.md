@@ -85,7 +85,7 @@ Russian: [`RUN_INSTRUCTIONS_RU.md`](measurement/laptop/RUN_INSTRUCTIONS_RU.md).
 | [`analysis/opt_summary.py`](analysis/opt_summary.py), [`analysis/r2_bounds.py`](analysis/r2_bounds.py) | Process-level statistics of CPU-opt; process-level intervals of the break-even grid of configuration D, bounds on GPU-side optimizations, shift of the break-even volume | Sections 7.8, 7.12, 8.5 |
 | [`measurement/laptop/RevisionBenchmarks2.cs`](measurement/laptop/RevisionBenchmarks2.cs), [`RevKernels2.cs`](measurement/laptop/RevKernels2.cs), [`run_revision2.cmd`](measurement/laptop/run_revision2.cmd) | Kit for further measurements on a computer with GPUs: three processes per benchmark, one power plan, GPU clock log, CPU-opt and optimized GPU classes, group sizes, Nsight Compute; instructions in Russian: [`RUN_INSTRUCTIONS_R2_RU.md`](measurement/laptop/RUN_INSTRUCTIONS_R2_RU.md) | not yet run |
 
-The version of the library listing that was measured is tagged `measured-r1`.
+The version of the library listing that was measured is that of commit `23050a9`.
 
 ## What is not included
 

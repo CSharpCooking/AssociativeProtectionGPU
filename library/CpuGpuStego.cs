@@ -3,7 +3,7 @@
 // and does not contain the BitVector class; see library/README.md for the names used in the paper.
 // Revision 2 (after the measurements): keys are validated by building the recognition table (KeyValidation.cs)
 // whenever a key is set, generated, or restored from a key file or from the header of a protected file; the changed
-// lines are marked [r2]. The measured version of this listing is tagged measured-r1 in the repository.
+// lines are marked [r2]. The measured version of this listing is that of commit 23050a9.
 
 public sealed class StegoLibrary
 {

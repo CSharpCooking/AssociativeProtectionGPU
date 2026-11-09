@@ -45,7 +45,7 @@ header of a protected file (`StegoLibrary.DecryptFile`), and the key is rejected
 The check, like the table-driven recognition, applies only to keys built by dichotomic (binary) partitioning of the
 etalon set (Proposition 1); keys built otherwise are rejected even if a search could decode their blocks. The validation
 runs when the key is set, outside the operations measured in the paper. The version of the listing that was measured is
-tagged `measured-r1`.
+that of commit `23050a9`.
 
 Tests: `tests/run_tests.sh [number of keys]` (requires the .NET 8 SDK) extracts the classes `EtalonFactory` and
 `AssocStego` from the listing, compiles them with `KeyValidation.cs` and the `BitVector` stand-in, and checks generated
