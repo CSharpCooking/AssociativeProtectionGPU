@@ -4,6 +4,7 @@
 // (write "return RevEntry.Run(args);" instead if Main returns int). Commands:
 //     rev --filter *RevBreakEven* [further BenchmarkDotNet options, e.g. --artifacts <folder>]
 //     rev-kernels <data folder> [repetitions] [iGPU,dGPU] [uniform,ff,zero,ru]
+//     rev-kernels2 <data folder> [repetitions] [iGPU,dGPU] [uniform,ff,zero,ru] [group sizes, e.g. 0,32,64,128,256,512,1024]
 //     rev-env
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ public static class RevEntry
     {
         typeof(RevBreakEven), typeof(RevFormation), typeof(RevRecovery),
         typeof(RevFullCycle), typeof(RevChunkSize), typeof(RevRecognition),
+        // revision 2 (RevisionBenchmarks2.cs)
+        typeof(Rev2BreakEven), typeof(Rev2Formation), typeof(Rev2Recovery), typeof(Rev2FullCycle), typeof(Rev2FullCycleSeq),
     };
 
     public static int Run(string[] args)
@@ -32,10 +35,12 @@ public static class RevEntry
                 return 0;
             case "rev-kernels":
                 return RevKernels.Run(rest);
+            case "rev-kernels2":
+                return RevKernels2.Run(rest);
             case "rev-env":
                 return Env();
             default:
-                Console.Error.WriteLine("commands: rev, rev-kernels, rev-env");
+                Console.Error.WriteLine("commands: rev, rev-kernels, rev-kernels2, rev-env");
                 return 1;
         }
     }

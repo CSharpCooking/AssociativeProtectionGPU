@@ -10,4 +10,7 @@ python3 analysis/config_d.py > analysis/output/config_D.txt
 python3 analysis/paper_values.py > /dev/null
 python3 analysis/lockstep_model.py > analysis/output/lockstep_model.txt
 python3 analysis/figures.py
-echo "reports: analysis/output/config_A.txt, summary_B.txt, summary_C.txt, config_D.txt, paper_values.md, lockstep_model.txt"
+# revision 2: optimized CPU path on configuration B; bounds and process-level intervals of configuration D
+python3 analysis/opt_summary.py > analysis/output/opt_B.txt
+python3 analysis/r2_bounds.py > analysis/output/r2_bounds.txt
+echo "reports: analysis/output/config_A.txt, summary_B.txt, summary_C.txt, config_D.txt, paper_values.md, lockstep_model.txt, opt_B.txt, r2_bounds.txt"

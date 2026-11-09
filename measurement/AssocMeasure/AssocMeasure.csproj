@@ -10,4 +10,8 @@
     <ServerGarbageCollector>false</ServerGarbageCollector>
     <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
+  <ItemGroup>
+    <!-- CPU paths of configuration D, compiled unchanged (revision 2 comparison) -->
+    <Compile Include="../laptop/CpuParallelStego.cs" />
+  </ItemGroup>
 </Project>

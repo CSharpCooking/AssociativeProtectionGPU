@@ -1,0 +1,69 @@
+{
+  "T1": {
+    "keys": 100000,
+    "rejected": 0,
+    "mHist": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      15,
+      956,
+      17228,
+      81801,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tableBuildMedianUs": 30.4256,
+    "tableBuildMinUs": 30.2358,
+    "tableBuildMaxUs": 31.2042
+  },
+  "T2": {
+    "keys": 1000,
+    "bytesPerKey": 10000,
+    "tableDiff": 0,
+    "mismatches": 0
+  },
+  "T3_random": {
+    "trials": 100000,
+    "sigDistinct": 81974,
+    "cond5": 0,
+    "accepted": 0,
+    "acceptedViolating5": 0,
+    "rejectedSatisfying5": 0,
+    "reasons": {
+      "more than L-1 positions": 100000
+    }
+  },
+  "T3_pool9": {
+    "trials": 100000,
+    "sigDistinct": 62231,
+    "cond5": 128,
+    "accepted": 0,
+    "acceptedViolating5": 0,
+    "rejectedSatisfying5": 128,
+    "disagreeWithIndependent": 0,
+    "reasons": {
+      "pattern matches no etalon": 68609,
+      "pattern matches several etalons": 31391
+    }
+  },
+  "T4": {
+    "keys": 10000,
+    "rejected": 10000,
+    "acceptedSame": 0,
+    "acceptedDifferent": 0,
+    "keysWithWrongBytes": 0,
+    "wrongBytes": 0,
+    "dataBytes": 2000,
+    "decodeErrors": 0,
+    "otherErrors": 0
+  }
+}

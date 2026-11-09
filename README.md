@@ -75,6 +75,18 @@ kernel-only measurement, and collects the results in `results_revision\` (about 
 Commands, groups and options: [`measurement/laptop/README.md`](measurement/laptop/README.md); instructions in
 Russian: [`RUN_INSTRUCTIONS_RU.md`](measurement/laptop/RUN_INSTRUCTIONS_RU.md).
 
+## Revision 2 (second report of reviewer 1)
+
+| Path | Content | Paper |
+|---|---|---|
+| [`library/KeyValidation.cs`](library/KeyValidation.cs), [`library/tests/`](library/tests/) | Key validation by the recognition table, added to the library after the measurements (lines `[r2]` of the listing), and its tests | Sections 5.1, 5.2, 7.1 |
+| [`measurement/AssocMeasure/New/CpuOptStego.cs`](measurement/AssocMeasure/New/CpuOptStego.cs), [`Bench/OptBench.cs`](measurement/AssocMeasure/Bench/OptBench.cs), [`measurement/run_opt_linux.sh`](measurement/run_opt_linux.sh) | Optimized CPU path (CPU-opt) and its comparison with the CPU paths of configuration D in independent processes | Sections 5.3, 6.4, 7.12, Table 16 |
+| [`results/opt_B/`](results/opt_B/), [`results/key_validation/`](results/key_validation/) | Raw results of these measurements and tests on configuration B | |
+| [`analysis/opt_summary.py`](analysis/opt_summary.py), [`analysis/r2_bounds.py`](analysis/r2_bounds.py) | Process-level statistics of CPU-opt; process-level intervals of the break-even grid of configuration D, bounds on GPU-side optimizations, shift of the break-even volume | Sections 7.8, 7.12, 8.5 |
+| [`measurement/laptop/RevisionBenchmarks2.cs`](measurement/laptop/RevisionBenchmarks2.cs), [`RevKernels2.cs`](measurement/laptop/RevKernels2.cs), [`run_revision2.cmd`](measurement/laptop/run_revision2.cmd) | Kit for further measurements on a computer with GPUs: three processes per benchmark, one power plan, GPU clock log, CPU-opt and optimized GPU classes, group sizes, Nsight Compute; instructions in Russian: [`RUN_INSTRUCTIONS_R2_RU.md`](measurement/laptop/RUN_INSTRUCTIONS_R2_RU.md) | not yet run |
+
+The version of the library listing that was measured is tagged `measured-r1`.
+
 ## What is not included
 
 * The input texts of configuration A: UTF-8 files of 1 KB to 100 MB formed from the Russian-language novel

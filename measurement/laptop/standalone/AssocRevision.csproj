@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!-- Standalone build of the revision measurements, for a computer without the benchmark project of the thesis.
-       It compiles the library listing of the thesis (library/CpuGpuStego.cs), a compatible BitVector
+       It compiles the library listing of the thesis (library/CpuGpuStego.cs, with the key validation of
+       library/KeyValidation.cs added after the measurements), a compatible BitVector
        (measurement/AssocMeasure/Thesis/BitVector.cs) and the .cs files of measurement/laptop. -->
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -21,6 +22,8 @@
     <Compile Include="Program.cs;GlobalUsings.cs" />
     <Compile Include="..\*.cs" />
     <Compile Include="..\..\..\library\CpuGpuStego.cs" Link="Library\CpuGpuStego.cs" />
+    <Compile Include="..\..\..\library\KeyValidation.cs" Link="Library\KeyValidation.cs" />
+    <Compile Include="..\..\AssocMeasure\New\CpuOptStego.cs" Link="Revision2\CpuOptStego.cs" />
     <Compile Include="..\..\AssocMeasure\Thesis\BitVector.cs" Link="Library\BitVector.cs" />
   </ItemGroup>
 </Project>

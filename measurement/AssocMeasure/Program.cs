@@ -20,8 +20,9 @@ static class P
             case "form": Form(args[1], int.Parse(args[2]), int.Parse(args[3]), args[4]); break;
             case "rec": Rec(args[1], int.Parse(args[2]), int.Parse(args[3]), args[4]); break;
             case "env": Env(); break;
+            case "opt": OptBench.Run(args[1], int.Parse(args[2]), args[3]); break;   // revision 2: optimized CPU path
             case "dist": Dist(int.Parse(args[1]), int.Parse(args[2]), args[3] == "1", args[4], args[5..]); break;
-            default: Console.WriteLine("keys N | equiv K M | filler outdir bytes [seed1,seed2,seed3] | form input iters warmup out.json | rec input iters warmup out.json | dist keys reps withBranchFree(0/1) out.json input1 [input2 ...] | env"); return 1;
+            default: Console.WriteLine("keys N | equiv K M | filler outdir bytes [seed1,seed2,seed3] | form input iters warmup out.json | rec input iters warmup out.json | dist keys reps withBranchFree(0/1) out.json input1 [input2 ...] | opt input10MB process out.json | env"); return 1;
         }
         return 0;
     }

@@ -54,6 +54,32 @@ byte randomByte = PseudoRandomByte(globalIndex, digitIndex, i, blockSeed);
 output[outputOffset + i] = (byte)(maskedEtalonByte | (randomByte & (byte)~keyByte));
 }
 }
+// ---- revision 2: formation kernel with coalesced stores (one thread per protected byte) ----
+// Thread t writes byte t of the protected chunk: block i = t / 30, section s = (t % 30) / 10, byte j = t % 10, so that
+// adjacent threads write adjacent bytes. The filler and the formula are those of EncryptKernelCopy, so the output is
+// byte for byte identical for the same seed; launch it with n * 30 threads (n source bytes).
+public static void EncryptCoalescedKernel(
+Index1D index,
+ArrayView<byte> input,
+ArrayView<byte> output,
+ArrayView<byte> maskedEtalons,
+ArrayView<byte> keys,
+int containerByteLen,
+int globalInputOffset,
+int blockSeed)
+{
+int t = index;
+int h = containerByteLen * 3;
+int i = t / h;
+int r = t - i * h;
+int s = r / containerByteLen;
+int j = r - s * containerByteLen;
+int value = input[i];
+int digit = s == 0 ? value / 100 : (s == 1 ? (value % 100) / 10 : value % 10);
+int e = digit * containerByteLen + j;
+byte randomByte = PseudoRandomByte(globalInputOffset + i, s, j, blockSeed);
+output[t] = (byte)(maskedEtalons[e] | (randomByte & (byte)~keys[e]));
+}
 public static byte PseudoRandomByte(int globalIndex, int digitIndex, int byteIndex, int blockSeed)
 {
 uint x = (uint)blockSeed;

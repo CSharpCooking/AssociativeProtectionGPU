@@ -1,6 +1,9 @@
 // CpuGpuStego library: listing from Appendix 1 of the master's thesis on which the paper is based.
 // Reproduced as printed there; only the indentation was restored. The listing has no using directives
 // and does not contain the BitVector class; see library/README.md for the names used in the paper.
+// Revision 2 (after the measurements): keys are validated by building the recognition table (KeyValidation.cs)
+// whenever a key is set, generated, or restored from a key file or from the header of a protected file; the changed
+// lines are marked [r2]. The measured version of this listing is tagged measured-r1 in the repository.
 
 public sealed class StegoLibrary
 {
@@ -64,7 +67,7 @@ public sealed class StegoLibrary
             throw new NotSupportedException("Текущая реализация библиотеки поддерживает расшифровку файлов размером до 2 ГБ.");
             var stego = new AssocStego(header.Etalons);
             var keys = PackagedStegoFile.RestoreKeys(header);
-            stego.Key = keys;
+            stego.Key = keys; // [r2] the setter builds the recognition table and rejects an invalid key
             stego.ValidateKeysOrThrow(keys);
             using var session = AcceleratorSelector.Create(mode);
             byte[] outputBytes = DecryptPayload(tempPayloadPath, (int)header.OriginalByteLength, stego, session);
@@ -813,6 +816,9 @@ public class AssocStego
     private byte[] flattenedKeys = Array.Empty<byte>();
     private byte[] flattenedMaskedEtalons = Array.Empty<byte>();
     private BitVector[] key;
+    private KeyRecognitionTable? recognitionTable; // [r2]
+    public KeyRecognitionTable KeyTable => recognitionTable // [r2]
+    ?? throw new InvalidOperationException("Ключ ещё не сгенерирован и не задан.");
     public IReadOnlyList<int>[] MaskUnitPositions => maskUnitPositions;
     public int ContainerByteLength => containerByteLength;
     public int HiddenByteLength => containerByteLength * 3;
@@ -832,6 +838,7 @@ public class AssocStego
             throw new ArgumentNullException(nameof(value));
             if (value.Length != etalons.Length)
             throw new ArgumentException("Длина ключа должна совпадать с количеством эталонов.", nameof(value));
+            recognitionTable = BuildRecognitionTableOrThrow(value); // [r2] a key for which the table cannot be built is rejected
             key = value;
             RefreshKeyCache();
         }
@@ -940,8 +947,7 @@ public class AssocStego
             throw new EndOfStreamException("Файл ключа повреждён: не хватает данных.");
             loadedKey[i] = new BitVector(bytes, bitLength);
         }
-        key = loadedKey;
-        RefreshKeyCache();
+        Key = loadedKey; // [r2] validated by the setter; an invalid key throws KeyValidationException and is not set
         return loadedKey;
     }
     private void RefreshKeyCache()
@@ -1030,6 +1036,26 @@ public class AssocStego
             throw new InvalidOperationException($"Неоднозначные ключи: эталоны {j} и {i} имеют одинаковую подпись по своим маскам.");
             map[sigStr] = i;
         }
+        BuildRecognitionTableOrThrow(key); // [r2] distinct signatures are necessary but not sufficient (Section 5.2)
+    }
+    // [r2] masks and masked etalons of the given key in the flattened layout, then the table of Section 5.2
+    private KeyRecognitionTable BuildRecognitionTableOrThrow(BitVector[] k)
+    {
+        if (k is null || k.Length != etalons.Length)
+        throw new KeyValidationException("Число масок ключа не совпадает с числом эталонов.");
+        var flatMasks = new byte[etalons.Length * containerByteLength];
+        var flatMasked = new byte[etalons.Length * containerByteLength];
+        for (int i = 0; i < etalons.Length; i++)
+        {
+            byte[] kb = k[i].ToByteArray();
+            if (kb.Length != containerByteLength)
+            throw new KeyValidationException($"Маска эталона {i} имеет длину {kb.Length} байт вместо {containerByteLength}.");
+            int offset = i * containerByteLength;
+            Buffer.BlockCopy(kb, 0, flatMasks, offset, containerByteLength);
+            for (int j = 0; j < containerByteLength; j++)
+            flatMasked[offset + j] = (byte)(flattenedEtalons[offset + j] & kb[j]);
+        }
+        return KeyRecognitionTable.BuildOrThrow(flatMasks, flatMasked, containerByteLength, etalons.Length, etalonLength);
     }
     public int DiscloseEtalon(BitVector stegoContainer)
     {

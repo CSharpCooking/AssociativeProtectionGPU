@@ -1,0 +1,7 @@
+T1: 100000 generated keys, rejected 0; |P|: 6:15, 7:956, 8:17228, 9:81801; generation with validation 26.7 s; table construction median 30.4 us (min 30.2, max 31.2)
+T2: 1000 keys saved and loaded; tables differing 0; recognition mismatches 0 of 10000000 bytes
+T3 random masks: 100000 keys; distinct signatures (original check) 81974; condition (5) 0; accepted 0; accepted although (5) fails 0; rejected although (5) holds 0; disagreements with the independent check 0; reasons: more than L-1 positions 100000
+T3 pool of nine positions: 100000 keys; distinct signatures (original check) 62231; condition (5) 128; accepted 0; accepted although (5) fails 0; rejected although (5) holds 128; disagreements with the independent check 0; reasons: pattern matches no etalon 68609, pattern matches several etalons 31391
+T4: 10000 key files with one flipped mask bit: rejected 10000; accepted unchanged 0; accepted as a different valid key 0 (of which 0 restore wrong bytes: 0 of 0, 0 with a decoding error); other errors 0
+ALL TESTS PASSED
+done

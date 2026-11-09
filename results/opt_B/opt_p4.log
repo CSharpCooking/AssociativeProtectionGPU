@@ -1,0 +1,21 @@
+[formation 10 MB] CPU-opt                                        N= 10  mean=    290.22 ms  ±   50.53 (99.9% CI)  SD=   33.42  med=    278.42  min=    260.86  max=    379.12  per-MB=   29.02 ms
+[formation 10 MB] CPU-par logic, memory                          N= 10  mean=    203.45 ms  ±    5.28 (99.9% CI)  SD=    3.49  med=    203.15  min=    199.17  max=    208.39  per-MB=   20.35 ms
+[formation 10 MB] CPU-opt, memory                                N= 10  mean=     79.76 ms  ±    7.73 (99.9% CI)  SD=    5.11  med=     78.14  min=     74.86  max=     88.23  per-MB=    7.98 ms
+[formation 10 MB] filler generation only, memory                 N= 10  mean=     40.66 ms  ±    6.35 (99.9% CI)  SD=    4.20  med=     39.14  min=     38.06  max=     52.11  per-MB=    4.07 ms
+[formation 10 MB] CPU-seq-chunk                                  N= 10  mean=    598.29 ms  ±   41.08 (99.9% CI)  SD=   27.17  med=    598.66  min=    560.75  max=    641.03  per-MB=   59.83 ms
+[formation 10 MB] CPU-par                                        N= 10  mean=    422.17 ms  ±   26.65 (99.9% CI)  SD=   17.63  med=    419.11  min=    399.82  max=    450.19  per-MB=   42.22 ms
+[formation 10 MB] CPU-par-GF                                     N= 10  mean=    588.43 ms  ±   23.22 (99.9% CI)  SD=   15.36  med=    589.80  min=    567.16  max=    611.32  per-MB=   58.84 ms
+[formation 10 MB] CPU-opt, 1 thread                              N= 10  mean=    329.40 ms  ±   32.41 (99.9% CI)  SD=   21.44  med=    330.20  min=    298.55  max=    364.97  per-MB=   32.94 ms
+[recovery 10 MB] CPU-opt                                        N= 10  mean=    121.72 ms  ±   16.81 (99.9% CI)  SD=   11.12  med=    123.06  min=    106.35  max=    140.89  per-MB=   12.17 ms
+[recovery 10 MB] CPU-par-table logic, memory                    N= 10  mean=    172.87 ms  ±   20.89 (99.9% CI)  SD=   13.82  med=    169.68  min=    154.84  max=    199.33  per-MB=   17.29 ms
+[recovery 10 MB] CPU-opt, memory                                N= 10  mean=     96.69 ms  ±    9.08 (99.9% CI)  SD=    6.01  med=     95.21  min=     88.18  max=    107.34  per-MB=    9.67 ms
+[recovery 10 MB] CPU-seq-table                                  N= 10  mean=    298.87 ms  ±   25.03 (99.9% CI)  SD=   16.56  med=    303.23  min=    270.91  max=    324.96  per-MB=   29.89 ms
+[recovery 10 MB] CPU-par                                        N= 10  mean=    592.11 ms  ±  123.36 (99.9% CI)  SD=   81.59  med=    593.41  min=    482.51  max=    762.16  per-MB=   59.21 ms
+[recovery 10 MB] CPU-par-table                                  N= 10  mean=    175.25 ms  ±   25.50 (99.9% CI)  SD=   16.87  med=    170.12  min=    156.34  max=    203.10  per-MB=   17.52 ms
+[recovery 10 MB] CPU-opt, 1 thread                              N= 10  mean=    184.50 ms  ±   19.11 (99.9% CI)  SD=   12.64  med=    186.32  min=    155.44  max=    204.34  per-MB=   18.45 ms
+[full cycle 10 MB] CPU-par-GF-table                               N= 10  mean=    747.88 ms  ±   50.53 (99.9% CI)  SD=   33.42  med=    740.27  min=    709.12  max=    809.08  per-MB=   74.79 ms
+[full cycle 10 MB] CPU-opt                                        N= 10  mean=    387.37 ms  ±   36.46 (99.9% CI)  SD=   24.12  med=    380.77  min=    356.20  max=    444.51  per-MB=   38.74 ms
+[full cycle 10 MB] CPU-par                                        N= 10  mean=    991.50 ms  ±  133.16 (99.9% CI)  SD=   88.08  med=    976.84  min=    872.15  max=   1131.42  per-MB=   99.15 ms
+[full cycle 100 MB] CPU-par-GF-table                               N=  6  mean=   8076.89 ms  ±  804.44 (99.9% CI)  SD=  286.87  med=   7974.64  min=   7785.06  max=   8501.90  per-MB=   80.77 ms
+[full cycle 100 MB] CPU-opt                                        N=  6  mean=   5088.05 ms  ± 1108.41 (99.9% CI)  SD=  395.27  med=   5140.01  min=   4381.60  max=   5454.42  per-MB=   50.88 ms
+[full cycle 100 MB] CPU-par                                        N=  6  mean=  10713.55 ms  ± 2714.59 (99.9% CI)  SD=  968.05  med=  11006.00  min=   9176.35  max=  11792.91  per-MB=  107.14 ms

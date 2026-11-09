@@ -2,6 +2,7 @@
 // Structure and file handling follow GpuStegoEncryptor/GpuStegoDecryptor of the thesis (Appendix 1);
 // differences: selectable recognition algorithm, explicit group size (0 = automatic, as before),
 // optional reuse of device buffers across blocks, no console output inside the measured code.
+// Revision 2: optional formation kernel with coalesced stores (NewKernels.EncryptCoalescedKernel, one thread per protected byte).
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,15 +20,17 @@ public sealed class GpuStegoEncryptorV2 : IDisposable
     private readonly Action<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int> _kernel;
     private readonly MemoryBuffer1D<byte, Stride1D.Dense> _gpuMaskedEtalons, _gpuKeys;
     private readonly int _c, _h, _blockSize;
-    private readonly bool _reuse;
-    public GpuStegoEncryptorV2(Accelerator acc, AssocStego stego, int blockSize = 512 * 1024, int groupSize = 0, bool reuseDeviceBuffers = false)
+    private readonly bool _reuse, _coalesced;
+    public GpuStegoEncryptorV2(Accelerator acc, AssocStego stego, int blockSize = 512 * 1024, int groupSize = 0, bool reuseDeviceBuffers = false, bool coalesced = false)
     {
-        _acc = acc; _c = stego.ContainerByteLength; _h = stego.HiddenByteLength; _blockSize = blockSize; _reuse = reuseDeviceBuffers;
+        _acc = acc; _c = stego.ContainerByteLength; _h = stego.HiddenByteLength; _blockSize = blockSize; _reuse = reuseDeviceBuffers; _coalesced = coalesced;
+        Action<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int> kernel =
+            coalesced ? NewKernels.EncryptCoalescedKernel : NewKernels.EncryptKernelCopy;
         _gpuMaskedEtalons = acc.Allocate1D<byte>(stego.FlattenedMaskedEtalonsBytes);
         _gpuKeys = acc.Allocate1D<byte>(stego.FlattenedKeysBytes);
         _kernel = groupSize <= 0
-            ? acc.LoadAutoGroupedStreamKernel<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int>(NewKernels.EncryptKernelCopy)
-            : acc.LoadImplicitlyGroupedStreamKernel<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int>(NewKernels.EncryptKernelCopy, groupSize);
+            ? acc.LoadAutoGroupedStreamKernel<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int>(kernel)
+            : acc.LoadImplicitlyGroupedStreamKernel<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int>(kernel, groupSize);
     }
     public void EncryptToStream(byte[] input, string outputPath)
     {
@@ -55,7 +58,7 @@ public sealed class GpuStegoEncryptorV2 : IDisposable
                 {
                     gin.CopyFromCPU(inBlock);
                     int seed = RandomNumberGenerator.GetInt32(int.MinValue, int.MaxValue);
-                    _kernel(n, gin.View, gout.View, _gpuMaskedEtalons.View, _gpuKeys.View, _c, offset, seed);
+                    _kernel(_coalesced ? n * _h : n, gin.View, gout.View, _gpuMaskedEtalons.View, _gpuKeys.View, _c, offset, seed);
                     _acc.Synchronize();
                     gout.CopyToCPU(outBlock);
                 }

@@ -5,3 +5,5 @@ analysis/output/
 __pycache__/
 *.pyc
 results_revision/
+results_revision2/
+library/tests/Extracted.g.cs
