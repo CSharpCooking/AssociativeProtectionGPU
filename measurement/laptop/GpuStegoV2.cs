@@ -2,7 +2,9 @@
 // Structure and file handling follow GpuStegoEncryptor/GpuStegoDecryptor of the thesis (Appendix 1);
 // differences: selectable recognition algorithm, explicit group size (0 = automatic, as before),
 // optional reuse of device buffers across blocks, no console output inside the measured code.
-// Revision 2: optional formation kernel with coalesced stores (NewKernels.EncryptCoalescedKernel, one thread per protected byte).
+// Revision 2: optional formation kernel with coalesced stores (NewKernels.EncryptCoalescedKernel, one thread per protected byte),
+// and optional double buffering of the file input and output (overlapIo): the protected chunk k is written, or chunk k+1 read,
+// by another thread while the device processes the next or the current chunk; all ILGPU calls stay on the calling thread.
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,10 +22,10 @@ public sealed class GpuStegoEncryptorV2 : IDisposable
     private readonly Action<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int> _kernel;
     private readonly MemoryBuffer1D<byte, Stride1D.Dense> _gpuMaskedEtalons, _gpuKeys;
     private readonly int _c, _h, _blockSize;
-    private readonly bool _reuse, _coalesced;
-    public GpuStegoEncryptorV2(Accelerator acc, AssocStego stego, int blockSize = 512 * 1024, int groupSize = 0, bool reuseDeviceBuffers = false, bool coalesced = false)
+    private readonly bool _reuse, _coalesced, _overlap;
+    public GpuStegoEncryptorV2(Accelerator acc, AssocStego stego, int blockSize = 512 * 1024, int groupSize = 0, bool reuseDeviceBuffers = false, bool coalesced = false, bool overlapIo = false)
     {
-        _acc = acc; _c = stego.ContainerByteLength; _h = stego.HiddenByteLength; _blockSize = blockSize; _reuse = reuseDeviceBuffers; _coalesced = coalesced;
+        _acc = acc; _c = stego.ContainerByteLength; _h = stego.HiddenByteLength; _blockSize = blockSize; _reuse = reuseDeviceBuffers; _coalesced = coalesced; _overlap = overlapIo;
         Action<Index1D, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, ArrayView<byte>, int, int, int> kernel =
             coalesced ? NewKernels.EncryptCoalescedKernel : NewKernels.EncryptKernelCopy;
         _gpuMaskedEtalons = acc.Allocate1D<byte>(stego.FlattenedMaskedEtalonsBytes);
@@ -39,6 +41,8 @@ public sealed class GpuStegoEncryptorV2 : IDisposable
         // Only API calls already used by the thesis code: Allocate1D, CopyFromCPU(array), CopyToCPU(array), Synchronize.
         byte[]? fullIn = input.Length >= _blockSize ? new byte[_blockSize] : null;
         byte[]? fullOut = input.Length >= _blockSize ? new byte[_blockSize * _h] : null;
+        byte[]? fullOut2 = _overlap && fullOut != null ? new byte[_blockSize * _h] : null;   // second host buffer (overlapIo)
+        Task? write = null;
         MemoryBuffer1D<byte, Stride1D.Dense>? dIn = null, dOut = null;
         if (_reuse && fullIn != null) { dIn = _acc.Allocate1D<byte>(_blockSize); dOut = _acc.Allocate1D<byte>((long)_blockSize * _h); }
         try
@@ -49,7 +53,7 @@ public sealed class GpuStegoEncryptorV2 : IDisposable
                 int n = Math.Min(_blockSize, input.Length - offset);
                 bool full = n == _blockSize;
                 byte[] inBlock = full ? fullIn! : new byte[n];
-                byte[] outBlock = full ? fullOut! : new byte[n * _h];
+                byte[] outBlock = full ? (fullOut2 != null && (b & 1) == 1 ? fullOut2 : fullOut!) : new byte[n * _h];
                 Buffer.BlockCopy(input, offset, inBlock, 0, n);
                 bool reuseThis = _reuse && full;
                 var gin = reuseThis ? dIn! : _acc.Allocate1D<byte>(n);
@@ -63,10 +67,14 @@ public sealed class GpuStegoEncryptorV2 : IDisposable
                     gout.CopyToCPU(outBlock);
                 }
                 finally { if (!reuseThis) { gin.Dispose(); gout.Dispose(); } }
-                outputStream.Write(outBlock, 0, n * _h);
+                if (!_overlap) { outputStream.Write(outBlock, 0, n * _h); continue; }
+                write?.Wait();                                 // the writes stay in order; the other buffer is free again
+                int len = n * _h;
+                write = Task.Run(() => outputStream.Write(outBlock, 0, len));
             }
+            write?.Wait();
         }
-        finally { dIn?.Dispose(); dOut?.Dispose(); }
+        finally { try { write?.Wait(); } catch { } dIn?.Dispose(); dOut?.Dispose(); }
     }
     public void Dispose() { _gpuMaskedEtalons.Dispose(); _gpuKeys.Dispose(); }
 }
@@ -80,11 +88,11 @@ public sealed class GpuStegoDecryptorV2 : IDisposable
     private readonly MemoryBuffer1D<byte, Stride1D.Dense> _gpuMaskedEtalons, _gpuKeys, _gpuTable;
     private readonly MemoryBuffer1D<int, Stride1D.Dense> _gpuPosByte, _gpuPosBit;
     private readonly int _c, _h, _etalonCount, _m, _blockSize;
-    private readonly bool _reuse;
-    public GpuStegoDecryptorV2(Accelerator acc, AssocStego stego, DecodeAlgorithm alg, int blockSize = 512 * 1024, int groupSize = 0, bool reuseDeviceBuffers = false)
+    private readonly bool _reuse, _overlap;
+    public GpuStegoDecryptorV2(Accelerator acc, AssocStego stego, DecodeAlgorithm alg, int blockSize = 512 * 1024, int groupSize = 0, bool reuseDeviceBuffers = false, bool overlapIo = false)
     {
         _acc = acc; _alg = alg; _c = stego.ContainerByteLength; _h = stego.HiddenByteLength; _etalonCount = stego.etalons.Length;
-        _blockSize = blockSize; _reuse = reuseDeviceBuffers;
+        _blockSize = blockSize; _reuse = reuseDeviceBuffers; _overlap = overlapIo;
         _gpuMaskedEtalons = acc.Allocate1D<byte>(stego.FlattenedMaskedEtalonsBytes);
         _gpuKeys = acc.Allocate1D<byte>(stego.FlattenedKeysBytes);
         var tb = RecognitionTable.Build(stego.FlattenedKeysBytes, stego.FlattenedMaskedEtalonsBytes, _c, _etalonCount);
@@ -111,9 +119,19 @@ public sealed class GpuStegoDecryptorV2 : IDisposable
         using var inputStream = new FileStream(filePath, new FileStreamOptions { Mode = FileMode.Open, Access = FileAccess.Read, Share = FileShare.Read, BufferSize = 1 << 20, Options = FileOptions.SequentialScan });
         int totalBlocks = (expectedOutputLength + _blockSize - 1) / _blockSize;
         byte[]? fullIn = expectedOutputLength >= _blockSize ? new byte[_blockSize * _h] : null;
+        byte[]? fullIn2 = _overlap && fullIn != null ? new byte[_blockSize * _h] : null;   // second host buffer (overlapIo)
         byte[]? fullOut = expectedOutputLength >= _blockSize ? new byte[_blockSize] : null;
         MemoryBuffer1D<byte, Stride1D.Dense>? dIn = null, dOut = null;
         if (_reuse && fullIn != null) { dIn = _acc.Allocate1D<byte>((long)_blockSize * _h); dOut = _acc.Allocate1D<byte>(_blockSize); }
+        // host buffer of block b: full blocks alternate between fullIn and fullIn2 (overlapIo); a partial block has its own array
+        byte[] HostIn(int b, int inN, bool full) => full ? (fullIn2 != null && (b & 1) == 1 ? fullIn2 : fullIn!) : new byte[inN];
+        void ReadBlock(int b, byte[] buf, int inN)
+        {
+            int read = 0;
+            while (read < inN) { int r = inputStream.Read(buf, read, inN - read); if (r == 0) throw new InvalidOperationException($"block {b}: unexpected end of file"); read += r; }
+        }
+        Task? prefetch = null;
+        byte[]? nextBuf = null;
         try
         {
             for (int b = 0; b < totalBlocks; b++)
@@ -122,10 +140,20 @@ public sealed class GpuStegoDecryptorV2 : IDisposable
                 int n = Math.Min(_blockSize, expectedOutputLength - outOffset);
                 bool full = n == _blockSize;
                 int inN = n * _h;
-                byte[] inBlock = full ? fullIn! : new byte[inN];
+                byte[] inBlock;
+                if (prefetch != null) { prefetch.Wait(); inBlock = nextBuf!; }      // read by the previous iteration (overlapIo)
+                else { inBlock = HostIn(b, inN, full); ReadBlock(b, inBlock, inN); }
+                prefetch = null;
+                if (_overlap && b + 1 < totalBlocks)
+                {
+                    int b1 = b + 1;
+                    int n1 = Math.Min(_blockSize, expectedOutputLength - b1 * _blockSize);
+                    int inN1 = n1 * _h;
+                    byte[] buf1 = HostIn(b1, inN1, n1 == _blockSize);
+                    nextBuf = buf1;
+                    prefetch = Task.Run(() => ReadBlock(b1, buf1, inN1));       // the next block is read while this one is processed
+                }
                 byte[] outBlock = full ? fullOut! : new byte[n];
-                int read = 0;
-                while (read < inN) { int r = inputStream.Read(inBlock, read, inN - read); if (r == 0) throw new InvalidOperationException($"block {b}: unexpected end of file"); read += r; }
                 bool reuseThis = _reuse && full;
                 var gin = reuseThis ? dIn! : _acc.Allocate1D<byte>(inN);
                 var gout = reuseThis ? dOut! : _acc.Allocate1D<byte>(n);
@@ -143,7 +171,7 @@ public sealed class GpuStegoDecryptorV2 : IDisposable
                 Buffer.BlockCopy(outBlock, 0, result, outOffset, n);
             }
         }
-        finally { dIn?.Dispose(); dOut?.Dispose(); }
+        finally { try { prefetch?.Wait(); } catch { } dIn?.Dispose(); dOut?.Dispose(); }
         return result;
     }
     public void Dispose() { _gpuMaskedEtalons.Dispose(); _gpuKeys.Dispose(); _gpuTable.Dispose(); _gpuPosByte.Dispose(); _gpuPosBit.Dispose(); }

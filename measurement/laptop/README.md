@@ -100,3 +100,16 @@ ncu --import rev_kernels_dgpu.ncu-rep --page details --csv > rev_kernels_dgpu.cs
 
 Of interest are the average number of active threads per warp, the branch efficiency, the achieved occupancy and the
 DRAM throughput of the search, table and branch-free kernels for `uniform` and `ff`.
+
+## Revision 2 (second report of reviewer 1)
+
+`run_revision2.cmd <text file> <data folder> [group]` runs the classes of `RevisionBenchmarks2.cs` (three processes per
+benchmark) and the kernel-only times of `RevKernels2.cs` (thread group sizes 0-1024, formation kernel with coalesced
+stores). Groups: `probe` (quick check of the build and of both GPUs), `env`, `breakeven`, `formation`, `recovery`,
+`fullcycle`, `fullcycleseq`, `kernels`, and, separately, `ncu` (Nsight Compute counters of the four kernels on the
+discrete GPU for the uniform and all-255 inputs). Modes added to those of the first kit: `CPU-opt` (optimized CPU path,
+`../AssocMeasure/New/CpuOptStego.cs`), `iGPU-opt` and `dGPU-opt` (V2 classes with device buffers reused between chunks,
+the coalesced formation kernel and the table-driven kernel), and the same with double-buffered file input and output
+(`CPU-opt-ovl`, `iGPU-ovl`, `dGPU-ovl`). The script activates the High performance plan for the whole session, logs the
+clock rates of the discrete GPU every 500 ms, records the mode of the vendor utility, and writes the results to
+`results_revision2/`. Instructions in Russian: [`RUN_INSTRUCTIONS_R2_RU.md`](RUN_INSTRUCTIONS_R2_RU.md).

@@ -86,3 +86,10 @@ ncu --import rev_kernels_dgpu.ncu-rep --page details --csv > rev_kernels_dgpu.cs
 Если набор запускается на ноутбуке конфигурации A и на нём найдётся папка `BenchmarkDotNet.Artifacts` исходных прогонов ВКР (по умолчанию —
 `<проект>\bin\Release\net7.0\BenchmarkDotNet.Artifacts` или папка проекта), её тоже прислать: в логах исходных
 прогонов есть число прогревочных итераций, которого нет в отчётах.
+
+## Второй раунд
+
+`run_revision2.cmd <текстовый файл> <папка data> [группа]` — дополнительные замеры по второму отчёту рецензента 1:
+классы `RevisionBenchmarks2.cs` (три процесса на каждый замер), время ядер `RevKernels2.cs` (размеры группы 0–1024,
+ядро формирования с объединёнными записями), счётчики Nsight Compute (группа `ncu`). Подробная инструкция:
+[`RUN_INSTRUCTIONS_R2_RU.md`](RUN_INSTRUCTIONS_R2_RU.md).

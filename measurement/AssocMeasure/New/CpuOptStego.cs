@@ -10,6 +10,9 @@
 //    outside the measured operation, and the restored data are written into an array supplied by the caller.
 // The filler is produced by one RandomNumberGenerator.Fill call per range, as in CPU-par, so that the output has the same
 // statistical source as the reference implementation. No ILGPU types are used.
+// overlapIo = true (CPU-opt-ovl): double buffering of the file input and output; in formation, chunk k+1 is formed while
+// chunk k is written by another thread, and in recovery, chunk k+1 is read while chunk k is recognized. The writes and
+// reads stay sequential and in order (at most one outstanding I/O operation).
 using System;
 using System.Collections.Concurrent;
 using System.IO;
@@ -32,9 +35,10 @@ public sealed class CpuOptStego
     private readonly ushort[] _part;                          // _part[jj * 256 + b]: bits of u contributed by byte b at _jBytes[jj]
     private readonly byte[] _table;                           // L[u]
     private readonly byte[] _chunk;                           // reusable chunk buffer
-    private readonly bool _parallel;
+    private readonly byte[]? _chunk2;                         // second chunk buffer (overlapIo)
+    private readonly bool _parallel, _overlap;
 
-    public CpuOptStego(AssocStego st, RecognitionTable tb, int maxInputLength, bool parallel = true)
+    public CpuOptStego(AssocStego st, RecognitionTable tb, int maxInputLength, bool parallel = true, bool overlapIo = false)
     {
         if (st.ContainerByteLength != C || st.HiddenByteLength != H) throw new ArgumentException("10-byte sections expected");
         byte[] k = st.FlattenedKeysBytes, me = st.FlattenedMaskedEtalonsBytes;
@@ -61,6 +65,8 @@ public sealed class CpuOptStego
         _table = (byte[])tb.Table.Clone();
         _chunk = new byte[Math.Min(ChunkSize, Math.Max(maxInputLength, 1)) * H];
         _parallel = parallel;
+        _overlap = overlapIo;
+        if (overlapIo) _chunk2 = new byte[_chunk.Length];
     }
 
     private void ForRanges(int n, Action<int, int> body)
@@ -73,12 +79,29 @@ public sealed class CpuOptStego
     public void EncryptToFile(byte[] input, string path)
     {
         using var fs = new FileStream(path, new FileStreamOptions { Mode = FileMode.Create, Access = FileAccess.Write, Share = FileShare.None, BufferSize = 1 << 20, Options = FileOptions.SequentialScan });
+        if (!_overlap)
+        {
+            for (int start = 0; start < input.Length; start += ChunkSize)
+            {
+                int n = Math.Min(ChunkSize, input.Length - start);
+                FormChunk(input, start, n, _chunk);
+                fs.Write(_chunk, 0, n * H);
+            }
+            return;
+        }
+        Task? write = null;
+        int slot = 0;
         for (int start = 0; start < input.Length; start += ChunkSize)
         {
             int n = Math.Min(ChunkSize, input.Length - start);
-            FormChunk(input, start, n, _chunk);
-            fs.Write(_chunk, 0, n * H);
+            byte[] buf = slot == 0 ? _chunk : _chunk2!;
+            FormChunk(input, start, n, buf);          // the other buffer may still be being written
+            write?.Wait();                             // the writes stay in order
+            int len = n * H;
+            write = Task.Run(() => fs.Write(buf, 0, len));
+            slot ^= 1;
         }
+        write?.Wait();
     }
 
     /// <summary>Formation into memory (no file): the protected representation of the whole input in <paramref name="output"/>.</summary>
@@ -121,14 +144,44 @@ public sealed class CpuOptStego
     public void DecryptFromFile(string path, byte[] result, int length)
     {
         using var fs = new FileStream(path, new FileStreamOptions { Mode = FileMode.Open, Access = FileAccess.Read, Share = FileShare.Read, BufferSize = 1 << 20, Options = FileOptions.SequentialScan });
-        for (int start = 0; start < length; start += ChunkSize)
+        if (!_overlap)
+        {
+            for (int start = 0; start < length; start += ChunkSize)
+            {
+                int n = Math.Min(ChunkSize, length - start);
+                ReadExactly(fs, _chunk, n * H);
+                int s0 = start;
+                ForRanges(n, (a, b) => DecodeRange(_chunk, 0, result, s0, a, b));
+            }
+            return;
+        }
+        byte[] cur = _chunk, next = _chunk2!;
+        int first = Math.Min(ChunkSize, length);
+        byte[] b0 = cur;
+        Task read = Task.Run(() => ReadExactly(fs, b0, first * H));
+        for (int start = 0; start < length;)
         {
             int n = Math.Min(ChunkSize, length - start);
-            int need = n * H, got = 0;
-            while (got < need) { int r = fs.Read(_chunk, got, need - got); if (r == 0) throw new EndOfStreamException("unexpected end of the protected file"); got += r; }
+            read.Wait();
+            byte[] buf = cur;
+            int nextStart = start + n;
+            if (nextStart < length)
+            {
+                int n2 = Math.Min(ChunkSize, length - nextStart);
+                byte[] nb = next;
+                read = Task.Run(() => ReadExactly(fs, nb, n2 * H));   // the next chunk is read while this one is recognized
+            }
             int s0 = start;
-            ForRanges(n, (a, b) => DecodeRange(_chunk, 0, result, s0, a, b));
+            ForRanges(n, (a, b) => DecodeRange(buf, 0, result, s0, a, b));
+            (cur, next) = (next, cur);
+            start = nextStart;
         }
+    }
+
+    private static void ReadExactly(FileStream fs, byte[] buf, int need)
+    {
+        int got = 0;
+        while (got < need) { int r = fs.Read(buf, got, need - got); if (r == 0) throw new EndOfStreamException("unexpected end of the protected file"); got += r; }
     }
 
     /// <summary>Recovery from memory (no file).</summary>

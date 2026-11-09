@@ -4,6 +4,9 @@
 //   CPU-opt             optimized CPU path (measurement/AssocMeasure/New/CpuOptStego.cs) on all hardware threads
 //   iGPU-opt, dGPU-opt  V2 classes with device buffers reused between chunks (host arrays sized to the input, as in V2),
 //                       the formation kernel with coalesced stores and the table-driven recognition kernel
+//   CPU-opt-ovl, iGPU-ovl, dGPU-ovl  the same with double-buffered file input and output: the next chunk is formed, or
+//                       processed on the device, while the previous one is written, and the next chunk is read while the
+//                       current one is recognized (formation, recovery and full cycle of 10 and 100 MB only)
 // Power plan: BenchmarkDotNet switches every benchmark process to the High performance plan; run_revision2.cmd activates
 // the same plan for the whole session, so that the kernel-only times (rev-kernels2) are measured under it as well, and it
 // logs the clock rates of the discrete GPU with nvidia-smi during all runs.
@@ -28,29 +31,31 @@ public abstract class Rev2Base : RevBase
     protected GpuStegoEncryptorV2? Enc2;
     protected GpuStegoDecryptorV2? Dec2;
 
-    protected static bool IsOpt(string mode) => mode.EndsWith("-opt");
+    protected static bool IsOpt(string mode) => mode.EndsWith("-opt") || mode.EndsWith("-ovl");
+    protected static bool IsOvl(string mode) => mode.EndsWith("-ovl");
+    protected static bool IsCpuOpt(string mode) => mode == "CPU-opt" || mode == "CPU-opt-ovl";
 
     // a new key, then the coders of the mode (outside the measured interval)
     protected void PrepareCoders(string mode, bool encoder, bool decoder)
     {
         DisposeCoders();
         NewKey();
-        if (mode == "CPU-opt")
+        if (IsCpuOpt(mode))
         {
             var tb = RecognitionTable.Build(Loaded.FlattenedKeysBytes, Loaded.FlattenedMaskedEtalonsBytes, Loaded.ContainerByteLength, Loaded.etalons.Length);
-            Opt = new CpuOptStego(Stego, tb, Input.Length, parallel: true);
+            Opt = new CpuOptStego(Stego, tb, Input.Length, parallel: true, overlapIo: IsOvl(mode));
             if (Result.Length != Input.Length) Result = new byte[Input.Length];
             return;
         }
         if (Session == null) return;
         if (encoder)
         {
-            if (IsOpt(mode)) Enc2 = new GpuStegoEncryptorV2(Acc, Stego, reuseDeviceBuffers: true, coalesced: true);
+            if (IsOpt(mode)) Enc2 = new GpuStegoEncryptorV2(Acc, Stego, reuseDeviceBuffers: true, coalesced: true, overlapIo: IsOvl(mode));
             else Enc = new GpuStegoEncryptor(Acc, Stego);
         }
         if (decoder)
         {
-            if (IsOpt(mode)) Dec2 = new GpuStegoDecryptorV2(Acc, Loaded, DecodeAlgorithm.Table, reuseDeviceBuffers: true);
+            if (IsOpt(mode)) Dec2 = new GpuStegoDecryptorV2(Acc, Loaded, DecodeAlgorithm.Table, reuseDeviceBuffers: true, overlapIo: IsOvl(mode));
             else if (mode.EndsWith("-table")) Dec2 = new GpuStegoDecryptorV2(Acc, Loaded, DecodeAlgorithm.Table);
             else Dec = new GpuStegoDecryptor(Acc, Loaded);
         }
@@ -65,7 +70,7 @@ public abstract class Rev2Base : RevBase
     // formation by the mode; CPU modes of the first kit through CpuForm
     protected void Form(string mode)
     {
-        if (mode == "CPU-opt") Opt!.EncryptToFile(Input, DataPath);
+        if (IsCpuOpt(mode)) Opt!.EncryptToFile(Input, DataPath);
         else if (Session == null) CpuForm(mode == "CPU-par-GF-table" ? "CPU-par-GF" : mode, Input, DataPath, Stego);
         else if (Enc2 != null) Enc2.EncryptToStream(Input, DataPath);
         else Enc!.EncryptToStream(Input, DataPath);
@@ -73,7 +78,7 @@ public abstract class Rev2Base : RevBase
 
     protected byte[] Recover(string mode)
     {
-        if (mode == "CPU-opt") { Opt!.DecryptFromFile(DataPath, Result, Input.Length); return Result; }
+        if (IsCpuOpt(mode)) { Opt!.DecryptFromFile(DataPath, Result, Input.Length); return Result; }
         if (Session == null) return CpuRecover(mode == "CPU-par-GF-table" ? "CPU-par-table" : mode, DataPath, Input.Length, Loaded);
         return Dec2 != null ? Dec2.DecryptFromFile(DataPath, Input.Length) : Dec!.DecryptFromFile(DataPath, Input.Length);
     }
@@ -109,7 +114,7 @@ public class Rev2BreakEven : Rev2Base
 [Config(typeof(Rev2MidConfig))]
 public class Rev2Formation : Rev2Base
 {
-    [Params("CPU-seq", "CPU-par", "CPU-par-GF", "CPU-opt", "iGPU", "dGPU", "iGPU-opt", "dGPU-opt")] public string Mode = "CPU-seq";
+    [Params("CPU-seq", "CPU-par", "CPU-par-GF", "CPU-opt", "CPU-opt-ovl", "iGPU", "iGPU-opt", "iGPU-ovl", "dGPU", "dGPU-opt", "dGPU-ovl")] public string Mode = "CPU-seq";
 
     [GlobalSetup] public void Setup() => Init(TextInput(Bytes(10 << 20)), DeviceOf(Mode));
     [IterationSetup] public void IterationSetup() => PrepareCoders(Mode, true, false);
@@ -125,7 +130,7 @@ public class Rev2Formation : Rev2Base
 [Config(typeof(Rev2MidConfig))]
 public class Rev2Recovery : Rev2Base
 {
-    [Params("CPU-seq", "CPU-par-table", "CPU-opt", "iGPU", "iGPU-table", "iGPU-opt", "dGPU", "dGPU-table", "dGPU-opt")] public string Mode = "CPU-seq";
+    [Params("CPU-seq", "CPU-par-table", "CPU-opt", "CPU-opt-ovl", "iGPU", "iGPU-table", "iGPU-opt", "iGPU-ovl", "dGPU", "dGPU-table", "dGPU-opt", "dGPU-ovl")] public string Mode = "CPU-seq";
 
     [GlobalSetup] public void Setup() => Init(TextInput(Bytes(10 << 20)), DeviceOf(Mode));
     [IterationSetup]
@@ -148,7 +153,7 @@ public class Rev2Recovery : Rev2Base
 [Config(typeof(Rev2LongConfig))]
 public class Rev2FullCycle : Rev2Base
 {
-    [Params("CPU-par", "CPU-par-GF-table", "CPU-opt", "iGPU", "iGPU-table", "iGPU-opt", "dGPU", "dGPU-table", "dGPU-opt")] public string Mode = "CPU-par";
+    [Params("CPU-par", "CPU-par-GF-table", "CPU-opt", "CPU-opt-ovl", "iGPU", "iGPU-table", "iGPU-opt", "iGPU-ovl", "dGPU", "dGPU-table", "dGPU-opt", "dGPU-ovl")] public string Mode = "CPU-par";
 
     [GlobalSetup] public void Setup() => Init(TextInput(Bytes(100 << 20)), DeviceOf(Mode));
     [IterationSetup] public void IterationSetup() => PrepareCoders(Mode, true, true);
