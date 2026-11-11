@@ -2,7 +2,8 @@
 
 Python 3.10+ with NumPy and Matplotlib. Run from the repository root; output goes to `analysis/output/`.
 `analysis/run_all.sh` runs `config_a.py`, `summarize.py B`, `summarize.py C`, `config_d.py`, `paper_values.py`,
-`lockstep_model.py` and `figures.py` in this order.
+`lockstep_model.py`, `figures.py`, `opt_summary.py`, `r2_bounds.py`, `config_d_r2.py`, `ncu_counters.py` and
+`control_paths.py` in this order.
 
 | Script | Input | Output | Paper |
 |---|---|---|---|
@@ -14,6 +15,12 @@ Python 3.10+ with NumPy and Matplotlib. Run from the repository root; output goe
 | `figures.py` | the JSON files above and `dist_10MB.json` of configurations B and C | `fig2.png` … `fig5.png` | Figures 2–5 |
 | `input_stats.py FILE…` | any files | stdout | Size, SHA-256 and the comparison counts of the search per byte (Section 6.3, Table 8) |
 | `run_nist.sh` | a binary file | NIST STS reports | Table 9, Table S4 (see the header of the script) |
+| `opt_summary.py` | `results/opt_B/` | `opt_summary.json`; report on stdout | Table 16; process-level statistics of CPU-opt and paired ratios (Section 7.12) |
+| `r2_bounds.py` | `config_D.json`, `results/configuration_D/` | `r2_bounds.json`; report on stdout | Process-level intervals of the break-even grid of the first run (Section 7.8); bound on what page-locked memory and overlapped device transfers can save (Section 8.5) |
+| `config_d_r2.py` | `results/configuration_D_r2/` | `config_D_r2.json`; report on stdout | Tables 17 and 18; pooled and process-level statistics, ratios, brackets of the break-even volume, kernel times by group size, clock log (Sections 6.4, 7.13, 8.5) |
+| `ncu_report.py OUT.csv INPUT=REPORT…` | Nsight Compute reports (`.ncu-rep`, `.ncu-repz`; not in the repository) | CSV of all metric values of every profiled launch | Reader of the report format, written without the NVIDIA tools; produced `results/configuration_D_r2/ncu/ncu_metrics.csv` |
+| `ncu_counters.py` | `results/configuration_D_r2/ncu/`, `results/configuration_D_r2/kernels2.csv` | `ncu_counters.json`; report on stdout | Table 19; counters of the four kernels of the dGPU on the uniform and all-255 inputs, their ratios, the clock rate during profiling, and the search times of the second run by key (Sections 7.13, 7.14, 8.2) |
+| `control_paths.py [KEYS]` | the library's etalons and key construction (through `lockstep_model.py`) | `control_paths.json`; report on stdout | Number of different control paths among the 32 threads of a warp in the search kernel, for uniform and all-255 data and 400 random keys (Section 7.14) |
 
 Conventions: times in the JSON files of `results/` are in seconds; *Error* and *Err999* are half-widths of the 99.9%
 confidence interval of the mean (Student's t). A speedup *S* is given with the conservative interval

@@ -1,0 +1,4 @@
+using "C:\Program Files\NVIDIA Corporation\Nsight Compute 2026.4.0\ncu.bat" 
+NVIDIA (R) Nsight Compute Command Line Profiler
+Copyright (c) 2018-2026 NVIDIA Corporation
+Version 2026.4.0.0 (build 39012641) (public-release)

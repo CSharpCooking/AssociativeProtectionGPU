@@ -1,0 +1,24 @@
+device,input,step,rep,ms
+==PROF== Connected to process 17668 (C:\Program Files\dotnet\dotnet.exe)
+==PROF== Profiling "Kernel_EncryptKernelCopy" - 0: 0%....50%....100% - 45 passes
+==PROF== Profiling "Kernel_DecryptSearchKernelCopy" - 1: 0%
+==WARNING== Launching the workload is taking more time than expected. If this continues to hang, terminate the profile and re-try by profiling the range of all related launches using '--replay-mode range'. See https://docs.nvidia.com/nsight-compute/ProfilingGuide/index.html#replay for more details.
+....50%....100% - 45 passes
+==PROF== Profiling "Kernel_DecryptTableKernel" - 2: 0%....50%....100% - 45 passes
+==PROF== Profiling "Kernel_DecryptBranchFreeKernel" - 3: 0%....50%....100% - 45 passes
+dGPU,uniform,copy input to device,0,3.414
+==PROF== Profiling "Kernel_EncryptKernelCopy" - 4: 0%....50%....100% - 45 passes
+dGPU,uniform,formation kernel,0,3412.720
+dGPU,uniform,copy protected to host,0,48.811
+dGPU,uniform,copy protected to device,0,49.660
+==PROF== Profiling "Kernel_DecryptSearchKernelCopy" - 5: 0%....50%....100% - 45 passes
+dGPU,uniform,search kernel,0,18877.815
+==PROF== Profiling "Kernel_DecryptTableKernel" - 6: 0%....50%....100% - 45 passes
+dGPU,uniform,table kernel,0,2974.923
+==PROF== Profiling "Kernel_DecryptBranchFreeKernel" - 7: 0%....50%....100% - 45 passes
+dGPU,uniform,branch-free kernel,0,6212.865
+dGPU,uniform,copy output to host,0,3.594
+dGPU,uniform,write protected file,0,232.039
+dGPU,uniform,read protected file,0,50.235
+==PROF== Disconnected from process 17668
+==PROF== Report: C:\assoc2\measurement\laptop\results_revision2\ncu_dGPU_uniform.ncu-repz

@@ -1,0 +1,1 @@
+[11.11.2026 14:22:28,09] group ncu: vendor mode Turbo 

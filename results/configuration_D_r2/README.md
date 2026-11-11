@@ -12,7 +12,7 @@ active during the whole run, including the kernel-only times (`power_plan.txt`);
 (`vendor_mode.txt`); the state of the discrete GPU was logged every 0.5 s (`gpu_clocks_all_*.csv`). The clock log has a
 gap from 16:48:09 to 22:13:20 local time, after the end of `Rev2FullCycle`: the computer was apparently in sleep mode.
 `Rev2FullCycleSeq` and the kernel-only times were measured after it; no benchmark was interrupted. The Nsight Compute
-step of the kit (`ncu`) was not run.
+step of the kit (`ncu`) was run the next day; its results are in [`ncu/`](ncu/).
 
 | File | Content |
 |---|---|
@@ -25,6 +25,7 @@ step of the kit (`ncu`) was not run.
 | `kernels2.csv`, `kernels2.err` | Kernel-only times for thread group sizes 0 (automatic), 32-1,024, ten repetitions; the two formation kernels and the three recognition kernels; a new key for every device, group size and input |
 | `gpu_clocks_all_*.csv`, `gpu_state_*_start.txt`, `gpu_state_*_end.txt` | `nvidia-smi` log of the power state, clock rates, power, temperature and utilization of the discrete GPU; its state before and after the run |
 | `power_plan.txt`, `vendor_mode.txt` | Power plan of Windows before and during the run; mode of the vendor utility as entered by the operator |
+| `ncu/` | Kernel-level counters of the discrete GPU (NVIDIA Nsight Compute), 11 November 2026; see [`ncu/README.md`](ncu/README.md) |
 
 Modes: `CPU-opt` is the optimized CPU path (`measurement/AssocMeasure/New/CpuOptStego.cs`); `-opt` are the V2 GPU classes
 with device buffers reused between chunks, the formation kernel with coalesced stores and the table-driven kernel; `-ovl`

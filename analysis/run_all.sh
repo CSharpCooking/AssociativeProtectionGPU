@@ -14,4 +14,7 @@ python3 analysis/figures.py
 python3 analysis/opt_summary.py > analysis/output/opt_B.txt
 python3 analysis/r2_bounds.py > analysis/output/r2_bounds.txt
 python3 analysis/config_d_r2.py > analysis/output/config_D_r2.txt
-echo "reports: analysis/output/config_A.txt, summary_B.txt, summary_C.txt, config_D.txt, paper_values.md, lockstep_model.txt, opt_B.txt, r2_bounds.txt, config_D_r2.txt"
+# kernel-level counters of the discrete GPU of configuration D (Nsight Compute) and the control paths of a warp
+python3 analysis/ncu_counters.py > analysis/output/ncu_counters.txt
+python3 analysis/control_paths.py > analysis/output/control_paths.txt
+echo "reports: analysis/output/config_A.txt, summary_B.txt, summary_C.txt, config_D.txt, paper_values.md, lockstep_model.txt, opt_B.txt, r2_bounds.txt, config_D_r2.txt, ncu_counters.txt, control_paths.txt"

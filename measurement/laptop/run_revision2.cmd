@@ -100,8 +100,12 @@ goto :done
 :ncuone
 echo [%time%] ncu, discrete GPU, input %1 (2-5 min)
 call "%NCU%" --target-processes all --set full --force-overwrite --export "%OUT%\ncu_dGPU_%1" dotnet bin\Release\net8.0\AssocRevision.dll rev-kernels "%ASSOC_DATA%" 1 dGPU %1 > "%OUT%\ncu_dGPU_%1.log" 2>&1
-if not exist "%OUT%\ncu_dGPU_%1.ncu-rep" (echo     no report: see ncu_dGPU_%1.log ^(ERR_NVGPUCTRPERM means no access to the counters^) & exit /b 0)
-call "%NCU%" --import "%OUT%\ncu_dGPU_%1.ncu-rep" --page details --csv > "%OUT%\ncu_dGPU_%1.csv" 2>> "%OUT%\ncu_dGPU_%1.log"
+rem the report is .ncu-rep or, with newer versions of Nsight Compute, a compressed .ncu-repz (analysis/ncu_report.py reads both)
+set "REP="
+if exist "%OUT%\ncu_dGPU_%1.ncu-rep" set "REP=%OUT%\ncu_dGPU_%1.ncu-rep"
+if exist "%OUT%\ncu_dGPU_%1.ncu-repz" set "REP=%OUT%\ncu_dGPU_%1.ncu-repz"
+if not defined REP (echo     no report: see ncu_dGPU_%1.log ^(ERR_NVGPUCTRPERM means no access to the counters^) & exit /b 0)
+call "%NCU%" --import "%REP%" --page details --csv > "%OUT%\ncu_dGPU_%1.csv" 2>> "%OUT%\ncu_dGPU_%1.log"
 exit /b 0
 
 :bench

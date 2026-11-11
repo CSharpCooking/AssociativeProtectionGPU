@@ -1,0 +1,12 @@
+C:\assoc2\measurement\laptop\results_revision2\build.log
+C:\assoc2\measurement\laptop\results_revision2\files.txt
+C:\assoc2\measurement\laptop\results_revision2\gpu_clocks_ncu_5159.csv
+C:\assoc2\measurement\laptop\results_revision2\gpu_state_ncu_end.txt
+C:\assoc2\measurement\laptop\results_revision2\gpu_state_ncu_start.txt
+C:\assoc2\measurement\laptop\results_revision2\ncu_dGPU_ff.log
+C:\assoc2\measurement\laptop\results_revision2\ncu_dGPU_ff.ncu-repz
+C:\assoc2\measurement\laptop\results_revision2\ncu_dGPU_uniform.log
+C:\assoc2\measurement\laptop\results_revision2\ncu_dGPU_uniform.ncu-repz
+C:\assoc2\measurement\laptop\results_revision2\ncu_version.txt
+C:\assoc2\measurement\laptop\results_revision2\power_plan.txt
+C:\assoc2\measurement\laptop\results_revision2\vendor_mode.txt
