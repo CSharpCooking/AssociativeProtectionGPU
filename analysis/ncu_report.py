@@ -11,8 +11,8 @@ being a message with one field whose wire type gives the type (string, double, f
 against the texts of the rules stored in the same reports, which quote several of the values (the number of active threads
 per warp, the numbers of sectors).
 
-The reports themselves are not in the repository (139 MB; they also contain the host name of the computer). This script
-turned them into results/configuration_D_r2/ncu/ncu_metrics.csv, which analysis/ncu_counters.py reads.
+The reports of configuration D are in results/configuration_D_r2/ncu/ (139 MB); this script turned them into
+ncu_metrics.csv in the same folder, which analysis/ncu_counters.py reads.
 
 usage: python3 analysis/ncu_report.py OUT.csv INPUT=REPORT [INPUT=REPORT ...]
        e.g. python3 analysis/ncu_report.py ncu_metrics.csv uniform=ncu_dGPU_uniform.ncu-repz ff=ncu_dGPU_ff.ncu-repz

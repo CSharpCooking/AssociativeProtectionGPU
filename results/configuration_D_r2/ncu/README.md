@@ -15,17 +15,18 @@ runs; on the all-255 input the control flow of the search kernel depends on the 
 
 | File | Content |
 |---|---|
+| `ncu_dGPU_uniform.ncu-repz`, `ncu_dGPU_ff.ncu-repz` | The Nsight Compute reports of the two runs as written by the profiler (75 and 64 MB) |
 | `ncu_metrics.csv` | All metric values of the 16 profiled launches (`input`, `launch` 0-7, `kernel`, `metric`, `value`; 1,784 metrics per launch), extracted from the reports by [`analysis/ncu_report.py`](../../../analysis/ncu_report.py) |
 | `ncu_dGPU_uniform.log`, `ncu_dGPU_ff.log` | Console output of the two runs: the profiled launches and the times printed by the program (these include the profiling passes and are not kernel times) |
 | `ncu_version.txt` | Version of Nsight Compute |
 | `gpu_clocks_ncu_*.csv`, `gpu_state_ncu_start.txt`, `gpu_state_ncu_end.txt` | `nvidia-smi` log of the discrete GPU during the session (every 0.5 s) and its state before and after it |
 | `power_plan.txt`, `vendor_mode.txt`, `build.log`, `files.txt` | Power plan before and during the session; mode of the vendor utility as entered by the operator; build log; list of the delivered files |
 
-The two reports themselves (`ncu_dGPU_uniform.ncu-repz`, 75 MB, and `ncu_dGPU_ff.ncu-repz`, 64 MB) are not included
-because of their size; they also contain the host name of the computer. Nsight Compute 2026.4 writes compressed reports
-(`.ncu-repz`), so the CSV export step of the kit, which looked for `.ncu-rep`, produced nothing; the metrics were read
-from the reports with `analysis/ncu_report.py`, and the reading was checked against the rule texts stored in the reports,
-which quote the number of active threads per warp and the numbers of sectors.
+Nsight Compute 2026.4 writes compressed reports (`.ncu-repz`), so the CSV export step of the kit, which looked for
+`.ncu-rep`, produced nothing; the metrics were read from the reports with `analysis/ncu_report.py`
+(`python3 analysis/ncu_report.py ncu_metrics.csv uniform=ncu_dGPU_uniform.ncu-repz ff=ncu_dGPU_ff.ncu-repz`), and the
+reading was checked against the rule texts stored in the reports, which quote the number of active threads per warp
+and the numbers of sectors. The reports can also be opened in the Nsight Compute application.
 
 Analysis: `python3 analysis/ncu_counters.py` (counters of Table 19, ratios between the kernels, clock rate during the
 session, search times of the second run by key) and `python3 analysis/control_paths.py` (number of control paths in a

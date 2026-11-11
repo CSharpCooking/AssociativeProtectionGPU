@@ -1,6 +1,7 @@
 *.bin binary
 *.png binary
 *.xlsx binary
+*.ncu-repz binary
 *.cmd text eol=crlf
 *.sh text eol=lf
 results/configuration_D/** -text
