@@ -9,6 +9,7 @@
   (OpenCL) and NVIDIA GeForce RTX 4090 Laptop GPU (CUDA), Windows 11 Home 25H2, .NET 8.0.33; BenchmarkDotNet reports
   and logs and kernel-only times of the kit `measurement/laptop` (own README).
 * `Supplementary_Tables_S1-S6.xlsx`: Tables S1–S6 to which the paper refers (Section 6.7).
+* `Supplementary_Tables_S7-S9.xlsx`: Tables S7–S9, the complete statistics of the measurements added in the second revision (second run on configuration D, its kernel-only times, the optimized CPU path on configuration B).
 
 All results of configurations B and C were obtained with `measurement/AssocMeasure` on the inputs in `data/`. Times
 are in seconds unless the field name says otherwise.

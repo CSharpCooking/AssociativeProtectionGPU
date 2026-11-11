@@ -25,6 +25,7 @@ NIST SP 800-22 tests, and the scripts that recompute the tables and figures of t
 | [`results/configuration_B/`](results/configuration_B/), [`results/configuration_C/`](results/configuration_C/) | Raw per-iteration results, logs, key checks, NIST SP 800-22 reports | Tables 7–9, Figure 4, Sections 7.1, 7.5–7.7, Tables S2–S4 |
 | [`results/configuration_D/`](results/configuration_D/) | BenchmarkDotNet reports and logs with the times of all iterations of every process, kernel-only times, environment | Tables 10–15, Figure 5, Sections 7.8–7.11, Tables S5–S6 |
 | [`results/Supplementary_Tables_S1-S6.xlsx`](results/Supplementary_Tables_S1-S6.xlsx) | Tables S1–S6 to which the paper refers: complete statistics of configurations A and D, measurements of B and C with raw iterations, paired measurements, NIST results, kernel-only times of D | Section 6.7 |
+| [`results/Supplementary_Tables_S7-S9.xlsx`](results/Supplementary_Tables_S7-S9.xlsx) | Tables S7–S9, added in the second revision: complete statistics of the second run on configuration D with the process means and process-level intervals of every benchmark (S7), its kernel-only times for every group size and repetition (S8), and the process means of the optimized CPU path on configuration B (S9) | Section 6.7; Tables 16–18 |
 | [`analysis/`](analysis/) | Python scripts that recompute Tables 4–15 and Figures 2–5 from `results/` | |
 
 ## Configurations

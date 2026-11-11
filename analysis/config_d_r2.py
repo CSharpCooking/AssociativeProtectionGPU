@@ -75,6 +75,7 @@ for cls in ('Rev2BreakEven', 'Rev2Formation', 'Rev2Recovery', 'Rev2FullCycle', '
         rec.update(mean=mean, sd=sd, hw=t_quantile(0.9995, n - 1) * sd / math.sqrt(n), n=n, launch_means=lm,
                    launch_n=[len(l) for l in launches],
                    hw_process=T2 * st.stdev(lm) / math.sqrt(len(lm)), launch_dev=100 * max(abs(x / mean - 1) for x in lm))
+        rec.update(se=sd / math.sqrt(n), median=st.median(res), min=min(res), max=max(res), params=dict(zip(names, key)))
         CHECK.append((cls, key, n == rec['N'], abs(mean / rec['report_mean'] - 1), abs(rec['hw'] / rec['report_error'] - 1), len(launches)))
         R[cls][key] = rec
 assert all(c[2] and c[5] == 3 for c in CHECK), [c for c in CHECK if not (c[2] and c[5] == 3)]
@@ -97,6 +98,9 @@ def verdict(a, b):
 
 
 OUT = {}
+# every case with its complete statistics (Table S7 of the supplementary workbook)
+OUT['cases'] = {cls: [{k: rec[k] for k in ('params', 'n', 'mean', 'hw', 'sd', 'se', 'median', 'min', 'max', 'launch_means', 'launch_n',
+                                               'hw_process', 'launch_dev', 'alloc_MB')} for rec in R[cls].values()] for cls in R}
 # ------------------------------------------------------------------ grid 1-1024 KB
 G = R['Rev2BreakEven']
 sizes = sorted({int(k[0]) for k in G})
