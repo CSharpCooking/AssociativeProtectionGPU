@@ -178,6 +178,16 @@ for dev in ('iGPU', 'dGPU'):
     d['rep_range_pct_max'] = max(100 * (max(v) - min(v)) / st.median(v) for k, v in K.items() if k[0] == dev)
     kern[dev] = d
 OUT['kernels'] = kern
+# share of the kernel in the stage of 10 MB of Russian text under the single power plan of this run: kernel-only time with the
+# automatic group size (whole input in one launch, one key) against the stage time of the library class (20 chunks, a new key
+# per iteration); the two programs still differ in chunking, so the shares are estimates
+shares = {}
+for dev in ('iGPU', 'dGPU'):
+    kf, ks, kt = (st.mean(K[(dev, 'ru', 0, s)]) for s in ('formation kernel', 'search kernel', 'table kernel'))
+    sf, ss, stb = OUT['formation'][dev]['mean'], OUT['recovery'][dev]['mean'], OUT['recovery'][dev + '-table']['mean']
+    shares[dev] = dict(formation=dict(kernel=kf, stage=sf, pct=100 * kf / sf), search=dict(kernel=ks, stage=ss, pct=100 * ks / ss),
+                       table=dict(kernel=kt, stage=stb, pct=100 * kt / stb))
+OUT['kernel_shares'] = shares
 
 # ------------------------------------------------------------------ clock log of the discrete GPU
 rows = []
@@ -227,4 +237,6 @@ for dev, d in kern.items():
           {i: f'{v["mean"]:.2f} ({v["min"]:.2f}-{v["max"]:.2f})' for i, v in d['coalesced_speedup'].items()})
     print('   explicit group sizes relative to automatic (median times, data-independent kernels):', {s: f'{v["min"]:.2f}-{v["max"]:.2f}' for s, v in d['group_rel_to_auto'].items()},
           '; search kernel, uniform:', f'{d["search_uniform_rel_to_auto"]["min"]:.2f}-{d["search_uniform_rel_to_auto"]["max"]:.2f}', f'; largest range over repetitions {d["rep_range_pct_max"]:.0f}%')
+for dev, d in shares.items():
+    print(f'=== kernel share of the stage, {dev}, Russian text, 10 MB:', {k: f"{v['kernel']:.1f} of {v['stage']:.1f} ms = {v['pct']:.1f}%" for k, v in d.items()})
 print('=== clocks:', OUT['clocks'])
