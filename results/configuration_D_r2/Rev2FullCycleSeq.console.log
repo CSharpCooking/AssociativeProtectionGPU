@@ -1,0 +1,267 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1/" /p:OutDir="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0/" /p:OutputPath="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0/" /p:PublishDir="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\publish/" in C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1
+// command took 1.68 sec and exited with 0
+// start dotnet  build -c Release --no-restore --nodeReuse:false /p:UseSharedCompilation=false /p:Deterministic=true /p:Optimize=true /p:ArtifactsPath="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1/" /p:OutDir="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0/" /p:OutputPath="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0/" /p:PublishDir="C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\publish/" --output "C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0/" in C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1
+// command took 3.33 sec and exited with 0
+// ***** Done, took 00:00:05 (5.07 sec)   *****
+// Found 1 benchmarks:
+//   Rev2FullCycleSeq.'Full cycle': L3W1I5(InvocationCount=1, IterationCount=5, LaunchCount=3, UnrollFactor=1, WarmupCount=1) [Mode=CPU-seq]
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: Rev2FullCycleSeq.'Full cycle': L3W1I5(InvocationCount=1, IterationCount=5, LaunchCount=3, UnrollFactor=1, WarmupCount=1) [Mode=CPU-seq]
+// *** Execute ***
+// Launch: 1 / 3
+// Execute: dotnet AssocRevision-L3W1I5-1.dll --anonymousPipes 1280 1356 --benchmarkName "Rev2FullCycleSeq.FullCycle(Mode: \"CPU-seq\")" --job L3W1I5 --benchmarkId 0 in C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L3W1I5(InvocationCount=1, IterationCount=5, LaunchCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 69600.00 ns, 69.6000 us/op
+WorkloadJitting  1: 1 op, 24282528400.00 ns, 24.2825 s/op
+
+OverheadWarmup   1: 1 op, 500.00 ns, 500.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  12: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  13: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  14: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 24715372400.00 ns, 24.7154 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 23812669800.00 ns, 23.8127 s/op
+WorkloadActual   2: 1 op, 25572842700.00 ns, 25.5728 s/op
+WorkloadActual   3: 1 op, 27629234700.00 ns, 27.6292 s/op
+WorkloadActual   4: 1 op, 25538078000.00 ns, 25.5381 s/op
+WorkloadActual   5: 1 op, 22566368200.00 ns, 22.5664 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 23812669600.00 ns, 23.8127 s/op
+WorkloadResult   2: 1 op, 25572842500.00 ns, 25.5728 s/op
+WorkloadResult   3: 1 op, 27629234500.00 ns, 27.6292 s/op
+WorkloadResult   4: 1 op, 25538077800.00 ns, 25.5381 s/op
+WorkloadResult   5: 1 op, 22566368000.00 ns, 22.5664 s/op
+// GC:  0 0 0 106955720 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 15820 has exited with code 0.
+// Launch: 2 / 3
+// Execute: dotnet AssocRevision-L3W1I5-1.dll --anonymousPipes 1276 1368 --benchmarkName "Rev2FullCycleSeq.FullCycle(Mode: \"CPU-seq\")" --job L3W1I5 --benchmarkId 0 in C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L3W1I5(InvocationCount=1, IterationCount=5, LaunchCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 66200.00 ns, 66.2000 us/op
+WorkloadJitting  1: 1 op, 24270264400.00 ns, 24.2703 s/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadWarmup   6: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   7: 1 op, 200.00 ns, 200.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   7: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   8: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   9: 1 op, 0.00 ns, 0.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual  14: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  15: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  16: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  17: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  18: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 100.00 ns, 100.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 23563765700.00 ns, 23.5638 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 25854203700.00 ns, 25.8542 s/op
+WorkloadActual   2: 1 op, 22814854500.00 ns, 22.8149 s/op
+WorkloadActual   3: 1 op, 24602188500.00 ns, 24.6022 s/op
+WorkloadActual   4: 1 op, 24872222200.00 ns, 24.8722 s/op
+WorkloadActual   5: 1 op, 25725750600.00 ns, 25.7258 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 25854203500.00 ns, 25.8542 s/op
+WorkloadResult   2: 1 op, 22814854300.00 ns, 22.8149 s/op
+WorkloadResult   3: 1 op, 24602188300.00 ns, 24.6022 s/op
+WorkloadResult   4: 1 op, 24872222000.00 ns, 24.8722 s/op
+WorkloadResult   5: 1 op, 25725750400.00 ns, 25.7258 s/op
+// GC:  0 0 0 106955720 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 10116 has exited with code 0.
+// Launch: 3 / 3
+// Execute: dotnet AssocRevision-L3W1I5-1.dll --anonymousPipes 1128 1344 --benchmarkName "Rev2FullCycleSeq.FullCycle(Mode: \"CPU-seq\")" --job L3W1I5 --benchmarkId 0 in C:\assoc2\measurement\laptop\standalone\bin\Release\net8.0\AssocRevision-L3W1I5-1\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL,AvxVnni,SERIALIZE VectorSize=256
+// Job: L3W1I5(InvocationCount=1, IterationCount=5, LaunchCount=3, UnrollFactor=1, WarmupCount=1)
+
+OverheadJitting  1: 1 op, 64200.00 ns, 64.2000 us/op
+WorkloadJitting  1: 1 op, 23898017500.00 ns, 23.8980 s/op
+
+OverheadWarmup   1: 1 op, 400.00 ns, 400.0000 ns/op
+OverheadWarmup   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   3: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadWarmup   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadWarmup   6: 1 op, 300.00 ns, 300.0000 ns/op
+
+OverheadActual   1: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   2: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   3: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   4: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   5: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual   6: 1 op, 300.00 ns, 300.0000 ns/op
+OverheadActual   7: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   8: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual   9: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  10: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  11: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  12: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  13: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  14: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  15: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  16: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  17: 1 op, 100.00 ns, 100.0000 ns/op
+OverheadActual  18: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  19: 1 op, 200.00 ns, 200.0000 ns/op
+OverheadActual  20: 1 op, 200.00 ns, 200.0000 ns/op
+
+WorkloadWarmup   1: 1 op, 24030620500.00 ns, 24.0306 s/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 25984471600.00 ns, 25.9845 s/op
+WorkloadActual   2: 1 op, 25248371200.00 ns, 25.2484 s/op
+WorkloadActual   3: 1 op, 27601758200.00 ns, 27.6018 s/op
+WorkloadActual   4: 1 op, 27768561700.00 ns, 27.7686 s/op
+WorkloadActual   5: 1 op, 26629123700.00 ns, 26.6291 s/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 25984471450.00 ns, 25.9845 s/op
+WorkloadResult   2: 1 op, 25248371050.00 ns, 25.2484 s/op
+WorkloadResult   3: 1 op, 27601758050.00 ns, 27.6018 s/op
+WorkloadResult   4: 1 op, 27768561550.00 ns, 27.7686 s/op
+WorkloadResult   5: 1 op, 26629123550.00 ns, 26.6291 s/op
+// GC:  0 0 0 106955720 1
+// Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 21788 has exited with code 0.
+
+Mean = 25.481 s, StdErr = 0.412 s (1.62%), N = 15, StdDev = 1.597 s
+Min = 22.566 s, Q1 = 24.737 s, Median = 25.573 s, Q3 = 26.307 s, Max = 27.769 s
+IQR = 1.570 s, LowerFence = 22.383 s, UpperFence = 28.661 s
+ConfidenceInterval = [23.774 s; 27.189 s] (CI 99.9%), Margin = 1.707 s (6.70% of Mean)
+Skewness = -0.26, Kurtosis = 2.07, MValue = 2
+
+// ** Remained 0 (0,0 %) benchmark(s) to run. Estimated finish 2026-11-10 22:23 (0h 0m from now) **
+Successfully reverted power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  C:\assoc2\measurement\laptop\results_revision2\Rev2FullCycleSeq\results\Rev2FullCycleSeq-report.csv
+  C:\assoc2\measurement\laptop\results_revision2\Rev2FullCycleSeq\results\Rev2FullCycleSeq-report-github.md
+  C:\assoc2\measurement\laptop\results_revision2\Rev2FullCycleSeq\results\Rev2FullCycleSeq-report.html
+
+// * Detailed results *
+Rev2FullCycleSeq.'Full cycle': L3W1I5(InvocationCount=1, IterationCount=5, LaunchCount=3, UnrollFactor=1, WarmupCount=1) [Mode=CPU-seq]
+Runtime = .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 25.481 s, StdErr = 0.412 s (1.62%), N = 15, StdDev = 1.597 s
+Min = 22.566 s, Q1 = 24.737 s, Median = 25.573 s, Q3 = 26.307 s, Max = 27.769 s
+IQR = 1.570 s, LowerFence = 22.383 s, UpperFence = 28.661 s
+ConfidenceInterval = [23.774 s; 27.189 s] (CI 99.9%), Margin = 1.707 s (6.70% of Mean)
+Skewness = -0.26, Kurtosis = 2.07, MValue = 2
+-------------------- Histogram --------------------
+[22.340 s ; 24.040 s) | @@@
+[24.040 s ; 26.143 s) | @@@@@@@@
+[26.143 s ; 28.049 s) | @@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+Intel Core i9-14900HX 2.20GHz, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 8.0.427
+  [Host] : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+  L3W1I5 : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+
+Job=L3W1I5  InvocationCount=1  IterationCount=5  
+LaunchCount=3  UnrollFactor=1  WarmupCount=1  
+
+| Method       | Mode    | Mean    | Error   | StdDev  | StdErr  | Min     | Q1      | Median  | Q3      | Max     | Iterations | Allocated |
+|------------- |-------- |--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|-----------:|----------:|
+| 'Full cycle' | CPU-seq | 25.48 s | 1.707 s | 1.597 s | 0.412 s | 22.57 s | 24.74 s | 25.57 s | 26.31 s | 27.77 s |      15.00 |    102 MB |
+
+// * Legends *
+  Mode       : Value of the 'Mode' parameter
+  Mean       : Arithmetic mean of all measurements
+  Error      : Half of 99.9% confidence interval
+  StdDev     : Standard deviation of all measurements
+  StdErr     : Standard error of all measurements
+  Min        : Minimum
+  Q1         : Quartile 1 (25th percentile)
+  Median     : Value separating the higher half of all measurements (50th percentile)
+  Q3         : Quartile 3 (75th percentile)
+  Max        : Maximum
+  Iterations : Number of target iterations
+  Allocated  : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 s        : 1 Second (1 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:10:07 (607.49 sec), executed benchmarks: 1
+
+Global total time: 00:10:13 (613.58 sec), executed benchmarks: 1
+// * Artifacts cleanup *
+Artifacts cleanup is finished

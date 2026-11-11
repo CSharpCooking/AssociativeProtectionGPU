@@ -82,7 +82,7 @@ BenchmarkDotNet из NuGet), выполняет шесть его классов
 * `library/KeyValidation.cs`, `library/tests/` — проверка ключа построением таблицы распознавания, добавленная в библиотеку после замеров (строки `[r2]` листинга), и её тесты (разд. 5.1, 5.2, 7.1).
 * `measurement/AssocMeasure/New/CpuOptStego.cs`, `Bench/OptBench.cs`, `measurement/run_opt_linux.sh` — оптимизированный путь CPU (CPU-opt) и его сравнение с путями CPU конфигурации D в независимых процессах (разд. 5.3, 6.4, 7.12, табл. 16); сырые результаты — `results/opt_B/`, `results/key_validation/`.
 * `analysis/opt_summary.py`, `analysis/r2_bounds.py` — статистика по процессам, межпроцессные интервалы сетки D, верхние оценки оптимизаций GPU, смещение порога (разд. 7.8, 7.12, 8.5).
-* `measurement/laptop/RevisionBenchmarks2.cs`, `RevKernels2.cs`, `run_revision2.cmd`, `RUN_INSTRUCTIONS_R2_RU.md` — комплект для дополнительных замеров на компьютере с GPU (пока не запускался).
+* `measurement/laptop/RevisionBenchmarks2.cs`, `RevKernels2.cs`, `run_revision2.cmd`, `RUN_INSTRUCTIONS_R2_RU.md` — комплект второго прогона на конфигурации D; его результаты — `results/configuration_D_r2/`, анализ — `analysis/config_d_r2.py` (разд. 7.13, табл. 17 и 18).
 
 Измеренная версия листинга библиотеки — версия коммита `23050a9`.
 

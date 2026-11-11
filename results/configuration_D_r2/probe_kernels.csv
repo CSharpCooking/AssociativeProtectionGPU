@@ -1,0 +1,11 @@
+device,input,group,step,rep,ms
+iGPU,ru,0,formation kernel,0,81.185
+iGPU,ru,0,coalesced formation kernel,0,58.831
+iGPU,ru,0,search kernel,0,230.187
+iGPU,ru,0,table kernel,0,55.944
+iGPU,ru,0,branch-free kernel,0,545.480
+dGPU,ru,0,formation kernel,0,8.381
+dGPU,ru,0,coalesced formation kernel,0,5.685
+dGPU,ru,0,search kernel,0,15.374
+dGPU,ru,0,table kernel,0,0.610
+dGPU,ru,0,branch-free kernel,0,4.230

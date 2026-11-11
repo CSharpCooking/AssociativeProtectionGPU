@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Rev2Recovery-20261110-161236</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.9711/25H2/2025Update/HudsonValley2)
+Intel Core i9-14900HX 2.20GHz, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 8.0.427
+  [Host]  : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+  L3W3I15 : .NET 8.0.33 (8.0.33, 8.0.3326.52219), X64 RyuJIT x86-64-v3
+</code></pre>
+<pre><code>Job=L3W3I15  InvocationCount=1  IterationCount=15  
+LaunchCount=3  UnrollFactor=1  WarmupCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mode   </th><th>Mean</th><th>Error</th><th>StdDev</th><th>StdErr</th><th>Min</th><th>Q1 </th><th>Median</th><th>Q3 </th><th>Max  </th><th>Iterations</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Recovery</td><td>CPU-opt</td><td>73.53 ms</td><td>1.773 ms</td><td>3.331 ms</td><td>0.502 ms</td><td>67.12 ms</td><td>71.60 ms</td><td>74.05 ms</td><td>75.43 ms</td><td>79.71 ms</td><td>44.00</td><td>-</td><td>-</td><td>-</td><td>82.94 KB</td>
+</tr><tr><td>Recovery</td><td>CPU-opt-ovl</td><td>54.54 ms</td><td>0.921 ms</td><td>1.753 ms</td><td>0.261 ms</td><td>50.91 ms</td><td>53.32 ms</td><td>54.74 ms</td><td>55.68 ms</td><td>57.66 ms</td><td>45.00</td><td>-</td><td>-</td><td>-</td><td>79.27 KB</td>
+</tr><tr><td>Recovery</td><td>CPU-par-table</td><td>85.58 ms</td><td>2.158 ms</td><td>4.054 ms</td><td>0.611 ms</td><td>76.96 ms</td><td>82.10 ms</td><td>85.40 ms</td><td>88.13 ms</td><td>93.41 ms</td><td>44.00</td><td>-</td><td>-</td><td>-</td><td>25683.68 KB</td>
+</tr><tr><td>Recovery</td><td>CPU-seq</td><td>789.95 ms</td><td>56.459 ms</td><td>107.419 ms</td><td>16.013 ms</td><td>578.96 ms</td><td>718.69 ms</td><td>789.09 ms</td><td>865.72 ms</td><td>1,047.17 ms</td><td>45.00</td><td>-</td><td>-</td><td>-</td><td>11264.59 KB</td>
+</tr><tr><td>Recovery</td><td>dGPU</td><td>122.07 ms</td><td>4.144 ms</td><td>7.884 ms</td><td>1.175 ms</td><td>107.89 ms</td><td>116.05 ms</td><td>121.93 ms</td><td>127.32 ms</td><td>138.41 ms</td><td>45.00</td><td>-</td><td>-</td><td>-</td><td>26123.73 KB</td>
+</tr><tr><td>Recovery</td><td>dGPU-opt</td><td>78.00 ms</td><td>0.410 ms</td><td>0.760 ms</td><td>0.116 ms</td><td>76.14 ms</td><td>77.53 ms</td><td>77.92 ms</td><td>78.44 ms</td><td>79.62 ms</td><td>43.00</td><td>-</td><td>-</td><td>-</td><td>26116.12 KB</td>
+</tr><tr><td>Recovery</td><td>dGPU-ovl</td><td>59.13 ms</td><td>1.415 ms</td><td>2.587 ms</td><td>0.399 ms</td><td>54.88 ms</td><td>57.05 ms</td><td>59.25 ms</td><td>60.51 ms</td><td>65.62 ms</td><td>42.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>41488.65 KB</td>
+</tr><tr><td>Recovery</td><td>dGPU-table</td><td>100.39 ms</td><td>1.000 ms</td><td>1.902 ms</td><td>0.284 ms</td><td>97.02 ms</td><td>98.97 ms</td><td>100.02 ms</td><td>102.05 ms</td><td>104.86 ms</td><td>45.00</td><td>-</td><td>-</td><td>-</td><td>26123.54 KB</td>
+</tr><tr><td>Recovery</td><td>iGPU</td><td>328.17 ms</td><td>13.055 ms</td><td>24.520 ms</td><td>3.696 ms</td><td>273.36 ms</td><td>311.47 ms</td><td>327.78 ms</td><td>346.13 ms</td><td>373.79 ms</td><td>44.00</td><td>-</td><td>-</td><td>-</td><td>26128.1 KB</td>
+</tr><tr><td>Recovery</td><td>iGPU-opt</td><td>136.17 ms</td><td>1.842 ms</td><td>3.505 ms</td><td>0.522 ms</td><td>127.61 ms</td><td>134.73 ms</td><td>137.21 ms</td><td>138.83 ms</td><td>140.82 ms</td><td>45.00</td><td>-</td><td>-</td><td>-</td><td>26120.49 KB</td>
+</tr><tr><td>Recovery</td><td>iGPU-ovl</td><td>88.92 ms</td><td>1.729 ms</td><td>3.290 ms</td><td>0.490 ms</td><td>82.48 ms</td><td>88.47 ms</td><td>90.04 ms</td><td>91.09 ms</td><td>94.83 ms</td><td>45.00</td><td>1000.0000</td><td>1000.0000</td><td>1000.0000</td><td>41492.15 KB</td>
+</tr><tr><td>Recovery</td><td>iGPU-table</td><td>147.78 ms</td><td>2.228 ms</td><td>4.239 ms</td><td>0.632 ms</td><td>136.43 ms</td><td>146.25 ms</td><td>148.87 ms</td><td>150.38 ms</td><td>154.45 ms</td><td>45.00</td><td>-</td><td>-</td><td>-</td><td>26127.91 KB</td>
+</tr></tbody></table>
+</body>
+</html>

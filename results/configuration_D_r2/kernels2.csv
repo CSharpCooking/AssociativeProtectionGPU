@@ -1,0 +1,2601 @@
+device,input,group,step,rep,ms
+iGPU,uniform,0,formation kernel,0,81.707
+iGPU,uniform,0,coalesced formation kernel,0,58.019
+iGPU,uniform,0,search kernel,0,202.922
+iGPU,uniform,0,table kernel,0,49.947
+iGPU,uniform,0,branch-free kernel,0,545.088
+iGPU,uniform,0,formation kernel,1,81.702
+iGPU,uniform,0,coalesced formation kernel,1,58.062
+iGPU,uniform,0,search kernel,1,202.826
+iGPU,uniform,0,table kernel,1,49.316
+iGPU,uniform,0,branch-free kernel,1,545.046
+iGPU,uniform,0,formation kernel,2,81.650
+iGPU,uniform,0,coalesced formation kernel,2,58.069
+iGPU,uniform,0,search kernel,2,202.799
+iGPU,uniform,0,table kernel,2,49.432
+iGPU,uniform,0,branch-free kernel,2,545.061
+iGPU,uniform,0,formation kernel,3,81.773
+iGPU,uniform,0,coalesced formation kernel,3,58.092
+iGPU,uniform,0,search kernel,3,203.015
+iGPU,uniform,0,table kernel,3,49.287
+iGPU,uniform,0,branch-free kernel,3,545.168
+iGPU,uniform,0,formation kernel,4,81.597
+iGPU,uniform,0,coalesced formation kernel,4,57.812
+iGPU,uniform,0,search kernel,4,202.548
+iGPU,uniform,0,table kernel,4,49.227
+iGPU,uniform,0,branch-free kernel,4,545.095
+iGPU,uniform,0,formation kernel,5,81.645
+iGPU,uniform,0,coalesced formation kernel,5,57.784
+iGPU,uniform,0,search kernel,5,202.687
+iGPU,uniform,0,table kernel,5,49.336
+iGPU,uniform,0,branch-free kernel,5,545.062
+iGPU,uniform,0,formation kernel,6,81.710
+iGPU,uniform,0,coalesced formation kernel,6,57.714
+iGPU,uniform,0,search kernel,6,202.561
+iGPU,uniform,0,table kernel,6,49.245
+iGPU,uniform,0,branch-free kernel,6,544.960
+iGPU,uniform,0,formation kernel,7,81.647
+iGPU,uniform,0,coalesced formation kernel,7,57.639
+iGPU,uniform,0,search kernel,7,202.586
+iGPU,uniform,0,table kernel,7,49.206
+iGPU,uniform,0,branch-free kernel,7,544.959
+iGPU,uniform,0,formation kernel,8,81.641
+iGPU,uniform,0,coalesced formation kernel,8,57.691
+iGPU,uniform,0,search kernel,8,202.589
+iGPU,uniform,0,table kernel,8,49.340
+iGPU,uniform,0,branch-free kernel,8,545.176
+iGPU,uniform,0,formation kernel,9,81.873
+iGPU,uniform,0,coalesced formation kernel,9,57.937
+iGPU,uniform,0,search kernel,9,202.552
+iGPU,uniform,0,table kernel,9,49.231
+iGPU,uniform,0,branch-free kernel,9,545.015
+iGPU,ff,0,formation kernel,0,71.653
+iGPU,ff,0,coalesced formation kernel,0,57.239
+iGPU,ff,0,search kernel,0,157.048
+iGPU,ff,0,table kernel,0,56.552
+iGPU,ff,0,branch-free kernel,0,545.122
+iGPU,ff,0,formation kernel,1,71.634
+iGPU,ff,0,coalesced formation kernel,1,57.170
+iGPU,ff,0,search kernel,1,156.993
+iGPU,ff,0,table kernel,1,56.593
+iGPU,ff,0,branch-free kernel,1,545.009
+iGPU,ff,0,formation kernel,2,71.631
+iGPU,ff,0,coalesced formation kernel,2,57.207
+iGPU,ff,0,search kernel,2,157.096
+iGPU,ff,0,table kernel,2,56.612
+iGPU,ff,0,branch-free kernel,2,545.065
+iGPU,ff,0,formation kernel,3,71.654
+iGPU,ff,0,coalesced formation kernel,3,57.209
+iGPU,ff,0,search kernel,3,157.001
+iGPU,ff,0,table kernel,3,56.637
+iGPU,ff,0,branch-free kernel,3,544.975
+iGPU,ff,0,formation kernel,4,71.604
+iGPU,ff,0,coalesced formation kernel,4,57.274
+iGPU,ff,0,search kernel,4,156.983
+iGPU,ff,0,table kernel,4,56.554
+iGPU,ff,0,branch-free kernel,4,544.962
+iGPU,ff,0,formation kernel,5,71.621
+iGPU,ff,0,coalesced formation kernel,5,57.173
+iGPU,ff,0,search kernel,5,157.004
+iGPU,ff,0,table kernel,5,56.504
+iGPU,ff,0,branch-free kernel,5,544.938
+iGPU,ff,0,formation kernel,6,71.612
+iGPU,ff,0,coalesced formation kernel,6,57.221
+iGPU,ff,0,search kernel,6,156.978
+iGPU,ff,0,table kernel,6,56.501
+iGPU,ff,0,branch-free kernel,6,544.956
+iGPU,ff,0,formation kernel,7,71.613
+iGPU,ff,0,coalesced formation kernel,7,57.190
+iGPU,ff,0,search kernel,7,156.931
+iGPU,ff,0,table kernel,7,56.527
+iGPU,ff,0,branch-free kernel,7,544.967
+iGPU,ff,0,formation kernel,8,71.630
+iGPU,ff,0,coalesced formation kernel,8,57.194
+iGPU,ff,0,search kernel,8,157.009
+iGPU,ff,0,table kernel,8,56.582
+iGPU,ff,0,branch-free kernel,8,544.966
+iGPU,ff,0,formation kernel,9,71.655
+iGPU,ff,0,coalesced formation kernel,9,57.179
+iGPU,ff,0,search kernel,9,156.954
+iGPU,ff,0,table kernel,9,56.532
+iGPU,ff,0,branch-free kernel,9,545.109
+iGPU,zero,0,formation kernel,0,71.627
+iGPU,zero,0,coalesced formation kernel,0,57.229
+iGPU,zero,0,search kernel,0,56.951
+iGPU,zero,0,table kernel,0,56.635
+iGPU,zero,0,branch-free kernel,0,544.997
+iGPU,zero,0,formation kernel,1,71.660
+iGPU,zero,0,coalesced formation kernel,1,57.412
+iGPU,zero,0,search kernel,1,56.896
+iGPU,zero,0,table kernel,1,56.618
+iGPU,zero,0,branch-free kernel,1,545.053
+iGPU,zero,0,formation kernel,2,71.623
+iGPU,zero,0,coalesced formation kernel,2,57.187
+iGPU,zero,0,search kernel,2,56.984
+iGPU,zero,0,table kernel,2,56.545
+iGPU,zero,0,branch-free kernel,2,544.949
+iGPU,zero,0,formation kernel,3,71.612
+iGPU,zero,0,coalesced formation kernel,3,57.103
+iGPU,zero,0,search kernel,3,56.855
+iGPU,zero,0,table kernel,3,56.650
+iGPU,zero,0,branch-free kernel,3,545.058
+iGPU,zero,0,formation kernel,4,71.694
+iGPU,zero,0,coalesced formation kernel,4,57.278
+iGPU,zero,0,search kernel,4,56.889
+iGPU,zero,0,table kernel,4,56.527
+iGPU,zero,0,branch-free kernel,4,544.968
+iGPU,zero,0,formation kernel,5,71.653
+iGPU,zero,0,coalesced formation kernel,5,57.454
+iGPU,zero,0,search kernel,5,57.064
+iGPU,zero,0,table kernel,5,56.663
+iGPU,zero,0,branch-free kernel,5,544.953
+iGPU,zero,0,formation kernel,6,71.623
+iGPU,zero,0,coalesced formation kernel,6,57.174
+iGPU,zero,0,search kernel,6,56.873
+iGPU,zero,0,table kernel,6,56.523
+iGPU,zero,0,branch-free kernel,6,544.973
+iGPU,zero,0,formation kernel,7,71.775
+iGPU,zero,0,coalesced formation kernel,7,57.477
+iGPU,zero,0,search kernel,7,56.938
+iGPU,zero,0,table kernel,7,56.676
+iGPU,zero,0,branch-free kernel,7,545.080
+iGPU,zero,0,formation kernel,8,71.609
+iGPU,zero,0,coalesced formation kernel,8,57.215
+iGPU,zero,0,search kernel,8,56.861
+iGPU,zero,0,table kernel,8,56.524
+iGPU,zero,0,branch-free kernel,8,544.982
+iGPU,zero,0,formation kernel,9,71.811
+iGPU,zero,0,coalesced formation kernel,9,57.158
+iGPU,zero,0,search kernel,9,56.890
+iGPU,zero,0,table kernel,9,56.591
+iGPU,zero,0,branch-free kernel,9,544.943
+iGPU,ru,0,formation kernel,0,101.140
+iGPU,ru,0,coalesced formation kernel,0,65.447
+iGPU,ru,0,search kernel,0,263.023
+iGPU,ru,0,table kernel,0,55.782
+iGPU,ru,0,branch-free kernel,0,566.524
+iGPU,ru,0,formation kernel,1,101.150
+iGPU,ru,0,coalesced formation kernel,1,65.693
+iGPU,ru,0,search kernel,1,262.979
+iGPU,ru,0,table kernel,1,55.836
+iGPU,ru,0,branch-free kernel,1,566.416
+iGPU,ru,0,formation kernel,2,101.172
+iGPU,ru,0,coalesced formation kernel,2,65.561
+iGPU,ru,0,search kernel,2,263.000
+iGPU,ru,0,table kernel,2,55.745
+iGPU,ru,0,branch-free kernel,2,566.435
+iGPU,ru,0,formation kernel,3,101.146
+iGPU,ru,0,coalesced formation kernel,3,65.641
+iGPU,ru,0,search kernel,3,262.907
+iGPU,ru,0,table kernel,3,55.747
+iGPU,ru,0,branch-free kernel,3,566.405
+iGPU,ru,0,formation kernel,4,101.164
+iGPU,ru,0,coalesced formation kernel,4,65.648
+iGPU,ru,0,search kernel,4,263.087
+iGPU,ru,0,table kernel,4,55.857
+iGPU,ru,0,branch-free kernel,4,566.444
+iGPU,ru,0,formation kernel,5,101.168
+iGPU,ru,0,coalesced formation kernel,5,65.534
+iGPU,ru,0,search kernel,5,263.044
+iGPU,ru,0,table kernel,5,55.752
+iGPU,ru,0,branch-free kernel,5,566.414
+iGPU,ru,0,formation kernel,6,101.190
+iGPU,ru,0,coalesced formation kernel,6,65.486
+iGPU,ru,0,search kernel,6,263.002
+iGPU,ru,0,table kernel,6,55.724
+iGPU,ru,0,branch-free kernel,6,566.419
+iGPU,ru,0,formation kernel,7,101.152
+iGPU,ru,0,coalesced formation kernel,7,65.574
+iGPU,ru,0,search kernel,7,263.001
+iGPU,ru,0,table kernel,7,55.755
+iGPU,ru,0,branch-free kernel,7,566.420
+iGPU,ru,0,formation kernel,8,101.154
+iGPU,ru,0,coalesced formation kernel,8,65.737
+iGPU,ru,0,search kernel,8,262.987
+iGPU,ru,0,table kernel,8,55.857
+iGPU,ru,0,branch-free kernel,8,566.430
+iGPU,ru,0,formation kernel,9,101.174
+iGPU,ru,0,coalesced formation kernel,9,65.445
+iGPU,ru,0,search kernel,9,263.033
+iGPU,ru,0,table kernel,9,55.744
+iGPU,ru,0,branch-free kernel,9,566.412
+iGPU,uniform,32,formation kernel,0,81.022
+iGPU,uniform,32,coalesced formation kernel,0,56.271
+iGPU,uniform,32,search kernel,0,233.506
+iGPU,uniform,32,table kernel,0,55.261
+iGPU,uniform,32,branch-free kernel,0,547.833
+iGPU,uniform,32,formation kernel,1,81.049
+iGPU,uniform,32,coalesced formation kernel,1,56.333
+iGPU,uniform,32,search kernel,1,233.479
+iGPU,uniform,32,table kernel,1,55.216
+iGPU,uniform,32,branch-free kernel,1,547.849
+iGPU,uniform,32,formation kernel,2,81.037
+iGPU,uniform,32,coalesced formation kernel,2,56.273
+iGPU,uniform,32,search kernel,2,233.403
+iGPU,uniform,32,table kernel,2,55.151
+iGPU,uniform,32,branch-free kernel,2,547.848
+iGPU,uniform,32,formation kernel,3,81.054
+iGPU,uniform,32,coalesced formation kernel,3,56.378
+iGPU,uniform,32,search kernel,3,233.459
+iGPU,uniform,32,table kernel,3,55.198
+iGPU,uniform,32,branch-free kernel,3,547.851
+iGPU,uniform,32,formation kernel,4,80.998
+iGPU,uniform,32,coalesced formation kernel,4,56.369
+iGPU,uniform,32,search kernel,4,233.434
+iGPU,uniform,32,table kernel,4,55.182
+iGPU,uniform,32,branch-free kernel,4,547.865
+iGPU,uniform,32,formation kernel,5,80.995
+iGPU,uniform,32,coalesced formation kernel,5,56.494
+iGPU,uniform,32,search kernel,5,233.464
+iGPU,uniform,32,table kernel,5,55.166
+iGPU,uniform,32,branch-free kernel,5,547.816
+iGPU,uniform,32,formation kernel,6,82.072
+iGPU,uniform,32,coalesced formation kernel,6,56.326
+iGPU,uniform,32,search kernel,6,233.439
+iGPU,uniform,32,table kernel,6,55.192
+iGPU,uniform,32,branch-free kernel,6,547.871
+iGPU,uniform,32,formation kernel,7,81.063
+iGPU,uniform,32,coalesced formation kernel,7,56.526
+iGPU,uniform,32,search kernel,7,233.468
+iGPU,uniform,32,table kernel,7,55.182
+iGPU,uniform,32,branch-free kernel,7,547.932
+iGPU,uniform,32,formation kernel,8,80.985
+iGPU,uniform,32,coalesced formation kernel,8,56.412
+iGPU,uniform,32,search kernel,8,233.422
+iGPU,uniform,32,table kernel,8,55.205
+iGPU,uniform,32,branch-free kernel,8,547.796
+iGPU,uniform,32,formation kernel,9,81.005
+iGPU,uniform,32,coalesced formation kernel,9,56.238
+iGPU,uniform,32,search kernel,9,233.414
+iGPU,uniform,32,table kernel,9,55.151
+iGPU,uniform,32,branch-free kernel,9,547.826
+iGPU,ff,32,formation kernel,0,71.642
+iGPU,ff,32,coalesced formation kernel,0,56.049
+iGPU,ff,32,search kernel,0,189.560
+iGPU,ff,32,table kernel,0,53.109
+iGPU,ff,32,branch-free kernel,0,541.322
+iGPU,ff,32,formation kernel,1,71.610
+iGPU,ff,32,coalesced formation kernel,1,55.966
+iGPU,ff,32,search kernel,1,189.635
+iGPU,ff,32,table kernel,1,53.116
+iGPU,ff,32,branch-free kernel,1,541.360
+iGPU,ff,32,formation kernel,2,71.646
+iGPU,ff,32,coalesced formation kernel,2,55.906
+iGPU,ff,32,search kernel,2,189.555
+iGPU,ff,32,table kernel,2,53.150
+iGPU,ff,32,branch-free kernel,2,541.334
+iGPU,ff,32,formation kernel,3,71.633
+iGPU,ff,32,coalesced formation kernel,3,55.976
+iGPU,ff,32,search kernel,3,189.639
+iGPU,ff,32,table kernel,3,53.162
+iGPU,ff,32,branch-free kernel,3,541.326
+iGPU,ff,32,formation kernel,4,71.760
+iGPU,ff,32,coalesced formation kernel,4,56.046
+iGPU,ff,32,search kernel,4,189.731
+iGPU,ff,32,table kernel,4,53.151
+iGPU,ff,32,branch-free kernel,4,541.425
+iGPU,ff,32,formation kernel,5,71.612
+iGPU,ff,32,coalesced formation kernel,5,55.981
+iGPU,ff,32,search kernel,5,189.560
+iGPU,ff,32,table kernel,5,53.126
+iGPU,ff,32,branch-free kernel,5,541.337
+iGPU,ff,32,formation kernel,6,71.667
+iGPU,ff,32,coalesced formation kernel,6,56.022
+iGPU,ff,32,search kernel,6,189.576
+iGPU,ff,32,table kernel,6,53.204
+iGPU,ff,32,branch-free kernel,6,541.347
+iGPU,ff,32,formation kernel,7,71.629
+iGPU,ff,32,coalesced formation kernel,7,56.242
+iGPU,ff,32,search kernel,7,189.703
+iGPU,ff,32,table kernel,7,53.424
+iGPU,ff,32,branch-free kernel,7,541.366
+iGPU,ff,32,formation kernel,8,71.688
+iGPU,ff,32,coalesced formation kernel,8,56.025
+iGPU,ff,32,search kernel,8,189.565
+iGPU,ff,32,table kernel,8,53.121
+iGPU,ff,32,branch-free kernel,8,541.403
+iGPU,ff,32,formation kernel,9,71.619
+iGPU,ff,32,coalesced formation kernel,9,56.054
+iGPU,ff,32,search kernel,9,189.629
+iGPU,ff,32,table kernel,9,53.123
+iGPU,ff,32,branch-free kernel,9,541.431
+iGPU,zero,32,formation kernel,0,71.634
+iGPU,zero,32,coalesced formation kernel,0,55.986
+iGPU,zero,32,search kernel,0,56.351
+iGPU,zero,32,table kernel,0,51.973
+iGPU,zero,32,branch-free kernel,0,543.618
+iGPU,zero,32,formation kernel,1,71.671
+iGPU,zero,32,coalesced formation kernel,1,55.989
+iGPU,zero,32,search kernel,1,56.432
+iGPU,zero,32,table kernel,1,52.023
+iGPU,zero,32,branch-free kernel,1,543.692
+iGPU,zero,32,formation kernel,2,71.689
+iGPU,zero,32,coalesced formation kernel,2,55.984
+iGPU,zero,32,search kernel,2,56.380
+iGPU,zero,32,table kernel,2,52.059
+iGPU,zero,32,branch-free kernel,2,543.639
+iGPU,zero,32,formation kernel,3,71.669
+iGPU,zero,32,coalesced formation kernel,3,56.309
+iGPU,zero,32,search kernel,3,56.386
+iGPU,zero,32,table kernel,3,52.062
+iGPU,zero,32,branch-free kernel,3,543.640
+iGPU,zero,32,formation kernel,4,71.774
+iGPU,zero,32,coalesced formation kernel,4,56.180
+iGPU,zero,32,search kernel,4,56.393
+iGPU,zero,32,table kernel,4,52.028
+iGPU,zero,32,branch-free kernel,4,543.742
+iGPU,zero,32,formation kernel,5,71.667
+iGPU,zero,32,coalesced formation kernel,5,56.048
+iGPU,zero,32,search kernel,5,56.367
+iGPU,zero,32,table kernel,5,52.094
+iGPU,zero,32,branch-free kernel,5,543.722
+iGPU,zero,32,formation kernel,6,71.641
+iGPU,zero,32,coalesced formation kernel,6,55.953
+iGPU,zero,32,search kernel,6,56.406
+iGPU,zero,32,table kernel,6,52.029
+iGPU,zero,32,branch-free kernel,6,543.655
+iGPU,zero,32,formation kernel,7,71.657
+iGPU,zero,32,coalesced formation kernel,7,56.032
+iGPU,zero,32,search kernel,7,56.350
+iGPU,zero,32,table kernel,7,52.004
+iGPU,zero,32,branch-free kernel,7,543.663
+iGPU,zero,32,formation kernel,8,71.761
+iGPU,zero,32,coalesced formation kernel,8,55.976
+iGPU,zero,32,search kernel,8,56.360
+iGPU,zero,32,table kernel,8,52.108
+iGPU,zero,32,branch-free kernel,8,543.688
+iGPU,zero,32,formation kernel,9,71.628
+iGPU,zero,32,coalesced formation kernel,9,56.252
+iGPU,zero,32,search kernel,9,56.508
+iGPU,zero,32,table kernel,9,52.050
+iGPU,zero,32,branch-free kernel,9,543.628
+iGPU,ru,32,formation kernel,0,81.706
+iGPU,ru,32,coalesced formation kernel,0,56.575
+iGPU,ru,32,search kernel,0,202.628
+iGPU,ru,32,table kernel,0,55.391
+iGPU,ru,32,branch-free kernel,0,541.340
+iGPU,ru,32,formation kernel,1,81.814
+iGPU,ru,32,coalesced formation kernel,1,56.454
+iGPU,ru,32,search kernel,1,202.648
+iGPU,ru,32,table kernel,1,55.411
+iGPU,ru,32,branch-free kernel,1,541.391
+iGPU,ru,32,formation kernel,2,81.788
+iGPU,ru,32,coalesced formation kernel,2,56.384
+iGPU,ru,32,search kernel,2,202.593
+iGPU,ru,32,table kernel,2,55.525
+iGPU,ru,32,branch-free kernel,2,541.397
+iGPU,ru,32,formation kernel,3,81.842
+iGPU,ru,32,coalesced formation kernel,3,56.466
+iGPU,ru,32,search kernel,3,202.601
+iGPU,ru,32,table kernel,3,55.441
+iGPU,ru,32,branch-free kernel,3,541.464
+iGPU,ru,32,formation kernel,4,81.800
+iGPU,ru,32,coalesced formation kernel,4,56.494
+iGPU,ru,32,search kernel,4,202.744
+iGPU,ru,32,table kernel,4,55.319
+iGPU,ru,32,branch-free kernel,4,541.368
+iGPU,ru,32,formation kernel,5,81.801
+iGPU,ru,32,coalesced formation kernel,5,56.412
+iGPU,ru,32,search kernel,5,202.639
+iGPU,ru,32,table kernel,5,55.339
+iGPU,ru,32,branch-free kernel,5,541.411
+iGPU,ru,32,formation kernel,6,81.797
+iGPU,ru,32,coalesced formation kernel,6,56.476
+iGPU,ru,32,search kernel,6,202.648
+iGPU,ru,32,table kernel,6,55.365
+iGPU,ru,32,branch-free kernel,6,541.396
+iGPU,ru,32,formation kernel,7,81.803
+iGPU,ru,32,coalesced formation kernel,7,56.500
+iGPU,ru,32,search kernel,7,202.636
+iGPU,ru,32,table kernel,7,55.325
+iGPU,ru,32,branch-free kernel,7,541.365
+iGPU,ru,32,formation kernel,8,81.657
+iGPU,ru,32,coalesced formation kernel,8,56.343
+iGPU,ru,32,search kernel,8,202.547
+iGPU,ru,32,table kernel,8,55.326
+iGPU,ru,32,branch-free kernel,8,541.348
+iGPU,ru,32,formation kernel,9,81.749
+iGPU,ru,32,coalesced formation kernel,9,56.492
+iGPU,ru,32,search kernel,9,202.669
+iGPU,ru,32,table kernel,9,55.385
+iGPU,ru,32,branch-free kernel,9,541.404
+iGPU,uniform,64,formation kernel,0,81.165
+iGPU,uniform,64,coalesced formation kernel,0,56.359
+iGPU,uniform,64,search kernel,0,244.374
+iGPU,uniform,64,table kernel,0,48.082
+iGPU,uniform,64,branch-free kernel,0,547.935
+iGPU,uniform,64,formation kernel,1,81.120
+iGPU,uniform,64,coalesced formation kernel,1,56.471
+iGPU,uniform,64,search kernel,1,244.407
+iGPU,uniform,64,table kernel,1,47.902
+iGPU,uniform,64,branch-free kernel,1,547.983
+iGPU,uniform,64,formation kernel,2,81.129
+iGPU,uniform,64,coalesced formation kernel,2,56.289
+iGPU,uniform,64,search kernel,2,244.422
+iGPU,uniform,64,table kernel,2,48.023
+iGPU,uniform,64,branch-free kernel,2,547.918
+iGPU,uniform,64,formation kernel,3,81.107
+iGPU,uniform,64,coalesced formation kernel,3,56.700
+iGPU,uniform,64,search kernel,3,244.379
+iGPU,uniform,64,table kernel,3,48.032
+iGPU,uniform,64,branch-free kernel,3,548.081
+iGPU,uniform,64,formation kernel,4,81.120
+iGPU,uniform,64,coalesced formation kernel,4,57.222
+iGPU,uniform,64,search kernel,4,244.339
+iGPU,uniform,64,table kernel,4,47.883
+iGPU,uniform,64,branch-free kernel,4,547.843
+iGPU,uniform,64,formation kernel,5,81.028
+iGPU,uniform,64,coalesced formation kernel,5,56.275
+iGPU,uniform,64,search kernel,5,244.400
+iGPU,uniform,64,table kernel,5,47.968
+iGPU,uniform,64,branch-free kernel,5,547.968
+iGPU,uniform,64,formation kernel,6,81.039
+iGPU,uniform,64,coalesced formation kernel,6,56.298
+iGPU,uniform,64,search kernel,6,244.320
+iGPU,uniform,64,table kernel,6,47.872
+iGPU,uniform,64,branch-free kernel,6,547.837
+iGPU,uniform,64,formation kernel,7,80.999
+iGPU,uniform,64,coalesced formation kernel,7,56.263
+iGPU,uniform,64,search kernel,7,244.286
+iGPU,uniform,64,table kernel,7,47.928
+iGPU,uniform,64,branch-free kernel,7,547.876
+iGPU,uniform,64,formation kernel,8,81.043
+iGPU,uniform,64,coalesced formation kernel,8,56.404
+iGPU,uniform,64,search kernel,8,244.243
+iGPU,uniform,64,table kernel,8,47.918
+iGPU,uniform,64,branch-free kernel,8,547.876
+iGPU,uniform,64,formation kernel,9,80.999
+iGPU,uniform,64,coalesced formation kernel,9,56.352
+iGPU,uniform,64,search kernel,9,244.294
+iGPU,uniform,64,table kernel,9,47.934
+iGPU,uniform,64,branch-free kernel,9,547.834
+iGPU,ff,64,formation kernel,0,71.649
+iGPU,ff,64,coalesced formation kernel,0,55.984
+iGPU,ff,64,search kernel,0,185.798
+iGPU,ff,64,table kernel,0,52.432
+iGPU,ff,64,branch-free kernel,0,541.341
+iGPU,ff,64,formation kernel,1,71.645
+iGPU,ff,64,coalesced formation kernel,1,55.938
+iGPU,ff,64,search kernel,1,185.772
+iGPU,ff,64,table kernel,1,52.365
+iGPU,ff,64,branch-free kernel,1,541.380
+iGPU,ff,64,formation kernel,2,71.617
+iGPU,ff,64,coalesced formation kernel,2,55.926
+iGPU,ff,64,search kernel,2,185.821
+iGPU,ff,64,table kernel,2,52.365
+iGPU,ff,64,branch-free kernel,2,541.369
+iGPU,ff,64,formation kernel,3,71.604
+iGPU,ff,64,coalesced formation kernel,3,55.905
+iGPU,ff,64,search kernel,3,185.783
+iGPU,ff,64,table kernel,3,52.376
+iGPU,ff,64,branch-free kernel,3,541.337
+iGPU,ff,64,formation kernel,4,71.780
+iGPU,ff,64,coalesced formation kernel,4,55.988
+iGPU,ff,64,search kernel,4,185.906
+iGPU,ff,64,table kernel,4,52.366
+iGPU,ff,64,branch-free kernel,4,541.394
+iGPU,ff,64,formation kernel,5,71.642
+iGPU,ff,64,coalesced formation kernel,5,56.219
+iGPU,ff,64,search kernel,5,185.887
+iGPU,ff,64,table kernel,5,52.376
+iGPU,ff,64,branch-free kernel,5,541.389
+iGPU,ff,64,formation kernel,6,71.618
+iGPU,ff,64,coalesced formation kernel,6,56.230
+iGPU,ff,64,search kernel,6,185.944
+iGPU,ff,64,table kernel,6,52.406
+iGPU,ff,64,branch-free kernel,6,541.366
+iGPU,ff,64,formation kernel,7,71.655
+iGPU,ff,64,coalesced formation kernel,7,56.079
+iGPU,ff,64,search kernel,7,185.875
+iGPU,ff,64,table kernel,7,52.449
+iGPU,ff,64,branch-free kernel,7,541.517
+iGPU,ff,64,formation kernel,8,71.619
+iGPU,ff,64,coalesced formation kernel,8,56.106
+iGPU,ff,64,search kernel,8,185.805
+iGPU,ff,64,table kernel,8,52.382
+iGPU,ff,64,branch-free kernel,8,541.380
+iGPU,ff,64,formation kernel,9,71.644
+iGPU,ff,64,coalesced formation kernel,9,55.895
+iGPU,ff,64,search kernel,9,185.820
+iGPU,ff,64,table kernel,9,52.470
+iGPU,ff,64,branch-free kernel,9,541.332
+iGPU,zero,64,formation kernel,0,71.734
+iGPU,zero,64,coalesced formation kernel,0,55.918
+iGPU,zero,64,search kernel,0,56.322
+iGPU,zero,64,table kernel,0,52.575
+iGPU,zero,64,branch-free kernel,0,543.772
+iGPU,zero,64,formation kernel,1,71.692
+iGPU,zero,64,coalesced formation kernel,1,55.925
+iGPU,zero,64,search kernel,1,56.427
+iGPU,zero,64,table kernel,1,52.666
+iGPU,zero,64,branch-free kernel,1,543.738
+iGPU,zero,64,formation kernel,2,71.639
+iGPU,zero,64,coalesced formation kernel,2,55.992
+iGPU,zero,64,search kernel,2,56.375
+iGPU,zero,64,table kernel,2,52.610
+iGPU,zero,64,branch-free kernel,2,543.659
+iGPU,zero,64,formation kernel,3,71.757
+iGPU,zero,64,coalesced formation kernel,3,56.089
+iGPU,zero,64,search kernel,3,56.375
+iGPU,zero,64,table kernel,3,52.572
+iGPU,zero,64,branch-free kernel,3,543.685
+iGPU,zero,64,formation kernel,4,71.738
+iGPU,zero,64,coalesced formation kernel,4,55.963
+iGPU,zero,64,search kernel,4,56.388
+iGPU,zero,64,table kernel,4,52.545
+iGPU,zero,64,branch-free kernel,4,543.669
+iGPU,zero,64,formation kernel,5,71.672
+iGPU,zero,64,coalesced formation kernel,5,56.134
+iGPU,zero,64,search kernel,5,56.376
+iGPU,zero,64,table kernel,5,52.582
+iGPU,zero,64,branch-free kernel,5,543.635
+iGPU,zero,64,formation kernel,6,71.688
+iGPU,zero,64,coalesced formation kernel,6,56.065
+iGPU,zero,64,search kernel,6,56.493
+iGPU,zero,64,table kernel,6,52.665
+iGPU,zero,64,branch-free kernel,6,543.660
+iGPU,zero,64,formation kernel,7,71.756
+iGPU,zero,64,coalesced formation kernel,7,56.052
+iGPU,zero,64,search kernel,7,56.374
+iGPU,zero,64,table kernel,7,52.634
+iGPU,zero,64,branch-free kernel,7,543.697
+iGPU,zero,64,formation kernel,8,71.654
+iGPU,zero,64,coalesced formation kernel,8,56.188
+iGPU,zero,64,search kernel,8,56.373
+iGPU,zero,64,table kernel,8,52.549
+iGPU,zero,64,branch-free kernel,8,543.667
+iGPU,zero,64,formation kernel,9,71.688
+iGPU,zero,64,coalesced formation kernel,9,56.010
+iGPU,zero,64,search kernel,9,56.329
+iGPU,zero,64,table kernel,9,52.607
+iGPU,zero,64,branch-free kernel,9,543.661
+iGPU,ru,64,formation kernel,0,81.744
+iGPU,ru,64,coalesced formation kernel,0,56.445
+iGPU,ru,64,search kernel,0,251.681
+iGPU,ru,64,table kernel,0,49.478
+iGPU,ru,64,branch-free kernel,0,541.400
+iGPU,ru,64,formation kernel,1,81.767
+iGPU,ru,64,coalesced formation kernel,1,56.400
+iGPU,ru,64,search kernel,1,251.633
+iGPU,ru,64,table kernel,1,49.599
+iGPU,ru,64,branch-free kernel,1,541.367
+iGPU,ru,64,formation kernel,2,81.738
+iGPU,ru,64,coalesced formation kernel,2,56.426
+iGPU,ru,64,search kernel,2,251.646
+iGPU,ru,64,table kernel,2,49.466
+iGPU,ru,64,branch-free kernel,2,541.465
+iGPU,ru,64,formation kernel,3,81.683
+iGPU,ru,64,coalesced formation kernel,3,56.502
+iGPU,ru,64,search kernel,3,251.665
+iGPU,ru,64,table kernel,3,49.479
+iGPU,ru,64,branch-free kernel,3,541.393
+iGPU,ru,64,formation kernel,4,81.733
+iGPU,ru,64,coalesced formation kernel,4,56.869
+iGPU,ru,64,search kernel,4,251.718
+iGPU,ru,64,table kernel,4,49.515
+iGPU,ru,64,branch-free kernel,4,541.392
+iGPU,ru,64,formation kernel,5,81.712
+iGPU,ru,64,coalesced formation kernel,5,56.923
+iGPU,ru,64,search kernel,5,251.669
+iGPU,ru,64,table kernel,5,49.512
+iGPU,ru,64,branch-free kernel,5,541.418
+iGPU,ru,64,formation kernel,6,81.668
+iGPU,ru,64,coalesced formation kernel,6,56.858
+iGPU,ru,64,search kernel,6,251.687
+iGPU,ru,64,table kernel,6,49.476
+iGPU,ru,64,branch-free kernel,6,541.437
+iGPU,ru,64,formation kernel,7,81.715
+iGPU,ru,64,coalesced formation kernel,7,56.553
+iGPU,ru,64,search kernel,7,251.670
+iGPU,ru,64,table kernel,7,49.593
+iGPU,ru,64,branch-free kernel,7,541.371
+iGPU,ru,64,formation kernel,8,81.766
+iGPU,ru,64,coalesced formation kernel,8,56.477
+iGPU,ru,64,search kernel,8,251.747
+iGPU,ru,64,table kernel,8,49.488
+iGPU,ru,64,branch-free kernel,8,541.406
+iGPU,ru,64,formation kernel,9,81.765
+iGPU,ru,64,coalesced formation kernel,9,56.565
+iGPU,ru,64,search kernel,9,251.641
+iGPU,ru,64,table kernel,9,49.607
+iGPU,ru,64,branch-free kernel,9,541.469
+iGPU,uniform,128,formation kernel,0,81.057
+iGPU,uniform,128,coalesced formation kernel,0,56.689
+iGPU,uniform,128,search kernel,0,209.019
+iGPU,uniform,128,table kernel,0,48.388
+iGPU,uniform,128,branch-free kernel,0,548.006
+iGPU,uniform,128,formation kernel,1,81.153
+iGPU,uniform,128,coalesced formation kernel,1,56.597
+iGPU,uniform,128,search kernel,1,208.941
+iGPU,uniform,128,table kernel,1,48.364
+iGPU,uniform,128,branch-free kernel,1,548.044
+iGPU,uniform,128,formation kernel,2,81.103
+iGPU,uniform,128,coalesced formation kernel,2,56.649
+iGPU,uniform,128,search kernel,2,209.013
+iGPU,uniform,128,table kernel,2,48.409
+iGPU,uniform,128,branch-free kernel,2,548.158
+iGPU,uniform,128,formation kernel,3,81.037
+iGPU,uniform,128,coalesced formation kernel,3,56.462
+iGPU,uniform,128,search kernel,3,209.037
+iGPU,uniform,128,table kernel,3,48.403
+iGPU,uniform,128,branch-free kernel,3,548.057
+iGPU,uniform,128,formation kernel,4,81.073
+iGPU,uniform,128,coalesced formation kernel,4,56.444
+iGPU,uniform,128,search kernel,4,208.888
+iGPU,uniform,128,table kernel,4,48.309
+iGPU,uniform,128,branch-free kernel,4,547.965
+iGPU,uniform,128,formation kernel,5,80.995
+iGPU,uniform,128,coalesced formation kernel,5,56.409
+iGPU,uniform,128,search kernel,5,208.875
+iGPU,uniform,128,table kernel,5,48.342
+iGPU,uniform,128,branch-free kernel,5,547.993
+iGPU,uniform,128,formation kernel,6,81.005
+iGPU,uniform,128,coalesced formation kernel,6,56.575
+iGPU,uniform,128,search kernel,6,208.873
+iGPU,uniform,128,table kernel,6,48.305
+iGPU,uniform,128,branch-free kernel,6,547.994
+iGPU,uniform,128,formation kernel,7,81.032
+iGPU,uniform,128,coalesced formation kernel,7,56.599
+iGPU,uniform,128,search kernel,7,208.921
+iGPU,uniform,128,table kernel,7,48.278
+iGPU,uniform,128,branch-free kernel,7,547.980
+iGPU,uniform,128,formation kernel,8,80.995
+iGPU,uniform,128,coalesced formation kernel,8,56.703
+iGPU,uniform,128,search kernel,8,208.883
+iGPU,uniform,128,table kernel,8,48.264
+iGPU,uniform,128,branch-free kernel,8,547.989
+iGPU,uniform,128,formation kernel,9,80.995
+iGPU,uniform,128,coalesced formation kernel,9,56.702
+iGPU,uniform,128,search kernel,9,208.925
+iGPU,uniform,128,table kernel,9,48.316
+iGPU,uniform,128,branch-free kernel,9,547.999
+iGPU,ff,128,formation kernel,0,71.643
+iGPU,ff,128,coalesced formation kernel,0,56.347
+iGPU,ff,128,search kernel,0,159.774
+iGPU,ff,128,table kernel,0,46.906
+iGPU,ff,128,branch-free kernel,0,541.393
+iGPU,ff,128,formation kernel,1,71.661
+iGPU,ff,128,coalesced formation kernel,1,56.267
+iGPU,ff,128,search kernel,1,159.830
+iGPU,ff,128,table kernel,1,46.756
+iGPU,ff,128,branch-free kernel,1,541.461
+iGPU,ff,128,formation kernel,2,71.712
+iGPU,ff,128,coalesced formation kernel,2,56.258
+iGPU,ff,128,search kernel,2,159.863
+iGPU,ff,128,table kernel,2,46.782
+iGPU,ff,128,branch-free kernel,2,541.483
+iGPU,ff,128,formation kernel,3,71.780
+iGPU,ff,128,coalesced formation kernel,3,56.230
+iGPU,ff,128,search kernel,3,159.805
+iGPU,ff,128,table kernel,3,46.764
+iGPU,ff,128,branch-free kernel,3,541.493
+iGPU,ff,128,formation kernel,4,71.730
+iGPU,ff,128,coalesced formation kernel,4,56.294
+iGPU,ff,128,search kernel,4,159.835
+iGPU,ff,128,table kernel,4,46.857
+iGPU,ff,128,branch-free kernel,4,541.476
+iGPU,ff,128,formation kernel,5,71.760
+iGPU,ff,128,coalesced formation kernel,5,56.248
+iGPU,ff,128,search kernel,5,159.697
+iGPU,ff,128,table kernel,5,46.829
+iGPU,ff,128,branch-free kernel,5,541.413
+iGPU,ff,128,formation kernel,6,71.764
+iGPU,ff,128,coalesced formation kernel,6,56.368
+iGPU,ff,128,search kernel,6,159.794
+iGPU,ff,128,table kernel,6,46.819
+iGPU,ff,128,branch-free kernel,6,541.450
+iGPU,ff,128,formation kernel,7,71.715
+iGPU,ff,128,coalesced formation kernel,7,56.213
+iGPU,ff,128,search kernel,7,159.829
+iGPU,ff,128,table kernel,7,46.840
+iGPU,ff,128,branch-free kernel,7,541.492
+iGPU,ff,128,formation kernel,8,71.703
+iGPU,ff,128,coalesced formation kernel,8,56.290
+iGPU,ff,128,search kernel,8,159.767
+iGPU,ff,128,table kernel,8,46.854
+iGPU,ff,128,branch-free kernel,8,541.450
+iGPU,ff,128,formation kernel,9,71.729
+iGPU,ff,128,coalesced formation kernel,9,56.260
+iGPU,ff,128,search kernel,9,159.799
+iGPU,ff,128,table kernel,9,46.857
+iGPU,ff,128,branch-free kernel,9,541.453
+iGPU,zero,128,formation kernel,0,71.650
+iGPU,zero,128,coalesced formation kernel,0,56.174
+iGPU,zero,128,search kernel,0,56.414
+iGPU,zero,128,table kernel,0,48.409
+iGPU,zero,128,branch-free kernel,0,543.686
+iGPU,zero,128,formation kernel,1,71.697
+iGPU,zero,128,coalesced formation kernel,1,56.278
+iGPU,zero,128,search kernel,1,56.439
+iGPU,zero,128,table kernel,1,48.438
+iGPU,zero,128,branch-free kernel,1,543.749
+iGPU,zero,128,formation kernel,2,71.664
+iGPU,zero,128,coalesced formation kernel,2,56.122
+iGPU,zero,128,search kernel,2,56.432
+iGPU,zero,128,table kernel,2,48.407
+iGPU,zero,128,branch-free kernel,2,543.708
+iGPU,zero,128,formation kernel,3,71.675
+iGPU,zero,128,coalesced formation kernel,3,56.152
+iGPU,zero,128,search kernel,3,56.391
+iGPU,zero,128,table kernel,3,48.395
+iGPU,zero,128,branch-free kernel,3,543.665
+iGPU,zero,128,formation kernel,4,71.653
+iGPU,zero,128,coalesced formation kernel,4,56.140
+iGPU,zero,128,search kernel,4,56.450
+iGPU,zero,128,table kernel,4,48.421
+iGPU,zero,128,branch-free kernel,4,543.685
+iGPU,zero,128,formation kernel,5,71.640
+iGPU,zero,128,coalesced formation kernel,5,56.194
+iGPU,zero,128,search kernel,5,56.448
+iGPU,zero,128,table kernel,5,48.383
+iGPU,zero,128,branch-free kernel,5,543.684
+iGPU,zero,128,formation kernel,6,71.664
+iGPU,zero,128,coalesced formation kernel,6,56.154
+iGPU,zero,128,search kernel,6,56.428
+iGPU,zero,128,table kernel,6,48.414
+iGPU,zero,128,branch-free kernel,6,543.714
+iGPU,zero,128,formation kernel,7,71.654
+iGPU,zero,128,coalesced formation kernel,7,56.200
+iGPU,zero,128,search kernel,7,56.449
+iGPU,zero,128,table kernel,7,48.432
+iGPU,zero,128,branch-free kernel,7,543.692
+iGPU,zero,128,formation kernel,8,71.656
+iGPU,zero,128,coalesced formation kernel,8,56.126
+iGPU,zero,128,search kernel,8,56.385
+iGPU,zero,128,table kernel,8,48.383
+iGPU,zero,128,branch-free kernel,8,543.668
+iGPU,zero,128,formation kernel,9,71.657
+iGPU,zero,128,coalesced formation kernel,9,56.139
+iGPU,zero,128,search kernel,9,56.392
+iGPU,zero,128,table kernel,9,48.434
+iGPU,zero,128,branch-free kernel,9,543.695
+iGPU,ru,128,formation kernel,0,81.726
+iGPU,ru,128,coalesced formation kernel,0,56.786
+iGPU,ru,128,search kernel,0,259.433
+iGPU,ru,128,table kernel,0,55.199
+iGPU,ru,128,branch-free kernel,0,541.533
+iGPU,ru,128,formation kernel,1,81.773
+iGPU,ru,128,coalesced formation kernel,1,56.724
+iGPU,ru,128,search kernel,1,259.356
+iGPU,ru,128,table kernel,1,55.141
+iGPU,ru,128,branch-free kernel,1,541.472
+iGPU,ru,128,formation kernel,2,81.674
+iGPU,ru,128,coalesced formation kernel,2,56.751
+iGPU,ru,128,search kernel,2,259.421
+iGPU,ru,128,table kernel,2,55.224
+iGPU,ru,128,branch-free kernel,2,541.547
+iGPU,ru,128,formation kernel,3,81.811
+iGPU,ru,128,coalesced formation kernel,3,56.805
+iGPU,ru,128,search kernel,3,259.468
+iGPU,ru,128,table kernel,3,55.193
+iGPU,ru,128,branch-free kernel,3,541.509
+iGPU,ru,128,formation kernel,4,81.758
+iGPU,ru,128,coalesced formation kernel,4,56.753
+iGPU,ru,128,search kernel,4,259.507
+iGPU,ru,128,table kernel,4,55.147
+iGPU,ru,128,branch-free kernel,4,541.482
+iGPU,ru,128,formation kernel,5,81.689
+iGPU,ru,128,coalesced formation kernel,5,56.861
+iGPU,ru,128,search kernel,5,259.566
+iGPU,ru,128,table kernel,5,55.111
+iGPU,ru,128,branch-free kernel,5,541.440
+iGPU,ru,128,formation kernel,6,81.698
+iGPU,ru,128,coalesced formation kernel,6,56.941
+iGPU,ru,128,search kernel,6,259.415
+iGPU,ru,128,table kernel,6,55.138
+iGPU,ru,128,branch-free kernel,6,541.471
+iGPU,ru,128,formation kernel,7,81.737
+iGPU,ru,128,coalesced formation kernel,7,56.865
+iGPU,ru,128,search kernel,7,259.448
+iGPU,ru,128,table kernel,7,55.200
+iGPU,ru,128,branch-free kernel,7,541.507
+iGPU,ru,128,formation kernel,8,81.697
+iGPU,ru,128,coalesced formation kernel,8,56.932
+iGPU,ru,128,search kernel,8,259.515
+iGPU,ru,128,table kernel,8,55.139
+iGPU,ru,128,branch-free kernel,8,541.519
+iGPU,ru,128,formation kernel,9,81.739
+iGPU,ru,128,coalesced formation kernel,9,56.818
+iGPU,ru,128,search kernel,9,259.458
+iGPU,ru,128,table kernel,9,55.202
+iGPU,ru,128,branch-free kernel,9,541.459
+iGPU,uniform,256,formation kernel,0,81.101
+iGPU,uniform,256,coalesced formation kernel,0,56.839
+iGPU,uniform,256,search kernel,0,214.299
+iGPU,uniform,256,table kernel,0,55.528
+iGPU,uniform,256,branch-free kernel,0,548.311
+iGPU,uniform,256,formation kernel,1,81.092
+iGPU,uniform,256,coalesced formation kernel,1,57.008
+iGPU,uniform,256,search kernel,1,214.304
+iGPU,uniform,256,table kernel,1,55.710
+iGPU,uniform,256,branch-free kernel,1,548.243
+iGPU,uniform,256,formation kernel,2,80.993
+iGPU,uniform,256,coalesced formation kernel,2,57.085
+iGPU,uniform,256,search kernel,2,214.261
+iGPU,uniform,256,table kernel,2,55.475
+iGPU,uniform,256,branch-free kernel,2,548.215
+iGPU,uniform,256,formation kernel,3,81.007
+iGPU,uniform,256,coalesced formation kernel,3,57.017
+iGPU,uniform,256,search kernel,3,214.263
+iGPU,uniform,256,table kernel,3,55.606
+iGPU,uniform,256,branch-free kernel,3,548.244
+iGPU,uniform,256,formation kernel,4,81.028
+iGPU,uniform,256,coalesced formation kernel,4,56.923
+iGPU,uniform,256,search kernel,4,214.322
+iGPU,uniform,256,table kernel,4,55.495
+iGPU,uniform,256,branch-free kernel,4,548.221
+iGPU,uniform,256,formation kernel,5,81.073
+iGPU,uniform,256,coalesced formation kernel,5,57.069
+iGPU,uniform,256,search kernel,5,214.338
+iGPU,uniform,256,table kernel,5,55.522
+iGPU,uniform,256,branch-free kernel,5,548.323
+iGPU,uniform,256,formation kernel,6,81.013
+iGPU,uniform,256,coalesced formation kernel,6,57.093
+iGPU,uniform,256,search kernel,6,214.287
+iGPU,uniform,256,table kernel,6,55.536
+iGPU,uniform,256,branch-free kernel,6,548.310
+iGPU,uniform,256,formation kernel,7,81.014
+iGPU,uniform,256,coalesced formation kernel,7,57.051
+iGPU,uniform,256,search kernel,7,214.360
+iGPU,uniform,256,table kernel,7,55.563
+iGPU,uniform,256,branch-free kernel,7,548.301
+iGPU,uniform,256,formation kernel,8,81.098
+iGPU,uniform,256,coalesced formation kernel,8,57.015
+iGPU,uniform,256,search kernel,8,214.405
+iGPU,uniform,256,table kernel,8,55.527
+iGPU,uniform,256,branch-free kernel,8,548.349
+iGPU,uniform,256,formation kernel,9,81.066
+iGPU,uniform,256,coalesced formation kernel,9,56.975
+iGPU,uniform,256,search kernel,9,214.275
+iGPU,uniform,256,table kernel,9,55.554
+iGPU,uniform,256,branch-free kernel,9,548.274
+iGPU,ff,256,formation kernel,0,71.689
+iGPU,ff,256,coalesced formation kernel,0,56.585
+iGPU,ff,256,search kernel,0,133.018
+iGPU,ff,256,table kernel,0,53.455
+iGPU,ff,256,branch-free kernel,0,541.613
+iGPU,ff,256,formation kernel,1,71.703
+iGPU,ff,256,coalesced formation kernel,1,56.599
+iGPU,ff,256,search kernel,1,132.891
+iGPU,ff,256,table kernel,1,53.500
+iGPU,ff,256,branch-free kernel,1,541.633
+iGPU,ff,256,formation kernel,2,71.677
+iGPU,ff,256,coalesced formation kernel,2,56.667
+iGPU,ff,256,search kernel,2,132.852
+iGPU,ff,256,table kernel,2,53.401
+iGPU,ff,256,branch-free kernel,2,541.607
+iGPU,ff,256,formation kernel,3,71.688
+iGPU,ff,256,coalesced formation kernel,3,56.736
+iGPU,ff,256,search kernel,3,132.927
+iGPU,ff,256,table kernel,3,53.357
+iGPU,ff,256,branch-free kernel,3,541.641
+iGPU,ff,256,formation kernel,4,71.679
+iGPU,ff,256,coalesced formation kernel,4,56.783
+iGPU,ff,256,search kernel,4,132.917
+iGPU,ff,256,table kernel,4,53.420
+iGPU,ff,256,branch-free kernel,4,541.603
+iGPU,ff,256,formation kernel,5,71.654
+iGPU,ff,256,coalesced formation kernel,5,56.564
+iGPU,ff,256,search kernel,5,132.864
+iGPU,ff,256,table kernel,5,53.427
+iGPU,ff,256,branch-free kernel,5,541.643
+iGPU,ff,256,formation kernel,6,71.664
+iGPU,ff,256,coalesced formation kernel,6,56.509
+iGPU,ff,256,search kernel,6,132.890
+iGPU,ff,256,table kernel,6,53.438
+iGPU,ff,256,branch-free kernel,6,541.588
+iGPU,ff,256,formation kernel,7,71.641
+iGPU,ff,256,coalesced formation kernel,7,56.567
+iGPU,ff,256,search kernel,7,132.901
+iGPU,ff,256,table kernel,7,53.392
+iGPU,ff,256,branch-free kernel,7,541.628
+iGPU,ff,256,formation kernel,8,71.692
+iGPU,ff,256,coalesced formation kernel,8,56.529
+iGPU,ff,256,search kernel,8,132.878
+iGPU,ff,256,table kernel,8,53.368
+iGPU,ff,256,branch-free kernel,8,541.598
+iGPU,ff,256,formation kernel,9,71.829
+iGPU,ff,256,coalesced formation kernel,9,56.535
+iGPU,ff,256,search kernel,9,132.857
+iGPU,ff,256,table kernel,9,53.364
+iGPU,ff,256,branch-free kernel,9,541.596
+iGPU,zero,256,formation kernel,0,71.710
+iGPU,zero,256,coalesced formation kernel,0,56.496
+iGPU,zero,256,search kernel,0,56.564
+iGPU,zero,256,table kernel,0,54.487
+iGPU,zero,256,branch-free kernel,0,543.862
+iGPU,zero,256,formation kernel,1,71.680
+iGPU,zero,256,coalesced formation kernel,1,56.493
+iGPU,zero,256,search kernel,1,56.595
+iGPU,zero,256,table kernel,1,54.472
+iGPU,zero,256,branch-free kernel,1,543.880
+iGPU,zero,256,formation kernel,2,71.684
+iGPU,zero,256,coalesced formation kernel,2,56.464
+iGPU,zero,256,search kernel,2,56.561
+iGPU,zero,256,table kernel,2,54.532
+iGPU,zero,256,branch-free kernel,2,543.853
+iGPU,zero,256,formation kernel,3,71.661
+iGPU,zero,256,coalesced formation kernel,3,56.528
+iGPU,zero,256,search kernel,3,56.565
+iGPU,zero,256,table kernel,3,54.453
+iGPU,zero,256,branch-free kernel,3,543.953
+iGPU,zero,256,formation kernel,4,71.678
+iGPU,zero,256,coalesced formation kernel,4,56.595
+iGPU,zero,256,search kernel,4,56.614
+iGPU,zero,256,table kernel,4,54.509
+iGPU,zero,256,branch-free kernel,4,543.996
+iGPU,zero,256,formation kernel,5,71.752
+iGPU,zero,256,coalesced formation kernel,5,56.732
+iGPU,zero,256,search kernel,5,56.764
+iGPU,zero,256,table kernel,5,54.528
+iGPU,zero,256,branch-free kernel,5,543.993
+iGPU,zero,256,formation kernel,6,71.650
+iGPU,zero,256,coalesced formation kernel,6,56.509
+iGPU,zero,256,search kernel,6,56.576
+iGPU,zero,256,table kernel,6,54.462
+iGPU,zero,256,branch-free kernel,6,543.924
+iGPU,zero,256,formation kernel,7,71.654
+iGPU,zero,256,coalesced formation kernel,7,56.587
+iGPU,zero,256,search kernel,7,56.611
+iGPU,zero,256,table kernel,7,54.514
+iGPU,zero,256,branch-free kernel,7,543.917
+iGPU,zero,256,formation kernel,8,72.223
+iGPU,zero,256,coalesced formation kernel,8,56.643
+iGPU,zero,256,search kernel,8,56.635
+iGPU,zero,256,table kernel,8,54.737
+iGPU,zero,256,branch-free kernel,8,543.872
+iGPU,zero,256,formation kernel,9,71.682
+iGPU,zero,256,coalesced formation kernel,9,56.635
+iGPU,zero,256,search kernel,9,56.558
+iGPU,zero,256,table kernel,9,54.492
+iGPU,zero,256,branch-free kernel,9,543.865
+iGPU,ru,256,formation kernel,0,81.693
+iGPU,ru,256,coalesced formation kernel,0,57.346
+iGPU,ru,256,search kernel,0,215.265
+iGPU,ru,256,table kernel,0,49.944
+iGPU,ru,256,branch-free kernel,0,541.563
+iGPU,ru,256,formation kernel,1,81.744
+iGPU,ru,256,coalesced formation kernel,1,57.503
+iGPU,ru,256,search kernel,1,215.418
+iGPU,ru,256,table kernel,1,49.976
+iGPU,ru,256,branch-free kernel,1,541.633
+iGPU,ru,256,formation kernel,2,81.690
+iGPU,ru,256,coalesced formation kernel,2,57.625
+iGPU,ru,256,search kernel,2,215.353
+iGPU,ru,256,table kernel,2,49.922
+iGPU,ru,256,branch-free kernel,2,541.612
+iGPU,ru,256,formation kernel,3,81.796
+iGPU,ru,256,coalesced formation kernel,3,57.580
+iGPU,ru,256,search kernel,3,215.367
+iGPU,ru,256,table kernel,3,50.038
+iGPU,ru,256,branch-free kernel,3,541.628
+iGPU,ru,256,formation kernel,4,81.691
+iGPU,ru,256,coalesced formation kernel,4,57.885
+iGPU,ru,256,search kernel,4,215.313
+iGPU,ru,256,table kernel,4,49.972
+iGPU,ru,256,branch-free kernel,4,541.609
+iGPU,ru,256,formation kernel,5,81.692
+iGPU,ru,256,coalesced formation kernel,5,57.557
+iGPU,ru,256,search kernel,5,215.311
+iGPU,ru,256,table kernel,5,50.049
+iGPU,ru,256,branch-free kernel,5,541.601
+iGPU,ru,256,formation kernel,6,81.685
+iGPU,ru,256,coalesced formation kernel,6,57.385
+iGPU,ru,256,search kernel,6,215.299
+iGPU,ru,256,table kernel,6,49.934
+iGPU,ru,256,branch-free kernel,6,541.626
+iGPU,ru,256,formation kernel,7,81.696
+iGPU,ru,256,coalesced formation kernel,7,57.383
+iGPU,ru,256,search kernel,7,215.275
+iGPU,ru,256,table kernel,7,49.958
+iGPU,ru,256,branch-free kernel,7,541.712
+iGPU,ru,256,formation kernel,8,81.673
+iGPU,ru,256,coalesced formation kernel,8,57.444
+iGPU,ru,256,search kernel,8,215.311
+iGPU,ru,256,table kernel,8,49.938
+iGPU,ru,256,branch-free kernel,8,541.648
+iGPU,ru,256,formation kernel,9,81.673
+iGPU,ru,256,coalesced formation kernel,9,57.423
+iGPU,ru,256,search kernel,9,215.264
+iGPU,ru,256,table kernel,9,49.943
+iGPU,ru,256,branch-free kernel,9,541.614
+iGPU,uniform,512,formation kernel,0,81.048
+iGPU,uniform,512,coalesced formation kernel,0,58.185
+iGPU,uniform,512,search kernel,0,253.864
+iGPU,uniform,512,table kernel,0,56.175
+iGPU,uniform,512,branch-free kernel,0,548.387
+iGPU,uniform,512,formation kernel,1,81.010
+iGPU,uniform,512,coalesced formation kernel,1,58.152
+iGPU,uniform,512,search kernel,1,254.114
+iGPU,uniform,512,table kernel,1,56.084
+iGPU,uniform,512,branch-free kernel,1,548.385
+iGPU,uniform,512,formation kernel,2,81.030
+iGPU,uniform,512,coalesced formation kernel,2,58.270
+iGPU,uniform,512,search kernel,2,253.965
+iGPU,uniform,512,table kernel,2,56.089
+iGPU,uniform,512,branch-free kernel,2,548.430
+iGPU,uniform,512,formation kernel,3,81.057
+iGPU,uniform,512,coalesced formation kernel,3,58.236
+iGPU,uniform,512,search kernel,3,253.916
+iGPU,uniform,512,table kernel,3,56.099
+iGPU,uniform,512,branch-free kernel,3,548.428
+iGPU,uniform,512,formation kernel,4,81.001
+iGPU,uniform,512,coalesced formation kernel,4,58.120
+iGPU,uniform,512,search kernel,4,254.121
+iGPU,uniform,512,table kernel,4,56.122
+iGPU,uniform,512,branch-free kernel,4,548.376
+iGPU,uniform,512,formation kernel,5,81.055
+iGPU,uniform,512,coalesced formation kernel,5,58.119
+iGPU,uniform,512,search kernel,5,253.906
+iGPU,uniform,512,table kernel,5,56.102
+iGPU,uniform,512,branch-free kernel,5,548.388
+iGPU,uniform,512,formation kernel,6,80.998
+iGPU,uniform,512,coalesced formation kernel,6,58.140
+iGPU,uniform,512,search kernel,6,253.881
+iGPU,uniform,512,table kernel,6,56.060
+iGPU,uniform,512,branch-free kernel,6,548.399
+iGPU,uniform,512,formation kernel,7,81.018
+iGPU,uniform,512,coalesced formation kernel,7,58.184
+iGPU,uniform,512,search kernel,7,253.885
+iGPU,uniform,512,table kernel,7,56.083
+iGPU,uniform,512,branch-free kernel,7,548.362
+iGPU,uniform,512,formation kernel,8,81.021
+iGPU,uniform,512,coalesced formation kernel,8,58.075
+iGPU,uniform,512,search kernel,8,253.977
+iGPU,uniform,512,table kernel,8,56.159
+iGPU,uniform,512,branch-free kernel,8,548.407
+iGPU,uniform,512,formation kernel,9,81.165
+iGPU,uniform,512,coalesced formation kernel,9,58.182
+iGPU,uniform,512,search kernel,9,253.895
+iGPU,uniform,512,table kernel,9,56.059
+iGPU,uniform,512,branch-free kernel,9,548.416
+iGPU,ff,512,formation kernel,0,71.743
+iGPU,ff,512,coalesced formation kernel,0,57.252
+iGPU,ff,512,search kernel,0,198.092
+iGPU,ff,512,table kernel,0,53.801
+iGPU,ff,512,branch-free kernel,0,541.748
+iGPU,ff,512,formation kernel,1,71.652
+iGPU,ff,512,coalesced formation kernel,1,57.363
+iGPU,ff,512,search kernel,1,198.147
+iGPU,ff,512,table kernel,1,53.876
+iGPU,ff,512,branch-free kernel,1,541.883
+iGPU,ff,512,formation kernel,2,71.630
+iGPU,ff,512,coalesced formation kernel,2,57.244
+iGPU,ff,512,search kernel,2,198.197
+iGPU,ff,512,table kernel,2,53.824
+iGPU,ff,512,branch-free kernel,2,541.799
+iGPU,ff,512,formation kernel,3,71.700
+iGPU,ff,512,coalesced formation kernel,3,57.372
+iGPU,ff,512,search kernel,3,198.054
+iGPU,ff,512,table kernel,3,53.783
+iGPU,ff,512,branch-free kernel,3,541.865
+iGPU,ff,512,formation kernel,4,71.722
+iGPU,ff,512,coalesced formation kernel,4,57.245
+iGPU,ff,512,search kernel,4,198.124
+iGPU,ff,512,table kernel,4,53.825
+iGPU,ff,512,branch-free kernel,4,541.773
+iGPU,ff,512,formation kernel,5,71.646
+iGPU,ff,512,coalesced formation kernel,5,57.300
+iGPU,ff,512,search kernel,5,198.219
+iGPU,ff,512,table kernel,5,53.944
+iGPU,ff,512,branch-free kernel,5,541.754
+iGPU,ff,512,formation kernel,6,71.704
+iGPU,ff,512,coalesced formation kernel,6,57.401
+iGPU,ff,512,search kernel,6,198.147
+iGPU,ff,512,table kernel,6,53.828
+iGPU,ff,512,branch-free kernel,6,541.835
+iGPU,ff,512,formation kernel,7,71.760
+iGPU,ff,512,coalesced formation kernel,7,57.546
+iGPU,ff,512,search kernel,7,198.164
+iGPU,ff,512,table kernel,7,53.817
+iGPU,ff,512,branch-free kernel,7,541.812
+iGPU,ff,512,formation kernel,8,71.684
+iGPU,ff,512,coalesced formation kernel,8,57.304
+iGPU,ff,512,search kernel,8,198.124
+iGPU,ff,512,table kernel,8,53.874
+iGPU,ff,512,branch-free kernel,8,541.740
+iGPU,ff,512,formation kernel,9,71.644
+iGPU,ff,512,coalesced formation kernel,9,57.253
+iGPU,ff,512,search kernel,9,198.102
+iGPU,ff,512,table kernel,9,53.793
+iGPU,ff,512,branch-free kernel,9,541.821
+iGPU,zero,512,formation kernel,0,71.667
+iGPU,zero,512,coalesced formation kernel,0,57.425
+iGPU,zero,512,search kernel,0,56.818
+iGPU,zero,512,table kernel,0,53.953
+iGPU,zero,512,branch-free kernel,0,543.905
+iGPU,zero,512,formation kernel,1,71.783
+iGPU,zero,512,coalesced formation kernel,1,57.387
+iGPU,zero,512,search kernel,1,56.794
+iGPU,zero,512,table kernel,1,54.006
+iGPU,zero,512,branch-free kernel,1,543.917
+iGPU,zero,512,formation kernel,2,71.682
+iGPU,zero,512,coalesced formation kernel,2,57.291
+iGPU,zero,512,search kernel,2,56.883
+iGPU,zero,512,table kernel,2,53.980
+iGPU,zero,512,branch-free kernel,2,543.941
+iGPU,zero,512,formation kernel,3,71.644
+iGPU,zero,512,coalesced formation kernel,3,57.355
+iGPU,zero,512,search kernel,3,56.886
+iGPU,zero,512,table kernel,3,53.944
+iGPU,zero,512,branch-free kernel,3,543.924
+iGPU,zero,512,formation kernel,4,71.704
+iGPU,zero,512,coalesced formation kernel,4,57.229
+iGPU,zero,512,search kernel,4,56.820
+iGPU,zero,512,table kernel,4,53.955
+iGPU,zero,512,branch-free kernel,4,544.003
+iGPU,zero,512,formation kernel,5,71.716
+iGPU,zero,512,coalesced formation kernel,5,57.455
+iGPU,zero,512,search kernel,5,56.830
+iGPU,zero,512,table kernel,5,54.031
+iGPU,zero,512,branch-free kernel,5,543.956
+iGPU,zero,512,formation kernel,6,71.681
+iGPU,zero,512,coalesced formation kernel,6,57.384
+iGPU,zero,512,search kernel,6,56.815
+iGPU,zero,512,table kernel,6,53.960
+iGPU,zero,512,branch-free kernel,6,543.979
+iGPU,zero,512,formation kernel,7,71.655
+iGPU,zero,512,coalesced formation kernel,7,57.265
+iGPU,zero,512,search kernel,7,56.799
+iGPU,zero,512,table kernel,7,54.103
+iGPU,zero,512,branch-free kernel,7,543.931
+iGPU,zero,512,formation kernel,8,71.695
+iGPU,zero,512,coalesced formation kernel,8,57.379
+iGPU,zero,512,search kernel,8,56.798
+iGPU,zero,512,table kernel,8,53.968
+iGPU,zero,512,branch-free kernel,8,543.962
+iGPU,zero,512,formation kernel,9,71.677
+iGPU,zero,512,coalesced formation kernel,9,57.255
+iGPU,zero,512,search kernel,9,56.901
+iGPU,zero,512,table kernel,9,53.939
+iGPU,zero,512,branch-free kernel,9,543.942
+iGPU,ru,512,formation kernel,0,81.762
+iGPU,ru,512,coalesced formation kernel,0,58.762
+iGPU,ru,512,search kernel,0,292.073
+iGPU,ru,512,table kernel,0,43.497
+iGPU,ru,512,branch-free kernel,0,541.830
+iGPU,ru,512,formation kernel,1,81.750
+iGPU,ru,512,coalesced formation kernel,1,58.954
+iGPU,ru,512,search kernel,1,292.034
+iGPU,ru,512,table kernel,1,43.566
+iGPU,ru,512,branch-free kernel,1,541.799
+iGPU,ru,512,formation kernel,2,81.688
+iGPU,ru,512,coalesced formation kernel,2,59.148
+iGPU,ru,512,search kernel,2,292.055
+iGPU,ru,512,table kernel,2,43.540
+iGPU,ru,512,branch-free kernel,2,541.794
+iGPU,ru,512,formation kernel,3,81.751
+iGPU,ru,512,coalesced formation kernel,3,59.091
+iGPU,ru,512,search kernel,3,292.139
+iGPU,ru,512,table kernel,3,43.533
+iGPU,ru,512,branch-free kernel,3,541.845
+iGPU,ru,512,formation kernel,4,81.740
+iGPU,ru,512,coalesced formation kernel,4,58.968
+iGPU,ru,512,search kernel,4,292.021
+iGPU,ru,512,table kernel,4,43.499
+iGPU,ru,512,branch-free kernel,4,542.014
+iGPU,ru,512,formation kernel,5,81.823
+iGPU,ru,512,coalesced formation kernel,5,59.111
+iGPU,ru,512,search kernel,5,292.040
+iGPU,ru,512,table kernel,5,43.492
+iGPU,ru,512,branch-free kernel,5,541.763
+iGPU,ru,512,formation kernel,6,81.778
+iGPU,ru,512,coalesced formation kernel,6,58.769
+iGPU,ru,512,search kernel,6,292.105
+iGPU,ru,512,table kernel,6,43.562
+iGPU,ru,512,branch-free kernel,6,541.788
+iGPU,ru,512,formation kernel,7,81.706
+iGPU,ru,512,coalesced formation kernel,7,58.856
+iGPU,ru,512,search kernel,7,292.002
+iGPU,ru,512,table kernel,7,43.617
+iGPU,ru,512,branch-free kernel,7,541.846
+iGPU,ru,512,formation kernel,8,81.825
+iGPU,ru,512,coalesced formation kernel,8,59.202
+iGPU,ru,512,search kernel,8,292.037
+iGPU,ru,512,table kernel,8,43.611
+iGPU,ru,512,branch-free kernel,8,541.790
+iGPU,ru,512,formation kernel,9,81.680
+iGPU,ru,512,coalesced formation kernel,9,58.857
+iGPU,ru,512,search kernel,9,291.957
+iGPU,ru,512,table kernel,9,43.489
+iGPU,ru,512,branch-free kernel,9,541.826
+dGPU,uniform,0,formation kernel,0,8.552
+dGPU,uniform,0,coalesced formation kernel,0,5.807
+dGPU,uniform,0,search kernel,0,20.077
+dGPU,uniform,0,table kernel,0,0.796
+dGPU,uniform,0,branch-free kernel,0,6.248
+dGPU,uniform,0,formation kernel,1,9.441
+dGPU,uniform,0,coalesced formation kernel,1,6.117
+dGPU,uniform,0,search kernel,1,21.390
+dGPU,uniform,0,table kernel,1,0.804
+dGPU,uniform,0,branch-free kernel,1,6.241
+dGPU,uniform,0,formation kernel,2,8.950
+dGPU,uniform,0,coalesced formation kernel,2,6.048
+dGPU,uniform,0,search kernel,2,20.640
+dGPU,uniform,0,table kernel,2,0.835
+dGPU,uniform,0,branch-free kernel,2,6.310
+dGPU,uniform,0,formation kernel,3,9.447
+dGPU,uniform,0,coalesced formation kernel,3,6.191
+dGPU,uniform,0,search kernel,3,21.277
+dGPU,uniform,0,table kernel,3,0.802
+dGPU,uniform,0,branch-free kernel,3,6.272
+dGPU,uniform,0,formation kernel,4,8.846
+dGPU,uniform,0,coalesced formation kernel,4,5.996
+dGPU,uniform,0,search kernel,4,21.042
+dGPU,uniform,0,table kernel,4,0.806
+dGPU,uniform,0,branch-free kernel,4,6.270
+dGPU,uniform,0,formation kernel,5,9.505
+dGPU,uniform,0,coalesced formation kernel,5,5.993
+dGPU,uniform,0,search kernel,5,20.389
+dGPU,uniform,0,table kernel,5,0.788
+dGPU,uniform,0,branch-free kernel,5,5.867
+dGPU,uniform,0,formation kernel,6,8.730
+dGPU,uniform,0,coalesced formation kernel,6,6.166
+dGPU,uniform,0,search kernel,6,21.333
+dGPU,uniform,0,table kernel,6,0.798
+dGPU,uniform,0,branch-free kernel,6,6.393
+dGPU,uniform,0,formation kernel,7,9.700
+dGPU,uniform,0,coalesced formation kernel,7,6.502
+dGPU,uniform,0,search kernel,7,21.076
+dGPU,uniform,0,table kernel,7,0.799
+dGPU,uniform,0,branch-free kernel,7,6.253
+dGPU,uniform,0,formation kernel,8,9.328
+dGPU,uniform,0,coalesced formation kernel,8,6.142
+dGPU,uniform,0,search kernel,8,21.392
+dGPU,uniform,0,table kernel,8,0.875
+dGPU,uniform,0,branch-free kernel,8,6.259
+dGPU,uniform,0,formation kernel,9,8.985
+dGPU,uniform,0,coalesced formation kernel,9,6.102
+dGPU,uniform,0,search kernel,9,20.944
+dGPU,uniform,0,table kernel,9,0.799
+dGPU,uniform,0,branch-free kernel,9,6.093
+dGPU,ff,0,formation kernel,0,7.551
+dGPU,ff,0,coalesced formation kernel,0,5.053
+dGPU,ff,0,search kernel,0,2.286
+dGPU,ff,0,table kernel,0,0.804
+dGPU,ff,0,branch-free kernel,0,4.998
+dGPU,ff,0,formation kernel,1,8.506
+dGPU,ff,0,coalesced formation kernel,1,6.198
+dGPU,ff,0,search kernel,1,2.778
+dGPU,ff,0,table kernel,1,0.800
+dGPU,ff,0,branch-free kernel,1,6.150
+dGPU,ff,0,formation kernel,2,9.029
+dGPU,ff,0,coalesced formation kernel,2,7.436
+dGPU,ff,0,search kernel,2,3.312
+dGPU,ff,0,table kernel,2,0.796
+dGPU,ff,0,branch-free kernel,2,7.067
+dGPU,ff,0,formation kernel,3,10.167
+dGPU,ff,0,coalesced formation kernel,3,6.812
+dGPU,ff,0,search kernel,3,2.964
+dGPU,ff,0,table kernel,3,0.792
+dGPU,ff,0,branch-free kernel,3,6.559
+dGPU,ff,0,formation kernel,4,10.046
+dGPU,ff,0,coalesced formation kernel,4,6.802
+dGPU,ff,0,search kernel,4,3.045
+dGPU,ff,0,table kernel,4,0.803
+dGPU,ff,0,branch-free kernel,4,6.703
+dGPU,ff,0,formation kernel,5,10.162
+dGPU,ff,0,coalesced formation kernel,5,7.816
+dGPU,ff,0,search kernel,5,3.501
+dGPU,ff,0,table kernel,5,0.819
+dGPU,ff,0,branch-free kernel,5,7.219
+dGPU,ff,0,formation kernel,6,10.153
+dGPU,ff,0,coalesced formation kernel,6,6.923
+dGPU,ff,0,search kernel,6,3.061
+dGPU,ff,0,table kernel,6,0.798
+dGPU,ff,0,branch-free kernel,6,6.715
+dGPU,ff,0,formation kernel,7,10.176
+dGPU,ff,0,coalesced formation kernel,7,6.791
+dGPU,ff,0,search kernel,7,3.037
+dGPU,ff,0,table kernel,7,0.831
+dGPU,ff,0,branch-free kernel,7,6.711
+dGPU,ff,0,formation kernel,8,9.771
+dGPU,ff,0,coalesced formation kernel,8,8.164
+dGPU,ff,0,search kernel,8,3.646
+dGPU,ff,0,table kernel,8,0.857
+dGPU,ff,0,branch-free kernel,8,7.417
+dGPU,ff,0,formation kernel,9,10.185
+dGPU,ff,0,coalesced formation kernel,9,7.246
+dGPU,ff,0,search kernel,9,3.229
+dGPU,ff,0,table kernel,9,0.805
+dGPU,ff,0,branch-free kernel,9,7.147
+dGPU,zero,0,formation kernel,0,5.899
+dGPU,zero,0,coalesced formation kernel,0,3.623
+dGPU,zero,0,search kernel,0,0.839
+dGPU,zero,0,table kernel,0,0.788
+dGPU,zero,0,branch-free kernel,0,6.310
+dGPU,zero,0,formation kernel,1,9.318
+dGPU,zero,0,coalesced formation kernel,1,6.561
+dGPU,zero,0,search kernel,1,0.846
+dGPU,zero,0,table kernel,1,0.797
+dGPU,zero,0,branch-free kernel,1,6.670
+dGPU,zero,0,formation kernel,2,10.216
+dGPU,zero,0,coalesced formation kernel,2,6.971
+dGPU,zero,0,search kernel,2,0.846
+dGPU,zero,0,table kernel,2,0.802
+dGPU,zero,0,branch-free kernel,2,6.950
+dGPU,zero,0,formation kernel,3,10.226
+dGPU,zero,0,coalesced formation kernel,3,7.126
+dGPU,zero,0,search kernel,3,0.845
+dGPU,zero,0,table kernel,3,0.801
+dGPU,zero,0,branch-free kernel,3,7.039
+dGPU,zero,0,formation kernel,4,10.147
+dGPU,zero,0,coalesced formation kernel,4,6.782
+dGPU,zero,0,search kernel,4,0.847
+dGPU,zero,0,table kernel,4,0.792
+dGPU,zero,0,branch-free kernel,4,6.707
+dGPU,zero,0,formation kernel,5,10.167
+dGPU,zero,0,coalesced formation kernel,5,6.782
+dGPU,zero,0,search kernel,5,0.845
+dGPU,zero,0,table kernel,5,0.790
+dGPU,zero,0,branch-free kernel,5,6.711
+dGPU,zero,0,formation kernel,6,10.261
+dGPU,zero,0,coalesced formation kernel,6,7.807
+dGPU,zero,0,search kernel,6,0.854
+dGPU,zero,0,table kernel,6,0.791
+dGPU,zero,0,branch-free kernel,6,7.212
+dGPU,zero,0,formation kernel,7,10.168
+dGPU,zero,0,coalesced formation kernel,7,7.497
+dGPU,zero,0,search kernel,7,0.878
+dGPU,zero,0,table kernel,7,0.807
+dGPU,zero,0,branch-free kernel,7,7.507
+dGPU,zero,0,formation kernel,8,10.179
+dGPU,zero,0,coalesced formation kernel,8,7.315
+dGPU,zero,0,search kernel,8,0.874
+dGPU,zero,0,table kernel,8,0.799
+dGPU,zero,0,branch-free kernel,8,6.976
+dGPU,zero,0,formation kernel,9,10.174
+dGPU,zero,0,coalesced formation kernel,9,8.061
+dGPU,zero,0,search kernel,9,0.921
+dGPU,zero,0,table kernel,9,0.840
+dGPU,zero,0,branch-free kernel,9,7.873
+dGPU,ru,0,formation kernel,0,6.867
+dGPU,ru,0,coalesced formation kernel,0,5.243
+dGPU,ru,0,search kernel,0,19.926
+dGPU,ru,0,table kernel,0,0.802
+dGPU,ru,0,branch-free kernel,0,5.742
+dGPU,ru,0,formation kernel,1,8.941
+dGPU,ru,0,coalesced formation kernel,1,6.054
+dGPU,ru,0,search kernel,1,20.589
+dGPU,ru,0,table kernel,1,0.807
+dGPU,ru,0,branch-free kernel,1,5.944
+dGPU,ru,0,formation kernel,2,8.726
+dGPU,ru,0,coalesced formation kernel,2,5.985
+dGPU,ru,0,search kernel,2,20.861
+dGPU,ru,0,table kernel,2,0.802
+dGPU,ru,0,branch-free kernel,2,6.049
+dGPU,ru,0,formation kernel,3,8.912
+dGPU,ru,0,coalesced formation kernel,3,6.125
+dGPU,ru,0,search kernel,3,21.192
+dGPU,ru,0,table kernel,3,0.810
+dGPU,ru,0,branch-free kernel,3,6.250
+dGPU,ru,0,formation kernel,4,9.457
+dGPU,ru,0,coalesced formation kernel,4,6.209
+dGPU,ru,0,search kernel,4,21.217
+dGPU,ru,0,table kernel,4,0.799
+dGPU,ru,0,branch-free kernel,4,6.117
+dGPU,ru,0,formation kernel,5,8.210
+dGPU,ru,0,coalesced formation kernel,5,5.657
+dGPU,ru,0,search kernel,5,20.942
+dGPU,ru,0,table kernel,5,0.818
+dGPU,ru,0,branch-free kernel,5,6.253
+dGPU,ru,0,formation kernel,6,9.451
+dGPU,ru,0,coalesced formation kernel,6,6.316
+dGPU,ru,0,search kernel,6,21.189
+dGPU,ru,0,table kernel,6,0.794
+dGPU,ru,0,branch-free kernel,6,6.357
+dGPU,ru,0,formation kernel,7,9.729
+dGPU,ru,0,coalesced formation kernel,7,6.496
+dGPU,ru,0,search kernel,7,22.206
+dGPU,ru,0,table kernel,7,0.800
+dGPU,ru,0,branch-free kernel,7,6.241
+dGPU,ru,0,formation kernel,8,9.138
+dGPU,ru,0,coalesced formation kernel,8,6.173
+dGPU,ru,0,search kernel,8,20.825
+dGPU,ru,0,table kernel,8,0.803
+dGPU,ru,0,branch-free kernel,8,6.569
+dGPU,ru,0,formation kernel,9,9.954
+dGPU,ru,0,coalesced formation kernel,9,6.633
+dGPU,ru,0,search kernel,9,22.290
+dGPU,ru,0,table kernel,9,0.822
+dGPU,ru,0,branch-free kernel,9,6.407
+dGPU,uniform,32,formation kernel,0,6.362
+dGPU,uniform,32,coalesced formation kernel,0,6.431
+dGPU,uniform,32,search kernel,0,27.775
+dGPU,uniform,32,table kernel,0,0.814
+dGPU,uniform,32,branch-free kernel,0,5.783
+dGPU,uniform,32,formation kernel,1,9.125
+dGPU,uniform,32,coalesced formation kernel,1,8.788
+dGPU,uniform,32,search kernel,1,38.057
+dGPU,uniform,32,table kernel,1,0.808
+dGPU,uniform,32,branch-free kernel,1,6.483
+dGPU,uniform,32,formation kernel,2,8.765
+dGPU,uniform,32,coalesced formation kernel,2,8.136
+dGPU,uniform,32,search kernel,2,42.823
+dGPU,uniform,32,table kernel,2,0.889
+dGPU,uniform,32,branch-free kernel,2,6.505
+dGPU,uniform,32,formation kernel,3,9.415
+dGPU,uniform,32,coalesced formation kernel,3,9.188
+dGPU,uniform,32,search kernel,3,39.840
+dGPU,uniform,32,table kernel,3,0.810
+dGPU,uniform,32,branch-free kernel,3,6.667
+dGPU,uniform,32,formation kernel,4,8.710
+dGPU,uniform,32,coalesced formation kernel,4,8.520
+dGPU,uniform,32,search kernel,4,42.803
+dGPU,uniform,32,table kernel,4,0.738
+dGPU,uniform,32,branch-free kernel,4,5.863
+dGPU,uniform,32,formation kernel,5,8.571
+dGPU,uniform,32,coalesced formation kernel,5,8.399
+dGPU,uniform,32,search kernel,5,40.004
+dGPU,uniform,32,table kernel,5,0.827
+dGPU,uniform,32,branch-free kernel,5,6.546
+dGPU,uniform,32,formation kernel,6,8.984
+dGPU,uniform,32,coalesced formation kernel,6,7.909
+dGPU,uniform,32,search kernel,6,36.976
+dGPU,uniform,32,table kernel,6,0.839
+dGPU,uniform,32,branch-free kernel,6,6.297
+dGPU,uniform,32,formation kernel,7,8.961
+dGPU,uniform,32,coalesced formation kernel,7,8.912
+dGPU,uniform,32,search kernel,7,39.982
+dGPU,uniform,32,table kernel,7,0.817
+dGPU,uniform,32,branch-free kernel,7,6.507
+dGPU,uniform,32,formation kernel,8,8.716
+dGPU,uniform,32,coalesced formation kernel,8,8.106
+dGPU,uniform,32,search kernel,8,41.945
+dGPU,uniform,32,table kernel,8,0.821
+dGPU,uniform,32,branch-free kernel,8,6.511
+dGPU,uniform,32,formation kernel,9,9.480
+dGPU,uniform,32,coalesced formation kernel,9,8.663
+dGPU,uniform,32,search kernel,9,37.974
+dGPU,uniform,32,table kernel,9,0.770
+dGPU,uniform,32,branch-free kernel,9,6.340
+dGPU,ff,32,formation kernel,0,6.411
+dGPU,ff,32,coalesced formation kernel,0,5.856
+dGPU,ff,32,search kernel,0,12.076
+dGPU,ff,32,table kernel,0,0.607
+dGPU,ff,32,branch-free kernel,0,7.652
+dGPU,ff,32,formation kernel,1,10.664
+dGPU,ff,32,coalesced formation kernel,1,10.834
+dGPU,ff,32,search kernel,1,25.651
+dGPU,ff,32,table kernel,1,1.054
+dGPU,ff,32,branch-free kernel,1,8.943
+dGPU,ff,32,formation kernel,2,10.198
+dGPU,ff,32,coalesced formation kernel,2,10.806
+dGPU,ff,32,search kernel,2,26.026
+dGPU,ff,32,table kernel,2,1.090
+dGPU,ff,32,branch-free kernel,2,9.165
+dGPU,ff,32,formation kernel,3,10.133
+dGPU,ff,32,coalesced formation kernel,3,10.302
+dGPU,ff,32,search kernel,3,25.168
+dGPU,ff,32,table kernel,3,1.112
+dGPU,ff,32,branch-free kernel,3,9.461
+dGPU,ff,32,formation kernel,4,10.146
+dGPU,ff,32,coalesced formation kernel,4,11.420
+dGPU,ff,32,search kernel,4,26.531
+dGPU,ff,32,table kernel,4,1.202
+dGPU,ff,32,branch-free kernel,4,9.460
+dGPU,ff,32,formation kernel,5,11.333
+dGPU,ff,32,coalesced formation kernel,5,11.760
+dGPU,ff,32,search kernel,5,26.902
+dGPU,ff,32,table kernel,5,1.008
+dGPU,ff,32,branch-free kernel,5,8.492
+dGPU,ff,32,formation kernel,6,10.480
+dGPU,ff,32,coalesced formation kernel,6,12.406
+dGPU,ff,32,search kernel,6,24.602
+dGPU,ff,32,table kernel,6,1.128
+dGPU,ff,32,branch-free kernel,6,8.864
+dGPU,ff,32,formation kernel,7,10.221
+dGPU,ff,32,coalesced formation kernel,7,11.602
+dGPU,ff,32,search kernel,7,24.941
+dGPU,ff,32,table kernel,7,1.034
+dGPU,ff,32,branch-free kernel,7,8.747
+dGPU,ff,32,formation kernel,8,10.361
+dGPU,ff,32,coalesced formation kernel,8,10.907
+dGPU,ff,32,search kernel,8,25.565
+dGPU,ff,32,table kernel,8,1.054
+dGPU,ff,32,branch-free kernel,8,8.882
+dGPU,ff,32,formation kernel,9,10.179
+dGPU,ff,32,coalesced formation kernel,9,10.355
+dGPU,ff,32,search kernel,9,25.290
+dGPU,ff,32,table kernel,9,1.121
+dGPU,ff,32,branch-free kernel,9,9.411
+dGPU,zero,32,formation kernel,0,5.978
+dGPU,zero,32,coalesced formation kernel,0,9.174
+dGPU,zero,32,search kernel,0,0.950
+dGPU,zero,32,table kernel,0,0.914
+dGPU,zero,32,branch-free kernel,0,7.614
+dGPU,zero,32,formation kernel,1,10.285
+dGPU,zero,32,coalesced formation kernel,1,10.333
+dGPU,zero,32,search kernel,1,0.945
+dGPU,zero,32,table kernel,1,0.913
+dGPU,zero,32,branch-free kernel,1,9.304
+dGPU,zero,32,formation kernel,2,12.717
+dGPU,zero,32,coalesced formation kernel,2,13.729
+dGPU,zero,32,search kernel,2,1.277
+dGPU,zero,32,table kernel,2,1.219
+dGPU,zero,32,branch-free kernel,2,10.818
+dGPU,zero,32,formation kernel,3,13.824
+dGPU,zero,32,coalesced formation kernel,3,15.271
+dGPU,zero,32,search kernel,3,1.397
+dGPU,zero,32,table kernel,3,1.335
+dGPU,zero,32,branch-free kernel,3,10.489
+dGPU,zero,32,formation kernel,4,12.497
+dGPU,zero,32,coalesced formation kernel,4,15.148
+dGPU,zero,32,search kernel,4,1.332
+dGPU,zero,32,table kernel,4,1.074
+dGPU,zero,32,branch-free kernel,4,9.034
+dGPU,zero,32,formation kernel,5,11.423
+dGPU,zero,32,coalesced formation kernel,5,13.092
+dGPU,zero,32,search kernel,5,1.222
+dGPU,zero,32,table kernel,5,1.165
+dGPU,zero,32,branch-free kernel,5,9.953
+dGPU,zero,32,formation kernel,6,12.047
+dGPU,zero,32,coalesced formation kernel,6,13.532
+dGPU,zero,32,search kernel,6,1.109
+dGPU,zero,32,table kernel,6,1.060
+dGPU,zero,32,branch-free kernel,6,9.040
+dGPU,zero,32,formation kernel,7,11.342
+dGPU,zero,32,coalesced formation kernel,7,11.814
+dGPU,zero,32,search kernel,7,1.106
+dGPU,zero,32,table kernel,7,1.058
+dGPU,zero,32,branch-free kernel,7,9.012
+dGPU,zero,32,formation kernel,8,11.436
+dGPU,zero,32,coalesced formation kernel,8,14.069
+dGPU,zero,32,search kernel,8,1.123
+dGPU,zero,32,table kernel,8,1.075
+dGPU,zero,32,branch-free kernel,8,9.298
+dGPU,zero,32,formation kernel,9,10.986
+dGPU,zero,32,coalesced formation kernel,9,11.027
+dGPU,zero,32,search kernel,9,1.116
+dGPU,zero,32,table kernel,9,1.103
+dGPU,zero,32,branch-free kernel,9,8.879
+dGPU,ru,32,formation kernel,0,9.159
+dGPU,ru,32,coalesced formation kernel,0,8.789
+dGPU,ru,32,search kernel,0,31.137
+dGPU,ru,32,table kernel,0,0.848
+dGPU,ru,32,branch-free kernel,0,6.893
+dGPU,ru,32,formation kernel,1,10.156
+dGPU,ru,32,coalesced formation kernel,1,10.688
+dGPU,ru,32,search kernel,1,35.567
+dGPU,ru,32,table kernel,1,0.844
+dGPU,ru,32,branch-free kernel,1,6.964
+dGPU,ru,32,formation kernel,2,9.988
+dGPU,ru,32,coalesced formation kernel,2,9.423
+dGPU,ru,32,search kernel,2,31.542
+dGPU,ru,32,table kernel,2,0.827
+dGPU,ru,32,branch-free kernel,2,6.745
+dGPU,ru,32,formation kernel,3,9.137
+dGPU,ru,32,coalesced formation kernel,3,8.720
+dGPU,ru,32,search kernel,3,34.142
+dGPU,ru,32,table kernel,3,0.900
+dGPU,ru,32,branch-free kernel,3,7.165
+dGPU,ru,32,formation kernel,4,9.585
+dGPU,ru,32,coalesced formation kernel,4,9.861
+dGPU,ru,32,search kernel,4,42.706
+dGPU,ru,32,table kernel,4,0.931
+dGPU,ru,32,branch-free kernel,4,7.707
+dGPU,ru,32,formation kernel,5,9.877
+dGPU,ru,32,coalesced formation kernel,5,9.455
+dGPU,ru,32,search kernel,5,41.271
+dGPU,ru,32,table kernel,5,0.884
+dGPU,ru,32,branch-free kernel,5,7.160
+dGPU,ru,32,formation kernel,6,10.012
+dGPU,ru,32,coalesced formation kernel,6,9.573
+dGPU,ru,32,search kernel,6,33.260
+dGPU,ru,32,table kernel,6,0.911
+dGPU,ru,32,branch-free kernel,6,7.127
+dGPU,ru,32,formation kernel,7,9.415
+dGPU,ru,32,coalesced formation kernel,7,8.897
+dGPU,ru,32,search kernel,7,35.920
+dGPU,ru,32,table kernel,7,0.908
+dGPU,ru,32,branch-free kernel,7,6.902
+dGPU,ru,32,formation kernel,8,9.893
+dGPU,ru,32,coalesced formation kernel,8,9.254
+dGPU,ru,32,search kernel,8,32.004
+dGPU,ru,32,table kernel,8,0.784
+dGPU,ru,32,branch-free kernel,8,6.359
+dGPU,ru,32,formation kernel,9,9.010
+dGPU,ru,32,coalesced formation kernel,9,8.211
+dGPU,ru,32,search kernel,9,30.612
+dGPU,ru,32,table kernel,9,0.996
+dGPU,ru,32,branch-free kernel,9,7.324
+dGPU,uniform,64,formation kernel,0,9.505
+dGPU,uniform,64,coalesced formation kernel,0,5.507
+dGPU,uniform,64,search kernel,0,37.950
+dGPU,uniform,64,table kernel,0,0.763
+dGPU,uniform,64,branch-free kernel,0,6.711
+dGPU,uniform,64,formation kernel,1,9.993
+dGPU,uniform,64,coalesced formation kernel,1,5.893
+dGPU,uniform,64,search kernel,1,44.243
+dGPU,uniform,64,table kernel,1,0.796
+dGPU,uniform,64,branch-free kernel,1,7.041
+dGPU,uniform,64,formation kernel,2,10.457
+dGPU,uniform,64,coalesced formation kernel,2,6.296
+dGPU,uniform,64,search kernel,2,47.933
+dGPU,uniform,64,table kernel,2,0.753
+dGPU,uniform,64,branch-free kernel,2,7.021
+dGPU,uniform,64,formation kernel,3,9.996
+dGPU,uniform,64,coalesced formation kernel,3,5.798
+dGPU,uniform,64,search kernel,3,41.522
+dGPU,uniform,64,table kernel,3,0.723
+dGPU,uniform,64,branch-free kernel,3,6.760
+dGPU,uniform,64,formation kernel,4,10.418
+dGPU,uniform,64,coalesced formation kernel,4,6.066
+dGPU,uniform,64,search kernel,4,44.335
+dGPU,uniform,64,table kernel,4,0.930
+dGPU,uniform,64,branch-free kernel,4,8.648
+dGPU,uniform,64,formation kernel,5,9.371
+dGPU,uniform,64,coalesced formation kernel,5,5.524
+dGPU,uniform,64,search kernel,5,44.457
+dGPU,uniform,64,table kernel,5,0.730
+dGPU,uniform,64,branch-free kernel,5,6.926
+dGPU,uniform,64,formation kernel,6,10.443
+dGPU,uniform,64,coalesced formation kernel,6,6.446
+dGPU,uniform,64,search kernel,6,49.598
+dGPU,uniform,64,table kernel,6,0.823
+dGPU,uniform,64,branch-free kernel,6,6.977
+dGPU,uniform,64,formation kernel,7,10.488
+dGPU,uniform,64,coalesced formation kernel,7,7.507
+dGPU,uniform,64,search kernel,7,48.579
+dGPU,uniform,64,table kernel,7,0.732
+dGPU,uniform,64,branch-free kernel,7,6.697
+dGPU,uniform,64,formation kernel,8,10.436
+dGPU,uniform,64,coalesced formation kernel,8,6.452
+dGPU,uniform,64,search kernel,8,47.125
+dGPU,uniform,64,table kernel,8,0.780
+dGPU,uniform,64,branch-free kernel,8,6.538
+dGPU,uniform,64,formation kernel,9,10.175
+dGPU,uniform,64,coalesced formation kernel,9,6.038
+dGPU,uniform,64,search kernel,9,42.585
+dGPU,uniform,64,table kernel,9,0.730
+dGPU,uniform,64,branch-free kernel,9,6.934
+dGPU,ff,64,formation kernel,0,6.041
+dGPU,ff,64,coalesced formation kernel,0,3.206
+dGPU,ff,64,search kernel,0,1.241
+dGPU,ff,64,table kernel,0,0.612
+dGPU,ff,64,branch-free kernel,0,3.615
+dGPU,ff,64,formation kernel,1,11.330
+dGPU,ff,64,coalesced formation kernel,1,9.911
+dGPU,ff,64,search kernel,1,3.786
+dGPU,ff,64,table kernel,1,1.483
+dGPU,ff,64,branch-free kernel,1,14.550
+dGPU,ff,64,formation kernel,2,19.225
+dGPU,ff,64,coalesced formation kernel,2,11.117
+dGPU,ff,64,search kernel,2,4.184
+dGPU,ff,64,table kernel,2,1.262
+dGPU,ff,64,branch-free kernel,2,12.563
+dGPU,ff,64,formation kernel,3,17.122
+dGPU,ff,64,coalesced formation kernel,3,12.664
+dGPU,ff,64,search kernel,3,3.712
+dGPU,ff,64,table kernel,3,1.111
+dGPU,ff,64,branch-free kernel,3,10.535
+dGPU,ff,64,formation kernel,4,13.084
+dGPU,ff,64,coalesced formation kernel,4,8.992
+dGPU,ff,64,search kernel,4,3.421
+dGPU,ff,64,table kernel,4,1.037
+dGPU,ff,64,branch-free kernel,4,10.057
+dGPU,ff,64,formation kernel,5,13.060
+dGPU,ff,64,coalesced formation kernel,5,10.829
+dGPU,ff,64,search kernel,5,4.087
+dGPU,ff,64,table kernel,5,1.236
+dGPU,ff,64,branch-free kernel,5,11.530
+dGPU,ff,64,formation kernel,6,17.143
+dGPU,ff,64,coalesced formation kernel,6,11.652
+dGPU,ff,64,search kernel,6,3.786
+dGPU,ff,64,table kernel,6,1.139
+dGPU,ff,64,branch-free kernel,6,12.427
+dGPU,ff,64,formation kernel,7,17.998
+dGPU,ff,64,coalesced formation kernel,7,11.487
+dGPU,ff,64,search kernel,7,4.367
+dGPU,ff,64,table kernel,7,1.213
+dGPU,ff,64,branch-free kernel,7,11.758
+dGPU,ff,64,formation kernel,8,18.454
+dGPU,ff,64,coalesced formation kernel,8,11.262
+dGPU,ff,64,search kernel,8,4.088
+dGPU,ff,64,table kernel,8,1.238
+dGPU,ff,64,branch-free kernel,8,12.004
+dGPU,ff,64,formation kernel,9,16.728
+dGPU,ff,64,coalesced formation kernel,9,11.483
+dGPU,ff,64,search kernel,9,3.942
+dGPU,ff,64,table kernel,9,1.099
+dGPU,ff,64,branch-free kernel,9,10.532
+dGPU,zero,64,formation kernel,0,8.014
+dGPU,zero,64,coalesced formation kernel,0,4.533
+dGPU,zero,64,search kernel,0,0.656
+dGPU,zero,64,table kernel,0,0.775
+dGPU,zero,64,branch-free kernel,0,9.536
+dGPU,zero,64,formation kernel,1,11.191
+dGPU,zero,64,coalesced formation kernel,1,8.001
+dGPU,zero,64,search kernel,1,0.942
+dGPU,zero,64,table kernel,1,0.949
+dGPU,zero,64,branch-free kernel,1,8.933
+dGPU,zero,64,formation kernel,2,13.656
+dGPU,zero,64,coalesced formation kernel,2,10.598
+dGPU,zero,64,search kernel,2,1.016
+dGPU,zero,64,table kernel,2,1.003
+dGPU,zero,64,branch-free kernel,2,9.725
+dGPU,zero,64,formation kernel,3,15.236
+dGPU,zero,64,coalesced formation kernel,3,10.879
+dGPU,zero,64,search kernel,3,1.104
+dGPU,zero,64,table kernel,3,1.078
+dGPU,zero,64,branch-free kernel,3,10.363
+dGPU,zero,64,formation kernel,4,15.738
+dGPU,zero,64,coalesced formation kernel,4,9.731
+dGPU,zero,64,search kernel,4,1.105
+dGPU,zero,64,table kernel,4,1.070
+dGPU,zero,64,branch-free kernel,4,10.323
+dGPU,zero,64,formation kernel,5,12.858
+dGPU,zero,64,coalesced formation kernel,5,9.881
+dGPU,zero,64,search kernel,5,1.257
+dGPU,zero,64,table kernel,5,1.218
+dGPU,zero,64,branch-free kernel,5,11.843
+dGPU,zero,64,formation kernel,6,16.875
+dGPU,zero,64,coalesced formation kernel,6,10.998
+dGPU,zero,64,search kernel,6,1.307
+dGPU,zero,64,table kernel,6,1.260
+dGPU,zero,64,branch-free kernel,6,12.278
+dGPU,zero,64,formation kernel,7,18.357
+dGPU,zero,64,coalesced formation kernel,7,11.292
+dGPU,zero,64,search kernel,7,1.272
+dGPU,zero,64,table kernel,7,1.208
+dGPU,zero,64,branch-free kernel,7,12.780
+dGPU,zero,64,formation kernel,8,16.995
+dGPU,zero,64,coalesced formation kernel,8,11.000
+dGPU,zero,64,search kernel,8,1.304
+dGPU,zero,64,table kernel,8,1.158
+dGPU,zero,64,branch-free kernel,8,10.361
+dGPU,zero,64,formation kernel,9,12.861
+dGPU,zero,64,coalesced formation kernel,9,9.233
+dGPU,zero,64,search kernel,9,1.208
+dGPU,zero,64,table kernel,9,1.240
+dGPU,zero,64,branch-free kernel,9,11.081
+dGPU,ru,64,formation kernel,0,8.556
+dGPU,ru,64,coalesced formation kernel,0,5.306
+dGPU,ru,64,search kernel,0,23.439
+dGPU,ru,64,table kernel,0,0.828
+dGPU,ru,64,branch-free kernel,0,7.517
+dGPU,ru,64,formation kernel,1,10.535
+dGPU,ru,64,coalesced formation kernel,1,6.580
+dGPU,ru,64,search kernel,1,25.016
+dGPU,ru,64,table kernel,1,0.855
+dGPU,ru,64,branch-free kernel,1,8.118
+dGPU,ru,64,formation kernel,2,10.451
+dGPU,ru,64,coalesced formation kernel,2,6.718
+dGPU,ru,64,search kernel,2,25.085
+dGPU,ru,64,table kernel,2,0.811
+dGPU,ru,64,branch-free kernel,2,8.523
+dGPU,ru,64,formation kernel,3,10.614
+dGPU,ru,64,coalesced formation kernel,3,6.532
+dGPU,ru,64,search kernel,3,25.971
+dGPU,ru,64,table kernel,3,0.768
+dGPU,ru,64,branch-free kernel,3,8.137
+dGPU,ru,64,formation kernel,4,10.441
+dGPU,ru,64,coalesced formation kernel,4,6.289
+dGPU,ru,64,search kernel,4,24.794
+dGPU,ru,64,table kernel,4,0.773
+dGPU,ru,64,branch-free kernel,4,8.023
+dGPU,ru,64,formation kernel,5,9.434
+dGPU,ru,64,coalesced formation kernel,5,5.531
+dGPU,ru,64,search kernel,5,23.790
+dGPU,ru,64,table kernel,5,0.733
+dGPU,ru,64,branch-free kernel,5,7.692
+dGPU,ru,64,formation kernel,6,10.616
+dGPU,ru,64,coalesced formation kernel,6,7.014
+dGPU,ru,64,search kernel,6,24.758
+dGPU,ru,64,table kernel,6,0.768
+dGPU,ru,64,branch-free kernel,6,7.923
+dGPU,ru,64,formation kernel,7,10.526
+dGPU,ru,64,coalesced formation kernel,7,6.750
+dGPU,ru,64,search kernel,7,27.636
+dGPU,ru,64,table kernel,7,0.845
+dGPU,ru,64,branch-free kernel,7,7.676
+dGPU,ru,64,formation kernel,8,10.448
+dGPU,ru,64,coalesced formation kernel,8,6.625
+dGPU,ru,64,search kernel,8,24.302
+dGPU,ru,64,table kernel,8,0.802
+dGPU,ru,64,branch-free kernel,8,8.511
+dGPU,ru,64,formation kernel,9,10.445
+dGPU,ru,64,coalesced formation kernel,9,6.535
+dGPU,ru,64,search kernel,9,24.728
+dGPU,ru,64,table kernel,9,0.769
+dGPU,ru,64,branch-free kernel,9,8.156
+dGPU,uniform,128,formation kernel,0,6.899
+dGPU,uniform,128,coalesced formation kernel,0,3.856
+dGPU,uniform,128,search kernel,0,19.764
+dGPU,uniform,128,table kernel,0,0.695
+dGPU,uniform,128,branch-free kernel,0,4.285
+dGPU,uniform,128,formation kernel,1,6.780
+dGPU,uniform,128,coalesced formation kernel,1,3.862
+dGPU,uniform,128,search kernel,1,30.464
+dGPU,uniform,128,table kernel,1,0.975
+dGPU,uniform,128,branch-free kernel,1,7.287
+dGPU,uniform,128,formation kernel,2,10.267
+dGPU,uniform,128,coalesced formation kernel,2,5.998
+dGPU,uniform,128,search kernel,2,39.276
+dGPU,uniform,128,table kernel,2,0.884
+dGPU,uniform,128,branch-free kernel,2,7.712
+dGPU,uniform,128,formation kernel,3,10.294
+dGPU,uniform,128,coalesced formation kernel,3,6.538
+dGPU,uniform,128,search kernel,3,34.344
+dGPU,uniform,128,table kernel,3,0.885
+dGPU,uniform,128,branch-free kernel,3,7.782
+dGPU,uniform,128,formation kernel,4,10.390
+dGPU,uniform,128,coalesced formation kernel,4,7.873
+dGPU,uniform,128,search kernel,4,41.784
+dGPU,uniform,128,table kernel,4,0.842
+dGPU,uniform,128,branch-free kernel,4,7.515
+dGPU,uniform,128,formation kernel,5,10.294
+dGPU,uniform,128,coalesced formation kernel,5,6.375
+dGPU,uniform,128,search kernel,5,40.961
+dGPU,uniform,128,table kernel,5,0.820
+dGPU,uniform,128,branch-free kernel,5,7.731
+dGPU,uniform,128,formation kernel,6,10.404
+dGPU,uniform,128,coalesced formation kernel,6,6.923
+dGPU,uniform,128,search kernel,6,39.196
+dGPU,uniform,128,table kernel,6,0.820
+dGPU,uniform,128,branch-free kernel,6,7.791
+dGPU,uniform,128,formation kernel,7,10.289
+dGPU,uniform,128,coalesced formation kernel,7,6.441
+dGPU,uniform,128,search kernel,7,40.666
+dGPU,uniform,128,table kernel,7,0.902
+dGPU,uniform,128,branch-free kernel,7,7.543
+dGPU,uniform,128,formation kernel,8,10.324
+dGPU,uniform,128,coalesced formation kernel,8,7.306
+dGPU,uniform,128,search kernel,8,42.729
+dGPU,uniform,128,table kernel,8,0.839
+dGPU,uniform,128,branch-free kernel,8,7.913
+dGPU,uniform,128,formation kernel,9,10.702
+dGPU,uniform,128,coalesced formation kernel,9,7.149
+dGPU,uniform,128,search kernel,9,38.501
+dGPU,uniform,128,table kernel,9,0.825
+dGPU,uniform,128,branch-free kernel,9,6.728
+dGPU,ff,128,formation kernel,0,7.273
+dGPU,ff,128,coalesced formation kernel,0,5.529
+dGPU,ff,128,search kernel,0,19.825
+dGPU,ff,128,table kernel,0,0.812
+dGPU,ff,128,branch-free kernel,0,7.539
+dGPU,ff,128,formation kernel,1,10.375
+dGPU,ff,128,coalesced formation kernel,1,6.178
+dGPU,ff,128,search kernel,1,20.864
+dGPU,ff,128,table kernel,1,0.809
+dGPU,ff,128,branch-free kernel,1,7.499
+dGPU,ff,128,formation kernel,2,10.305
+dGPU,ff,128,coalesced formation kernel,2,6.419
+dGPU,ff,128,search kernel,2,21.179
+dGPU,ff,128,table kernel,2,0.810
+dGPU,ff,128,branch-free kernel,2,7.105
+dGPU,ff,128,formation kernel,3,10.309
+dGPU,ff,128,coalesced formation kernel,3,6.500
+dGPU,ff,128,search kernel,3,20.788
+dGPU,ff,128,table kernel,3,0.810
+dGPU,ff,128,branch-free kernel,3,6.591
+dGPU,ff,128,formation kernel,4,10.045
+dGPU,ff,128,coalesced formation kernel,4,5.790
+dGPU,ff,128,search kernel,4,19.330
+dGPU,ff,128,table kernel,4,0.803
+dGPU,ff,128,branch-free kernel,4,6.547
+dGPU,ff,128,formation kernel,5,9.541
+dGPU,ff,128,coalesced formation kernel,5,5.630
+dGPU,ff,128,search kernel,5,18.560
+dGPU,ff,128,table kernel,5,0.802
+dGPU,ff,128,branch-free kernel,5,6.689
+dGPU,ff,128,formation kernel,6,10.169
+dGPU,ff,128,coalesced formation kernel,6,5.937
+dGPU,ff,128,search kernel,6,19.493
+dGPU,ff,128,table kernel,6,0.802
+dGPU,ff,128,branch-free kernel,6,6.531
+dGPU,ff,128,formation kernel,7,9.792
+dGPU,ff,128,coalesced formation kernel,7,5.830
+dGPU,ff,128,search kernel,7,19.108
+dGPU,ff,128,table kernel,7,0.822
+dGPU,ff,128,branch-free kernel,7,6.555
+dGPU,ff,128,formation kernel,8,9.678
+dGPU,ff,128,coalesced formation kernel,8,5.749
+dGPU,ff,128,search kernel,8,18.798
+dGPU,ff,128,table kernel,8,0.875
+dGPU,ff,128,branch-free kernel,8,6.530
+dGPU,ff,128,formation kernel,9,9.883
+dGPU,ff,128,coalesced formation kernel,9,5.675
+dGPU,ff,128,search kernel,9,18.760
+dGPU,ff,128,table kernel,9,0.806
+dGPU,ff,128,branch-free kernel,9,6.343
+dGPU,zero,128,formation kernel,0,5.981
+dGPU,zero,128,coalesced formation kernel,0,3.293
+dGPU,zero,128,search kernel,0,0.868
+dGPU,zero,128,table kernel,0,0.848
+dGPU,zero,128,branch-free kernel,0,6.216
+dGPU,zero,128,formation kernel,1,9.350
+dGPU,zero,128,coalesced formation kernel,1,5.566
+dGPU,zero,128,search kernel,1,0.852
+dGPU,zero,128,table kernel,1,0.792
+dGPU,zero,128,branch-free kernel,1,6.208
+dGPU,zero,128,formation kernel,2,9.289
+dGPU,zero,128,coalesced formation kernel,2,5.528
+dGPU,zero,128,search kernel,2,0.852
+dGPU,zero,128,table kernel,2,0.900
+dGPU,zero,128,branch-free kernel,2,6.450
+dGPU,zero,128,formation kernel,3,9.778
+dGPU,zero,128,coalesced formation kernel,3,6.047
+dGPU,zero,128,search kernel,3,0.841
+dGPU,zero,128,table kernel,3,0.885
+dGPU,zero,128,branch-free kernel,3,6.830
+dGPU,zero,128,formation kernel,4,10.370
+dGPU,zero,128,coalesced formation kernel,4,6.137
+dGPU,zero,128,search kernel,4,0.833
+dGPU,zero,128,table kernel,4,0.896
+dGPU,zero,128,branch-free kernel,4,6.739
+dGPU,zero,128,formation kernel,5,10.384
+dGPU,zero,128,coalesced formation kernel,5,6.034
+dGPU,zero,128,search kernel,5,0.853
+dGPU,zero,128,table kernel,5,0.834
+dGPU,zero,128,branch-free kernel,5,6.756
+dGPU,zero,128,formation kernel,6,10.383
+dGPU,zero,128,coalesced formation kernel,6,6.548
+dGPU,zero,128,search kernel,6,0.843
+dGPU,zero,128,table kernel,6,0.847
+dGPU,zero,128,branch-free kernel,6,6.917
+dGPU,zero,128,formation kernel,7,10.271
+dGPU,zero,128,coalesced formation kernel,7,8.112
+dGPU,zero,128,search kernel,7,0.969
+dGPU,zero,128,table kernel,7,0.940
+dGPU,zero,128,branch-free kernel,7,9.104
+dGPU,zero,128,formation kernel,8,11.354
+dGPU,zero,128,coalesced formation kernel,8,7.385
+dGPU,zero,128,search kernel,8,0.844
+dGPU,zero,128,table kernel,8,0.894
+dGPU,zero,128,branch-free kernel,8,7.287
+dGPU,zero,128,formation kernel,9,10.313
+dGPU,zero,128,coalesced formation kernel,9,6.701
+dGPU,zero,128,search kernel,9,0.853
+dGPU,zero,128,table kernel,9,0.797
+dGPU,zero,128,branch-free kernel,9,7.422
+dGPU,ru,128,formation kernel,0,8.834
+dGPU,ru,128,coalesced formation kernel,0,5.450
+dGPU,ru,128,search kernel,0,35.712
+dGPU,ru,128,table kernel,0,0.801
+dGPU,ru,128,branch-free kernel,0,7.121
+dGPU,ru,128,formation kernel,1,10.134
+dGPU,ru,128,coalesced formation kernel,1,5.959
+dGPU,ru,128,search kernel,1,39.590
+dGPU,ru,128,table kernel,1,0.806
+dGPU,ru,128,branch-free kernel,1,6.452
+dGPU,ru,128,formation kernel,2,9.387
+dGPU,ru,128,coalesced formation kernel,2,5.474
+dGPU,ru,128,search kernel,2,40.113
+dGPU,ru,128,table kernel,2,0.825
+dGPU,ru,128,branch-free kernel,2,6.141
+dGPU,ru,128,formation kernel,3,8.676
+dGPU,ru,128,coalesced formation kernel,3,5.187
+dGPU,ru,128,search kernel,3,36.856
+dGPU,ru,128,table kernel,3,0.812
+dGPU,ru,128,branch-free kernel,3,6.426
+dGPU,ru,128,formation kernel,4,10.229
+dGPU,ru,128,coalesced formation kernel,4,5.747
+dGPU,ru,128,search kernel,4,38.474
+dGPU,ru,128,table kernel,4,0.818
+dGPU,ru,128,branch-free kernel,4,6.304
+dGPU,ru,128,formation kernel,5,9.057
+dGPU,ru,128,coalesced formation kernel,5,5.277
+dGPU,ru,128,search kernel,5,38.247
+dGPU,ru,128,table kernel,5,0.805
+dGPU,ru,128,branch-free kernel,5,6.369
+dGPU,ru,128,formation kernel,6,9.022
+dGPU,ru,128,coalesced formation kernel,6,5.413
+dGPU,ru,128,search kernel,6,37.419
+dGPU,ru,128,table kernel,6,0.808
+dGPU,ru,128,branch-free kernel,6,6.558
+dGPU,ru,128,formation kernel,7,10.267
+dGPU,ru,128,coalesced formation kernel,7,5.743
+dGPU,ru,128,search kernel,7,38.335
+dGPU,ru,128,table kernel,7,0.836
+dGPU,ru,128,branch-free kernel,7,6.419
+dGPU,ru,128,formation kernel,8,9.315
+dGPU,ru,128,coalesced formation kernel,8,5.463
+dGPU,ru,128,search kernel,8,36.522
+dGPU,ru,128,table kernel,8,0.836
+dGPU,ru,128,branch-free kernel,8,6.119
+dGPU,ru,128,formation kernel,9,8.582
+dGPU,ru,128,coalesced formation kernel,9,5.219
+dGPU,ru,128,search kernel,9,35.599
+dGPU,ru,128,table kernel,9,0.818
+dGPU,ru,128,branch-free kernel,9,6.227
+dGPU,uniform,256,formation kernel,0,8.534
+dGPU,uniform,256,coalesced formation kernel,0,5.287
+dGPU,uniform,256,search kernel,0,32.117
+dGPU,uniform,256,table kernel,0,0.808
+dGPU,uniform,256,branch-free kernel,0,6.238
+dGPU,uniform,256,formation kernel,1,8.856
+dGPU,uniform,256,coalesced formation kernel,1,5.359
+dGPU,uniform,256,search kernel,1,35.082
+dGPU,uniform,256,table kernel,1,0.814
+dGPU,uniform,256,branch-free kernel,1,6.240
+dGPU,uniform,256,formation kernel,2,8.522
+dGPU,uniform,256,coalesced formation kernel,2,5.336
+dGPU,uniform,256,search kernel,2,32.624
+dGPU,uniform,256,table kernel,2,0.801
+dGPU,uniform,256,branch-free kernel,2,6.070
+dGPU,uniform,256,formation kernel,3,9.243
+dGPU,uniform,256,coalesced formation kernel,3,5.359
+dGPU,uniform,256,search kernel,3,34.993
+dGPU,uniform,256,table kernel,3,0.818
+dGPU,uniform,256,branch-free kernel,3,6.186
+dGPU,uniform,256,formation kernel,4,8.836
+dGPU,uniform,256,coalesced formation kernel,4,5.389
+dGPU,uniform,256,search kernel,4,34.245
+dGPU,uniform,256,table kernel,4,0.805
+dGPU,uniform,256,branch-free kernel,4,6.348
+dGPU,uniform,256,formation kernel,5,9.424
+dGPU,uniform,256,coalesced formation kernel,5,5.711
+dGPU,uniform,256,search kernel,5,33.707
+dGPU,uniform,256,table kernel,5,0.807
+dGPU,uniform,256,branch-free kernel,5,6.417
+dGPU,uniform,256,formation kernel,6,9.373
+dGPU,uniform,256,coalesced formation kernel,6,5.485
+dGPU,uniform,256,search kernel,6,35.868
+dGPU,uniform,256,table kernel,6,0.805
+dGPU,uniform,256,branch-free kernel,6,5.794
+dGPU,uniform,256,formation kernel,7,8.549
+dGPU,uniform,256,coalesced formation kernel,7,5.596
+dGPU,uniform,256,search kernel,7,34.867
+dGPU,uniform,256,table kernel,7,0.803
+dGPU,uniform,256,branch-free kernel,7,5.906
+dGPU,uniform,256,formation kernel,8,8.806
+dGPU,uniform,256,coalesced formation kernel,8,5.555
+dGPU,uniform,256,search kernel,8,34.829
+dGPU,uniform,256,table kernel,8,0.803
+dGPU,uniform,256,branch-free kernel,8,6.256
+dGPU,uniform,256,formation kernel,9,9.261
+dGPU,uniform,256,coalesced formation kernel,9,5.375
+dGPU,uniform,256,search kernel,9,35.606
+dGPU,uniform,256,table kernel,9,0.804
+dGPU,uniform,256,branch-free kernel,9,6.777
+dGPU,ff,256,formation kernel,0,6.715
+dGPU,ff,256,coalesced formation kernel,0,3.938
+dGPU,ff,256,search kernel,0,6.408
+dGPU,ff,256,table kernel,0,0.818
+dGPU,ff,256,branch-free kernel,0,6.311
+dGPU,ff,256,formation kernel,1,9.424
+dGPU,ff,256,coalesced formation kernel,1,5.732
+dGPU,ff,256,search kernel,1,7.302
+dGPU,ff,256,table kernel,1,0.808
+dGPU,ff,256,branch-free kernel,1,7.405
+dGPU,ff,256,formation kernel,2,10.360
+dGPU,ff,256,coalesced formation kernel,2,7.619
+dGPU,ff,256,search kernel,2,9.601
+dGPU,ff,256,table kernel,2,0.802
+dGPU,ff,256,branch-free kernel,2,7.703
+dGPU,ff,256,formation kernel,3,10.268
+dGPU,ff,256,coalesced formation kernel,3,7.107
+dGPU,ff,256,search kernel,3,9.011
+dGPU,ff,256,table kernel,3,0.799
+dGPU,ff,256,branch-free kernel,3,7.650
+dGPU,ff,256,formation kernel,4,10.282
+dGPU,ff,256,coalesced formation kernel,4,7.179
+dGPU,ff,256,search kernel,4,9.171
+dGPU,ff,256,table kernel,4,0.854
+dGPU,ff,256,branch-free kernel,4,7.912
+dGPU,ff,256,formation kernel,5,10.298
+dGPU,ff,256,coalesced formation kernel,5,7.100
+dGPU,ff,256,search kernel,5,8.797
+dGPU,ff,256,table kernel,5,0.795
+dGPU,ff,256,branch-free kernel,5,7.483
+dGPU,ff,256,formation kernel,6,10.263
+dGPU,ff,256,coalesced formation kernel,6,7.098
+dGPU,ff,256,search kernel,6,9.068
+dGPU,ff,256,table kernel,6,0.791
+dGPU,ff,256,branch-free kernel,6,7.790
+dGPU,ff,256,formation kernel,7,10.261
+dGPU,ff,256,coalesced formation kernel,7,6.886
+dGPU,ff,256,search kernel,7,8.511
+dGPU,ff,256,table kernel,7,0.809
+dGPU,ff,256,branch-free kernel,7,7.216
+dGPU,ff,256,formation kernel,8,10.253
+dGPU,ff,256,coalesced formation kernel,8,6.814
+dGPU,ff,256,search kernel,8,8.457
+dGPU,ff,256,table kernel,8,0.807
+dGPU,ff,256,branch-free kernel,8,7.129
+dGPU,ff,256,formation kernel,9,10.293
+dGPU,ff,256,coalesced formation kernel,9,6.372
+dGPU,ff,256,search kernel,9,8.129
+dGPU,ff,256,table kernel,9,0.833
+dGPU,ff,256,branch-free kernel,9,7.045
+dGPU,zero,256,formation kernel,0,5.973
+dGPU,zero,256,coalesced formation kernel,0,3.313
+dGPU,zero,256,search kernel,0,0.837
+dGPU,zero,256,table kernel,0,0.787
+dGPU,zero,256,branch-free kernel,0,6.043
+dGPU,zero,256,formation kernel,1,8.908
+dGPU,zero,256,coalesced formation kernel,1,5.457
+dGPU,zero,256,search kernel,1,0.869
+dGPU,zero,256,table kernel,1,0.792
+dGPU,zero,256,branch-free kernel,1,6.087
+dGPU,zero,256,formation kernel,2,9.068
+dGPU,zero,256,coalesced formation kernel,2,6.170
+dGPU,zero,256,search kernel,2,0.883
+dGPU,zero,256,table kernel,2,0.799
+dGPU,zero,256,branch-free kernel,2,6.380
+dGPU,zero,256,formation kernel,3,9.815
+dGPU,zero,256,coalesced formation kernel,3,7.394
+dGPU,zero,256,search kernel,3,0.905
+dGPU,zero,256,table kernel,3,0.858
+dGPU,zero,256,branch-free kernel,3,7.817
+dGPU,zero,256,formation kernel,4,10.251
+dGPU,zero,256,coalesced formation kernel,4,6.564
+dGPU,zero,256,search kernel,4,0.850
+dGPU,zero,256,table kernel,4,0.801
+dGPU,zero,256,branch-free kernel,4,6.761
+dGPU,zero,256,formation kernel,5,10.241
+dGPU,zero,256,coalesced formation kernel,5,6.720
+dGPU,zero,256,search kernel,5,0.879
+dGPU,zero,256,table kernel,5,0.798
+dGPU,zero,256,branch-free kernel,5,7.208
+dGPU,zero,256,formation kernel,6,10.254
+dGPU,zero,256,coalesced formation kernel,6,6.233
+dGPU,zero,256,search kernel,6,0.857
+dGPU,zero,256,table kernel,6,0.800
+dGPU,zero,256,branch-free kernel,6,6.696
+dGPU,zero,256,formation kernel,7,10.253
+dGPU,zero,256,coalesced formation kernel,7,6.379
+dGPU,zero,256,search kernel,7,0.844
+dGPU,zero,256,table kernel,7,0.794
+dGPU,zero,256,branch-free kernel,7,7.010
+dGPU,zero,256,formation kernel,8,10.250
+dGPU,zero,256,coalesced formation kernel,8,6.317
+dGPU,zero,256,search kernel,8,0.847
+dGPU,zero,256,table kernel,8,0.792
+dGPU,zero,256,branch-free kernel,8,6.685
+dGPU,zero,256,formation kernel,9,10.318
+dGPU,zero,256,coalesced formation kernel,9,7.759
+dGPU,zero,256,search kernel,9,0.973
+dGPU,zero,256,table kernel,9,0.894
+dGPU,zero,256,branch-free kernel,9,7.632
+dGPU,ru,256,formation kernel,0,8.409
+dGPU,ru,256,coalesced formation kernel,0,5.429
+dGPU,ru,256,search kernel,0,31.532
+dGPU,ru,256,table kernel,0,0.796
+dGPU,ru,256,branch-free kernel,0,6.473
+dGPU,ru,256,formation kernel,1,9.186
+dGPU,ru,256,coalesced formation kernel,1,5.551
+dGPU,ru,256,search kernel,1,33.166
+dGPU,ru,256,table kernel,1,0.828
+dGPU,ru,256,branch-free kernel,1,6.419
+dGPU,ru,256,formation kernel,2,9.197
+dGPU,ru,256,coalesced formation kernel,2,5.557
+dGPU,ru,256,search kernel,2,32.544
+dGPU,ru,256,table kernel,2,0.801
+dGPU,ru,256,branch-free kernel,2,6.234
+dGPU,ru,256,formation kernel,3,9.399
+dGPU,ru,256,coalesced formation kernel,3,5.317
+dGPU,ru,256,search kernel,3,31.945
+dGPU,ru,256,table kernel,3,0.791
+dGPU,ru,256,branch-free kernel,3,6.401
+dGPU,ru,256,formation kernel,4,8.804
+dGPU,ru,256,coalesced formation kernel,4,5.373
+dGPU,ru,256,search kernel,4,32.764
+dGPU,ru,256,table kernel,4,0.790
+dGPU,ru,256,branch-free kernel,4,6.384
+dGPU,ru,256,formation kernel,5,9.005
+dGPU,ru,256,coalesced formation kernel,5,5.434
+dGPU,ru,256,search kernel,5,32.887
+dGPU,ru,256,table kernel,5,0.863
+dGPU,ru,256,branch-free kernel,5,6.310
+dGPU,ru,256,formation kernel,6,9.533
+dGPU,ru,256,coalesced formation kernel,6,5.733
+dGPU,ru,256,search kernel,6,32.431
+dGPU,ru,256,table kernel,6,0.794
+dGPU,ru,256,branch-free kernel,6,6.375
+dGPU,ru,256,formation kernel,7,9.245
+dGPU,ru,256,coalesced formation kernel,7,5.547
+dGPU,ru,256,search kernel,7,33.733
+dGPU,ru,256,table kernel,7,0.807
+dGPU,ru,256,branch-free kernel,7,6.595
+dGPU,ru,256,formation kernel,8,8.477
+dGPU,ru,256,coalesced formation kernel,8,5.114
+dGPU,ru,256,search kernel,8,32.603
+dGPU,ru,256,table kernel,8,0.808
+dGPU,ru,256,branch-free kernel,8,6.303
+dGPU,ru,256,formation kernel,9,8.990
+dGPU,ru,256,coalesced formation kernel,9,5.316
+dGPU,ru,256,search kernel,9,30.566
+dGPU,ru,256,table kernel,9,0.800
+dGPU,ru,256,branch-free kernel,9,6.749
+dGPU,uniform,512,formation kernel,0,8.096
+dGPU,uniform,512,coalesced formation kernel,0,5.192
+dGPU,uniform,512,search kernel,0,24.991
+dGPU,uniform,512,table kernel,0,0.959
+dGPU,uniform,512,branch-free kernel,0,5.741
+dGPU,uniform,512,formation kernel,1,8.461
+dGPU,uniform,512,coalesced formation kernel,1,5.361
+dGPU,uniform,512,search kernel,1,25.093
+dGPU,uniform,512,table kernel,1,0.920
+dGPU,uniform,512,branch-free kernel,1,5.976
+dGPU,uniform,512,formation kernel,2,8.293
+dGPU,uniform,512,coalesced formation kernel,2,5.408
+dGPU,uniform,512,search kernel,2,24.650
+dGPU,uniform,512,table kernel,2,0.919
+dGPU,uniform,512,branch-free kernel,2,6.004
+dGPU,uniform,512,formation kernel,3,8.600
+dGPU,uniform,512,coalesced formation kernel,3,5.426
+dGPU,uniform,512,search kernel,3,24.984
+dGPU,uniform,512,table kernel,3,0.940
+dGPU,uniform,512,branch-free kernel,3,5.712
+dGPU,uniform,512,formation kernel,4,8.586
+dGPU,uniform,512,coalesced formation kernel,4,5.517
+dGPU,uniform,512,search kernel,4,25.369
+dGPU,uniform,512,table kernel,4,0.934
+dGPU,uniform,512,branch-free kernel,4,6.087
+dGPU,uniform,512,formation kernel,5,8.460
+dGPU,uniform,512,coalesced formation kernel,5,5.459
+dGPU,uniform,512,search kernel,5,24.919
+dGPU,uniform,512,table kernel,5,0.917
+dGPU,uniform,512,branch-free kernel,5,5.983
+dGPU,uniform,512,formation kernel,6,8.710
+dGPU,uniform,512,coalesced formation kernel,6,5.402
+dGPU,uniform,512,search kernel,6,26.339
+dGPU,uniform,512,table kernel,6,0.918
+dGPU,uniform,512,branch-free kernel,6,5.874
+dGPU,uniform,512,formation kernel,7,8.743
+dGPU,uniform,512,coalesced formation kernel,7,5.580
+dGPU,uniform,512,search kernel,7,25.724
+dGPU,uniform,512,table kernel,7,0.930
+dGPU,uniform,512,branch-free kernel,7,6.131
+dGPU,uniform,512,formation kernel,8,8.516
+dGPU,uniform,512,coalesced formation kernel,8,5.471
+dGPU,uniform,512,search kernel,8,24.791
+dGPU,uniform,512,table kernel,8,0.992
+dGPU,uniform,512,branch-free kernel,8,6.025
+dGPU,uniform,512,formation kernel,9,8.235
+dGPU,uniform,512,coalesced formation kernel,9,5.298
+dGPU,uniform,512,search kernel,9,25.778
+dGPU,uniform,512,table kernel,9,0.925
+dGPU,uniform,512,branch-free kernel,9,5.889
+dGPU,ff,512,formation kernel,0,5.905
+dGPU,ff,512,coalesced formation kernel,0,3.421
+dGPU,ff,512,search kernel,0,0.837
+dGPU,ff,512,table kernel,0,0.794
+dGPU,ff,512,branch-free kernel,0,4.568
+dGPU,ff,512,formation kernel,1,9.047
+dGPU,ff,512,coalesced formation kernel,1,6.195
+dGPU,ff,512,search kernel,1,1.483
+dGPU,ff,512,table kernel,1,0.793
+dGPU,ff,512,branch-free kernel,1,7.209
+dGPU,ff,512,formation kernel,2,10.350
+dGPU,ff,512,coalesced formation kernel,2,7.669
+dGPU,ff,512,search kernel,2,1.638
+dGPU,ff,512,table kernel,2,0.842
+dGPU,ff,512,branch-free kernel,2,7.918
+dGPU,ff,512,formation kernel,3,10.325
+dGPU,ff,512,coalesced formation kernel,3,8.125
+dGPU,ff,512,search kernel,3,1.732
+dGPU,ff,512,table kernel,3,0.885
+dGPU,ff,512,branch-free kernel,3,8.541
+dGPU,ff,512,formation kernel,4,10.647
+dGPU,ff,512,coalesced formation kernel,4,7.859
+dGPU,ff,512,search kernel,4,1.571
+dGPU,ff,512,table kernel,4,0.815
+dGPU,ff,512,branch-free kernel,4,7.724
+dGPU,ff,512,formation kernel,5,10.338
+dGPU,ff,512,coalesced formation kernel,5,7.909
+dGPU,ff,512,search kernel,5,1.695
+dGPU,ff,512,table kernel,5,0.868
+dGPU,ff,512,branch-free kernel,5,8.363
+dGPU,ff,512,formation kernel,6,10.596
+dGPU,ff,512,coalesced formation kernel,6,7.889
+dGPU,ff,512,search kernel,6,1.695
+dGPU,ff,512,table kernel,6,0.864
+dGPU,ff,512,branch-free kernel,6,7.303
+dGPU,ff,512,formation kernel,7,10.185
+dGPU,ff,512,coalesced formation kernel,7,6.875
+dGPU,ff,512,search kernel,7,1.470
+dGPU,ff,512,table kernel,7,0.843
+dGPU,ff,512,branch-free kernel,7,7.199
+dGPU,ff,512,formation kernel,8,10.176
+dGPU,ff,512,coalesced formation kernel,8,6.625
+dGPU,ff,512,search kernel,8,1.416
+dGPU,ff,512,table kernel,8,0.799
+dGPU,ff,512,branch-free kernel,8,6.958
+dGPU,ff,512,formation kernel,9,10.283
+dGPU,ff,512,coalesced formation kernel,9,6.434
+dGPU,ff,512,search kernel,9,1.349
+dGPU,ff,512,table kernel,9,0.929
+dGPU,ff,512,branch-free kernel,9,6.691
+dGPU,zero,512,formation kernel,0,5.909
+dGPU,zero,512,coalesced formation kernel,0,3.433
+dGPU,zero,512,search kernel,0,0.837
+dGPU,zero,512,table kernel,0,0.787
+dGPU,zero,512,branch-free kernel,0,3.629
+dGPU,zero,512,formation kernel,1,5.914
+dGPU,zero,512,coalesced formation kernel,1,3.427
+dGPU,zero,512,search kernel,1,0.835
+dGPU,zero,512,table kernel,1,0.825
+dGPU,zero,512,branch-free kernel,1,6.000
+dGPU,zero,512,formation kernel,2,8.808
+dGPU,zero,512,coalesced formation kernel,2,5.581
+dGPU,zero,512,search kernel,2,0.839
+dGPU,zero,512,table kernel,2,0.861
+dGPU,zero,512,branch-free kernel,2,5.851
+dGPU,zero,512,formation kernel,3,9.562
+dGPU,zero,512,coalesced formation kernel,3,6.093
+dGPU,zero,512,search kernel,3,0.841
+dGPU,zero,512,table kernel,3,0.789
+dGPU,zero,512,branch-free kernel,3,6.318
+dGPU,zero,512,formation kernel,4,9.336
+dGPU,zero,512,coalesced formation kernel,4,6.144
+dGPU,zero,512,search kernel,4,0.841
+dGPU,zero,512,table kernel,4,0.792
+dGPU,zero,512,branch-free kernel,4,6.693
+dGPU,zero,512,formation kernel,5,9.975
+dGPU,zero,512,coalesced formation kernel,5,6.231
+dGPU,zero,512,search kernel,5,0.844
+dGPU,zero,512,table kernel,5,0.799
+dGPU,zero,512,branch-free kernel,5,6.537
+dGPU,zero,512,formation kernel,6,9.949
+dGPU,zero,512,coalesced formation kernel,6,6.250
+dGPU,zero,512,search kernel,6,0.841
+dGPU,zero,512,table kernel,6,0.797
+dGPU,zero,512,branch-free kernel,6,6.538
+dGPU,zero,512,formation kernel,7,9.936
+dGPU,zero,512,coalesced formation kernel,7,6.231
+dGPU,zero,512,search kernel,7,0.844
+dGPU,zero,512,table kernel,7,0.792
+dGPU,zero,512,branch-free kernel,7,6.539
+dGPU,zero,512,formation kernel,8,9.922
+dGPU,zero,512,coalesced formation kernel,8,6.236
+dGPU,zero,512,search kernel,8,0.839
+dGPU,zero,512,table kernel,8,0.796
+dGPU,zero,512,branch-free kernel,8,6.545
+dGPU,zero,512,formation kernel,9,10.204
+dGPU,zero,512,coalesced formation kernel,9,6.549
+dGPU,zero,512,search kernel,9,0.848
+dGPU,zero,512,table kernel,9,0.802
+dGPU,zero,512,branch-free kernel,9,6.857
+dGPU,ru,512,formation kernel,0,5.890
+dGPU,ru,512,coalesced formation kernel,0,3.439
+dGPU,ru,512,search kernel,0,22.331
+dGPU,ru,512,table kernel,0,0.801
+dGPU,ru,512,branch-free kernel,0,7.080
+dGPU,ru,512,formation kernel,1,10.175
+dGPU,ru,512,coalesced formation kernel,1,6.495
+dGPU,ru,512,search kernel,1,29.739
+dGPU,ru,512,table kernel,1,0.830
+dGPU,ru,512,branch-free kernel,1,6.990
+dGPU,ru,512,formation kernel,2,9.942
+dGPU,ru,512,coalesced formation kernel,2,6.256
+dGPU,ru,512,search kernel,2,28.635
+dGPU,ru,512,table kernel,2,0.806
+dGPU,ru,512,branch-free kernel,2,6.482
+dGPU,ru,512,formation kernel,3,9.580
+dGPU,ru,512,coalesced formation kernel,3,6.105
+dGPU,ru,512,search kernel,3,27.848
+dGPU,ru,512,table kernel,3,0.816
+dGPU,ru,512,branch-free kernel,3,6.672
+dGPU,ru,512,formation kernel,4,9.437
+dGPU,ru,512,coalesced formation kernel,4,6.042
+dGPU,ru,512,search kernel,4,28.011
+dGPU,ru,512,table kernel,4,0.805
+dGPU,ru,512,branch-free kernel,4,6.829
+dGPU,ru,512,formation kernel,5,9.718
+dGPU,ru,512,coalesced formation kernel,5,6.122
+dGPU,ru,512,search kernel,5,28.207
+dGPU,ru,512,table kernel,5,0.806
+dGPU,ru,512,branch-free kernel,5,6.705
+dGPU,ru,512,formation kernel,6,9.616
+dGPU,ru,512,coalesced formation kernel,6,6.020
+dGPU,ru,512,search kernel,6,29.724
+dGPU,ru,512,table kernel,6,0.805
+dGPU,ru,512,branch-free kernel,6,7.119
+dGPU,ru,512,formation kernel,7,10.196
+dGPU,ru,512,coalesced formation kernel,7,6.390
+dGPU,ru,512,search kernel,7,28.152
+dGPU,ru,512,table kernel,7,0.830
+dGPU,ru,512,branch-free kernel,7,6.295
+dGPU,ru,512,formation kernel,8,8.933
+dGPU,ru,512,coalesced formation kernel,8,5.757
+dGPU,ru,512,search kernel,8,27.365
+dGPU,ru,512,table kernel,8,0.801
+dGPU,ru,512,branch-free kernel,8,6.707
+dGPU,ru,512,formation kernel,9,9.493
+dGPU,ru,512,coalesced formation kernel,9,5.965
+dGPU,ru,512,search kernel,9,28.915
+dGPU,ru,512,table kernel,9,0.803
+dGPU,ru,512,branch-free kernel,9,6.701
+dGPU,uniform,1024,formation kernel,0,5.796
+dGPU,uniform,1024,coalesced formation kernel,0,4.984
+dGPU,uniform,1024,search kernel,0,20.791
+dGPU,uniform,1024,table kernel,0,0.800
+dGPU,uniform,1024,branch-free kernel,0,6.515
+dGPU,uniform,1024,formation kernel,1,8.930
+dGPU,uniform,1024,coalesced formation kernel,1,7.822
+dGPU,uniform,1024,search kernel,1,26.755
+dGPU,uniform,1024,table kernel,1,0.804
+dGPU,uniform,1024,branch-free kernel,1,6.395
+dGPU,uniform,1024,formation kernel,2,9.024
+dGPU,uniform,1024,coalesced formation kernel,2,8.161
+dGPU,uniform,1024,search kernel,2,26.120
+dGPU,uniform,1024,table kernel,2,0.801
+dGPU,uniform,1024,branch-free kernel,2,6.511
+dGPU,uniform,1024,formation kernel,3,9.206
+dGPU,uniform,1024,coalesced formation kernel,3,8.112
+dGPU,uniform,1024,search kernel,3,25.488
+dGPU,uniform,1024,table kernel,3,0.806
+dGPU,uniform,1024,branch-free kernel,3,6.324
+dGPU,uniform,1024,formation kernel,4,8.785
+dGPU,uniform,1024,coalesced formation kernel,4,7.887
+dGPU,uniform,1024,search kernel,4,24.251
+dGPU,uniform,1024,table kernel,4,0.790
+dGPU,uniform,1024,branch-free kernel,4,5.907
+dGPU,uniform,1024,formation kernel,5,8.376
+dGPU,uniform,1024,coalesced formation kernel,5,7.676
+dGPU,uniform,1024,search kernel,5,24.418
+dGPU,uniform,1024,table kernel,5,0.788
+dGPU,uniform,1024,branch-free kernel,5,5.951
+dGPU,uniform,1024,formation kernel,6,8.151
+dGPU,uniform,1024,coalesced formation kernel,6,7.395
+dGPU,uniform,1024,search kernel,6,24.361
+dGPU,uniform,1024,table kernel,6,0.801
+dGPU,uniform,1024,branch-free kernel,6,6.059
+dGPU,uniform,1024,formation kernel,7,8.314
+dGPU,uniform,1024,coalesced formation kernel,7,7.249
+dGPU,uniform,1024,search kernel,7,22.959
+dGPU,uniform,1024,table kernel,7,0.786
+dGPU,uniform,1024,branch-free kernel,7,6.160
+dGPU,uniform,1024,formation kernel,8,8.834
+dGPU,uniform,1024,coalesced formation kernel,8,7.527
+dGPU,uniform,1024,search kernel,8,26.480
+dGPU,uniform,1024,table kernel,8,0.870
+dGPU,uniform,1024,branch-free kernel,8,6.584
+dGPU,uniform,1024,formation kernel,9,7.994
+dGPU,uniform,1024,coalesced formation kernel,9,7.196
+dGPU,uniform,1024,search kernel,9,25.137
+dGPU,uniform,1024,table kernel,9,0.797
+dGPU,uniform,1024,branch-free kernel,9,6.177
+dGPU,ff,1024,formation kernel,0,5.798
+dGPU,ff,1024,coalesced formation kernel,0,4.986
+dGPU,ff,1024,search kernel,0,0.930
+dGPU,ff,1024,table kernel,0,0.782
+dGPU,ff,1024,branch-free kernel,0,5.293
+dGPU,ff,1024,formation kernel,1,8.747
+dGPU,ff,1024,coalesced formation kernel,1,8.183
+dGPU,ff,1024,search kernel,1,1.632
+dGPU,ff,1024,table kernel,1,0.881
+dGPU,ff,1024,branch-free kernel,1,6.723
+dGPU,ff,1024,formation kernel,2,9.665
+dGPU,ff,1024,coalesced formation kernel,2,8.503
+dGPU,ff,1024,search kernel,2,1.609
+dGPU,ff,1024,table kernel,2,0.865
+dGPU,ff,1024,branch-free kernel,2,6.834
+dGPU,ff,1024,formation kernel,3,9.839
+dGPU,ff,1024,coalesced formation kernel,3,9.473
+dGPU,ff,1024,search kernel,3,1.823
+dGPU,ff,1024,table kernel,3,0.953
+dGPU,ff,1024,branch-free kernel,3,7.673
+dGPU,ff,1024,formation kernel,4,10.036
+dGPU,ff,1024,coalesced formation kernel,4,9.251
+dGPU,ff,1024,search kernel,4,1.693
+dGPU,ff,1024,table kernel,4,0.893
+dGPU,ff,1024,branch-free kernel,4,7.070
+dGPU,ff,1024,formation kernel,5,10.002
+dGPU,ff,1024,coalesced formation kernel,5,8.864
+dGPU,ff,1024,search kernel,5,1.721
+dGPU,ff,1024,table kernel,5,0.935
+dGPU,ff,1024,branch-free kernel,5,7.231
+dGPU,ff,1024,formation kernel,6,10.050
+dGPU,ff,1024,coalesced formation kernel,6,8.944
+dGPU,ff,1024,search kernel,6,1.726
+dGPU,ff,1024,table kernel,6,0.898
+dGPU,ff,1024,branch-free kernel,6,7.599
+dGPU,ff,1024,formation kernel,7,10.070
+dGPU,ff,1024,coalesced formation kernel,7,10.265
+dGPU,ff,1024,search kernel,7,2.073
+dGPU,ff,1024,table kernel,7,1.069
+dGPU,ff,1024,branch-free kernel,7,9.018
+dGPU,ff,1024,formation kernel,8,12.439
+dGPU,ff,1024,coalesced formation kernel,8,11.365
+dGPU,ff,1024,search kernel,8,2.178
+dGPU,ff,1024,table kernel,8,1.135
+dGPU,ff,1024,branch-free kernel,8,9.717
+dGPU,ff,1024,formation kernel,9,12.664
+dGPU,ff,1024,coalesced formation kernel,9,11.831
+dGPU,ff,1024,search kernel,9,2.204
+dGPU,ff,1024,table kernel,9,1.139
+dGPU,ff,1024,branch-free kernel,9,9.368
+dGPU,zero,1024,formation kernel,0,6.757
+dGPU,zero,1024,coalesced formation kernel,0,7.027
+dGPU,zero,1024,search kernel,0,0.777
+dGPU,zero,1024,table kernel,0,0.717
+dGPU,zero,1024,branch-free kernel,0,5.599
+dGPU,zero,1024,formation kernel,1,7.880
+dGPU,zero,1024,coalesced formation kernel,1,7.037
+dGPU,zero,1024,search kernel,1,0.784
+dGPU,zero,1024,table kernel,1,0.724
+dGPU,zero,1024,branch-free kernel,1,5.678
+dGPU,zero,1024,formation kernel,2,10.005
+dGPU,zero,1024,coalesced formation kernel,2,9.717
+dGPU,zero,1024,search kernel,2,1.101
+dGPU,zero,1024,table kernel,2,1.018
+dGPU,zero,1024,branch-free kernel,2,8.675
+dGPU,zero,1024,formation kernel,3,11.842
+dGPU,zero,1024,coalesced formation kernel,3,10.869
+dGPU,zero,1024,search kernel,3,1.127
+dGPU,zero,1024,table kernel,3,1.210
+dGPU,zero,1024,branch-free kernel,3,8.824
+dGPU,zero,1024,formation kernel,4,10.706
+dGPU,zero,1024,coalesced formation kernel,4,10.273
+dGPU,zero,1024,search kernel,4,1.079
+dGPU,zero,1024,table kernel,4,1.098
+dGPU,zero,1024,branch-free kernel,4,8.317
+dGPU,zero,1024,formation kernel,5,11.948
+dGPU,zero,1024,coalesced formation kernel,5,11.299
+dGPU,zero,1024,search kernel,5,1.151
+dGPU,zero,1024,table kernel,5,1.086
+dGPU,zero,1024,branch-free kernel,5,8.904
+dGPU,zero,1024,formation kernel,6,11.036
+dGPU,zero,1024,coalesced formation kernel,6,10.873
+dGPU,zero,1024,search kernel,6,1.156
+dGPU,zero,1024,table kernel,6,1.136
+dGPU,zero,1024,branch-free kernel,6,9.045
+dGPU,zero,1024,formation kernel,7,11.037
+dGPU,zero,1024,coalesced formation kernel,7,10.472
+dGPU,zero,1024,search kernel,7,1.124
+dGPU,zero,1024,table kernel,7,1.122
+dGPU,zero,1024,branch-free kernel,7,8.155
+dGPU,zero,1024,formation kernel,8,10.878
+dGPU,zero,1024,coalesced formation kernel,8,11.192
+dGPU,zero,1024,search kernel,8,1.201
+dGPU,zero,1024,table kernel,8,1.042
+dGPU,zero,1024,branch-free kernel,8,8.396
+dGPU,zero,1024,formation kernel,9,10.300
+dGPU,zero,1024,coalesced formation kernel,9,10.176
+dGPU,zero,1024,search kernel,9,1.077
+dGPU,zero,1024,table kernel,9,1.069
+dGPU,zero,1024,branch-free kernel,9,7.418
+dGPU,ru,1024,formation kernel,0,8.636
+dGPU,ru,1024,coalesced formation kernel,0,7.556
+dGPU,ru,1024,search kernel,0,27.961
+dGPU,ru,1024,table kernel,0,0.850
+dGPU,ru,1024,branch-free kernel,0,6.731
+dGPU,ru,1024,formation kernel,1,9.017
+dGPU,ru,1024,coalesced formation kernel,1,7.859
+dGPU,ru,1024,search kernel,1,30.337
+dGPU,ru,1024,table kernel,1,0.868
+dGPU,ru,1024,branch-free kernel,1,6.892
+dGPU,ru,1024,formation kernel,2,9.997
+dGPU,ru,1024,coalesced formation kernel,2,8.452
+dGPU,ru,1024,search kernel,2,29.916
+dGPU,ru,1024,table kernel,2,0.852
+dGPU,ru,1024,branch-free kernel,2,6.729
+dGPU,ru,1024,formation kernel,3,8.784
+dGPU,ru,1024,coalesced formation kernel,3,7.770
+dGPU,ru,1024,search kernel,3,29.862
+dGPU,ru,1024,table kernel,3,0.873
+dGPU,ru,1024,branch-free kernel,3,6.806
+dGPU,ru,1024,formation kernel,4,8.364
+dGPU,ru,1024,coalesced formation kernel,4,7.476
+dGPU,ru,1024,search kernel,4,29.114
+dGPU,ru,1024,table kernel,4,0.834
+dGPU,ru,1024,branch-free kernel,4,6.579
+dGPU,ru,1024,formation kernel,5,9.454
+dGPU,ru,1024,coalesced formation kernel,5,8.201
+dGPU,ru,1024,search kernel,5,32.170
+dGPU,ru,1024,table kernel,5,0.927
+dGPU,ru,1024,branch-free kernel,5,7.249
+dGPU,ru,1024,formation kernel,6,9.788
+dGPU,ru,1024,coalesced formation kernel,6,8.660
+dGPU,ru,1024,search kernel,6,33.828
+dGPU,ru,1024,table kernel,6,0.975
+dGPU,ru,1024,branch-free kernel,6,6.832
+dGPU,ru,1024,formation kernel,7,9.753
+dGPU,ru,1024,coalesced formation kernel,7,8.327
+dGPU,ru,1024,search kernel,7,30.611
+dGPU,ru,1024,table kernel,7,0.866
+dGPU,ru,1024,branch-free kernel,7,6.536
+dGPU,ru,1024,formation kernel,8,9.192
+dGPU,ru,1024,coalesced formation kernel,8,8.103
+dGPU,ru,1024,search kernel,8,29.075
+dGPU,ru,1024,table kernel,8,0.826
+dGPU,ru,1024,branch-free kernel,8,6.279
+dGPU,ru,1024,formation kernel,9,8.880
+dGPU,ru,1024,coalesced formation kernel,9,7.956
+dGPU,ru,1024,search kernel,9,29.801
+dGPU,ru,1024,table kernel,9,0.902
+dGPU,ru,1024,branch-free kernel,9,6.487

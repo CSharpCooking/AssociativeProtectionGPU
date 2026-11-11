@@ -13,4 +13,5 @@ python3 analysis/figures.py
 # revision 2: optimized CPU path on configuration B; bounds and process-level intervals of configuration D
 python3 analysis/opt_summary.py > analysis/output/opt_B.txt
 python3 analysis/r2_bounds.py > analysis/output/r2_bounds.txt
-echo "reports: analysis/output/config_A.txt, summary_B.txt, summary_C.txt, config_D.txt, paper_values.md, lockstep_model.txt, opt_B.txt, r2_bounds.txt"
+python3 analysis/config_d_r2.py > analysis/output/config_D_r2.txt
+echo "reports: analysis/output/config_A.txt, summary_B.txt, summary_C.txt, config_D.txt, paper_values.md, lockstep_model.txt, opt_B.txt, r2_bounds.txt, config_D_r2.txt"
